@@ -63,6 +63,7 @@ def saveHTML(content, filePath):
         color: #ffffff;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
     }}
 
     a, a:visited {{
@@ -80,6 +81,7 @@ def saveHTML(content, filePath):
     .content {{
         margin: 1rem;
         flex-grow: 1;
+        overflow-y: auto;
     }}
 </style>
 
