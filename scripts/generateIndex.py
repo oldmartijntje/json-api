@@ -87,7 +87,7 @@ def saveHTML(content, filePath):
         <a href="https://oldmartijntje.nl">My Website</a>
         <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
         <p>Generated this index with a Python script</p>
-        <p>Last updated: ''' + str(datetime.datetime.now()) + '''</p>
+        <p>Last updated: ''' + str(datetime.datetime.now().time()) + '''</p>
     </footer>
 </body>
 
