@@ -1,0 +1,9 @@
+{
+    "path": "./docs/api/projects",
+    "folders": [],
+    "files": [
+        "project-viewer_achievements.json",
+        "project-viewer_offlineProjects.json"
+    ],
+    "parent": "../index.json"
+}

@@ -1,7 +1,8 @@
 {
     "path": "./docs/api",
     "folders": [
-        "oldmartijntje.nl"
+        "oldmartijntje.nl",
+        "projects"
     ],
     "files": [
         "index.html",
