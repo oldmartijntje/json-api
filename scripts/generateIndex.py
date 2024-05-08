@@ -34,7 +34,7 @@ def createHTML(files, folders, filePath):
         if folder == folders[-1]:
             content += '</ul>\n'
     for file in files:
-        if file == files[0] and len(folders) > 1:
+        if file == files[0] and len(files) > 1:
             content += '<h2>Files</h2>\n'
             content += '<ul>\n'
         if file != 'index.html':
