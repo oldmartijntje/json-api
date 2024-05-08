@@ -1,5 +1,5 @@
 {
-    "ballteCards": [
+    "battleCards": [
         {
             "name": "Sprinter",
             "power": 0,
@@ -9,7 +9,7 @@
             "onGoing": "This card has as much |Power| power as unspent |Energy| Energy",
             "description": "Gotta go fast",
             "special": "",
-            "image": "assets/images/B001.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B001.png",
             "type": "Fire",
             "series": "",
             "shopCost": 12,
@@ -26,7 +26,7 @@
             "onGoing": "",
             "description": "You are my rock",
             "special": "",
-            "image": "assets/images/B002.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B002.png",
             "type": "Earth",
             "series": "Henk",
             "shopCost": 12,
@@ -43,7 +43,7 @@
             "onGoing": "",
             "description": "Neurotoxins go brrrr",
             "special": "",
-            "image": "assets/images/B003.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B003.png",
             "type": "Electric",
             "series": "",
             "shopCost": 26,
@@ -61,7 +61,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -79,7 +79,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -97,7 +97,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -115,7 +115,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -133,7 +133,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -151,7 +151,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -169,7 +169,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -187,7 +187,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -205,7 +205,7 @@
             "onGoing": "",
             "description": "cluck cluck",
             "special": "",
-            "image": "assets/images/B004.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B004.png",
             "type": "Water",
             "series": "revolution",
             "shopCost": 5,
@@ -224,7 +224,7 @@
             "onGoing": "",
             "description": "Fried unborn Chick",
             "special": "",
-            "image": "assets/images/B005.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B005.png",
             "type": "Fire",
             "series": "",
             "shopCost": 12,
@@ -241,7 +241,7 @@
             "onGoing": "",
             "description": "Fried unborn Chick",
             "special": "",
-            "image": "assets/images/B005.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B005.png",
             "type": "Fire",
             "series": "",
             "shopCost": 12,
@@ -258,7 +258,7 @@
             "onGoing": "",
             "description": "Fried unborn Chick",
             "special": "",
-            "image": "assets/images/B005.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B005.png",
             "type": "Fire",
             "series": "",
             "shopCost": 12,
@@ -275,7 +275,7 @@
             "onGoing": "",
             "description": "Fried unborn Chick",
             "special": "",
-            "image": "assets/images/B005.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B005.png",
             "type": "Fire",
             "series": "",
             "shopCost": 12,
@@ -290,7 +290,7 @@
             "onGoing": "",
             "description": "",
             "special": "",
-            "image": "assets/images/B006.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B006.png",
             "type": "Earth",
             "series": "",
             "shopCost": 33,
@@ -307,7 +307,7 @@
             "onGoing": "",
             "description": "Wait, that's illegal?",
             "special": "",
-            "image": "assets/images/B007.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B007.png",
             "type": "Wind",
             "series": "",
             "shopCost": 5,
@@ -324,7 +324,7 @@
             "onGoing": "",
             "description": "",
             "special": "You can play this at any player.",
-            "image": "assets/images/B008.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B008.png",
             "type": "Water",
             "series": "",
             "shopCost": 12,
@@ -341,7 +341,7 @@
             "onGoing": "",
             "description": "",
             "special": "",
-            "image": "assets/images/B009.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B009.png",
             "type": "Fire",
             "series": "",
             "shopCost": 5,
@@ -358,7 +358,7 @@
             "onGoing": "",
             "description": "There is no way back.",
             "special": "",
-            "image": "assets/images/B010.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B010.png",
             "type": "Wind",
             "series": "",
             "shopCost": 5,
@@ -375,7 +375,7 @@
             "onGoing": "",
             "description": "i am ironcluck",
             "special": "",
-            "image": "assets/images/B011.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B011.png",
             "type": "Earth",
             "series": "revolution",
             "shopCost": 12,
@@ -392,7 +392,7 @@
             "onGoing": "Players can only play 1 card per turn",
             "description": "",
             "special": "",
-            "image": "assets/images/B012.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B012.png",
             "type": "Water",
             "series": "",
             "shopCost": 26,
@@ -414,7 +414,7 @@
             "deck": "A",
             "id": "B013",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Strategic Fort",
@@ -430,7 +430,7 @@
             "deck": "B",
             "id": "B014",
             "amount": 1,
-            "image": "assets/images/B014.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B014.png"
         },
         {
             "name": "Hate Comment",
@@ -446,7 +446,7 @@
             "deck": "B",
             "id": "B015",
             "amount": 1,
-            "image": "assets/images/B015.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B015.png"
         },
         {
             "name": "Dead Link",
@@ -462,7 +462,7 @@
             "deck": "B",
             "id": "B016",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Burning Bob",
@@ -478,7 +478,7 @@
             "deck": "B",
             "id": "B017",
             "amount": 1,
-            "image": "assets/images/B017.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B017.png"
         },
         {
             "name": "Princess Shroob",
@@ -495,7 +495,7 @@
             "deck": "A",
             "id": "B018",
             "amount": 1,
-            "image": "assets/images/B018.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B018.png"
         },
         {
             "name": "Meeple Army",
@@ -512,7 +512,7 @@
             "deck": "B",
             "id": "B019",
             "amount": 1,
-            "image": "assets/images/B019.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B019.png"
         },
         {
             "name": "Easter Chick Army",
@@ -529,7 +529,7 @@
             "deck": "B",
             "id": "B020",
             "amount": 1,
-            "image": "assets/images/B020.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B020.png"
         },
         {
             "name": "Duckter Strange",
@@ -546,7 +546,7 @@
             "deck": "B",
             "id": "B021",
             "amount": 1,
-            "image": "assets/images/B021.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B021.png"
         },
         {
             "name": "Big Goober",
@@ -563,7 +563,7 @@
             "deck": "B",
             "id": "B022",
             "amount": 1,
-            "image": "assets/images/B022.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B022.png"
         },
         {
             "name": "Elmo",
@@ -580,7 +580,7 @@
             "deck": "B",
             "id": "B023",
             "amount": 1,
-            "image": "assets/images/B023.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B023.png"
         },
         {
             "name": "Super Soaker",
@@ -597,7 +597,7 @@
             "deck": "B",
             "id": "B024",
             "amount": 1,
-            "image": "assets/images/B024.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B024.png"
         },
         {
             "name": "Giftcard",
@@ -614,7 +614,7 @@
             "shopCost": 5,
             "id": "B025",
             "amount": 1,
-            "image": "assets/images/B025.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B025.png"
         },
         {
             "name": "The Killer Bunny",
@@ -631,7 +631,7 @@
             "deck": "B",
             "id": "B026",
             "amount": 1,
-            "image": "assets/images/B026.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B026.png"
         },
         {
             "name": "Quirk-Destroying Drug",
@@ -648,7 +648,7 @@
             "deck": "B",
             "id": "B027",
             "amount": 1,
-            "image": "assets/images/B027.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B027.png"
         },
         {
             "name": "Tractor Chick",
@@ -665,7 +665,7 @@
             "deck": "B",
             "id": "B028",
             "amount": 1,
-            "image": "assets/images/B028.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B028.png"
         },
         {
             "name": "Failed Experiment",
@@ -682,7 +682,7 @@
             "deck": "B",
             "id": "B029",
             "amount": 1,
-            "image": "assets/images/B029.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B029.png"
         },
         {
             "name": "Duck Compress",
@@ -699,7 +699,7 @@
             "deck": "B",
             "id": "B030",
             "amount": 1,
-            "image": "assets/images/B030.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B030.png"
         },
         {
             "name": "Dead Link",
@@ -716,7 +716,7 @@
             "deck": "A",
             "id": "B031",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Quack for One",
@@ -733,7 +733,7 @@
             "deck": "A",
             "id": "B032",
             "amount": 1,
-            "image": "assets/images/B032.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B032.png"
         },
         {
             "name": "Confusing traffic",
@@ -750,7 +750,7 @@
             "deck": "A",
             "id": "B033",
             "amount": 1,
-            "image": "assets/images/B033.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B033.png"
         },
         {
             "name": "Fire Flower",
@@ -767,7 +767,7 @@
             "deck": "A",
             "id": "B034",
             "amount": 1,
-            "image": "assets/images/B034.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B034.png"
         },
         {
             "name": "Dead Link",
@@ -784,7 +784,7 @@
             "deck": "A",
             "id": "B035",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Curse",
@@ -801,7 +801,7 @@
             "shopCost": 12,
             "id": "B036",
             "amount": 1,
-            "image": "assets/images/B036.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B036.png"
         },
         {
             "name": "Dead Link",
@@ -818,7 +818,7 @@
             "deck": "A",
             "id": "B037",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Fire Magic",
@@ -835,7 +835,7 @@
             "deck": "A",
             "id": "B038",
             "amount": 1,
-            "image": "assets/images/B038.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B038.png"
         },
         {
             "name": "Electrician Chick",
@@ -852,7 +852,7 @@
             "deck": "A",
             "id": "B039",
             "amount": 1,
-            "image": "assets/images/B039.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B039.png"
         },
         {
             "name": "Dead Link",
@@ -869,7 +869,7 @@
             "deck": "A",
             "id": "B040",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Fire Tornado",
@@ -886,7 +886,7 @@
             "deck": "A",
             "id": "B041",
             "amount": 1,
-            "image": "assets/images/B041.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B041.png"
         },
         {
             "name": "Lava Monster",
@@ -903,7 +903,7 @@
             "deck": "B",
             "id": "B042",
             "amount": 1,
-            "image": "assets/images/B042.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B042.png"
         },
         {
             "name": "Electric Ball",
@@ -920,7 +920,7 @@
             "deck": "B",
             "id": "B043",
             "amount": 1,
-            "image": "assets/images/B043.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B043.png"
         },
         {
             "name": "Dead Link",
@@ -937,7 +937,7 @@
             "deck": "B",
             "id": "B044",
             "amount": 1,
-            "image": "assets/images/404nf.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nf.png"
         },
         {
             "name": "Time machine",
@@ -954,7 +954,7 @@
             "deck": "B",
             "id": "B045",
             "amount": 1,
-            "image": "assets/images/B045.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B045.png"
         },
         {
             "name": "DIY Forge",
@@ -971,7 +971,7 @@
             "deck": "B",
             "id": "B046",
             "amount": 1,
-            "image": "assets/images/B046.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B046.png"
         },
         {
             "name": "Quacki Kaminari",
@@ -988,7 +988,7 @@
             "deck": "B",
             "id": "B047",
             "amount": 1,
-            "image": "assets/images/B047.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B047.png"
         },
         {
             "name": "Boulder Mushroom",
@@ -1005,7 +1005,7 @@
             "deck": "B",
             "id": "B048",
             "amount": 1,
-            "image": "assets/images/B048.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B048.png"
         },
         {
             "name": "Forbidden room",
@@ -1022,7 +1022,7 @@
             "deck": "B",
             "id": "B049",
             "amount": 1,
-            "image": "assets/images/B049.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B049.png"
         },
         {
             "name": "Hidden Mcdonalds",
@@ -1039,7 +1039,7 @@
             "deck": "A",
             "id": "B050",
             "amount": 1,
-            "image": "assets/images/B050.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B050.png"
         },
         {
             "name": "Volcano",
@@ -1056,7 +1056,7 @@
             "deck": "B",
             "id": "B051",
             "amount": 1,
-            "image": "assets/images/B051.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B051.png"
         },
         {
             "name": "Nuclear Powerplant",
@@ -1073,7 +1073,7 @@
             "deck": "A",
             "id": "B052",
             "amount": 1,
-            "image": "assets/images/B052.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B052.png"
         },
         {
             "name": "Dwayne",
@@ -1090,7 +1090,7 @@
             "deck": "B",
             "id": "B053",
             "amount": 1,
-            "image": "assets/images/B053.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B053.png"
         },
         {
             "name": "Shroobs",
@@ -1107,7 +1107,7 @@
             "deck": "B",
             "id": "B054",
             "amount": 1,
-            "image": "assets/images/B054.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B054.png"
         },
         {
             "name": "Lloyd",
@@ -1124,7 +1124,7 @@
             "deck": "B",
             "id": "B055",
             "amount": 1,
-            "image": "assets/images/B055.png"
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B055.png"
         },
         {
             "name": "Dragon",
@@ -1137,7 +1137,7 @@
             "special": "",
             "type": "Green",
             "series": "brick",
-            "image": "assets/images/B056.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B056.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B056",
@@ -1154,7 +1154,7 @@
             "special": "",
             "type": "Green",
             "series": "brick",
-            "image": "assets/images/B057.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B057.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B057",
@@ -1171,7 +1171,7 @@
             "special": "",
             "type": "Electric",
             "series": "brick",
-            "image": "assets/images/B058.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B058.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B058",
@@ -1189,7 +1189,7 @@
             "special": "",
             "type": "Fire",
             "series": "blockgame",
-            "image": "assets/images/B059.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B059.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B059",
@@ -1207,7 +1207,7 @@
             "special": "",
             "type": "Fire",
             "series": "blockgame",
-            "image": "assets/images/B059.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B059.png",
             "shopCost": 19,
             "deck": "S",
             "id": "B059",
@@ -1225,7 +1225,7 @@
             "special": "",
             "type": "Fire",
             "series": "blockgame",
-            "image": "assets/images/B059.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B059.png",
             "shopCost": 19,
             "deck": "S",
             "id": "B059",
@@ -1243,7 +1243,7 @@
             "special": "",
             "type": "Fire",
             "series": "blockgame",
-            "image": "assets/images/B059.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B059.png",
             "shopCost": 19,
             "deck": "S",
             "id": "B059",
@@ -1261,7 +1261,7 @@
             "special": "",
             "type": "Fire",
             "series": "blockgame",
-            "image": "assets/images/B059.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B059.png",
             "shopCost": 19,
             "deck": "S",
             "id": "B059",
@@ -1278,7 +1278,7 @@
             "special": "",
             "type": "Electric",
             "series": "revolution",
-            "image": "assets/images/B060.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B060.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B060",
@@ -1295,7 +1295,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B061.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B061.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B061",
@@ -1312,7 +1312,7 @@
             "special": "",
             "type": "Water",
             "series": "Mushroom",
-            "image": "assets/images/B062.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B062.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B062",
@@ -1329,7 +1329,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B063.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B063.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B063",
@@ -1346,7 +1346,7 @@
             "special": "",
             "type": "Water",
             "series": "Mushroom",
-            "image": "assets/images/B064.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B064.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B064",
@@ -1363,7 +1363,7 @@
             "special": "This card becomes the last card you played",
             "type": "???",
             "series": "Mushroom",
-            "image": "assets/images/B065.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B065.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B065",
@@ -1380,7 +1380,7 @@
             "special": "This does not have effect on (B052) Nuclear Powerplant",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B066.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B066.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B066",
@@ -1397,7 +1397,7 @@
             "special": "Play this at someone else, they keep this card after this battle is over",
             "type": "Wind",
             "series": "Fun",
-            "image": "assets/images/B067.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B067.png",
             "shopCost": 5,
             "deck": "A",
             "id": "B067",
@@ -1414,7 +1414,7 @@
             "special": "Needs to be the first or second card you play in a battle, this can't be the last card you play.",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B068.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B068.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B068",
@@ -1431,7 +1431,7 @@
             "special": "Play this at someone else, they keep this card after this battle is over",
             "type": "Wind",
             "series": "Fun",
-            "image": "assets/images/B069.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B069.png",
             "shopCost": 5,
             "deck": "A",
             "id": "B069",
@@ -1450,7 +1450,7 @@
             "special": "",
             "type": "Earth",
             "series": "GGCU",
-            "image": "assets/images/B070.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B070.png",
             "shopCost": 5,
             "id": "B070"
         },
@@ -1467,7 +1467,7 @@
             "special": "",
             "type": "Earth",
             "series": "GGCU",
-            "image": "assets/images/B070.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B070.png",
             "shopCost": 5,
             "id": "B070"
         },
@@ -1484,7 +1484,7 @@
             "special": "",
             "type": "Earth",
             "series": "GGCU",
-            "image": "assets/images/B070.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B070.png",
             "shopCost": 5,
             "id": "B070"
         },
@@ -1501,7 +1501,7 @@
             "special": "",
             "type": "Earth",
             "series": "GGCU",
-            "image": "assets/images/B070.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B070.png",
             "shopCost": 5,
             "id": "B070"
         },
@@ -1516,7 +1516,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B071.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B071.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B071",
@@ -1533,7 +1533,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B072.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B072.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B072",
@@ -1550,7 +1550,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B073.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B073.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B073",
@@ -1567,7 +1567,7 @@
             "special": "",
             "type": "Fire",
             "series": "Mushroom",
-            "image": "assets/images/B074.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B074.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B074",
@@ -1584,7 +1584,7 @@
             "special": "",
             "type": "Earth",
             "series": "Mushroom",
-            "image": "assets/images/B075.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B075.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B075",
@@ -1601,7 +1601,7 @@
             "special": "",
             "type": "Wind",
             "series": "revolution",
-            "image": "assets/images/B076.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B076.png",
             "shopCost": 40,
             "deck": "B",
             "id": "B076",
@@ -1618,7 +1618,7 @@
             "special": "",
             "type": "ErrorType",
             "series": "",
-            "image": "assets/images/error.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/error.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B077",
@@ -1635,7 +1635,7 @@
             "special": "",
             "type": "Fire",
             "series": "",
-            "image": "assets/images/B078.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B078.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B078",
@@ -1652,7 +1652,7 @@
             "special": "",
             "type": "Water",
             "series": "",
-            "image": "assets/images/B079.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B079.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B079",
@@ -1671,7 +1671,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1688,7 +1688,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1705,7 +1705,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1722,7 +1722,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1739,7 +1739,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1756,7 +1756,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1773,7 +1773,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1790,7 +1790,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1807,7 +1807,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1824,7 +1824,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1841,7 +1841,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1858,7 +1858,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B080.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B080.png",
             "shopCost": 33,
             "id": "B080"
         },
@@ -1873,7 +1873,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B081.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B081.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B081",
@@ -1890,7 +1890,7 @@
             "special": "",
             "type": "Water",
             "series": "Henk",
-            "image": "assets/images/B082.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B082.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B082",
@@ -1907,7 +1907,7 @@
             "special": "",
             "type": "Fire",
             "series": "",
-            "image": "assets/images/B083.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B083.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B083",
@@ -1924,7 +1924,7 @@
             "special": "disable all |Electric| type cards their abillities",
             "type": "Wind",
             "series": "",
-            "image": "assets/images/B084.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B084.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B084",
@@ -1941,7 +1941,7 @@
             "special": "",
             "type": "Wind",
             "series": "brick",
-            "image": "assets/images/B085.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B085.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B085",
@@ -1958,7 +1958,7 @@
             "special": "",
             "type": "Fire",
             "series": "GGCU",
-            "image": "assets/images/B086.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B086.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B086",
@@ -1977,7 +1977,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -1994,7 +1994,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2011,7 +2011,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2028,7 +2028,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2045,7 +2045,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2062,7 +2062,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2079,7 +2079,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2096,7 +2096,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B087.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B087.png",
             "shopCost": 12,
             "id": "B087"
         },
@@ -2111,7 +2111,7 @@
             "special": "",
             "type": "Wind",
             "series": "blockgame",
-            "image": "assets/images/B088.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B088.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B088",
@@ -2128,7 +2128,7 @@
             "special": "",
             "type": "Wind",
             "series": "blockgame",
-            "image": "assets/images/B089.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B089.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B089",
@@ -2145,7 +2145,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B090.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B090.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B090",
@@ -2162,7 +2162,7 @@
             "special": "",
             "type": "Earth",
             "series": "blockgame",
-            "image": "assets/images/B091.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B091.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B091",
@@ -2179,7 +2179,7 @@
             "special": "",
             "type": "Fire",
             "series": "",
-            "image": "assets/images/B092.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B092.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B092",
@@ -2196,7 +2196,7 @@
             "special": "",
             "type": "Fire",
             "series": "DUCKIFY",
-            "image": "assets/images/B093.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B093.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B093",
@@ -2213,7 +2213,7 @@
             "special": "",
             "type": "Wind",
             "series": "blockgame",
-            "image": "assets/images/B094.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B094.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B094",
@@ -2230,7 +2230,7 @@
             "special": "",
             "type": "Earth",
             "series": "",
-            "image": "assets/images/B095.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B095.png",
             "shopCost": 33,
             "deck": "B",
             "id": "B095",
@@ -2247,7 +2247,7 @@
             "special": "",
             "type": "Earth",
             "series": "",
-            "image": "assets/images/B096.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B096.png",
             "shopCost": 12,
             "deck": "B",
             "id": "B096",
@@ -2264,7 +2264,7 @@
             "special": "",
             "type": "Earth",
             "series": "",
-            "image": "assets/images/B097.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B097.png",
             "shopCost": 12,
             "deck": "A",
             "id": "B097",
@@ -2281,7 +2281,7 @@
             "special": "",
             "type": "Fire",
             "series": "revolution blockgame",
-            "image": "assets/images/B098.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B098.png",
             "shopCost": 26,
             "deck": "B",
             "id": "B098",
@@ -2298,7 +2298,7 @@
             "special": "",
             "type": "Wind",
             "series": "blockgame",
-            "image": "assets/images/B099.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B099.png",
             "shopCost": 19,
             "deck": "B",
             "id": "B099",
@@ -2317,7 +2317,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2334,7 +2334,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2351,7 +2351,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2368,7 +2368,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2385,7 +2385,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2402,7 +2402,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2419,7 +2419,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2436,7 +2436,7 @@
             "special": "",
             "type": "Water",
             "series": "GGCU",
-            "image": "assets/images/B100.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B100.png",
             "shopCost": 19,
             "id": "B100"
         },
@@ -2452,10 +2452,318 @@
             "special": "Play this at someone elses.",
             "type": "Wind",
             "series": "Fun",
-            "image": "assets/images/B101.png",
+            "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/B101.png",
             "shopCost": 5,
             "id": "B101",
             "amount": 1
         }
+    ],
+    "locations": [
+        [
+            {
+                "name": "Celeste mountain",
+                "onGoingL": "Double the |onGoing| onGoing effects",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L001.png",
+                "id": "L001"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onGoingL": "Double the |onReveal| on reveal effects",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L002"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onGoingL": "When this reaches a total |Power| power of 10+, switch the location",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L003"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onRevealL": "Add a random card to everyones deck.",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L004"
+            },
+            {
+                "name": "Sahara",
+                "onGoingL": "all cards cost 1 |Energy| less",
+                "icons": "blockgame",
+                "description": "Sand!",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L005.png",
+                "id": "L005"
+            },
+            {
+                "name": "The Allan dessert",
+                "onGoingL": "all cards cost 1 |Energy| more",
+                "icons": "",
+                "description": "Dessert of lost memories",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L006.png",
+                "id": "L006"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "specialL": "everyone teams up with their neighbour, you now gotta win together (total |Energy| energy is 22)",
+                "icons": "teams",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L007"
+            },
+            {
+                "name": "Hollywood",
+                "onRevealL": "everyone has 10 extra |Energy| energy",
+                "icons": "",
+                "description": "What on earth is he doing?",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L008.png",
+                "id": "L008"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onGoingL": "|Energy| energy cost becomes the |Power| power of the card",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L009"
+            },
+            {
+                "name": "404-NOTFOUND",
+                "icons": "",
+                "description": "nothing happens",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L010.png",
+                "id": "L010"
+            },
+            {
+                "name": "Catnip factory",
+                "onGoingL": "when you play a card you have to meow for a 1 |Energy| cost discount (1 per card)",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L011.png",
+                "id": "L011"
+            },
+            {
+                "name": "Het Binnenhof",
+                "onGoingL": "only 2 cards can be played per person",
+                "icons": "",
+                "description": "Home of Mark Rutte",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L012.png",
+                "id": "L012"
+            },
+            {
+                "name": "Black hole",
+                "onGoingL": "cards have no effects",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L013.png",
+                "id": "L013"
+            },
+            {
+                "name": "The Matrix",
+                "onGoingL": "|onGoing| onGoing effects are disabled",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L014.png",
+                "id": "L014"
+            },
+            {
+                "name": "Dying planet",
+                "onGoingL": "|onReveal| on reveal effects are disabled",
+                "icons": "Mushroom",
+                "description": "|shroobLang1||shroobLang2|!!!!",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L015.png",
+                "id": "L015"
+            },
+            {
+                "name": "Nuclear launch",
+                "onRevealL": "turns into Nuked world (L017) next turn",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L016.png",
+                "id": "L016"
+            },
+            {
+                "name": "Nuked world",
+                "onGoingL": "cards can't be played",
+                "icons": "notDrawable",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L017.png",
+                "id": "L017"
+            },
+            {
+                "name": "Hollijolli Village",
+                "onGoingL": "you can only play 1 card per turn",
+                "icons": "Mushroom",
+                "description": "|shroobLang6||shroobLang2||shroobLang9||shroobLang17|!",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L018.png",
+                "id": "L018"
+            },
+            {
+                "name": "Flooding",
+                "onRevealL": "turns into flooded (L020) next turn",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L019.png",
+                "id": "L019"
+            },
+            {
+                "name": "Flooded",
+                "onGoingL": "only water type cards can be played here",
+                "icons": "notDrawable",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L020.png",
+                "id": "L020"
+            },
+            {
+                "name": "Oudendijk",
+                "onGoingL": "you can only play cards here that have effects",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L021.png",
+                "id": "L021"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onGoingL": "all cards cost 2 |Energy|",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L022"
+            },
+            {
+                "name": "Mushroom kingdom",
+                "onGoingL": "all |Mushroom| mushroom series cards get +1 |Power| power",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L023.png",
+                "id": "L023"
+            },
+            {
+                "name": "Aperture",
+                "onGoingL": "all cards lose 3 |Power| power once played (2 will turn into -1)",
+                "icons": "",
+                "description": "neurotoxins go brrrr",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L024.png",
+                "id": "L024"
+            },
+            {
+                "name": "Stockmarket",
+                "onRevealL": "all cards in your hand lose 3 |Power| power (2 will turn into -1)",
+                "icons": "",
+                "description": "Deflation",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L025.png",
+                "id": "L025"
+            },
+            {
+                "name": "Kingdom of the Ducks",
+                "onReveal": "Add 1 |Power| power to all played cards",
+                "icons": "",
+                "description": "No ducks were BBQ'd",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L026.png",
+                "id": "L026"
+            },
+            {
+                "name": "Cantine",
+                "onGoingL": "3 and 4 |Energy| cost cards cost 5 |Energy|",
+                "icons": "",
+                "description": "That's expensive|eyesEmoji|",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L027.png",
+                "id": "L027"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onGoingL": "1 and 2 |Energy| cost cards cost 0 |Energy|",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L028"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onRevealL": "Everyone rolls dice, they get this much extra |Energy| energy",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L029"
+            },
+            {
+                "name": "Hide and seek",
+                "onGoingL": "Cards get revealed at the end of the battle.",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L030.png",
+                "id": "L030"
+            },
+            {
+                "name": "Wildfire",
+                "onReveal": "If your card is a |Fire| fire type, throw a |D6| 6 sided dice and add it to it's power |Power|",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L031.png",
+                "id": "L031"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onReveal": "If your card is a |Water| water type, throw a |D6| 6 sided dice and add it to it's power |Power|",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L032"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "specialL": "If someone can correctly guess what card you played when it's not yet revealed, it will have 2 less |Power| power",
+                "icons": "Fun",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L033"
+            },
+            {
+                "name": "Time hole",
+                "specialL": "It's not turn based. Set a 5 minute timer, everyone can play cards whenever they want. Battle is over when timer finishes.",
+                "icons": "Mushroom",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L034.png",
+                "id": "L034"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "specialL": "All cards change type to |???| type",
+                "icons": "???",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L035"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onReveal": "turn all your cards 90 degrees in the same direction.",
+                "onGoingL": "Remove all cards that face it's player.",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L036"
+            },
+            {
+                "name": "Weg gon loesoe",
+                "onReveal": "Replace it with a random card.",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/404nfL.png",
+                "id": "L037"
+            },
+            {
+                "name": "Please donate",
+                "specialL": "You can play cards at everyone, not just yourself.",
+                "icons": "",
+                "description": "",
+                "image": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets/images/L038.png",
+                "id": "L038"
+            }
+        ]
     ]
 }

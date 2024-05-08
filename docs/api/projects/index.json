@@ -1,8 +1,10 @@
 {
     "path": "./docs/api/projects",
-    "folders": [],
+    "folders": [
+        "henk-empires-new-kingdoms-assets"
+    ],
     "files": [
-        "henk-empire-new-kingdoms_battlecards.json",
+        "henk-empire-new-kingdoms.json",
         "index.html",
         "index.json",
         "project-viewer_achievements.json",

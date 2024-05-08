@@ -1,0 +1,9 @@
+{
+    "path": "./docs/api/projects/henk-empires-new-kingdoms-assets",
+    "folders": [
+        "icons",
+        "images"
+    ],
+    "files": [],
+    "parent": "../index.json"
+}
