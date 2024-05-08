@@ -2,7 +2,7 @@
     "author": "OldMartijntje",
     "lastUpdate": "08/05/2024",
     "fullBlogsLocation": {
-        "public": "https://oldmartijntje.github.io/json-api/api/globalData/fullBlogs.json",
+        "public": "https://api.oldmartijntje.nl/api/globalData/fullBlogs.json",
         "local": "./docs/api/globalData/fullBlogs.json"
     },
     "blogs": [

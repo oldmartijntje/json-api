@@ -15,14 +15,14 @@
     "desktopShortcuts": [
         {
             "Title": "Installer.iso",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/iso.png",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/iso.png",
             "Command": "openNewTab",
             "Link": "",
             "Payload": {
                 "Popup": [
                     {
                         "Text": "Want to download a virus?",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Question.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Question.png"
                     }
                 ],
                 "Title": "Curiosity",
@@ -73,7 +73,7 @@
                 "Popup": [
                     {
                         "Text": "Catastrophic failure",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Exclamation.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Exclamation.png"
                     }
                 ],
                 "Title": "Error",
@@ -345,7 +345,7 @@
                 "Popup": [
                     {
                         "Text": "Visit my github!",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Information.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Information.png"
                     }
                 ],
                 "Title": "Hey!",
@@ -380,7 +380,7 @@
                 "Popup": [
                     {
                         "Text": "You encountered HOTLINE WEBRING!",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Exclamation.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Exclamation.png"
                     }
                 ],
                 "Title": "WARNING",
@@ -420,7 +420,7 @@
                 "Popup": [
                     {
                         "Text": "Do you want to check out my friends website?",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Question.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Question.png"
                     }
                 ],
                 "Title": "tominhisroom.dev",
@@ -443,7 +443,7 @@
         },
         {
             "Title": "Link me!",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/oldma.png",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/oldma.png",
             "Command": "openNewTab",
             "Link": "",
             "Payload": {
@@ -478,7 +478,7 @@
         },
         {
             "Title": "Page Explorer",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Internet.ico",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Internet.ico",
             "Command": "openSingleNewTab",
             "Link": "",
             "Payload": {
@@ -497,7 +497,7 @@
         },
         {
             "Title": "Task Manager",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/pc.ico",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/pc.ico",
             "Command": "openNewTab",
             "Link": "",
             "Payload": {
@@ -528,7 +528,7 @@
         },
         {
             "Title": "Mobile Mode",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/phone.ico",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/phone.ico",
             "Command": "mobileMode",
             "Link": "",
             "Payload": {},
@@ -584,7 +584,7 @@
                 "Popup": [
                     {
                         "Text": "Do you want to check out my friends website?",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Question.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Question.png"
                     }
                 ],
                 "Title": "https://mielesgames.nl",
@@ -625,11 +625,11 @@
                 "Popup": [
                     {
                         "Text": "My Digital Garden is a place where I keep my documentation and notes. And notes can Link to other notes etc. It's a nice way to keep track of things.",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Information.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Information.png"
                     },
                     {
                         "Text": "Do you want to check out my digital garden?",
-                        "Img": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Question.png"
+                        "Img": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Question.png"
                     }
                 ],
                 "Title": "https://docs.oldmartijntje.nl",
@@ -654,7 +654,7 @@
     "taskBar": [
         {
             "Title": "Page Explorer",
-            "Icon": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/icons/Internet.ico",
+            "Icon": "https://api.oldmartijntje.nl/api/websiteData/assets/icons/Internet.ico",
             "Command": "openSingleNewTab",
             "Link": "",
             "Payload": {

@@ -2,7 +2,7 @@
     "smallAds": [
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/nicelyCSSed.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/nicelyCSSed.gif",
             "blank_": true
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "link": "./Chat",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/single.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/single.gif",
             "blank_": false
         },
         {
@@ -52,7 +52,7 @@
         },
         {
             "link": "http://www.saitogames.com/battlepainters/",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/battlePainters.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/battlePainters.gif",
             "blank_": true
         },
         {
@@ -62,7 +62,7 @@
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/robuzx.png",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/robuzx.png",
             "blank_": true
         },
         {
@@ -92,7 +92,7 @@
         },
         {
             "link": "https://open.spotify.com/track/0X3FKutBnvxqEBxH5xwkU2?si=f38dc45e5b734ef1",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/Button1.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/Button1.gif",
             "blank_": true
         },
         {
@@ -107,7 +107,7 @@
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/brainTraining.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/brainTraining.gif",
             "blank_": true
         },
         {
@@ -127,12 +127,12 @@
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/longus.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/longus.gif",
             "blank_": true
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/marioScared.png",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/marioScared.png",
             "blank_": true
         }
     ],
@@ -140,17 +140,17 @@
     "bigAds": [
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/carcassonne.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/carcassonne.gif",
             "blank_": true
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/scratch.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/scratch.gif",
             "blank_": true
         },
         {
             "link": "",
-            "image": "https://oldmartijntje.github.io/json-api/api/websiteData/assets/images/ads/partnerzInTiem.gif",
+            "image": "https://api.oldmartijntje.nl/api/websiteData/assets/images/ads/partnerzInTiem.gif",
             "blank_": true
         }
     ]
