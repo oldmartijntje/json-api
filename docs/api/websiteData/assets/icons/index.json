@@ -1,11 +1,38 @@
 {
     "path": "./docs/api/websiteData/assets/icons",
     "folders": [
-        "achievements"
+        "achievements",
+        "console icons"
     ],
     "files": [
+        "1up.png",
+        "Critical Error.png",
+        "disc1.png",
+        "Exclamation.png",
+        "exitButton.png",
+        "flag.png",
+        "flag2.png",
+        "greenArrow.png",
         "index.html",
-        "index.json"
+        "index.json",
+        "Information.png",
+        "Internet.ico",
+        "iso.png",
+        "load.ico",
+        "marioHeart.png",
+        "marioPowerHeart.png",
+        "moreApps.png",
+        "oldma.png",
+        "pc.ico",
+        "phone.ico",
+        "portal1.png",
+        "portal2.png",
+        "Question.png",
+        "Retro-Coin-icon.png",
+        "save.ico",
+        "saveButton.png",
+        "trash.ico",
+        "turnOff.ico"
     ],
     "parent": "../index.json"
 }

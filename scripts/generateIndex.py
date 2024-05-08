@@ -26,6 +26,7 @@ def createHTML(files, folders, filePath):
     content = '<h1>Index of ' + filePath + '</h1>\n'
     if (filePath != startingPos):
         content += '<strong><a href="../index.html" style="margin-bottom:1rem">[parent directory]</a></strong>\n'
+    content += '<strong><a href="./index.json" style="margin-bottom:1rem">.json index</a></strong>\n'
     for folder in folders:
         if folder == folders[0]:
             content += '<h2>Folders</h2>\n'
@@ -35,10 +36,10 @@ def createHTML(files, folders, filePath):
         if folder == folders[-1]:
             content += '</ul>\n'
     for file in files:
-        if file == files[0] and len(files) > 1:
+        if file == files[0] and len(files) > 2:
             content += '<h2>Files</h2>\n'
             content += '<ul>\n'
-        if file != 'index.html':
+        if file != 'index.html' and file != 'index.json':
             content += '<li><a href="./' + file + '">' + file + '</a></li>\n'
         if file == files[-1]:
             content += '</ul>\n'
