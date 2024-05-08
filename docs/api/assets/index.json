@@ -1,0 +1,15 @@
+{
+  "path": "./docs/api/assets",
+  "items": [
+    {
+      "name": "icons",
+      "type": "folder",
+      "path": "./docs/api/assets/icons"
+    },
+    {
+      "name": "images",
+      "type": "folder",
+      "path": "./docs/api/assets/images"
+    },
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "path": "./docs/api/assets/images",
+  "items": [
+    {
+      "name": "battlePainters.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/battlePainters.gif"
+    },
+    {
+      "name": "brainTraining.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/brainTraining.gif"
+    },
+    {
+      "name": "Button1.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/Button1.gif"
+    },
+    {
+      "name": "carcassonne.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/carcassonne.gif"
+    },
+    {
+      "name": "longus.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/longus.gif"
+    },
+    {
+      "name": "marioScared.png",
+      "type": "file",
+      "path": "./docs/api/assets/images/marioScared.png"
+    },
+    {
+      "name": "nicelyCSSed.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/nicelyCSSed.gif"
+    },
+    {
+      "name": "partnerzInTiem.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/partnerzInTiem.gif"
+    },
+    {
+      "name": "robuzx.png",
+      "type": "file",
+      "path": "./docs/api/assets/images/robuzx.png"
+    },
+    {
+      "name": "scratch.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/scratch.gif"
+    },
+    {
+      "name": "single.gif",
+      "type": "file",
+      "path": "./docs/api/assets/images/single.gif"
+    },
+  ]
+}

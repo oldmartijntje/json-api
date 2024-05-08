@@ -45,6 +45,34 @@ def createHTML(files, folders, filePath):
     
     return content
 
+def createJson(files, folders, filePath):
+    # Create the JSON content
+    content = '{\n'
+    content += '  "path": "' + filePath + '",\n'
+    content += '  "items": [\n'
+    for folder in folders:
+        content += '    {\n'
+        content += '      "name": "' + folder + '",\n'
+        content += '      "type": "folder",\n'
+        content += '      "path": "' + filePath + '/' + folder + '"\n'
+        content += '    },\n'
+    for file in files:
+        if file != 'index.html':
+            content += '    {\n'
+            content += '      "name": "' + file + '",\n'
+            content += '      "type": "file",\n'
+            content += '      "path": "' + filePath + '/' + file + '"\n'
+            content += '    },\n'
+    content += '  ]\n'
+    content += '}\n'
+    
+    return content
+
+def saveJson(content, filePath):
+    # Save the JSON content to a file
+    with open(filePath + '/index.json', 'w') as file:
+        file.write(content)
+
 def saveHTML(content, filePath):
     start = f'''<!DOCTYPE html>
 <html lang="en">
@@ -109,6 +137,8 @@ def saveHTML(content, filePath):
 def findIndented(folders, currentPath, files):
     html = createHTML(files, folders, currentPath)
     saveHTML(html, currentPath)
+    json = createJson(files, folders, currentPath)
+    saveJson(json, currentPath)
     for x in range(len(folders)):
         if folders[x] == 'node_modules':
             folders.pop(x)

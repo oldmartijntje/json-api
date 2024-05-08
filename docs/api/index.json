@@ -1,0 +1,10 @@
+{
+  "path": "./docs/api",
+  "items": [
+    {
+      "name": "assets",
+      "type": "folder",
+      "path": "./docs/api/assets"
+    },
+  ]
+}
