@@ -1,10 +1,1 @@
-{
-  "path": "./docs/api",
-  "items": [
-    {
-      "name": "assets",
-      "type": "folder",
-      "path": "./docs/api/assets"
-    },
-  ]
-}
+{'path': './docs/api', 'folders': ['assets'], 'files': ['index.html', 'index.json'], 'parent': '../index.json'}

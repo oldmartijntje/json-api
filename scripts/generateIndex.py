@@ -47,31 +47,23 @@ def createHTML(files, folders, filePath):
 
 def createJson(files, folders, filePath):
     # Create the JSON content
-    content = '{\n'
-    content += '  "path": "' + filePath + '",\n'
-    content += '  "items": [\n'
+    jsonFile = {}
+    jsonFile['path'] = filePath
+    jsonFile['folders'] = []
+    jsonFile['files'] = []
+    if (filePath != startingPos):
+        jsonFile['parent'] = '../index.json'
     for folder in folders:
-        content += '    {\n'
-        content += '      "name": "' + folder + '",\n'
-        content += '      "type": "folder",\n'
-        content += '      "path": "' + filePath + '/' + folder + '"\n'
-        content += '    },\n'
+        jsonFile['folders'].append(folder)
     for file in files:
-        if file != 'index.html':
-            content += '    {\n'
-            content += '      "name": "' + file + '",\n'
-            content += '      "type": "file",\n'
-            content += '      "path": "' + filePath + '/' + file + '"\n'
-            content += '    },\n'
-    content += '  ]\n'
-    content += '}\n'
+        jsonFile['files'].append(file)
     
-    return content
+    return jsonFile
 
 def saveJson(content, filePath):
     # Save the JSON content to a file
     with open(filePath + '/index.json', 'w') as file:
-        file.write(content)
+        file.write(str(content))
 
 def saveHTML(content, filePath):
     start = f'''<!DOCTYPE html>
