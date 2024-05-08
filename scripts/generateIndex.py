@@ -64,6 +64,8 @@ def saveHTML(content, filePath):
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        height: 100svh;
+        width: 100vw;
     }}
 
     a, a:visited {{
@@ -81,7 +83,7 @@ def saveHTML(content, filePath):
     .content {{
         margin: 1rem;
         flex-grow: 1;
-        overflow-y: auto;
+        overflow-y: scroll;
     }}
 </style>
 
