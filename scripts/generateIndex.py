@@ -95,7 +95,7 @@ def saveHTML(content, filePath):
     }}
 
     footer {{
-        width: calc(100% - 1rem);
+        width: calc(100% - 2rem);
         background-color: #1f1f1f;
         padding: 1rem;
         text-align: center;
