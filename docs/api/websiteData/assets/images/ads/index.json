@@ -1,0 +1,18 @@
+{
+    "path": "./docs/api/websiteData/assets/images/ads",
+    "folders": [],
+    "files": [
+        "battlePainters.gif",
+        "brainTraining.gif",
+        "Button1.gif",
+        "carcassonne.gif",
+        "longus.gif",
+        "marioScared.png",
+        "nicelyCSSed.gif",
+        "partnerzInTiem.gif",
+        "robuzx.png",
+        "scratch.gif",
+        "single.gif"
+    ],
+    "parent": "../index.json"
+}

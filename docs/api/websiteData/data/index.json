@@ -1,6 +1,11 @@
 {
     "path": "./docs/api/websiteData/data",
     "folders": [],
-    "files": [],
+    "files": [
+        "achievements.json",
+        "ads.json",
+        "index.html",
+        "index.json"
+    ],
     "parent": "../index.json"
 }
