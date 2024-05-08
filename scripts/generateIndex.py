@@ -67,7 +67,14 @@ def saveJson(content, filePath):
     json.dump(content, open(filePath + '/index.json', 'w'), indent=4)
 
 
-def saveHTML(content, filePath):
+def saveHTML(content, filePath, files, folders):
+    print(filePath)
+    webPathPatst = filePath.split('./docs/')
+    if len(webPathPatst) > 1:
+        webPath = webPathPatst[1]
+    else:
+        webPath = ""
+    webPath = 'https://api/oldmartijntje.nl/' + webPath
     start = f'''<!DOCTYPE html>
 <html lang="en">
 
@@ -75,6 +82,11 @@ def saveHTML(content, filePath):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <meta property="og:title" content="OldMartijntje.nl">
+    <meta property="og:description" content="OldMartijntje's API. View this folder which contains {len(files) + len(folders)} files/folders.">
+    <meta property="og:image" content="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
+    <meta property="og:url" content="{webPath}">
+    <meta property="og:type" content="website">
 </head>
 <style>
     body {{
@@ -130,7 +142,7 @@ def saveHTML(content, filePath):
 
 def findIndented(folders, currentPath, files):
     html = createHTML(files, folders, currentPath)
-    saveHTML(html, currentPath)
+    saveHTML(html, currentPath, files, folders)
     json = createJson(files, folders, currentPath)
     saveJson(json, currentPath)
     for x in range(len(folders)):

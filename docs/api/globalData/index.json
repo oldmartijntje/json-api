@@ -3,6 +3,8 @@
     "folders": [],
     "files": [
         "fullBlogs.json",
+        "index.html",
+        "index.json",
         "myBlog.json"
     ],
     "parent": "../index.json"

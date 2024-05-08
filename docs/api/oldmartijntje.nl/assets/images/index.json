@@ -4,8 +4,27 @@
         "ads"
     ],
     "files": [
+        "404.png",
+        "aprilFoolsQR.png",
+        "background.gif",
+        "bee.gif",
+        "crown.png",
         "index.html",
-        "index.json"
+        "index.json",
+        "mii full.png",
+        "mii.png",
+        "mobileUser.png",
+        "mobileUserRegular.pdn",
+        "mobileUserRegular.png",
+        "mobileUserRegular2.png",
+        "mobileUserRegular3.png",
+        "mobileUserRegular4.png",
+        "mobileUserRegularBackground.png",
+        "mobileUserRegularCopyright.png",
+        "mobileUserRegularPressAnywhere.png",
+        "myAI.jpeg",
+        "navigator.png",
+        "turtleWithEnvelope.png"
     ],
     "parent": "../index.json"
 }
