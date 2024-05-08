@@ -1,12 +1,15 @@
 {
-    "path": "./docs/api/websiteData/data",
+    "path": "./docs/api/oldmartijntje.nl/data",
     "folders": [],
     "files": [
         "achievements.json",
         "ads.json",
         "applications.json",
+        "gamesData.json",
         "index.html",
-        "index.json"
+        "index.json",
+        "projects.json",
+        "websiteDisplayItems.json"
     ],
     "parent": "../index.json"
 }

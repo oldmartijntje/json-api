@@ -1,8 +1,7 @@
 {
-    "path": "./docs/api/websiteData/assets",
+    "path": "./docs/api/oldmartijntje.nl/assets/images",
     "folders": [
-        "icons",
-        "images"
+        "ads"
     ],
     "files": [
         "index.html",
