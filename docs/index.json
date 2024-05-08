@@ -4,6 +4,7 @@
         "api"
     ],
     "files": [
+        "CNAME",
         "index.html",
         "index.json"
     ]
