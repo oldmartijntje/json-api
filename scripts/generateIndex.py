@@ -61,6 +61,8 @@ def saveHTML(content, filePath):
         padding: 0;
         background-color: #3c3c3c;
         color: #ffffff;
+        display: flex;
+        flex-direction: column;
     }}
 
     a, a:visited {{
@@ -68,17 +70,21 @@ def saveHTML(content, filePath):
     }}
 
     footer {{
-        position: fixed;
-        bottom: 0;
         width: 100%;
         background-color: #1f1f1f;
         padding: 1rem;
         text-align: center;
+        height: 12rem;
+    }}
+
+    .content {{
+        margin: 1rem;
+        flex-grow: 1;
     }}
 </style>
 
 <body>
-<div style="margin: 1rem">
+<div class="content">
 '''
 
     end = '''</div>
