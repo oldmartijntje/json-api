@@ -68,7 +68,6 @@ def saveJson(content, filePath):
 
 
 def saveHTML(content, filePath, files, folders):
-    print(filePath)
     webPathPatst = filePath.split('./docs/')
     if len(webPathPatst) > 1:
         webPath = webPathPatst[1]
