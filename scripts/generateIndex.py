@@ -1,6 +1,7 @@
 import os
 import subprocess
 import datetime
+import json
 
 title = 'OldMartijntje\'s Static API'
 
@@ -62,8 +63,8 @@ def createJson(files, folders, filePath):
 
 def saveJson(content, filePath):
     # Save the JSON content to a file
-    with open(filePath + '/index.json', 'w') as file:
-        file.write(str(content))
+    json.dump(content, open(filePath + '/index.json', 'w'))
+    
 
 def saveHTML(content, filePath):
     start = f'''<!DOCTYPE html>
