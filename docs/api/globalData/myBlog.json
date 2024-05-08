@@ -1,0 +1,17 @@
+{
+    "author": "OldMartijntje",
+    "lastUpdate": "08/05/2024",
+    "fullBlogsLocation": {
+        "public": "https://oldmartijntje.github.io/json-api/api/globalData/fullBlogs.json",
+        "local": "./docs/api/globalData/fullBlogs.json"
+    },
+    "blogs": [
+        {
+            "title": "Blog Init",
+            "url": "https://docs.oldmartijntje.nl/10-19-Spare-time/11-Writing/11.00-Blog/11.00.0001-Blog-Init",
+            "description": "The Initiation of this blog.",
+            "date": "08/05/2024",
+            "id": "b8413c1f-78ee-4701-9ede-ca675e0577c2"
+        }
+    ]
+}

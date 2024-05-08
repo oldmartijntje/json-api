@@ -1,6 +1,7 @@
 {
     "path": "./docs/api",
     "folders": [
+        "globalData",
         "oldmartijntje.nl",
         "projects"
     ],

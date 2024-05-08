@@ -1,0 +1,9 @@
+{
+    "path": "./docs/api/globalData",
+    "folders": [],
+    "files": [
+        "fullBlogs.json",
+        "myBlog.json"
+    ],
+    "parent": "../index.json"
+}
