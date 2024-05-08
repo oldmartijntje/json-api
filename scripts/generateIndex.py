@@ -151,5 +151,5 @@ findIndented(folders, startingPos, files)
 
 # commit using subprocess
 subprocess.run(['git', 'add', '.'])
-subprocess.run(['git', 'commit', '-m', 'Updated index.html files.'])
+subprocess.run(['git', 'commit', '-m', 'Updating Data.'])
 subprocess.run(['git', 'push'])
