@@ -81,7 +81,7 @@ def saveHTML(content, filePath, files, folders):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
-    <meta property="og:title" content="api.OldMartijntje.nl">
+    <meta property="og:title" content="api.oldmartijntje.nl">
     <meta property="og:description" content="OldMartijntje's API. View this folder which contains {len(files) + len(folders)} files/folders.">
     <meta property="og:image" content="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
     <meta property="og:url" content="{webPath}">
