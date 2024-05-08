@@ -1,0 +1,9 @@
+{
+    "path": "./docs/api/websiteData",
+    "folders": [
+        "assets",
+        "data"
+    ],
+    "files": [],
+    "parent": "../index.json"
+}
