@@ -4,6 +4,7 @@
     "files": [
         "achievements.json",
         "ads.json",
+        "applications.json",
         "index.html",
         "index.json"
     ],

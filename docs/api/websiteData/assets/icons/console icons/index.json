@@ -81,7 +81,9 @@
         "console_79.png",
         "console_8.png",
         "console_80.png",
-        "console_9.png"
+        "console_9.png",
+        "index.html",
+        "index.json"
     ],
     "parent": "../index.json"
 }
