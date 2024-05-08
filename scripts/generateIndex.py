@@ -24,7 +24,7 @@ def createHTML(files, folders, filePath):
     # Create the HTML content
     content = '<h1>Index of ' + filePath + '</h1>\n'
     if (filePath != startingPos):
-        content += '<a href="../index.html">Back</a>\n'
+        content += '<strong><a href="../index.html" style="margin-bottom:1rem">Back</a></strong>\n'
     for folder in folders:
         if folder == folders[0]:
             content += '<h2>Folders</h2>\n'
