@@ -80,6 +80,7 @@ def saveHTML(content, filePath, files, folders):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
     <title>{title}</title>
     <meta property="og:title" content="api.oldmartijntje.nl">
     <meta property="og:description" content="OldMartijntje's API. View this folder: &quot;{filePath}&quot;\nIt contains {len(files)-2} files and {len(folders)} folders.">
