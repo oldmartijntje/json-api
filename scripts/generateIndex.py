@@ -63,8 +63,8 @@ def createJson(files, folders, filePath):
 
 def saveJson(content, filePath):
     # Save the JSON content to a file
-    json.dump(content, open(filePath + '/index.json', 'w'))
-    
+    json.dump(content, open(filePath + '/index.json', 'w'), indent=4)
+
 
 def saveHTML(content, filePath):
     start = f'''<!DOCTYPE html>

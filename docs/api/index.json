@@ -1,1 +1,11 @@
-{"path": "./docs/api", "folders": ["assets"], "files": ["index.html", "index.json"], "parent": "../index.json"}
+{
+    "path": "./docs/api",
+    "folders": [
+        "assets"
+    ],
+    "files": [
+        "index.html",
+        "index.json"
+    ],
+    "parent": "../index.json"
+}

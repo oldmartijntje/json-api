@@ -1,1 +1,10 @@
-{"path": "./docs", "folders": ["api"], "files": ["index.html", "index.json"]}
+{
+    "path": "./docs",
+    "folders": [
+        "api"
+    ],
+    "files": [
+        "index.html",
+        "index.json"
+    ]
+}
