@@ -2,6 +2,9 @@
     "path": "./docs/api/projects",
     "folders": [],
     "files": [
+        "henk-empire-new-kingdoms_battlecards.json",
+        "index.html",
+        "index.json",
         "project-viewer_achievements.json",
         "project-viewer_offlineProjects.json"
     ],
