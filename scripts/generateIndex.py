@@ -2,8 +2,33 @@ import os
 import subprocess
 import datetime
 import json
+import tkinter as tk
+from tkinter import filedialog
 
 title = 'OldMartijntje\'s Static API'
+
+def createSettingsJson():
+    settings = {}
+    settings['title'] = 'OldMartijntje\'s Static API'
+    settings['startingPos'] = './docs'
+    settings['webPath'] = 'https://api.oldmartijntje.nl/'
+    settings['icon'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
+
+    with open('./settings.json', 'w') as file:
+        json.dump(settings, file, indent=4)
+    
+
+
+def loadSettingsJson():
+    try:
+        with open('./settings.json') as file:
+            settings = json.load(file)
+    except:
+        settings = createSettingsJson()
+
+        filedialog.askopenfilename()
+
+    return settings
 
 def list_files_and_folders(directory):
     # Get list of all files and folders in the directory
@@ -130,7 +155,7 @@ def saveHTML(content, filePath, files, folders):
         <h2>OldMartijntje &copy;</h2>
         <a href="https://oldmartijntje.nl">My Website</a>
         <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
-        <p>Generated this index with a Python script</p>
+        <p>Generated this index with <a href="">a Python script</a></p>
         <p>Last updated: ''' + str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p')) + '''</p>
     </footer>
 </body>
@@ -153,6 +178,8 @@ def findIndented(folders, currentPath, files):
             files, subfolders = list_files_and_folders(newPath)
             findIndented(subfolders, newPath, files)
     
+
+print(loadSettingsJson())
 
 startingPos = './docs'
 try:

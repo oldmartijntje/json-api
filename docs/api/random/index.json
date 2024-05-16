@@ -3,6 +3,9 @@
     "folders": [
         "lists"
     ],
-    "files": [],
+    "files": [
+        "index.html",
+        "index.json"
+    ],
     "parent": "../index.json"
 }
