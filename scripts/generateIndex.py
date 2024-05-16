@@ -229,8 +229,8 @@ def createHTML(files, folders, filePath):
             content += f'<h2>Folders ({len(folders)})</h2>\n'
             content += '<ul>\n'
         content += '<li class="fileLine"><strong><a href="./'+folder['name']+'/index.html">./' +folder['name'] + '</a></strong>'
-        content += '<span class="childrenAmount" title="Amount of children">' + str(folder['childrenAmount']-2) + ' Items </span>'
-        content += '<span class="time-since" data-value="' + str(datetime.datetime.fromtimestamp(folder['lastModified']).isoformat()) + '"></span>'
+        content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
+        content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(folder['lastModified']).isoformat()) + '"></span>'
         content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(folder['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
         content += '</li>\n'
         if folder == folders[-1]:
@@ -242,7 +242,7 @@ def createHTML(files, folders, filePath):
         if file['name'] != 'index.html' and file['name'] != 'index.json':
             content += '<li class="fileLine"><a href="./' + file['name'] + '">' + file['name'] + '</a>'
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
-            content += '<span class="time-since" data-value="' + str(datetime.datetime.fromtimestamp(file['lastModified']).isoformat()) + '"></span>'
+            content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(file['lastModified']).isoformat()) + '"></span>'
             content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(file['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
             content += '</li>\n'
         if file == files[-1]:
