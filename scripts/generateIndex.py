@@ -30,6 +30,9 @@ def loadSettingsJson():
         settings = createSettingsJson()
 
         showerror('Error', 'No settings.json file found. A new one has been created. Please fill in the settings.')
+        # open the folder in the file explorer
+        os.system('explorer /select,settings.json')
+        exit()
 
     return settings
 
