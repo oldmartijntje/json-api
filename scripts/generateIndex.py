@@ -119,13 +119,14 @@ def list_files_and_folders(directory):
 
 def createHTML(files, folders, filePath):
     # Create the HTML content
-    content = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
-    content += '<header>\n'
+    header = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
+    header += '<header>\n'
     if (filePath != startingPos):
-        content += '<strong><a href="../index.html">[parent directory]</a></strong>\n'
-        content += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
-    content += '<strong><a href="./index.json">[json index]</a></strong>\n'
-    content += '</header>\n'
+        header += '<strong><a href="../index.html">[parent directory]</a></strong>\n'
+        header += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
+    header += '<strong><a href="./index.json">[json index]</a></strong>\n'
+    header += '</header>\n'
+    content = ''
     for folder in folders:
         if folder == folders[0]:
             content += '<h2>Folders</h2>\n'
@@ -144,7 +145,7 @@ def createHTML(files, folders, filePath):
             content += '</ul>\n'
     content += '</ul>'
     
-    return content
+    return header, content
 
 def createJson(files, folders, filePath):
     # Create the JSON content
@@ -176,7 +177,7 @@ def ignoreBasePathInWebPath(filePath, settings):
     return webPath
 
 
-def saveHTML(content, filePath, files, folders):
+def saveHTML(header, content, filePath, files, folders):
     webPathPatst = filePath.split('./docs/')
     if len(webPathPatst) > 1:
         webPath = webPathPatst[1]
@@ -202,8 +203,10 @@ def saveHTML(content, filePath, files, folders):
 </style>
 
 <body>
-<div class="content">
 '''
+    
+    middle = f'''<div class="content">
+    '''
 
     end = f'''</div>
     <footer>
@@ -215,11 +218,11 @@ def saveHTML(content, filePath, files, folders):
 </html>'''
     # Save the HTML content to a file
     with open(filePath + '/index.html', 'w') as file:
-        file.write(start + content + end)
+        file.write(start + header + middle + content + end)
 
 def findIndented(folders, currentPath, files):
-    html = createHTML(files, folders, currentPath)
-    saveHTML(html, currentPath, files, folders)
+    header, content = createHTML(files, folders, currentPath)
+    saveHTML(header, content, currentPath, files, folders)
     json = createJson(files, folders, currentPath)
     saveJson(json, currentPath)
     for x in range(len(folders)):
