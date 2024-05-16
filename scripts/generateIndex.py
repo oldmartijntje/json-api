@@ -118,6 +118,10 @@ header {
         gap: 0.5rem;
     }
 
+    .modifiedDate {
+        display: none;
+    }
+
 }
 
 '''
