@@ -39,6 +39,20 @@ footer {
     height: 12rem;
 }
 
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+#title {
+    word-wrap: break-word;
+}
+
+#indexName {
+    text-decoration: underline;
+}
+
 header {
     width: calc(100% - 2rem);
     background-color: #1f1f1f;
@@ -53,9 +67,11 @@ header {
 </style>
 
 <body>
-<h1>Index of https://api.oldmartijntje.nl</h1>
 <header>
+<h1 id="title">Index of <span id="indexName">https://api.oldmartijntje.nl</span></h1>
+<div class="buttons">
 <strong><a href="./index.json">[json index]</a></strong>
+</div>
 </header>
 <div class="content">
     <h2>Folders</h2>
@@ -74,7 +90,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:09PM</p>
+        <p>Last updated: 16/05/24 22:19PM</p>
     </footer>
 </body>
 

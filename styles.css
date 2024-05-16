@@ -23,6 +23,20 @@ footer {
     height: 12rem;
 }
 
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+#title {
+    word-wrap: break-word;
+}
+
+#indexName {
+    text-decoration: underline;
+}
+
 header {
     width: calc(100% - 2rem);
     background-color: #1f1f1f;

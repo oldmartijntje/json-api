@@ -71,6 +71,20 @@ footer {
     height: 12rem;
 }
 
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+#title {
+    word-wrap: break-word;
+}
+
+#indexName {
+    text-decoration: underline;
+}
+
 header {
     width: calc(100% - 2rem);
     background-color: #1f1f1f;
@@ -119,12 +133,14 @@ def list_files_and_folders(directory):
 
 def createHTML(files, folders, filePath):
     # Create the HTML content
-    header = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
-    header += '<header>\n'
+    header = '<header>\n'
+    header += '<h1 id="title">Index of <span id="indexName">' + ignoreBasePathInWebPath(filePath, settings) + '</span></h1>\n'
+    header += '<div class="buttons">\n'
     if (filePath != startingPos):
         header += '<strong><a href="../index.html">[parent directory]</a></strong>\n'
         header += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
     header += '<strong><a href="./index.json">[json index]</a></strong>\n'
+    header += '</div>\n'
     header += '</header>\n'
     content = ''
     for folder in folders:
