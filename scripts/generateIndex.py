@@ -107,13 +107,20 @@ header {
     flex: 2 1 40%;
 }  
 
-
-
 .content {
     margin: 1rem;
     flex-grow: 1;
     overflow-y: scroll;
-}'''
+}
+
+@media only screen and (max-width: 800px) {
+    .fileLine {
+        gap: 0.5rem;
+    }
+
+}
+
+'''
         with open('./styles.css', 'w') as file:
             file.write(styles)
             file.close()

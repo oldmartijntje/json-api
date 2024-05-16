@@ -74,13 +74,20 @@ header {
     flex: 2 1 40%;
 }  
 
-
-
 .content {
     margin: 1rem;
     flex-grow: 1;
     overflow-y: scroll;
 }
+
+@media only screen and (max-width: 800px) {
+    .fileLine {
+        gap: 0.5rem;
+    }
+
+}
+
+
 </style>
 
 <body>
@@ -135,7 +142,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 23:16PM</p>
+        <p>Last updated: 16/05/24 23:20PM</p>
     </footer>
     <script>
     
