@@ -1,38 +1,186 @@
 {
     "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/icons",
     "folders": [
-        "achievements",
-        "console icons"
+        {
+            "name": "achievements",
+            "childrenAmount": 53,
+            "lastModified": 1715165318.2572572
+        },
+        {
+            "name": "console icons",
+            "childrenAmount": 82,
+            "lastModified": 1715165663.139296
+        }
     ],
     "files": [
-        "1up.png",
-        "Critical Error.png",
-        "disc1.png",
-        "Exclamation.png",
-        "exitButton.png",
-        "flag.png",
-        "flag2.png",
-        "greenArrow.png",
-        "index.html",
-        "index.json",
-        "Information.png",
-        "Internet.ico",
-        "iso.png",
-        "load.ico",
-        "marioHeart.png",
-        "marioPowerHeart.png",
-        "moreApps.png",
-        "oldma.png",
-        "pc.ico",
-        "phone.ico",
-        "portal1.png",
-        "portal2.png",
-        "Question.png",
-        "Retro-Coin-icon.png",
-        "save.ico",
-        "saveButton.png",
-        "trash.ico",
-        "turnOff.ico"
+        {
+            "name": "1up.png",
+            "size": 1029,
+            "lastModified": 1700472951.2601027,
+            "type": "png"
+        },
+        {
+            "name": "Critical Error.png",
+            "size": 2321,
+            "lastModified": 1700163039.646199,
+            "type": "png"
+        },
+        {
+            "name": "disc1.png",
+            "size": 19632,
+            "lastModified": 1703152162.4136035,
+            "type": "png"
+        },
+        {
+            "name": "Exclamation.png",
+            "size": 1895,
+            "lastModified": 1700163090.623246,
+            "type": "png"
+        },
+        {
+            "name": "exitButton.png",
+            "size": 289,
+            "lastModified": 1703177874.762265,
+            "type": "png"
+        },
+        {
+            "name": "flag.png",
+            "size": 9424,
+            "lastModified": 1700498814.0015762,
+            "type": "png"
+        },
+        {
+            "name": "flag2.png",
+            "size": 16897,
+            "lastModified": 1700863046.3768392,
+            "type": "png"
+        },
+        {
+            "name": "greenArrow.png",
+            "size": 990,
+            "lastModified": 1700338385.499249,
+            "type": "png"
+        },
+        {
+            "name": "index.html",
+            "size": 11921,
+            "lastModified": 1715893686.4250698,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 4988,
+            "lastModified": 1715893686.4270976,
+            "type": "json"
+        },
+        {
+            "name": "Information.png",
+            "size": 2397,
+            "lastModified": 1700163090.666248,
+            "type": "png"
+        },
+        {
+            "name": "Internet.ico",
+            "size": 3774,
+            "lastModified": 1700162705.6895652,
+            "type": "ico"
+        },
+        {
+            "name": "iso.png",
+            "size": 2963,
+            "lastModified": 1700506083.2809215,
+            "type": "png"
+        },
+        {
+            "name": "load.ico",
+            "size": 1406,
+            "lastModified": 1700162732.545135,
+            "type": "ico"
+        },
+        {
+            "name": "marioHeart.png",
+            "size": 46414,
+            "lastModified": 1700484209.885794,
+            "type": "png"
+        },
+        {
+            "name": "marioPowerHeart.png",
+            "size": 60998,
+            "lastModified": 1700484233.2853546,
+            "type": "png"
+        },
+        {
+            "name": "moreApps.png",
+            "size": 823,
+            "lastModified": 1706624941.6528764,
+            "type": "png"
+        },
+        {
+            "name": "oldma.png",
+            "size": 20909,
+            "lastModified": 1700258770.0744224,
+            "type": "png"
+        },
+        {
+            "name": "pc.ico",
+            "size": 766,
+            "lastModified": 1700162727.7291372,
+            "type": "ico"
+        },
+        {
+            "name": "phone.ico",
+            "size": 9662,
+            "lastModified": 1700162712.9771688,
+            "type": "ico"
+        },
+        {
+            "name": "portal1.png",
+            "size": 477,
+            "lastModified": 1703172966.3181434,
+            "type": "png"
+        },
+        {
+            "name": "portal2.png",
+            "size": 485,
+            "lastModified": 1703172977.7215595,
+            "type": "png"
+        },
+        {
+            "name": "Question.png",
+            "size": 2470,
+            "lastModified": 1700163090.713249,
+            "type": "png"
+        },
+        {
+            "name": "Retro-Coin-icon.png",
+            "size": 412,
+            "lastModified": 1700345065.8975875,
+            "type": "png"
+        },
+        {
+            "name": "save.ico",
+            "size": 9662,
+            "lastModified": 1700162712.6331346,
+            "type": "ico"
+        },
+        {
+            "name": "saveButton.png",
+            "size": 283,
+            "lastModified": 1703177854.4179888,
+            "type": "png"
+        },
+        {
+            "name": "trash.ico",
+            "size": 2238,
+            "lastModified": 1700162735.7291374,
+            "type": "ico"
+        },
+        {
+            "name": "turnOff.ico",
+            "size": 3774,
+            "lastModified": 1700162722.3591359,
+            "type": "ico"
+        }
     ],
     "parent": "../index.json"
 }

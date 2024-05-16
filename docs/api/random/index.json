@@ -1,11 +1,25 @@
 {
     "path": "https://api.oldmartijntje.nl/api/random",
     "folders": [
-        "lists"
+        {
+            "name": "lists",
+            "childrenAmount": 7,
+            "lastModified": 1715870497.6562262
+        }
     ],
     "files": [
-        "index.html",
-        "index.json"
+        {
+            "name": "index.html",
+            "size": 4614,
+            "lastModified": 1715893686.524288,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 597,
+            "lastModified": 1715893686.525287,
+            "type": "json"
+        }
     ],
     "parent": "../index.json"
 }

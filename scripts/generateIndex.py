@@ -20,7 +20,8 @@ def createSettingsJson():
     settings['embedTitle'] = 'api.oldmartijntje.nl'
     settings['embedDescription'] = 'OldMartijntje\'s API.'
     settings['commitOnRun'] = True
-    settings['alwaysDefaultStyles'] = False
+    settings['alwaysDefaultStyles'] = True
+    settings['alwaysDefaultJavascript'] = True
     settings['footer'] = '''
     <h2>OldMartijntje &copy;</h2>
     <a href="https://oldmartijntje.nl">My Website</a>
@@ -91,6 +92,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -100,6 +118,59 @@ header {
             file.write(styles)
             file.close()
     return styles
+
+def loadJavascript():
+    try:
+        if loadSetting(settings, 'alwaysDefaultJavascript'):
+            raise Exception
+        javascript = open('./scripts.js', 'r').read()
+    except:
+        javascript = '''
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        '''
+        with open('./scripts.js', 'w') as file:
+            file.write(javascript)
+            file.close()
+    return javascript
 
 def loadSettingsJson():
     try:
@@ -125,10 +196,9 @@ def list_files_and_folders(directory):
     for item in contents:
         item_path = os.path.join(directory, item)
         if os.path.isfile(item_path):
-            files.append(item)
+            files.append({'name': item, 'size': os.path.getsize(item_path), 'lastModified': os.path.getmtime(item_path), 'type': item.split('.')[-1]})
         elif os.path.isdir(item_path):
-            folders.append(item)
-    
+            folders.append({'name': item, 'childrenAmount': len(os.listdir(item_path)), 'lastModified': os.path.getmtime(item_path)})
     return files, folders
 
 def createHTML(files, folders, filePath):
@@ -145,23 +215,40 @@ def createHTML(files, folders, filePath):
     content = ''
     for folder in folders:
         if folder == folders[0]:
-            content += '<h2>Folders</h2>\n'
+            content += f'<h2>Folders ({len(folders)})</h2>\n'
             content += '<ul>\n'
-        content += '<li><strong><a href="./'+folder+'/index.html">./' +folder + '</a></strong>'
+        content += '<li class="fileLine"><strong><a href="./'+folder['name']+'/index.html">./' +folder['name'] + '</a></strong>'
+        content += '<span class="childrenAmount" title="Amount of children">' + str(folder['childrenAmount']-2) + ' Items </span>'
+        content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(folder['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
+        content += '<span class="time-since" data-value="' + str(datetime.datetime.fromtimestamp(folder['lastModified']).isoformat()) + '"></span>'
         content += '</li>\n'
         if folder == folders[-1]:
             content += '</ul>\n'
     for file in files:
         if file == files[0] and len(files) > 2:
-            content += '<h2>Files</h2>\n'
+            content += f'<h2>Files ({len(files)-2})</h2>\n'
             content += '<ul>\n'
-        if file != 'index.html' and file != 'index.json':
-            content += '<li><a href="./' + file + '">' + file + '</a></li>\n'
+        if file['name'] != 'index.html' and file['name'] != 'index.json':
+            content += '<li class="fileLine"><a href="./' + file['name'] + '">' + file['name'] + '</a>'
+            content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
+            content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(file['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
+            content += '<span class="time-since" data-value="' + str(datetime.datetime.fromtimestamp(file['lastModified']).isoformat()) + '"></span>'
+            content += '</li>\n'
         if file == files[-1]:
             content += '</ul>\n'
     content += '</ul>'
     
     return header, content
+
+def fileSizeCalculator(size):
+    if size < 1000:
+        return str(size) + ' bytes'
+    elif size < 1000000:
+        return str(size/1000) + ' KB'
+    elif size < 1000000000:
+        return str(size/1000000) + ' MB'
+    else:
+        return str(size/1000000000) + ' GB'
 
 def createJson(files, folders, filePath):
     # Create the JSON content
@@ -227,8 +314,11 @@ def saveHTML(header, content, filePath, files, folders):
     end = f'''</div>
     <footer>
         {loadSetting(settings, 'footer')}
-        <p>Last updated: ''' + str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p')) + '''</p>
+        <p>Last updated: {str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))}</p>
     </footer>
+    <script>
+    {javascript}
+    </script>
 </body>
 
 </html>'''
@@ -242,16 +332,17 @@ def findIndented(folders, currentPath, files):
     json = createJson(files, folders, currentPath)
     saveJson(json, currentPath)
     for x in range(len(folders)):
-        if folders[x] == 'node_modules':
+        if folders[x]['name'] == 'node_modules':
             folders.pop(x)
         else:
-            newPath = currentPath + '/' + folders[x]
+            newPath = currentPath + '/' + folders[x]['name']
             files, subfolders = list_files_and_folders(newPath)
             findIndented(subfolders, newPath, files)
     
 
 settings = loadSettingsJson()
 styling = loadStyling()
+javascript = loadJavascript()
 
 startingPos = loadSetting(settings, 'startingFolder')
 try:

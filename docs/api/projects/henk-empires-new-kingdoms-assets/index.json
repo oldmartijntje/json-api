@@ -1,12 +1,30 @@
 {
     "path": "https://api.oldmartijntje.nl/api/projects/henk-empires-new-kingdoms-assets",
     "folders": [
-        "icons",
-        "images"
+        {
+            "name": "icons",
+            "childrenAmount": 69,
+            "lastModified": 1715191206.22736
+        },
+        {
+            "name": "images",
+            "childrenAmount": 134,
+            "lastModified": 1715191206.2369432
+        }
     ],
     "files": [
-        "index.html",
-        "index.json"
+        {
+            "name": "index.html",
+            "size": 5024,
+            "lastModified": 1715893686.4774868,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 769,
+            "lastModified": 1715893686.4784832,
+            "type": "json"
+        }
     ],
     "parent": "../index.json"
 }

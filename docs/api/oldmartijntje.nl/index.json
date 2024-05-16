@@ -1,12 +1,30 @@
 {
     "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl",
     "folders": [
-        "assets",
-        "data"
+        {
+            "name": "assets",
+            "childrenAmount": 4,
+            "lastModified": 1715164301.1505764
+        },
+        {
+            "name": "data",
+            "childrenAmount": 8,
+            "lastModified": 1715169059.1164284
+        }
     ],
     "files": [
-        "index.html",
-        "index.json"
+        {
+            "name": "index.html",
+            "size": 4944,
+            "lastModified": 1715893686.411371,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 742,
+            "lastModified": 1715893686.4123785,
+            "type": "json"
+        }
     ],
     "parent": "../index.json"
 }

@@ -8,5 +8,6 @@
     "embedDescription": "OldMartijntje's API.",
     "commitOnRun": true,
     "alwaysDefaultStyles": true,
+    "alwaysDefaultJavascript": true,
     "footer": "\n    <h2>OldMartijntje &copy;</h2>\n    <a href=\"https://oldmartijntje.nl\">My Website</a>\n    <a href=\"https://docs.oldmartijntje.nl\">My Digital Garden</a>\n    <p>Generated this index with <a href=\"https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py\">a python script</a></p>\n    "
 }

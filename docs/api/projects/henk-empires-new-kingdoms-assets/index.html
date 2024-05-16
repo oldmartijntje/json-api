@@ -59,6 +59,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -76,10 +93,10 @@ header {
 </div>
 </header>
 <div class="content">
-    <h2>Folders</h2>
+    <h2>Folders (2)</h2>
 <ul>
-<li><strong><a href="./icons/index.html">./icons</a></strong></li>
-<li><strong><a href="./images/index.html">./images</a></strong></li>
+<li class="fileLine"><strong><a href="./icons/index.html">./icons</a></strong><span class="childrenAmount" title="Amount of children">67 Items </span><span class="modifiedDate" title="Last Modified">08/05/24 20:00PM</span><span class="time-since" data-value="2024-05-08T20:00:06.227360"></span></li>
+<li class="fileLine"><strong><a href="./images/index.html">./images</a></strong><span class="childrenAmount" title="Amount of children">132 Items </span><span class="modifiedDate" title="Last Modified">08/05/24 20:00PM</span><span class="time-since" data-value="2024-05-08T20:00:06.236943"></span></li>
 </ul>
 </ul>
 </ul></div>
@@ -90,8 +107,52 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:19PM</p>
+        <p>Last updated: 16/05/24 23:10PM</p>
     </footer>
+    <script>
+    
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        
+    </script>
 </body>
 
 </html>

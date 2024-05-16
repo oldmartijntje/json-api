@@ -59,6 +59,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -76,15 +93,15 @@ header {
 </div>
 </header>
 <div class="content">
-    <h2>Folders</h2>
+    <h2>Folders (1)</h2>
 <ul>
-<li><strong><a href="./henk-empires-new-kingdoms-assets/index.html">./henk-empires-new-kingdoms-assets</a></strong></li>
+<li class="fileLine"><strong><a href="./henk-empires-new-kingdoms-assets/index.html">./henk-empires-new-kingdoms-assets</a></strong><span class="childrenAmount" title="Amount of children">2 Items </span><span class="modifiedDate" title="Last Modified">08/05/24 20:00PM</span><span class="time-since" data-value="2024-05-08T20:00:06.221768"></span></li>
 </ul>
-<h2>Files</h2>
+<h2>Files (3)</h2>
 <ul>
-<li><a href="./henk-empire-new-kingdoms.json">henk-empire-new-kingdoms.json</a></li>
-<li><a href="./project-viewer_achievements.json">project-viewer_achievements.json</a></li>
-<li><a href="./project-viewer_offlineProjects.json">project-viewer_offlineProjects.json</a></li>
+<li class="fileLine"><a href="./henk-empire-new-kingdoms.json">henk-empire-new-kingdoms.json</a><span class="size" title="File Size">103.499 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 19:59PM</span><span class="time-since" data-value="2024-05-08T19:59:42.525578"></span></li>
+<li class="fileLine"><a href="./project-viewer_achievements.json">project-viewer_achievements.json</a><span class="size" title="File Size">3.967 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 13:55PM</span><span class="time-since" data-value="2024-05-08T13:55:22.723519"></span></li>
+<li class="fileLine"><a href="./project-viewer_offlineProjects.json">project-viewer_offlineProjects.json</a><span class="size" title="File Size">41.189 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 13:54PM</span><span class="time-since" data-value="2024-05-08T13:54:45.094220"></span></li>
 </ul>
 </ul></div>
     <footer>
@@ -94,8 +111,52 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:19PM</p>
+        <p>Last updated: 16/05/24 23:10PM</p>
     </footer>
+    <script>
+    
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        
+    </script>
 </body>
 
 </html>

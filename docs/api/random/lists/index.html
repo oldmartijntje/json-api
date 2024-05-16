@@ -59,6 +59,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -76,13 +93,13 @@ header {
 </div>
 </header>
 <div class="content">
-    <h2>Files</h2>
+    <h2>Files (5)</h2>
 <ul>
-<li><a href="./filmTheoryMatpatDump.json">filmTheoryMatpatDump.json</a></li>
-<li><a href="./foodTheoryMatpatDump.json">foodTheoryMatpatDump.json</a></li>
-<li><a href="./gameTheoryMatpatDump.json">gameTheoryMatpatDump.json</a></li>
-<li><a href="./styleTheoryMatpatDump.json">styleTheoryMatpatDump.json</a></li>
-<li><a href="./vacantieLijst.json">vacantieLijst.json</a></li>
+<li class="fileLine"><a href="./filmTheoryMatpatDump.json">filmTheoryMatpatDump.json</a><span class="size" title="File Size">76.406 KB</span><span class="modifiedDate" title="Last Modified">11/03/24 12:52PM</span><span class="time-since" data-value="2024-03-11T12:52:42.399952"></span></li>
+<li class="fileLine"><a href="./foodTheoryMatpatDump.json">foodTheoryMatpatDump.json</a><span class="size" title="File Size">32.107 KB</span><span class="modifiedDate" title="Last Modified">11/03/24 12:52PM</span><span class="time-since" data-value="2024-03-11T12:52:53.906593"></span></li>
+<li class="fileLine"><a href="./gameTheoryMatpatDump.json">gameTheoryMatpatDump.json</a><span class="size" title="File Size">106.405 KB</span><span class="modifiedDate" title="Last Modified">11/03/24 12:53PM</span><span class="time-since" data-value="2024-03-11T12:53:05.252935"></span></li>
+<li class="fileLine"><a href="./styleTheoryMatpatDump.json">styleTheoryMatpatDump.json</a><span class="size" title="File Size">7.753 KB</span><span class="modifiedDate" title="Last Modified">11/03/24 12:52PM</span><span class="time-since" data-value="2024-03-11T12:52:28.019556"></span></li>
+<li class="fileLine"><a href="./vacantieLijst.json">vacantieLijst.json</a><span class="size" title="File Size">3.284 KB</span><span class="modifiedDate" title="Last Modified">16/05/24 19:23PM</span><span class="time-since" data-value="2024-05-16T19:23:10.039958"></span></li>
 </ul>
 </ul></div>
     <footer>
@@ -92,8 +109,52 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:19PM</p>
+        <p>Last updated: 16/05/24 23:10PM</p>
     </footer>
+    <script>
+    
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        
+    </script>
 </body>
 
 </html>

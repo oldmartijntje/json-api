@@ -2,75 +2,420 @@
     "path": "https://api.oldmartijntje.nl/api/projects/henk-empires-new-kingdoms-assets/icons",
     "folders": [],
     "files": [
-        "404nf.png",
-        "Active.png",
-        "aim.png",
-        "bow.png",
-        "brick.png",
-        "coins.png",
-        "D20.png",
-        "D6.png",
-        "description.png",
-        "duckbot.png",
-        "electric.png",
-        "emptyIcon.png",
-        "energy.png",
-        "eyesEmoji.png",
-        "fire.png",
-        "gem1.png",
-        "gem2.png",
-        "gem3.png",
-        "gem4.png",
-        "gem5.png",
-        "gem6.png",
-        "ggcu.png",
-        "glove.png",
-        "green.png",
-        "henk.png",
-        "index.html",
-        "index.json",
-        "mijnkjweft.png",
-        "mushroom.png",
-        "ongoing.png",
-        "ongoingLocation.png",
-        "onreveal.png",
-        "onrevealLocation.png",
-        "oreRecourse.png",
-        "partypopper.png",
-        "power.png",
-        "questionmarks.png",
-        "RandomGem.png",
-        "revolution.png",
-        "shroobLanguage1.png",
-        "shroobLanguage10.png",
-        "shroobLanguage11.png",
-        "shroobLanguage12.png",
-        "shroobLanguage13.png",
-        "shroobLanguage14.png",
-        "shroobLanguage15.png",
-        "shroobLanguage16.png",
-        "shroobLanguage17.png",
-        "shroobLanguage18.png",
-        "shroobLanguage19.png",
-        "shroobLanguage2.png",
-        "shroobLanguage3.png",
-        "shroobLanguage4.png",
-        "shroobLanguage5.png",
-        "shroobLanguage6.png",
-        "shroobLanguage7.png",
-        "shroobLanguage8.png",
-        "shroobLanguage9.png",
-        "special.png",
-        "specialLocation.png",
-        "stone.png",
-        "stoneRecourse.png",
-        "UnknownBattleCard.png",
-        "victoryPoint.png",
-        "water.png",
-        "wheatRecourse.png",
-        "wind.png",
-        "woodRecourse.png",
-        "woolRecourse.png"
+        {
+            "name": "404nf.png",
+            "size": 2686,
+            "lastModified": 1715160162.683236,
+            "type": "png"
+        },
+        {
+            "name": "Active.png",
+            "size": 5595,
+            "lastModified": 1715160162.7132804,
+            "type": "png"
+        },
+        {
+            "name": "aim.png",
+            "size": 5368,
+            "lastModified": 1715160162.8646774,
+            "type": "png"
+        },
+        {
+            "name": "bow.png",
+            "size": 5555,
+            "lastModified": 1715160162.8947916,
+            "type": "png"
+        },
+        {
+            "name": "brick.png",
+            "size": 134286,
+            "lastModified": 1715160162.9238412,
+            "type": "png"
+        },
+        {
+            "name": "coins.png",
+            "size": 44459,
+            "lastModified": 1715160162.954061,
+            "type": "png"
+        },
+        {
+            "name": "D20.png",
+            "size": 27786,
+            "lastModified": 1715160162.74283,
+            "type": "png"
+        },
+        {
+            "name": "D6.png",
+            "size": 32604,
+            "lastModified": 1715160162.7753224,
+            "type": "png"
+        },
+        {
+            "name": "description.png",
+            "size": 500,
+            "lastModified": 1715160162.9835992,
+            "type": "png"
+        },
+        {
+            "name": "duckbot.png",
+            "size": 51726,
+            "lastModified": 1715160163.0156934,
+            "type": "png"
+        },
+        {
+            "name": "electric.png",
+            "size": 10018,
+            "lastModified": 1715160163.0465765,
+            "type": "png"
+        },
+        {
+            "name": "emptyIcon.png",
+            "size": 139,
+            "lastModified": 1715160163.0764909,
+            "type": "png"
+        },
+        {
+            "name": "energy.png",
+            "size": 96300,
+            "lastModified": 1715160163.1040354,
+            "type": "png"
+        },
+        {
+            "name": "eyesEmoji.png",
+            "size": 35761,
+            "lastModified": 1715160163.1295817,
+            "type": "png"
+        },
+        {
+            "name": "fire.png",
+            "size": 31470,
+            "lastModified": 1715160163.1556928,
+            "type": "png"
+        },
+        {
+            "name": "gem1.png",
+            "size": 9521,
+            "lastModified": 1715160163.181224,
+            "type": "png"
+        },
+        {
+            "name": "gem2.png",
+            "size": 10483,
+            "lastModified": 1715160163.2077866,
+            "type": "png"
+        },
+        {
+            "name": "gem3.png",
+            "size": 6809,
+            "lastModified": 1715160163.234331,
+            "type": "png"
+        },
+        {
+            "name": "gem4.png",
+            "size": 52798,
+            "lastModified": 1715160163.259929,
+            "type": "png"
+        },
+        {
+            "name": "gem5.png",
+            "size": 5413,
+            "lastModified": 1715160163.2864668,
+            "type": "png"
+        },
+        {
+            "name": "gem6.png",
+            "size": 31573,
+            "lastModified": 1715160163.3114996,
+            "type": "png"
+        },
+        {
+            "name": "ggcu.png",
+            "size": 16480,
+            "lastModified": 1715160163.336533,
+            "type": "png"
+        },
+        {
+            "name": "glove.png",
+            "size": 29678,
+            "lastModified": 1715160163.363195,
+            "type": "png"
+        },
+        {
+            "name": "green.png",
+            "size": 22113,
+            "lastModified": 1715160163.390229,
+            "type": "png"
+        },
+        {
+            "name": "henk.png",
+            "size": 64401,
+            "lastModified": 1715160163.417089,
+            "type": "png"
+        },
+        {
+            "name": "index.html",
+            "size": 22481,
+            "lastModified": 1715893686.4926713,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 11578,
+            "lastModified": 1715893686.4936647,
+            "type": "json"
+        },
+        {
+            "name": "mijnkjweft.png",
+            "size": 55118,
+            "lastModified": 1715160163.4426272,
+            "type": "png"
+        },
+        {
+            "name": "mushroom.png",
+            "size": 20567,
+            "lastModified": 1715160163.4666548,
+            "type": "png"
+        },
+        {
+            "name": "ongoing.png",
+            "size": 3631,
+            "lastModified": 1715160163.492751,
+            "type": "png"
+        },
+        {
+            "name": "ongoingLocation.png",
+            "size": 4127,
+            "lastModified": 1715160163.5182989,
+            "type": "png"
+        },
+        {
+            "name": "onreveal.png",
+            "size": 3177,
+            "lastModified": 1715160163.545548,
+            "type": "png"
+        },
+        {
+            "name": "onrevealLocation.png",
+            "size": 5106,
+            "lastModified": 1715160163.604436,
+            "type": "png"
+        },
+        {
+            "name": "oreRecourse.png",
+            "size": 91961,
+            "lastModified": 1715160163.6373303,
+            "type": "png"
+        },
+        {
+            "name": "partypopper.png",
+            "size": 51233,
+            "lastModified": 1715160163.669845,
+            "type": "png"
+        },
+        {
+            "name": "power.png",
+            "size": 71289,
+            "lastModified": 1715160163.7036686,
+            "type": "png"
+        },
+        {
+            "name": "questionmarks.png",
+            "size": 43304,
+            "lastModified": 1715160163.7357874,
+            "type": "png"
+        },
+        {
+            "name": "RandomGem.png",
+            "size": 6660,
+            "lastModified": 1715160162.803516,
+            "type": "png"
+        },
+        {
+            "name": "revolution.png",
+            "size": 14829,
+            "lastModified": 1715160163.7684133,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage1.png",
+            "size": 26296,
+            "lastModified": 1715160163.8050852,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage10.png",
+            "size": 22303,
+            "lastModified": 1715160163.837277,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage11.png",
+            "size": 20001,
+            "lastModified": 1715160163.8659916,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage12.png",
+            "size": 22188,
+            "lastModified": 1715160163.895669,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage13.png",
+            "size": 22613,
+            "lastModified": 1715160163.9204018,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage14.png",
+            "size": 21807,
+            "lastModified": 1715160163.9454918,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage15.png",
+            "size": 22078,
+            "lastModified": 1715160163.9695938,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage16.png",
+            "size": 21502,
+            "lastModified": 1715160163.9939964,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage17.png",
+            "size": 17810,
+            "lastModified": 1715160164.0177448,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage18.png",
+            "size": 21417,
+            "lastModified": 1715160164.0423572,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage19.png",
+            "size": 22664,
+            "lastModified": 1715160164.0720356,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage2.png",
+            "size": 21229,
+            "lastModified": 1715160164.0979085,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage3.png",
+            "size": 21320,
+            "lastModified": 1715160164.1230738,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage4.png",
+            "size": 19380,
+            "lastModified": 1715160164.1486745,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage5.png",
+            "size": 17626,
+            "lastModified": 1715160164.176583,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage6.png",
+            "size": 19997,
+            "lastModified": 1715160164.2006779,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage7.png",
+            "size": 20042,
+            "lastModified": 1715160164.2253892,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage8.png",
+            "size": 22619,
+            "lastModified": 1715160164.2505682,
+            "type": "png"
+        },
+        {
+            "name": "shroobLanguage9.png",
+            "size": 17342,
+            "lastModified": 1715160164.2759345,
+            "type": "png"
+        },
+        {
+            "name": "special.png",
+            "size": 11853,
+            "lastModified": 1715160164.3035507,
+            "type": "png"
+        },
+        {
+            "name": "specialLocation.png",
+            "size": 11853,
+            "lastModified": 1715160164.3282113,
+            "type": "png"
+        },
+        {
+            "name": "stone.png",
+            "size": 26567,
+            "lastModified": 1715160164.352996,
+            "type": "png"
+        },
+        {
+            "name": "stoneRecourse.png",
+            "size": 41560,
+            "lastModified": 1715160164.3780603,
+            "type": "png"
+        },
+        {
+            "name": "UnknownBattleCard.png",
+            "size": 21295,
+            "lastModified": 1715160162.8352084,
+            "type": "png"
+        },
+        {
+            "name": "victoryPoint.png",
+            "size": 2782,
+            "lastModified": 1715160164.4024167,
+            "type": "png"
+        },
+        {
+            "name": "water.png",
+            "size": 25548,
+            "lastModified": 1715160164.4296834,
+            "type": "png"
+        },
+        {
+            "name": "wheatRecourse.png",
+            "size": 63760,
+            "lastModified": 1715160164.4566097,
+            "type": "png"
+        },
+        {
+            "name": "wind.png",
+            "size": 44828,
+            "lastModified": 1715160164.4870398,
+            "type": "png"
+        },
+        {
+            "name": "woodRecourse.png",
+            "size": 29017,
+            "lastModified": 1715160164.5140333,
+            "type": "png"
+        },
+        {
+            "name": "woolRecourse.png",
+            "size": 136219,
+            "lastModified": 1715160164.5435865,
+            "type": "png"
+        }
     ],
     "parent": "../index.json"
 }

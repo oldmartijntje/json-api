@@ -2,13 +2,48 @@
     "path": "https://api.oldmartijntje.nl/api/random/lists",
     "folders": [],
     "files": [
-        "filmTheoryMatpatDump.json",
-        "foodTheoryMatpatDump.json",
-        "gameTheoryMatpatDump.json",
-        "index.html",
-        "index.json",
-        "styleTheoryMatpatDump.json",
-        "vacantieLijst.json"
+        {
+            "name": "filmTheoryMatpatDump.json",
+            "size": 76406,
+            "lastModified": 1710157962.399952,
+            "type": "json"
+        },
+        {
+            "name": "foodTheoryMatpatDump.json",
+            "size": 32107,
+            "lastModified": 1710157973.9065933,
+            "type": "json"
+        },
+        {
+            "name": "gameTheoryMatpatDump.json",
+            "size": 106405,
+            "lastModified": 1710157985.2529354,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 5770,
+            "lastModified": 1715893686.5272896,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 1346,
+            "lastModified": 1715893686.5282876,
+            "type": "json"
+        },
+        {
+            "name": "styleTheoryMatpatDump.json",
+            "size": 7753,
+            "lastModified": 1710157948.0195558,
+            "type": "json"
+        },
+        {
+            "name": "vacantieLijst.json",
+            "size": 3284,
+            "lastModified": 1715880190.0399575,
+            "type": "json"
+        }
     ],
     "parent": "../index.json"
 }

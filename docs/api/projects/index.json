@@ -1,14 +1,43 @@
 {
     "path": "https://api.oldmartijntje.nl/api/projects",
     "folders": [
-        "henk-empires-new-kingdoms-assets"
+        {
+            "name": "henk-empires-new-kingdoms-assets",
+            "childrenAmount": 4,
+            "lastModified": 1715191206.2217681
+        }
     ],
     "files": [
-        "henk-empire-new-kingdoms.json",
-        "index.html",
-        "index.json",
-        "project-viewer_achievements.json",
-        "project-viewer_offlineProjects.json"
+        {
+            "name": "henk-empire-new-kingdoms.json",
+            "size": 103499,
+            "lastModified": 1715191182.525578,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 5618,
+            "lastModified": 1715893686.4754877,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 1181,
+            "lastModified": 1715893686.4764886,
+            "type": "json"
+        },
+        {
+            "name": "project-viewer_achievements.json",
+            "size": 3967,
+            "lastModified": 1715169322.7235186,
+            "type": "json"
+        },
+        {
+            "name": "project-viewer_offlineProjects.json",
+            "size": 41189,
+            "lastModified": 1715169285.0942204,
+            "type": "json"
+        }
     ],
     "parent": "../index.json"
 }

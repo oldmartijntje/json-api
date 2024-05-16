@@ -59,6 +59,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -76,19 +93,19 @@ header {
 </div>
 </header>
 <div class="content">
-    <h2>Files</h2>
+    <h2>Files (11)</h2>
 <ul>
-<li><a href="./battlePainters.gif">battlePainters.gif</a></li>
-<li><a href="./brainTraining.gif">brainTraining.gif</a></li>
-<li><a href="./Button1.gif">Button1.gif</a></li>
-<li><a href="./carcassonne.gif">carcassonne.gif</a></li>
-<li><a href="./longus.gif">longus.gif</a></li>
-<li><a href="./marioScared.png">marioScared.png</a></li>
-<li><a href="./nicelyCSSed.gif">nicelyCSSed.gif</a></li>
-<li><a href="./partnerzInTiem.gif">partnerzInTiem.gif</a></li>
-<li><a href="./robuzx.png">robuzx.png</a></li>
-<li><a href="./scratch.gif">scratch.gif</a></li>
-<li><a href="./single.gif">single.gif</a></li>
+<li class="fileLine"><a href="./battlePainters.gif">battlePainters.gif</a><span class="size" title="File Size">10.198 KB</span><span class="modifiedDate" title="Last Modified">21/11/23 20:07PM</span><span class="time-since" data-value="2023-11-21T20:07:41.657959"></span></li>
+<li class="fileLine"><a href="./brainTraining.gif">brainTraining.gif</a><span class="size" title="File Size">4.914 KB</span><span class="modifiedDate" title="Last Modified">21/11/23 19:37PM</span><span class="time-since" data-value="2023-11-21T19:37:09.075966"></span></li>
+<li class="fileLine"><a href="./Button1.gif">Button1.gif</a><span class="size" title="File Size">3.725 KB</span><span class="modifiedDate" title="Last Modified">20/11/23 09:59AM</span><span class="time-since" data-value="2023-11-20T09:59:38.860899"></span></li>
+<li class="fileLine"><a href="./carcassonne.gif">carcassonne.gif</a><span class="size" title="File Size">1.049724 MB</span><span class="modifiedDate" title="Last Modified">03/12/23 12:33PM</span><span class="time-since" data-value="2023-12-03T12:33:25.243770"></span></li>
+<li class="fileLine"><a href="./longus.gif">longus.gif</a><span class="size" title="File Size">8.035 KB</span><span class="modifiedDate" title="Last Modified">23/11/23 13:56PM</span><span class="time-since" data-value="2023-11-23T13:56:41.815927"></span></li>
+<li class="fileLine"><a href="./marioScared.png">marioScared.png</a><span class="size" title="File Size">49.268 KB</span><span class="modifiedDate" title="Last Modified">04/12/23 11:40AM</span><span class="time-since" data-value="2023-12-04T11:40:29.517786"></span></li>
+<li class="fileLine"><a href="./nicelyCSSed.gif">nicelyCSSed.gif</a><span class="size" title="File Size">11.738 KB</span><span class="modifiedDate" title="Last Modified">21/11/23 20:50PM</span><span class="time-since" data-value="2023-11-21T20:50:33.572576"></span></li>
+<li class="fileLine"><a href="./partnerzInTiem.gif">partnerzInTiem.gif</a><span class="size" title="File Size">83.287 KB</span><span class="modifiedDate" title="Last Modified">04/12/23 11:16AM</span><span class="time-since" data-value="2023-12-04T11:16:31.183826"></span></li>
+<li class="fileLine"><a href="./robuzx.png">robuzx.png</a><span class="size" title="File Size">4.2 KB</span><span class="modifiedDate" title="Last Modified">02/12/23 16:38PM</span><span class="time-since" data-value="2023-12-02T16:38:32.713939"></span></li>
+<li class="fileLine"><a href="./scratch.gif">scratch.gif</a><span class="size" title="File Size">503.778 KB</span><span class="modifiedDate" title="Last Modified">04/12/23 10:57AM</span><span class="time-since" data-value="2023-12-04T10:57:35.880311"></span></li>
+<li class="fileLine"><a href="./single.gif">single.gif</a><span class="size" title="File Size">15.156 KB</span><span class="modifiedDate" title="Last Modified">29/11/23 14:14PM</span><span class="time-since" data-value="2023-11-29T14:14:08.840128"></span></li>
 </ul>
 </ul></div>
     <footer>
@@ -98,8 +115,52 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:19PM</p>
+        <p>Last updated: 16/05/24 23:10PM</p>
     </footer>
+    <script>
+    
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        
+    </script>
 </body>
 
 </html>

@@ -1,11 +1,30 @@
 {
     "path": "https://api.oldmartijntje.nl",
     "folders": [
-        "api"
+        {
+            "name": "api",
+            "childrenAmount": 5,
+            "lastModified": 1715889415.0537176
+        }
     ],
     "files": [
-        "CNAME",
-        "index.html",
-        "index.json"
+        {
+            "name": "CNAME",
+            "size": 20,
+            "lastModified": 1715195614.459698,
+            "type": "CNAME"
+        },
+        {
+            "name": "index.html",
+            "size": 4718,
+            "lastModified": 1715893686.4058664,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 707,
+            "lastModified": 1715893686.4058664,
+            "type": "json"
+        }
     ]
 }

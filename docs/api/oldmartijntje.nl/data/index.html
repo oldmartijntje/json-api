@@ -59,6 +59,23 @@ header {
     padding: 1rem;
 }
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+
+
 .content {
     margin: 1rem;
     flex-grow: 1;
@@ -76,14 +93,14 @@ header {
 </div>
 </header>
 <div class="content">
-    <h2>Files</h2>
+    <h2>Files (6)</h2>
 <ul>
-<li><a href="./achievements.json">achievements.json</a></li>
-<li><a href="./ads.json">ads.json</a></li>
-<li><a href="./applications.json">applications.json</a></li>
-<li><a href="./gamesData.json">gamesData.json</a></li>
-<li><a href="./projects.json">projects.json</a></li>
-<li><a href="./websiteDisplayItems.json">websiteDisplayItems.json</a></li>
+<li class="fileLine"><a href="./achievements.json">achievements.json</a><span class="size" title="File Size">30.421 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 21:23PM</span><span class="time-since" data-value="2024-05-08T21:23:29.644957"></span></li>
+<li class="fileLine"><a href="./ads.json">ads.json</a><span class="size" title="File Size">5.394 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 21:23PM</span><span class="time-since" data-value="2024-05-08T21:23:28.924897"></span></li>
+<li class="fileLine"><a href="./applications.json">applications.json</a><span class="size" title="File Size">25.607 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 21:23PM</span><span class="time-since" data-value="2024-05-08T21:23:27.877361"></span></li>
+<li class="fileLine"><a href="./gamesData.json">gamesData.json</a><span class="size" title="File Size">11.094 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 13:39PM</span><span class="time-since" data-value="2024-05-08T13:39:20.770697"></span></li>
+<li class="fileLine"><a href="./projects.json">projects.json</a><span class="size" title="File Size">21.369 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 13:49PM</span><span class="time-since" data-value="2024-05-08T13:49:09.243737"></span></li>
+<li class="fileLine"><a href="./websiteDisplayItems.json">websiteDisplayItems.json</a><span class="size" title="File Size">59.962 KB</span><span class="modifiedDate" title="Last Modified">08/05/24 13:52PM</span><span class="time-since" data-value="2024-05-08T13:52:08.032840"></span></li>
 </ul>
 </ul></div>
     <footer>
@@ -93,8 +110,52 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 22:19PM</p>
+        <p>Last updated: 16/05/24 23:10PM</p>
     </footer>
+    <script>
+    
+        function timeSince(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let interval = Math.floor(seconds / 31536000);
+
+            if (interval >= 1) {
+                return interval + " year" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 2592000);
+            if (interval >= 1) {
+                return interval + " month" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                return interval + " day" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 3600);
+            if (interval >= 1) {
+                return interval + " hour" + (interval > 1 ? "s" : "");
+            }
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) {
+                return interval + " minute" + (interval > 1 ? "s" : "");
+            }
+            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+        }
+
+        function updateTimeSince() {
+            const elements = document.querySelectorAll('.time-since');
+            elements.forEach(element => {
+                const datetimeString = element.getAttribute('data-value');
+                const datetime = new Date(datetimeString);
+                element.textContent = timeSince(datetime) + " ago";
+            });
+        }
+
+        // Initial update
+        updateTimeSince();
+
+        // Update every minute
+        setInterval(updateTimeSince, 60000);
+        
+    </script>
 </body>
 
 </html>
