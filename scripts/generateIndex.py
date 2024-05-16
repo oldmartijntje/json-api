@@ -3,7 +3,10 @@ import subprocess
 import datetime
 import json
 import tkinter as tk
-from tkinter import filedialog
+from tkinter.messagebox import showerror
+
+
+
 
 title = 'OldMartijntje\'s Static API'
 
@@ -26,7 +29,7 @@ def loadSettingsJson():
     except:
         settings = createSettingsJson()
 
-        filedialog.askopenfilename()
+        showerror('Error', 'No settings.json file found. A new one has been created. Please fill in the settings.')
 
     return settings
 
