@@ -1,5 +1,5 @@
 {
-    "path": "./docs/api/globalData",
+    "path": "https://api.oldmartijntje.nl/api/globalData",
     "folders": [],
     "files": [
         "fullBlogs.json",

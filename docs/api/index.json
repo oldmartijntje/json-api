@@ -1,5 +1,5 @@
 {
-    "path": "./docs/api",
+    "path": "https://api.oldmartijntje.nl/api",
     "folders": [
         "globalData",
         "oldmartijntje.nl",

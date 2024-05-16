@@ -1,6 +1,10 @@
 {
     "title": "OldMartijntje's Static API",
-    "startingPos": "./docs",
-    "webPath": "https://api.oldmartijntje.nl/",
-    "icon": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png"
+    "startingFolder": "./docs",
+    "webPath": "https://api.oldmartijntje.nl",
+    "websiteIcon": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png",
+    "embedImage": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png",
+    "embedTitle": "api.oldmartijntje.nl",
+    "embedDescription": "OldMartijntje's API.",
+    "footer": "\n    <h2>OldMartijntje &copy;</h2>\n    <a href=\"https://oldmartijntje.nl\">My Website</a>\n    <a href=\"https://docs.oldmartijntje.nl\">My Digital Garden</a>\n    <p>Generated this index with <a href=\"https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py\">a python script</a></p>\n    "
 }

@@ -13,14 +13,69 @@ title = 'OldMartijntje\'s Static API'
 def createSettingsJson():
     settings = {}
     settings['title'] = 'OldMartijntje\'s Static API'
-    settings['startingPos'] = './docs'
-    settings['webPath'] = 'https://api.oldmartijntje.nl/'
-    settings['icon'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
+    settings['startingFolder'] = './docs'
+    settings['webPath'] = 'https://api.oldmartijntje.nl'
+    settings['websiteIcon'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
+    settings['embedImage'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
+    settings['embedTitle'] = 'api.oldmartijntje.nl'
+    settings['embedDescription'] = 'OldMartijntje\'s API.'
+    settings['footer'] = '''
+    <h2>OldMartijntje &copy;</h2>
+    <a href="https://oldmartijntje.nl">My Website</a>
+    <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
+    <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
+    '''
 
     with open('./settings.json', 'w') as file:
         json.dump(settings, file, indent=4)
     
+def loadSetting(settingsDict, key):
+    try:
+        return settingsDict[key]
+    except:
+        showerror('Error', 'The settings.json file is missing the ' + key + ' key. Please fill it in.')
+        # open the folder in the file explorer
+        os.system('explorer /select,settings.json')
+        exit()
 
+def loadStyling():
+    try:
+        styles = open('./styles.css', 'r').read()
+    except:
+        styles = '''body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100svh;
+    width: 100vw;
+}
+
+a, a:visited {
+    color: #67acf8;
+}
+
+footer {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    height: 12rem;
+}
+
+.content {
+    margin: 1rem;
+    flex-grow: 1;
+    overflow-y: scroll;
+}'''
+        with open('./styles.css', 'w') as file:
+            file.write(styles)
+            file.close()
+    return styles
 
 def loadSettingsJson():
     try:
@@ -54,15 +109,15 @@ def list_files_and_folders(directory):
 
 def createHTML(files, folders, filePath):
     # Create the HTML content
-    content = '<h1>Index of ' + filePath + '</h1>\n'
+    content = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
     if (filePath != startingPos):
-        content += '<strong><a href="../index.html" style="margin-bottom:1rem">[parent directory]</a></strong>\n'
-    content += '<strong><a href="./index.json" style="margin-bottom:1rem">.json index</a></strong>\n'
+        content += '<strong><a href="../index.html">[parent directory]</a></strong><br>\n'
+    content += '<strong><a href="./index.json">[json index]</a></strong>\n'
     for folder in folders:
         if folder == folders[0]:
             content += '<h2>Folders</h2>\n'
             content += '<ul>\n'
-        content += '<li><strong><a href="./'+folder+'/index.html">' + filePath + '/' +folder + '</a></strong>'
+        content += '<li><strong><a href="./'+folder+'/index.html">./' +folder + '</a></strong>'
         content += '</li>\n'
         if folder == folders[-1]:
             content += '</ul>\n'
@@ -81,7 +136,7 @@ def createHTML(files, folders, filePath):
 def createJson(files, folders, filePath):
     # Create the JSON content
     jsonFile = {}
-    jsonFile['path'] = filePath
+    jsonFile['path'] = ignoreBasePathInWebPath(filePath, settings)
     jsonFile['folders'] = []
     jsonFile['files'] = []
     if (filePath != startingPos):
@@ -98,70 +153,48 @@ def saveJson(content, filePath):
     json.dump(content, open(filePath + '/index.json', 'w'), indent=4)
 
 
+def ignoreBasePathInWebPath(filePath, settings):
+    webPathPatst = filePath.split(loadSetting(settings, 'startingFolder'))
+    if len(webPathPatst) > 1:
+        webPath = webPathPatst[1]
+    else:
+        webPath = ""
+    webPath = loadSetting(settings, 'webPath') + webPath
+    return webPath
+
+
 def saveHTML(content, filePath, files, folders):
     webPathPatst = filePath.split('./docs/')
     if len(webPathPatst) > 1:
         webPath = webPathPatst[1]
     else:
         webPath = ""
-    webPath = 'https://api/oldmartijntje.nl/' + webPath
+    webPath = loadSetting(settings, 'webPath') + webPath
     start = f'''<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
+    <link rel="icon" href="{loadSetting(settings, 'websiteIcon')}">
     <title>{title}</title>
-    <meta property="og:title" content="api.oldmartijntje.nl">
-    <meta property="og:description" content="OldMartijntje's API. View this folder: &quot;{filePath}&quot;\nIt contains {len(files)-2} files and {len(folders)} folders.">
-    <meta property="og:image" content="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
+    <meta property="og:title" content="{loadSetting(settings, 'embedTitle')}">
+    <meta property="og:description" content="{loadSetting(settings, 'embedDescription')} View this folder: &quot;{ignoreBasePathInWebPath(filePath, settings)}&quot;\nIt contains {len(files)-2} files and {len(folders)} folders.">
+    <meta property="og:image" content="{loadSetting(settings, 'embedImage')}">
     <meta property="og:url" content="{webPath}">
     <meta property="og:type" content="website">
 </head>
 <style>
-    body {{
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #3c3c3c;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        height: 100svh;
-        width: 100vw;
-    }}
-
-    a, a:visited {{
-        color: #67acf8;
-    }}
-
-    footer {{
-        width: calc(100% - 2rem);
-        background-color: #1f1f1f;
-        padding: 1rem;
-        text-align: center;
-        height: 12rem;
-    }}
-
-    .content {{
-        margin: 1rem;
-        flex-grow: 1;
-        overflow-y: scroll;
-    }}
+    {styling}
 </style>
 
 <body>
 <div class="content">
 '''
 
-    end = '''</div>
+    end = f'''</div>
     <footer>
-        <h2>OldMartijntje &copy;</h2>
-        <a href="https://oldmartijntje.nl">My Website</a>
-        <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
-        <p>Generated this index with <a href="">a Python script</a></p>
+        {loadSetting(settings, 'footer')}
         <p>Last updated: ''' + str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p')) + '''</p>
     </footer>
 </body>
@@ -185,9 +218,10 @@ def findIndented(folders, currentPath, files):
             findIndented(subfolders, newPath, files)
     
 
-print(loadSettingsJson())
+settings = loadSettingsJson()
+styling = loadStyling()
 
-startingPos = './docs'
+startingPos = loadSetting(settings, 'startingFolder')
 try:
     files, folders = list_files_and_folders(startingPos)
 except:
