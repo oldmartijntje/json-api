@@ -1,0 +1,12 @@
+{
+    "path": "./docs/api/random/lists",
+    "folders": [],
+    "files": [
+        "filmTheoryMatpatDump.json",
+        "foodTheoryMatpatDump.json",
+        "gameTheoryMatpatDump.json",
+        "styleTheoryMatpatDump.json",
+        "vacantieLijst.json"
+    ],
+    "parent": "../index.json"
+}

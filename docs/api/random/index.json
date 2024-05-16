@@ -1,0 +1,8 @@
+{
+    "path": "./docs/api/random",
+    "folders": [
+        "lists"
+    ],
+    "files": [],
+    "parent": "../index.json"
+}
