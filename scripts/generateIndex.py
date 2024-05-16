@@ -247,8 +247,12 @@ def fileSizeCalculator(size):
         return str(size/1000) + ' KB'
     elif size < 1000000000:
         return str(size/1000000) + ' MB'
-    else:
+    elif size < 1000000000000:
         return str(size/1000000000) + ' GB'
+    elif size < 1000000000000000:
+        return str(size/1000000000000) + ' TB'
+    else:
+        return str(size) + ' bytes'
 
 def createJson(files, folders, filePath):
     # Create the JSON content
