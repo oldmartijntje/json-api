@@ -1,7 +1,0 @@
-{
-    "b8413c1f-78ee-4701-9ede-ca675e0577c2": {
-        "markdown": "---\ntags:\n  - my-own/blog\n  - code/api\n---\n## intro\n\nI am writing this whilst setting up my API. It is an static #code/api which will house my blog.\n\nMy static API is hosted on github pages, and I have a #code/python script to add a new blog to my api. This makes it quite easy to add a new blog.\n\n\n## the api\n\nthe api hosts a lot of json files, which will help you navigate the api. And they will list every file in every folder. \n\nMy python script just adds the blog article to the json list. And hosts the current version in another json.",
-        "id": "b8413c1f-78ee-4701-9ede-ca675e0577c2",
-        "date": "08/05/2024"
-    }
-}

@@ -1,7 +1,6 @@
 {
     "path": "https://api.oldmartijntje.nl/api",
     "folders": [
-        "globalData",
         "oldmartijntje.nl",
         "projects",
         "random"
