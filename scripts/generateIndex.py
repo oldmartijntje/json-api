@@ -111,6 +111,7 @@ def createHTML(files, folders, filePath):
     # Create the HTML content
     content = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
     if (filePath != startingPos):
+        content += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong><br>\n'
         content += '<strong><a href="../index.html">[parent directory]</a></strong><br>\n'
     content += '<strong><a href="./index.json">[json index]</a></strong>\n'
     for folder in folders:
