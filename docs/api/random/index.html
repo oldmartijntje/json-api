@@ -27,8 +27,7 @@ It contains 0 files and 1 folders.">
     width: 100vw;
 }
 
-a,
-a:visited {
+a, a:visited {
     color: #67acf8;
 }
 
@@ -38,6 +37,12 @@ footer {
     padding: 1rem;
     text-align: center;
     height: 12rem;
+}
+
+header {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
 }
 
 .content {
@@ -50,9 +55,11 @@ footer {
 <body>
 <div class="content">
 <h1>Index of https://api.oldmartijntje.nl/api/random</h1>
-<strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong><br>
-<strong><a href="../index.html">[parent directory]</a></strong><br>
+<header>
+<strong><a href="../index.html">[parent directory]</a></strong>
+<strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
 <strong><a href="./index.json">[json index]</a></strong>
+</header>
 <h2>Folders</h2>
 <ul>
 <li><strong><a href="./lists/index.html">./lists</a></strong></li>
@@ -66,7 +73,7 @@ footer {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 21:58PM</p>
+        <p>Last updated: 16/05/24 22:05PM</p>
     </footer>
 </body>
 

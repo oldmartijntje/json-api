@@ -19,6 +19,8 @@ def createSettingsJson():
     settings['embedImage'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
     settings['embedTitle'] = 'api.oldmartijntje.nl'
     settings['embedDescription'] = 'OldMartijntje\'s API.'
+    settings['commitOnRun'] = True
+    settings['alwaysDefaultStyles'] = False
     settings['footer'] = '''
     <h2>OldMartijntje &copy;</h2>
     <a href="https://oldmartijntje.nl">My Website</a>
@@ -40,6 +42,8 @@ def loadSetting(settingsDict, key):
 
 def loadStyling():
     try:
+        if loadSetting(settings, 'alwaysDefaultStyles'):
+            raise Exception
         styles = open('./styles.css', 'r').read()
     except:
         styles = '''body {
@@ -65,6 +69,12 @@ footer {
     padding: 1rem;
     text-align: center;
     height: 12rem;
+}
+
+header {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
 }
 
 .content {
@@ -110,10 +120,12 @@ def list_files_and_folders(directory):
 def createHTML(files, folders, filePath):
     # Create the HTML content
     content = '<h1>Index of ' + ignoreBasePathInWebPath(filePath, settings) + '</h1>\n'
+    content += '<header>\n'
     if (filePath != startingPos):
-        content += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong><br>\n'
-        content += '<strong><a href="../index.html">[parent directory]</a></strong><br>\n'
+        content += '<strong><a href="../index.html">[parent directory]</a></strong>\n'
+        content += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
     content += '<strong><a href="./index.json">[json index]</a></strong>\n'
+    content += '</header>\n'
     for folder in folders:
         if folder == folders[0]:
             content += '<h2>Folders</h2>\n'
@@ -230,7 +242,9 @@ except:
 
 findIndented(folders, startingPos, files)
 
-# commit using subprocess
-subprocess.run(['git', 'add', '.'])
-subprocess.run(['git', 'commit', '-m', 'Updating Data.'])
-subprocess.run(['git', 'push'])
+if loadSetting(settings, 'commitOnRun'):
+
+    # commit using subprocess
+    subprocess.run(['git', 'add', '.'])
+    subprocess.run(['git', 'commit', '-m', 'Updating Data.'])
+    subprocess.run(['git', 'push'])
