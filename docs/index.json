@@ -4,13 +4,13 @@
         {
             "name": "api",
             "childrenAmount": 7,
-            "lastModified": 1716322003.112619,
+            "lastModified": 1716322950.0783732,
             "type": "folder"
         },
         {
             "name": "system",
             "childrenAmount": 25,
-            "lastModified": 1716322114.9346423,
+            "lastModified": 1716322950.1244917,
             "type": "folder"
         }
     ],
@@ -24,13 +24,13 @@
         {
             "name": "index.html",
             "size": 11202,
-            "lastModified": 1716322043.1111996,
+            "lastModified": 1716322950.1204896,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 904,
-            "lastModified": 1716322043.1182027,
+            "size": 906,
+            "lastModified": 1716322950.1214912,
             "type": "json"
         }
     ]

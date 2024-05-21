@@ -2,9 +2,15 @@
     "path": "https://api.oldmartijntje.nl/api/random",
     "folders": [
         {
+            "name": "files",
+            "childrenAmount": 9,
+            "lastModified": 1716323027.615599,
+            "type": "folder"
+        },
+        {
             "name": "lists",
-            "childrenAmount": 7,
-            "lastModified": 1715870497.6562262,
+            "childrenAmount": 5,
+            "lastModified": 1716323027.615599,
             "type": "folder"
         }
     ],
@@ -12,13 +18,13 @@
         {
             "name": "index.html",
             "size": 10189,
-            "lastModified": 1716322043.6838014,
+            "lastModified": 1716322950.1159663,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 629,
-            "lastModified": 1716322043.687802,
+            "size": 628,
+            "lastModified": 1716322950.1175282,
             "type": "json"
         }
     ],

@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100svh;
+    width: 100vw;
+}
+
+a, a:visited {
+    color: #67acf8;
+}
+
+footer {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    max-height: 8rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#title {
+    word-wrap: break-word;
+    font-size: 1.1rem;
+}
+
+#indexName {
+    text-decoration: underline;
+}
+
+header {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+}
+
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon {
+    padding-right: 1rem;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+.content {
+    margin: 1rem;
+    flex-grow: 1;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+    max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div video,
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
+footer a,
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+footer h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .fileLine {
+        gap: 0.5rem;
+    }
+
+    .modifiedDate {
+        display: none;
+    }
+}
