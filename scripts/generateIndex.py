@@ -286,7 +286,7 @@ def loadJavascript():
         // Update every 10 seconds
         setInterval(updateTimeSince, 10000);
 
-        const displayMode = localStorage.getItem('displayMode');
+        var displayMode = localStorage.getItem('displayMode');
         console.log(displayMode);
         if (displayMode == null) {
             displayMode = 'iconView';
