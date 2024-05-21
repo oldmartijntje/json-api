@@ -23,5 +23,7 @@
     "exe": "https://api.oldmartijntje.nl/system/exe.png",
     "md": "https://api.oldmartijntje.nl/system/markdown.png",
     "txt": "https://api.oldmartijntje.nl/system/txt.png",
-    "url": "https://api.oldmartijntje.nl/system/url.png"
+    "url": "https://api.oldmartijntje.nl/system/url.png",
+    "mp4": "https://api.oldmartijntje.nl/system/vlc.png",
+    "webm": "https://api.oldmartijntje.nl/system/vlc.png"
 }

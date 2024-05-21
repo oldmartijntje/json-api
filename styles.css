@@ -11,6 +11,10 @@ body {
     width: 100vw;
 }
 
+ul {
+    padding: 0;
+}
+
 a, a:visited {
     color: #67acf8;
 }
@@ -146,6 +150,16 @@ footer p {
 footer h2 {
     font-size: 1rem;
     margin: 0;
+}
+
+.miniIcon {
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+li div {
+    margin-left: 1rem;
 }
 
 @media only screen and (max-width: 800px) {

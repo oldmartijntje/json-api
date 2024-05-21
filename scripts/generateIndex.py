@@ -54,6 +54,9 @@ def createSettingsJson():
         "md": "https://api.oldmartijntje.nl/system/markdown.png",
         "txt": "https://api.oldmartijntje.nl/system/txt.png",
         "url": "https://api.oldmartijntje.nl/system/url.png",
+        "mp4": "https://api.oldmartijntje.nl/system/vlc.png",
+        "webm": "https://api.oldmartijntje.nl/system/vlc.png",
+
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
@@ -86,6 +89,10 @@ def loadStyling():
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+}
+
+ul {
+    padding: 0;
 }
 
 a, a:visited {
@@ -223,6 +230,16 @@ footer p {
 footer h2 {
     font-size: 1rem;
     margin: 0;
+}
+
+.miniIcon {
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+li div {
+    margin-left: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -428,7 +445,11 @@ def createHTML(files, folders, filePath):
         if folder == folders[0]:
             content += f'<h2>Folders ({len(folders)})</h2>\n'
             content += '<ul>\n'
-        content += '<li class="fileLine"><strong><a href="./'+folder['name']+'/index.html">./' +folder['name'] + '</a></strong>'
+        content += '<li class="fileLine">'
+        content += '<div>'
+        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+        content += '<a href="./' + folder['name'] + '">' + folder['name'] + '</a>'
+        content += '</div>'
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
         content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(folder['lastModified']).isoformat()) + '"></span>'
         content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(folder['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
@@ -440,7 +461,11 @@ def createHTML(files, folders, filePath):
             content += f'<h2>Files ({len(files)-2})</h2>\n'
             content += '<ul>\n'
         if file['name'] != 'index.html' and file['name'] != 'index.json':
-            content += '<li class="fileLine"><a href="./' + file['name'] + '">' + file['name'] + '</a>'
+            content += '<li class="fileLine">'
+            content += '<div>'
+            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+            content += '<a href="./' + file['name'] + '">' + file['name'] + '</a>'
+            content += '</div>'
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
             content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(file['lastModified']).isoformat()) + '"></span>'
             content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(file['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'

@@ -46,20 +46,20 @@
         },
         {
             "name": "icons.json",
-            "size": 1532,
-            "lastModified": 1716322095.028339,
+            "size": 1651,
+            "lastModified": 1716323789.0280988,
             "type": "json"
         },
         {
             "name": "index.html",
-            "size": 21550,
-            "lastModified": 1716322950.1234908,
+            "size": 25955,
+            "lastModified": 1716324223.4982822,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 4144,
-            "lastModified": 1716322950.1244917,
+            "size": 4302,
+            "lastModified": 1716324223.516315,
             "type": "json"
         },
         {
@@ -138,6 +138,12 @@
             "name": "url.png",
             "size": 14338,
             "lastModified": 1716322081.107825,
+            "type": "png"
+        },
+        {
+            "name": "vlc.png",
+            "size": 52312,
+            "lastModified": 1716323639.0218449,
             "type": "png"
         },
         {
