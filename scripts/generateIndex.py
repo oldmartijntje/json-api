@@ -418,10 +418,10 @@ def ignoreBasePathInWebPath(filePath, settings):
 
 def fetchIcon(fileOrFolder):
     displayIcons = ['png', 'jpeg', 'jpg', 'ico', 'gif']
-    if  fileOrFolder['type'] in displayIcons:
-        return fileOrFolder['name']
-    elif loadSetting(settings, 'icons') and fileOrFolder['type'] in loadSetting(settings, 'icons'):
+    if loadSetting(settings, 'icons') and fileOrFolder['type'] in loadSetting(settings, 'icons'):
         return loadSetting(settings, 'icons')[fileOrFolder['type']]
+    elif  fileOrFolder['type'] in displayIcons:
+        return fileOrFolder['name']
     else:
         if loadSetting(settings, 'icons') and '?' in loadSetting(settings, 'icons'):
             return loadSetting(settings, 'icons')['?']
