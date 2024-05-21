@@ -10,15 +10,21 @@
         },
         {
             "name": "index.html",
-            "size": 8505,
-            "lastModified": 1716309773.7288764,
+            "size": 8503,
+            "lastModified": 1716310267.2264562,
             "type": "html"
         },
         {
             "name": "index.json",
             "size": 615,
-            "lastModified": 1716309773.7313948,
+            "lastModified": 1716310267.2294521,
             "type": "json"
+        },
+        {
+            "name": "unknown-file-types.png",
+            "size": 10230,
+            "lastModified": 1716310371.700749,
+            "type": "png"
         }
     ],
     "parent": "../index.json"
