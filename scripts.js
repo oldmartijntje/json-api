@@ -63,7 +63,8 @@
         setInterval(updateTimeSince, 10000);
 
         const displayMode = localStorage.getItem('displayMode');
-        if (displayMode === null) {
+        console.log(displayMode);
+        if (displayMode == null) {
             setLocalStorageItem('displayMode', 'iconView');
         }
         console.log('Display Mode:', displayMode);
