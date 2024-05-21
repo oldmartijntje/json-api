@@ -101,6 +101,7 @@ header {
     text-align: center;
     height: 115px;
     width: 115px;
+    max-width: 20%;
 }
 
 .iconItem:hover {
