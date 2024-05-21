@@ -124,6 +124,58 @@ header {
 
 }
 
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem img {
+    height: 75%;
+    aspect-ratio: 1/1;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 '''
         with open('./styles.css', 'w') as file:
             file.write(styles)
@@ -177,6 +229,52 @@ def loadJavascript():
 
         // Update every minute
         setInterval(updateTimeSince, 60000);
+
+        document.querySelectorAll('input[name="view"]').forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                handleRadioChange(event.target.id);
+            });
+        });
+
+        function handleRadioChange(selectedId) {
+            if (selectedId === 'listView') {
+                console.log('List View selected');
+                // Add your code to handle List View selection
+                document.getElementById('list').style.display = 'block';
+                document.getElementById('icon').style.display = 'none';
+            } else if (selectedId === 'iconView') {
+                console.log('Icon View selected');
+                document.getElementById('list').style.display = 'none';
+                document.getElementById('icon').style.display = 'block';
+
+                // Add your code to handle Icon View selection
+            }
+        }
+        handleRadioChange('iconView');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img.lazy');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    } else {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = '';
+                        }
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
         '''
         with open('./scripts.js', 'w') as file:
             file.write(javascript)
@@ -209,7 +307,7 @@ def list_files_and_folders(directory):
         if os.path.isfile(item_path):
             files.append({'name': item, 'size': os.path.getsize(item_path), 'lastModified': os.path.getmtime(item_path), 'type': item.split('.')[-1]})
         elif os.path.isdir(item_path):
-            folders.append({'name': item, 'childrenAmount': len(os.listdir(item_path)), 'lastModified': os.path.getmtime(item_path)})
+            folders.append({'name': item, 'childrenAmount': len(os.listdir(item_path)), 'lastModified': os.path.getmtime(item_path), 'type': 'folder'})
     return files, folders
 
 def createHTML(files, folders, filePath):
@@ -222,6 +320,17 @@ def createHTML(files, folders, filePath):
         header += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
     header += '<strong><a href="./index.json">[json index]</a></strong>\n'
     header += '</div>\n'
+    header += '''<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio" checked>
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio">
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div>'''
     header += '</header>\n'
     content = ''
     for folder in folders:
@@ -294,6 +403,28 @@ def ignoreBasePathInWebPath(filePath, settings):
     webPath = loadSetting(settings, 'webPath') + webPath
     return webPath
 
+def fetchIcon(fileOrFolder):
+    if fileOrFolder['type'] == 'folder':
+        return 'https://simpleicon.com/wp-content/uploads/folder.png'
+    else:
+        return 'https://simpleicon.com/wp-content/uploads/file.png'
+
+def generateViewIcons(files, folders, filePath):
+    design = '''
+<a class="iconItem" href="{url}">
+    <img data-src="{icon}" alt="{name}"
+        class="lazy">
+    <p>{name}</p>
+</a>
+'''
+    icons = ''
+    for folder in folders:
+        if folder['name'] != 'node_modules':
+            icons += design.format(url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'])
+    for file in files:
+        if file['name'] != 'index.html' and file['name'] != 'index.json':
+            icons += design.format(url='./' + file['name'], icon=fetchIcon(file), name=file['name'])
+    return icons	
 
 def saveHTML(header, content, filePath, files, folders):
     webPathPatst = filePath.split('./docs/')
@@ -323,13 +454,18 @@ def saveHTML(header, content, filePath, files, folders):
 <body>
 '''
     
-    middle = f'''<div class="content">
+    middle = f'''<div class="content" id="list">
     '''
 
     end = f'''</div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            {generateViewIcons(files, folders, filePath)}
+        </div>
+    </div>
     <footer>
         {loadSetting(settings, 'footer')}
-        <p>Last updated: {str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))}</p>
+        <p>Last updated: <span>{str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))}</span><span class="time-since" data-value="{str(datetime.datetime.now().isoformat())}"></span></p>
     </footer>
     <script>
     {javascript}
