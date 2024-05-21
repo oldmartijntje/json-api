@@ -9,8 +9,8 @@
         },
         {
             "name": "system",
-            "childrenAmount": 4,
-            "lastModified": 1716318818.3088868,
+            "childrenAmount": 6,
+            "lastModified": 1716319102.1107447,
             "type": "folder"
         }
     ],
@@ -23,14 +23,14 @@
         },
         {
             "name": "index.html",
-            "size": 10978,
-            "lastModified": 1716318877.0204923,
+            "size": 10958,
+            "lastModified": 1716318948.7693818,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 903,
-            "lastModified": 1716318877.0249853,
+            "size": 906,
+            "lastModified": 1716318948.7746086,
             "type": "json"
         }
     ]

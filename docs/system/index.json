@@ -10,15 +10,27 @@
         },
         {
             "name": "index.html",
-            "size": 10543,
-            "lastModified": 1716318877.50429,
+            "size": 10523,
+            "lastModified": 1716318949.2551537,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 789,
-            "lastModified": 1716318877.5092907,
+            "size": 787,
+            "lastModified": 1716318949.258145,
             "type": "json"
+        },
+        {
+            "name": "json.png",
+            "size": 14746,
+            "lastModified": 1716319075.2902663,
+            "type": "png"
+        },
+        {
+            "name": "pdn.png",
+            "size": 58144,
+            "lastModified": 1716317692.6509624,
+            "type": "png"
         },
         {
             "name": "unknown-file-types.png",
