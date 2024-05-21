@@ -51,6 +51,8 @@ def createSettingsJson():
         "7z": "https://api.oldmartijntje.nl/system/archive.png",
         "iso": "https://api.oldmartijntje.nl/system/archive.png",
         "exe": "https://api.oldmartijntje.nl/system/exe.png",
+        "md": "https://api.oldmartijntje.nl/system/markdown.png",
+        "txt": "https://api.oldmartijntje.nl/system/txt.png",
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
