@@ -189,6 +189,25 @@ header {
     .modifiedDate {
         display: none;
     }
+
+    #title {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        max-height: 8rem;
+    }
+
+    footer a,
+    footer p {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    footer h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
 }
 '''
         with open('./styles.css', 'w') as file:
