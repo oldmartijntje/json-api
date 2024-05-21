@@ -45,15 +45,21 @@
             "type": "png"
         },
         {
+            "name": "icons.json",
+            "size": 1473,
+            "lastModified": 1716321157.3020113,
+            "type": "json"
+        },
+        {
             "name": "index.html",
-            "size": 19433,
-            "lastModified": 1716320715.101535,
+            "size": 20479,
+            "lastModified": 1716320886.7765646,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 3505,
-            "lastModified": 1716320715.114787,
+            "size": 3823,
+            "lastModified": 1716320886.7860973,
             "type": "json"
         },
         {
