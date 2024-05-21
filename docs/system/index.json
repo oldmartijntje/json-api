@@ -46,20 +46,20 @@
         },
         {
             "name": "icons.json",
-            "size": 1473,
-            "lastModified": 1716321157.3020113,
+            "size": 1532,
+            "lastModified": 1716322095.028339,
             "type": "json"
         },
         {
             "name": "index.html",
             "size": 21040,
-            "lastModified": 1716321163.4173698,
+            "lastModified": 1716322043.7159345,
             "type": "html"
         },
         {
             "name": "index.json",
             "size": 3987,
-            "lastModified": 1716321163.4304905,
+            "lastModified": 1716322043.7350006,
             "type": "json"
         },
         {
@@ -132,6 +132,12 @@
             "name": "unknown-file-types.png",
             "size": 10230,
             "lastModified": 1716310371.700749,
+            "type": "png"
+        },
+        {
+            "name": "url.png",
+            "size": 14338,
+            "lastModified": 1716322081.107825,
             "type": "png"
         },
         {

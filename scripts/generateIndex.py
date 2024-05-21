@@ -53,6 +53,7 @@ def createSettingsJson():
         "exe": "https://api.oldmartijntje.nl/system/exe.png",
         "md": "https://api.oldmartijntje.nl/system/markdown.png",
         "txt": "https://api.oldmartijntje.nl/system/txt.png",
+        "url": "https://api.oldmartijntje.nl/system/url.png",
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
