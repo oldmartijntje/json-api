@@ -289,6 +289,7 @@ def loadJavascript():
         const displayMode = localStorage.getItem('displayMode');
         console.log(displayMode);
         if (displayMode == null) {
+            displayMode = 'iconView';
             setLocalStorageItem('displayMode', 'iconView');
         }
         console.log('Display Mode:', displayMode);
