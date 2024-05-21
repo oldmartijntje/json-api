@@ -28,6 +28,13 @@ def createSettingsJson():
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     '''
+    settings['icons'] = {
+        'folder': 'https://api.oldmartijntje.nl/system/folder.png',
+        'html': 'https://simpleicon.com/wp-content/uploads/html.png',
+        'css': 'https://simpleicon.com/wp-content/uploads/css.png',
+        'js': 'https://simpleicon.com/wp-content/uploads/javascript.png',
+        'json': 'https://simpleicon.com/wp-content/uploads/json.png'
+    }
 
     with open('./settings.json', 'w') as file:
         json.dump(settings, file, indent=4)
@@ -184,7 +191,6 @@ header {
     .modifiedDate {
         display: none;
     }
-
 }
 '''
         with open('./styles.css', 'w') as file:
@@ -415,18 +421,10 @@ def ignoreBasePathInWebPath(filePath, settings):
 
 def fetchIcon(fileOrFolder):
     displayIcons = ['png', 'jpeg', 'jpg', 'ico', 'gif']
-    if fileOrFolder['type'] == 'folder':
-        return 'https://simpleicon.com/wp-content/uploads/folder.png'
-    elif fileOrFolder['type'] == 'html':
-        return 'https://simpleicon.com/wp-content/uploads/html.png'
-    elif fileOrFolder['type'] == 'css':
-        return 'https://simpleicon.com/wp-content/uploads/css.png'
-    elif fileOrFolder['type'] == 'js':
-        return 'https://simpleicon.com/wp-content/uploads/javascript.png'
-    elif fileOrFolder['type'] == 'json':
-        return 'https://simpleicon.com/wp-content/uploads/json.png'
-    elif  fileOrFolder['type'] in displayIcons:
+    if  fileOrFolder['type'] in displayIcons:
         return fileOrFolder['name']
+    elif loadSetting(settings, 'icons') and fileOrFolder['type'] in loadSetting(settings, 'icons'):
+        return loadSetting(settings, 'icons')[fileOrFolder['type']]
     else:
         return 'https://simpleicon.com/wp-content/uploads/file.png'
 
