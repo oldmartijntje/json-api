@@ -3,6 +3,18 @@
     "folders": [],
     "files": [
         {
+            "name": "index.html",
+            "size": 10580,
+            "lastModified": 1716318877.2436876,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 492,
+            "lastModified": 1716318877.2466807,
+            "type": "json"
+        },
+        {
             "name": "mario.mp4",
             "size": 336390,
             "lastModified": 1701684659.5011747,
