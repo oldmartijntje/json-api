@@ -3,27 +3,93 @@
     "folders": [],
     "files": [
         {
+            "name": "archive.png",
+            "size": 1104013,
+            "lastModified": 1716320626.1780965,
+            "type": "png"
+        },
+        {
+            "name": "aseprite.png",
+            "size": 28449,
+            "lastModified": 1716320336.9399085,
+            "type": "png"
+        },
+        {
+            "name": "css.png",
+            "size": 240155,
+            "lastModified": 1716319938.6216924,
+            "type": "png"
+        },
+        {
+            "name": "docx.png",
+            "size": 55285,
+            "lastModified": 1716320123.8212721,
+            "type": "png"
+        },
+        {
+            "name": "exe.png",
+            "size": 9539,
+            "lastModified": 1716320580.4201603,
+            "type": "png"
+        },
+        {
             "name": "folder.png",
             "size": 26105,
             "lastModified": 1716307293.6174471,
             "type": "png"
         },
         {
+            "name": "html.png",
+            "size": 143832,
+            "lastModified": 1716319907.351827,
+            "type": "png"
+        },
+        {
             "name": "index.html",
-            "size": 10523,
-            "lastModified": 1716318949.2551537,
+            "size": 19433,
+            "lastModified": 1716320670.4433324,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 787,
-            "lastModified": 1716318949.258145,
+            "size": 3505,
+            "lastModified": 1716320670.4538572,
             "type": "json"
+        },
+        {
+            "name": "js.png",
+            "size": 11050,
+            "lastModified": 1716319809.680712,
+            "type": "png"
         },
         {
             "name": "json.png",
             "size": 14746,
             "lastModified": 1716319075.2902663,
+            "type": "png"
+        },
+        {
+            "name": "mp3.png",
+            "size": 227627,
+            "lastModified": 1716320047.1752946,
+            "type": "png"
+        },
+        {
+            "name": "nds.png",
+            "size": 13363,
+            "lastModified": 1716320393.778466,
+            "type": "png"
+        },
+        {
+            "name": "ogg.png",
+            "size": 117168,
+            "lastModified": 1716320095.402236,
+            "type": "png"
+        },
+        {
+            "name": "pdf.png",
+            "size": 88204,
+            "lastModified": 1716320482.4372797,
             "type": "png"
         },
         {
@@ -33,9 +99,33 @@
             "type": "png"
         },
         {
+            "name": "pptx.png",
+            "size": 21247,
+            "lastModified": 1716320156.543083,
+            "type": "png"
+        },
+        {
+            "name": "py.png",
+            "size": 68904,
+            "lastModified": 1716319980.8192003,
+            "type": "png"
+        },
+        {
             "name": "unknown-file-types.png",
             "size": 10230,
             "lastModified": 1716310371.700749,
+            "type": "png"
+        },
+        {
+            "name": "wav.png",
+            "size": 275990,
+            "lastModified": 1716320075.5267732,
+            "type": "png"
+        },
+        {
+            "name": "xlsx.png",
+            "size": 63161,
+            "lastModified": 1716320177.049126,
             "type": "png"
         }
     ],

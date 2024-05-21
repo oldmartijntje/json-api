@@ -30,7 +30,27 @@ def createSettingsJson():
     '''
     settings['icons'] = {
         'folder': 'https://api.oldmartijntje.nl/system/folder.png',
-        '?': 'https://api.oldmartijntje.nl/system/unknown-file-types.png'
+        '?': 'https://api.oldmartijntje.nl/system/unknown-file-types.png',
+        "json": "https://api.oldmartijntje.nl/system/json.png",
+        "pdn": "https://api.oldmartijntje.nl/system/pdn.png",
+        "html": "https://api.oldmartijntje.nl/system/html.png",
+        "css": "https://api.oldmartijntje.nl/system/css.png",
+        "js": "https://api.oldmartijntje.nl/system/js.png",
+        "py": "https://api.oldmartijntje.nl/system/py.png",
+        "aseprite": "https://api.oldmartijntje.nl/system/aseprite.png",
+        "docx": "https://api.oldmartijntje.nl/system/docx.png",
+        "pptx": "https://api.oldmartijntje.nl/system/pptx.png",
+        "xlsx": "https://api.oldmartijntje.nl/system/xlsx.png",
+        "pdf": "https://api.oldmartijntje.nl/system/pdf.png",
+        "mp3": "https://api.oldmartijntje.nl/system/mp3.png",
+        "wav": "https://api.oldmartijntje.nl/system/wav.png",
+        "ogg": "https://api.oldmartijntje.nl/system/ogg.png",
+        "nds": "https://api.oldmartijntje.nl/system/nds.png",
+        "zip": "https://api.oldmartijntje.nl/system/archive.png",
+        "rar": "https://api.oldmartijntje.nl/system/archive.png",
+        "7z": "https://api.oldmartijntje.nl/system/archive.png",
+        "iso": "https://api.oldmartijntje.nl/system/archive.png",
+        "exe": "https://api.oldmartijntje.nl/system/exe.png",
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
@@ -492,7 +512,7 @@ def generateViewIcons(files, folders, filePath):
     <p>{name}</p>
 </a>
 '''
-    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy">'
+    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy"  onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
     videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:
