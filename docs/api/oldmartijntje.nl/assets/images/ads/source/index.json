@@ -1,0 +1,19 @@
+{
+    "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/ads/source",
+    "folders": [],
+    "files": [
+        {
+            "name": "mario.mp4",
+            "size": 336390,
+            "lastModified": 1701684659.5011747,
+            "type": "mp4"
+        },
+        {
+            "name": "test.mp4",
+            "size": 357521,
+            "lastModified": 1701602984.5047767,
+            "type": "mp4"
+        }
+    ],
+    "parent": "../index.json"
+}

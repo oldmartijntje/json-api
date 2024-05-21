@@ -1,6 +1,13 @@
 {
     "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/ads",
-    "folders": [],
+    "folders": [
+        {
+            "name": "source",
+            "childrenAmount": 2,
+            "lastModified": 1716318865.6796768,
+            "type": "folder"
+        }
+    ],
     "files": [
         {
             "name": "battlePainters.gif",
@@ -28,14 +35,14 @@
         },
         {
             "name": "index.html",
-            "size": 14810,
-            "lastModified": 1716317548.4651842,
+            "size": 14830,
+            "lastModified": 1716318802.0662668,
             "type": "html"
         },
         {
             "name": "index.json",
             "size": 2303,
-            "lastModified": 1716317548.4735773,
+            "lastModified": 1716318802.0727868,
             "type": "json"
         },
         {

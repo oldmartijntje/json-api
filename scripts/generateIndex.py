@@ -32,6 +32,7 @@ def createSettingsJson():
         'folder': 'https://api.oldmartijntje.nl/system/folder.png',
         '?': 'https://api.oldmartijntje.nl/system/unknown-file-types.png'
     }
+    settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
     with open('./settings.json', 'w') as file:
         json.dump(settings, file, indent=4)
@@ -170,6 +171,7 @@ header {
     background-color: #4d4d4d;
 }
 
+.iconItem div video,
 .iconItem div img {
     max-height: 100%;
     max-width: 100%;
@@ -482,21 +484,26 @@ def fetchIcon(fileOrFolder):
         return 'https://simpleicon.com/wp-content/uploads/file.png'
 
 def generateViewIcons(files, folders, filePath):
+    videoTypes = loadSetting(settings, 'loadVideosFromTypes')
     design = '''
 <a class="iconItem" href="{url}">
     <div>
-        <img data-src="{icon}" alt="{name}" class="lazy">
+        {type}
     </div>
     <p>{name}</p>
 </a>
 '''
+    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy">'
+    videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:
         if folder['name'] != 'node_modules':
-            icons += design.format(url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'])
+            icons += design.format(url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'], type=imgDesign.format(icon=fetchIcon(folder), name=folder['name']))
     for file in files:
-        if file['name'] != 'index.html' and file['name'] != 'index.json':
-            icons += design.format(url='./' + file['name'], icon=fetchIcon(file), name=file['name'])
+        if file['type'] in videoTypes:
+            icons += design.format(url='./' + file['name'], name=file['name'], type=videoDesign.format(url='./' + file['name'], name=file['name']))
+        elif file['name'] != 'index.html' and file['name'] != 'index.json':
+            icons += design.format(url='./' + file['name'], icon=fetchIcon(file), name=file['name'], type=imgDesign.format(icon=fetchIcon(file), name=file['name']))
     return icons	
 
 def saveHTML(header, content, filePath, files, folders):
