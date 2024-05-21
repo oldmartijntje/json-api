@@ -30,10 +30,7 @@ def createSettingsJson():
     '''
     settings['icons'] = {
         'folder': 'https://api.oldmartijntje.nl/system/folder.png',
-        'html': 'https://simpleicon.com/wp-content/uploads/html.png',
-        'css': 'https://simpleicon.com/wp-content/uploads/css.png',
-        'js': 'https://simpleicon.com/wp-content/uploads/javascript.png',
-        'json': 'https://simpleicon.com/wp-content/uploads/json.png'
+        '?': 'https://api.oldmartijntje.nl/system/unknown-file-types.png'
     }
 
     with open('./settings.json', 'w') as file:
@@ -426,6 +423,8 @@ def fetchIcon(fileOrFolder):
     elif loadSetting(settings, 'icons') and fileOrFolder['type'] in loadSetting(settings, 'icons'):
         return loadSetting(settings, 'icons')[fileOrFolder['type']]
     else:
+        if loadSetting(settings, 'icons') and '?' in loadSetting(settings, 'icons'):
+            return loadSetting(settings, 'icons')['?']
         return 'https://simpleicon.com/wp-content/uploads/file.png'
 
 def generateViewIcons(files, folders, filePath):
