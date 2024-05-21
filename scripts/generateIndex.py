@@ -447,7 +447,7 @@ def createHTML(files, folders, filePath):
             content += '<ul>\n'
         content += '<li class="fileLine">'
         content += '<div>'
-        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+        content += '<img data-src="' + fetchIcon(folder) + '/index.html" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
         content += '<a href="./' + folder['name'] + '">' + folder['name'] + '</a>'
         content += '</div>'
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
