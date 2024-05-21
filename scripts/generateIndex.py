@@ -62,7 +62,6 @@ def loadStyling():
     overflow: hidden;
     height: 100svh;
     width: 100vw;
-    user-select: none;
 }
 
 a, a:visited {
@@ -75,16 +74,19 @@ footer {
     padding: 1rem;
     text-align: center;
     height: 12rem;
+    max-height: 8rem;
 }
 
 .buttons {
     display: flex;
     justify-content: start;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 #title {
     word-wrap: break-word;
+    font-size: 1.1rem;
 }
 
 #indexName {
@@ -102,6 +104,10 @@ header {
     justify-content: space-between;
 }
 
+#icon {
+    padding-right: 1rem;
+}
+
 .fileLine * {
     overflow: hidden;
     word-wrap: break-word;
@@ -116,6 +122,7 @@ header {
     margin: 1rem;
     flex-grow: 1;
     overflow-y: scroll;
+    user-select: none;
 }
 
 .icon-radio {
@@ -155,6 +162,8 @@ header {
     height: 115px;
     width: 115px;
     max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
 }
 
 .iconItem:hover {
@@ -181,6 +190,17 @@ header {
     word-break: break-all;
 }
 
+footer a,
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+footer h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -188,25 +208,6 @@ header {
 
     .modifiedDate {
         display: none;
-    }
-
-    #title {
-        font-size: 1.1rem;
-    }
-
-    footer {
-        max-height: 8rem;
-    }
-
-    footer a,
-    footer p {
-        margin: 0;
-        font-size: 0.8rem;
-    }
-
-    footer h2 {
-        font-size: 1rem;
-        margin: 0;
     }
 }
 '''
@@ -222,6 +223,11 @@ def loadJavascript():
         javascript = open('./scripts.js', 'r').read()
     except:
         javascript = '''
+
+        function setLocalStorageItem(key, value) {
+            localStorage.setItem(key, value);
+        }
+
         function timeSince(date) {
             const seconds = Math.floor((new Date() - date) / 1000);
             let interval = Math.floor(seconds / 31536000);
@@ -257,11 +263,32 @@ def loadJavascript():
             });
         }
 
+        function setRadioButtonValue(value) {
+            // Find all radio buttons with name "view"
+            let radioButtons = document.querySelectorAll('input[name="view"]');
+            
+            // Loop through each radio button
+            radioButtons.forEach((radio) => {
+                radio.checked = false;
+            });
+            radioButtons.forEach((radio) => {
+                // Check if the radio button's value matches the desired value
+                if (radio.id === value) {
+                    // Set the checked attribute to true if it matches
+                    radio.checked = true;
+                }
+            });
+        }
+
         // Initial update
         updateTimeSince();
 
         // Update every 10 seconds
         setInterval(updateTimeSince, 10000);
+
+        const displayMode = localStorage.getItem('displayMode');
+        console.log('Display Mode:', displayMode);
+        handleRadioChange(displayMode);
 
         document.querySelectorAll('input[name="view"]').forEach((radio) => {
             radio.addEventListener('change', (event) => {
@@ -270,6 +297,7 @@ def loadJavascript():
         });
 
         function handleRadioChange(selectedId) {
+            setLocalStorageItem('displayMode', selectedId);
             if (selectedId === 'listView') {
                 console.log('List View selected');
                 // Add your code to handle List View selection
@@ -282,8 +310,9 @@ def loadJavascript():
 
                 // Add your code to handle Icon View selection
             }
+            setRadioButtonValue(selectedId);
         }
-        handleRadioChange('iconView');
+
 
         document.addEventListener("DOMContentLoaded", function () {
             const lazyImages = document.querySelectorAll('img.lazy');
@@ -359,7 +388,7 @@ def createHTML(files, folders, filePath):
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
     </label>
 
-    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <input type="radio" id="iconView" name="view" class="icon-radio">
     <label for="iconView" class="icon-label">
         <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
     </label>

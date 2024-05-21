@@ -1,4 +1,9 @@
 
+
+        function setLocalStorageItem(key, value) {
+            localStorage.setItem(key, value);
+        }
+
         function timeSince(date) {
             const seconds = Math.floor((new Date() - date) / 1000);
             let interval = Math.floor(seconds / 31536000);
@@ -34,11 +39,32 @@
             });
         }
 
+        function setRadioButtonValue(value) {
+            // Find all radio buttons with name "view"
+            let radioButtons = document.querySelectorAll('input[name="view"]');
+            
+            // Loop through each radio button
+            radioButtons.forEach((radio) => {
+                radio.checked = false;
+            });
+            radioButtons.forEach((radio) => {
+                // Check if the radio button's value matches the desired value
+                if (radio.id === value) {
+                    // Set the checked attribute to true if it matches
+                    radio.checked = true;
+                }
+            });
+        }
+
         // Initial update
         updateTimeSince();
 
         // Update every 10 seconds
         setInterval(updateTimeSince, 10000);
+
+        const displayMode = localStorage.getItem('displayMode');
+        console.log('Display Mode:', displayMode);
+        handleRadioChange(displayMode);
 
         document.querySelectorAll('input[name="view"]').forEach((radio) => {
             radio.addEventListener('change', (event) => {
@@ -47,6 +73,7 @@
         });
 
         function handleRadioChange(selectedId) {
+            setLocalStorageItem('displayMode', selectedId);
             if (selectedId === 'listView') {
                 console.log('List View selected');
                 // Add your code to handle List View selection
@@ -59,8 +86,9 @@
 
                 // Add your code to handle Icon View selection
             }
+            setRadioButtonValue(selectedId);
         }
-        handleRadioChange('iconView');
+
 
         document.addEventListener("DOMContentLoaded", function () {
             const lazyImages = document.querySelectorAll('img.lazy');

@@ -9,7 +9,6 @@ body {
     overflow: hidden;
     height: 100svh;
     width: 100vw;
-    user-select: none;
 }
 
 a, a:visited {
@@ -22,16 +21,19 @@ footer {
     padding: 1rem;
     text-align: center;
     height: 12rem;
+    max-height: 8rem;
 }
 
 .buttons {
     display: flex;
     justify-content: start;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 #title {
     word-wrap: break-word;
+    font-size: 1.1rem;
 }
 
 #indexName {
@@ -49,6 +51,10 @@ header {
     justify-content: space-between;
 }
 
+#icon {
+    padding-right: 1rem;
+}
+
 .fileLine * {
     overflow: hidden;
     word-wrap: break-word;
@@ -63,6 +69,7 @@ header {
     margin: 1rem;
     flex-grow: 1;
     overflow-y: scroll;
+    user-select: none;
 }
 
 .icon-radio {
@@ -102,6 +109,8 @@ header {
     height: 115px;
     width: 115px;
     max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
 }
 
 .iconItem:hover {
@@ -128,6 +137,17 @@ header {
     word-break: break-all;
 }
 
+footer a,
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+footer h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -135,24 +155,5 @@ header {
 
     .modifiedDate {
         display: none;
-    }
-
-    #title {
-        font-size: 1.1rem;
-    }
-
-    footer {
-        max-height: 8rem;
-    }
-
-    footer a,
-    footer p {
-        margin: 0;
-        font-size: 0.8rem;
-    }
-
-    footer h2 {
-        font-size: 1rem;
-        margin: 0;
     }
 }
