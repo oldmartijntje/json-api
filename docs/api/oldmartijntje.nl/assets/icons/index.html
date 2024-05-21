@@ -25,6 +25,7 @@ It contains 26 files and 2 folders.">
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+    user-select: none;
 }
 
 a, a:visited {
@@ -80,6 +81,68 @@ header {
     overflow-y: scroll;
 }
 
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -91,7 +154,6 @@ header {
 
 }
 
-
 </style>
 
 <body>
@@ -102,8 +164,18 @@ header {
 <strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
 <strong><a href="./index.json">[json index]</a></strong>
 </div>
-</header>
-<div class="content">
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
     <h2>Folders (2)</h2>
 <ul>
 <li class="fileLine"><strong><a href="./achievements/index.html">./achievements</a></strong><span class="childrenAmount" title="Amount of items in this folder">51 Items </span><span class="time-since" title="Last Modified" data-value="2024-05-08T12:48:38.257257"></span><span class="modifiedDate" title="Last Modified">08/05/24 12:48PM</span></li>
@@ -139,6 +211,207 @@ header {
 <li class="fileLine"><a href="./turnOff.ico">turnOff.ico</a><span class="size" title="File Size">3.774 KB</span><span class="time-since" title="Last Modified" data-value="2023-11-16T20:25:22.359136"></span><span class="modifiedDate" title="Last Modified">16/11/23 20:25PM</span></li>
 </ul>
 </ul></div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            
+<a class="iconItem" href="./achievements/index.html">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/folder.png" alt="achievements" class="lazy">
+    </div>
+    <p>achievements</p>
+</a>
+
+<a class="iconItem" href="./console icons/index.html">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/folder.png" alt="console icons" class="lazy">
+    </div>
+    <p>console icons</p>
+</a>
+
+<a class="iconItem" href="./1up.png">
+    <div>
+        <img data-src="1up.png" alt="1up.png" class="lazy">
+    </div>
+    <p>1up.png</p>
+</a>
+
+<a class="iconItem" href="./Critical Error.png">
+    <div>
+        <img data-src="Critical Error.png" alt="Critical Error.png" class="lazy">
+    </div>
+    <p>Critical Error.png</p>
+</a>
+
+<a class="iconItem" href="./disc1.png">
+    <div>
+        <img data-src="disc1.png" alt="disc1.png" class="lazy">
+    </div>
+    <p>disc1.png</p>
+</a>
+
+<a class="iconItem" href="./Exclamation.png">
+    <div>
+        <img data-src="Exclamation.png" alt="Exclamation.png" class="lazy">
+    </div>
+    <p>Exclamation.png</p>
+</a>
+
+<a class="iconItem" href="./exitButton.png">
+    <div>
+        <img data-src="exitButton.png" alt="exitButton.png" class="lazy">
+    </div>
+    <p>exitButton.png</p>
+</a>
+
+<a class="iconItem" href="./flag.png">
+    <div>
+        <img data-src="flag.png" alt="flag.png" class="lazy">
+    </div>
+    <p>flag.png</p>
+</a>
+
+<a class="iconItem" href="./flag2.png">
+    <div>
+        <img data-src="flag2.png" alt="flag2.png" class="lazy">
+    </div>
+    <p>flag2.png</p>
+</a>
+
+<a class="iconItem" href="./greenArrow.png">
+    <div>
+        <img data-src="greenArrow.png" alt="greenArrow.png" class="lazy">
+    </div>
+    <p>greenArrow.png</p>
+</a>
+
+<a class="iconItem" href="./Information.png">
+    <div>
+        <img data-src="Information.png" alt="Information.png" class="lazy">
+    </div>
+    <p>Information.png</p>
+</a>
+
+<a class="iconItem" href="./Internet.ico">
+    <div>
+        <img data-src="Internet.ico" alt="Internet.ico" class="lazy">
+    </div>
+    <p>Internet.ico</p>
+</a>
+
+<a class="iconItem" href="./iso.png">
+    <div>
+        <img data-src="iso.png" alt="iso.png" class="lazy">
+    </div>
+    <p>iso.png</p>
+</a>
+
+<a class="iconItem" href="./load.ico">
+    <div>
+        <img data-src="load.ico" alt="load.ico" class="lazy">
+    </div>
+    <p>load.ico</p>
+</a>
+
+<a class="iconItem" href="./marioHeart.png">
+    <div>
+        <img data-src="marioHeart.png" alt="marioHeart.png" class="lazy">
+    </div>
+    <p>marioHeart.png</p>
+</a>
+
+<a class="iconItem" href="./marioPowerHeart.png">
+    <div>
+        <img data-src="marioPowerHeart.png" alt="marioPowerHeart.png" class="lazy">
+    </div>
+    <p>marioPowerHeart.png</p>
+</a>
+
+<a class="iconItem" href="./moreApps.png">
+    <div>
+        <img data-src="moreApps.png" alt="moreApps.png" class="lazy">
+    </div>
+    <p>moreApps.png</p>
+</a>
+
+<a class="iconItem" href="./oldma.png">
+    <div>
+        <img data-src="oldma.png" alt="oldma.png" class="lazy">
+    </div>
+    <p>oldma.png</p>
+</a>
+
+<a class="iconItem" href="./pc.ico">
+    <div>
+        <img data-src="pc.ico" alt="pc.ico" class="lazy">
+    </div>
+    <p>pc.ico</p>
+</a>
+
+<a class="iconItem" href="./phone.ico">
+    <div>
+        <img data-src="phone.ico" alt="phone.ico" class="lazy">
+    </div>
+    <p>phone.ico</p>
+</a>
+
+<a class="iconItem" href="./portal1.png">
+    <div>
+        <img data-src="portal1.png" alt="portal1.png" class="lazy">
+    </div>
+    <p>portal1.png</p>
+</a>
+
+<a class="iconItem" href="./portal2.png">
+    <div>
+        <img data-src="portal2.png" alt="portal2.png" class="lazy">
+    </div>
+    <p>portal2.png</p>
+</a>
+
+<a class="iconItem" href="./Question.png">
+    <div>
+        <img data-src="Question.png" alt="Question.png" class="lazy">
+    </div>
+    <p>Question.png</p>
+</a>
+
+<a class="iconItem" href="./Retro-Coin-icon.png">
+    <div>
+        <img data-src="Retro-Coin-icon.png" alt="Retro-Coin-icon.png" class="lazy">
+    </div>
+    <p>Retro-Coin-icon.png</p>
+</a>
+
+<a class="iconItem" href="./save.ico">
+    <div>
+        <img data-src="save.ico" alt="save.ico" class="lazy">
+    </div>
+    <p>save.ico</p>
+</a>
+
+<a class="iconItem" href="./saveButton.png">
+    <div>
+        <img data-src="saveButton.png" alt="saveButton.png" class="lazy">
+    </div>
+    <p>saveButton.png</p>
+</a>
+
+<a class="iconItem" href="./trash.ico">
+    <div>
+        <img data-src="trash.ico" alt="trash.ico" class="lazy">
+    </div>
+    <p>trash.ico</p>
+</a>
+
+<a class="iconItem" href="./turnOff.ico">
+    <div>
+        <img data-src="turnOff.ico" alt="turnOff.ico" class="lazy">
+    </div>
+    <p>turnOff.ico</p>
+</a>
+
+        </div>
+    </div>
     <footer>
         
     <h2>OldMartijntje &copy;</h2>
@@ -146,7 +419,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 23:23PM</p>
+        <p>Last updated: <span>21/05/24 18:42PM / </span><span class="time-since" data-value="2024-05-21T18:42:53.432740"></span></p>
     </footer>
     <script>
     
@@ -188,8 +461,54 @@ header {
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
+
+        document.querySelectorAll('input[name="view"]').forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                handleRadioChange(event.target.id);
+            });
+        });
+
+        function handleRadioChange(selectedId) {
+            if (selectedId === 'listView') {
+                console.log('List View selected');
+                // Add your code to handle List View selection
+                document.getElementById('list').style.display = 'block';
+                document.getElementById('icon').style.display = 'none';
+            } else if (selectedId === 'iconView') {
+                console.log('Icon View selected');
+                document.getElementById('list').style.display = 'none';
+                document.getElementById('icon').style.display = 'block';
+
+                // Add your code to handle Icon View selection
+            }
+        }
+        handleRadioChange('iconView');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img.lazy');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    } else {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = '';
+                        }
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
         
     </script>
 </body>

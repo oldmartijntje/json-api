@@ -25,6 +25,7 @@ It contains 6 files and 0 folders.">
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+    user-select: none;
 }
 
 a, a:visited {
@@ -80,6 +81,68 @@ header {
     overflow-y: scroll;
 }
 
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -91,7 +154,6 @@ header {
 
 }
 
-
 </style>
 
 <body>
@@ -102,8 +164,18 @@ header {
 <strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
 <strong><a href="./index.json">[json index]</a></strong>
 </div>
-</header>
-<div class="content">
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
     <h2>Files (6)</h2>
 <ul>
 <li class="fileLine"><a href="./achievements.json">achievements.json</a><span class="size" title="File Size">30.421 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-08T21:23:29.644957"></span><span class="modifiedDate" title="Last Modified">08/05/24 21:23PM</span></li>
@@ -114,6 +186,53 @@ header {
 <li class="fileLine"><a href="./websiteDisplayItems.json">websiteDisplayItems.json</a><span class="size" title="File Size">59.962 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-08T13:52:08.032840"></span><span class="modifiedDate" title="Last Modified">08/05/24 13:52PM</span></li>
 </ul>
 </ul></div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            
+<a class="iconItem" href="./achievements.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="achievements.json" class="lazy">
+    </div>
+    <p>achievements.json</p>
+</a>
+
+<a class="iconItem" href="./ads.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="ads.json" class="lazy">
+    </div>
+    <p>ads.json</p>
+</a>
+
+<a class="iconItem" href="./applications.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="applications.json" class="lazy">
+    </div>
+    <p>applications.json</p>
+</a>
+
+<a class="iconItem" href="./gamesData.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="gamesData.json" class="lazy">
+    </div>
+    <p>gamesData.json</p>
+</a>
+
+<a class="iconItem" href="./projects.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="projects.json" class="lazy">
+    </div>
+    <p>projects.json</p>
+</a>
+
+<a class="iconItem" href="./websiteDisplayItems.json">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/json.png" alt="websiteDisplayItems.json" class="lazy">
+    </div>
+    <p>websiteDisplayItems.json</p>
+</a>
+
+        </div>
+    </div>
     <footer>
         
     <h2>OldMartijntje &copy;</h2>
@@ -121,7 +240,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 23:23PM</p>
+        <p>Last updated: <span>21/05/24 18:42PM / </span><span class="time-since" data-value="2024-05-21T18:42:53.581796"></span></p>
     </footer>
     <script>
     
@@ -163,8 +282,54 @@ header {
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
+
+        document.querySelectorAll('input[name="view"]').forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                handleRadioChange(event.target.id);
+            });
+        });
+
+        function handleRadioChange(selectedId) {
+            if (selectedId === 'listView') {
+                console.log('List View selected');
+                // Add your code to handle List View selection
+                document.getElementById('list').style.display = 'block';
+                document.getElementById('icon').style.display = 'none';
+            } else if (selectedId === 'iconView') {
+                console.log('Icon View selected');
+                document.getElementById('list').style.display = 'none';
+                document.getElementById('icon').style.display = 'block';
+
+                // Add your code to handle Icon View selection
+            }
+        }
+        handleRadioChange('iconView');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img.lazy');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    } else {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = '';
+                        }
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
         
     </script>
 </body>

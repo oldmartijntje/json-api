@@ -4,12 +4,14 @@
         {
             "name": "achievements",
             "childrenAmount": 53,
-            "lastModified": 1715165318.2572572
+            "lastModified": 1715165318.2572572,
+            "type": "folder"
         },
         {
             "name": "console icons",
             "childrenAmount": 82,
-            "lastModified": 1715165663.139296
+            "lastModified": 1715165663.139296,
+            "type": "folder"
         }
     ],
     "files": [
@@ -63,14 +65,14 @@
         },
         {
             "name": "index.html",
-            "size": 12073,
-            "lastModified": 1715894451.1258883,
+            "size": 21171,
+            "lastModified": 1716309311.5641053,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 4987,
-            "lastModified": 1715894451.1268485,
+            "size": 5050,
+            "lastModified": 1716309311.5849795,
             "type": "json"
         },
         {

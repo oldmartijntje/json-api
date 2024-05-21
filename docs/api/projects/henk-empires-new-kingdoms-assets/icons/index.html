@@ -25,6 +25,7 @@ It contains 67 files and 0 folders.">
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+    user-select: none;
 }
 
 a, a:visited {
@@ -80,6 +81,68 @@ header {
     overflow-y: scroll;
 }
 
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -91,7 +154,6 @@ header {
 
 }
 
-
 </style>
 
 <body>
@@ -102,8 +164,18 @@ header {
 <strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
 <strong><a href="./index.json">[json index]</a></strong>
 </div>
-</header>
-<div class="content">
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
     <h2>Files (67)</h2>
 <ul>
 <li class="fileLine"><a href="./404nf.png">404nf.png</a><span class="size" title="File Size">2.686 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-08T11:22:42.683236"></span><span class="modifiedDate" title="Last Modified">08/05/24 11:22AM</span></li>
@@ -175,6 +247,480 @@ header {
 <li class="fileLine"><a href="./woolRecourse.png">woolRecourse.png</a><span class="size" title="File Size">136.219 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-08T11:22:44.543586"></span><span class="modifiedDate" title="Last Modified">08/05/24 11:22AM</span></li>
 </ul>
 </ul></div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            
+<a class="iconItem" href="./404nf.png">
+    <div>
+        <img data-src="404nf.png" alt="404nf.png" class="lazy">
+    </div>
+    <p>404nf.png</p>
+</a>
+
+<a class="iconItem" href="./Active.png">
+    <div>
+        <img data-src="Active.png" alt="Active.png" class="lazy">
+    </div>
+    <p>Active.png</p>
+</a>
+
+<a class="iconItem" href="./aim.png">
+    <div>
+        <img data-src="aim.png" alt="aim.png" class="lazy">
+    </div>
+    <p>aim.png</p>
+</a>
+
+<a class="iconItem" href="./bow.png">
+    <div>
+        <img data-src="bow.png" alt="bow.png" class="lazy">
+    </div>
+    <p>bow.png</p>
+</a>
+
+<a class="iconItem" href="./brick.png">
+    <div>
+        <img data-src="brick.png" alt="brick.png" class="lazy">
+    </div>
+    <p>brick.png</p>
+</a>
+
+<a class="iconItem" href="./coins.png">
+    <div>
+        <img data-src="coins.png" alt="coins.png" class="lazy">
+    </div>
+    <p>coins.png</p>
+</a>
+
+<a class="iconItem" href="./D20.png">
+    <div>
+        <img data-src="D20.png" alt="D20.png" class="lazy">
+    </div>
+    <p>D20.png</p>
+</a>
+
+<a class="iconItem" href="./D6.png">
+    <div>
+        <img data-src="D6.png" alt="D6.png" class="lazy">
+    </div>
+    <p>D6.png</p>
+</a>
+
+<a class="iconItem" href="./description.png">
+    <div>
+        <img data-src="description.png" alt="description.png" class="lazy">
+    </div>
+    <p>description.png</p>
+</a>
+
+<a class="iconItem" href="./duckbot.png">
+    <div>
+        <img data-src="duckbot.png" alt="duckbot.png" class="lazy">
+    </div>
+    <p>duckbot.png</p>
+</a>
+
+<a class="iconItem" href="./electric.png">
+    <div>
+        <img data-src="electric.png" alt="electric.png" class="lazy">
+    </div>
+    <p>electric.png</p>
+</a>
+
+<a class="iconItem" href="./emptyIcon.png">
+    <div>
+        <img data-src="emptyIcon.png" alt="emptyIcon.png" class="lazy">
+    </div>
+    <p>emptyIcon.png</p>
+</a>
+
+<a class="iconItem" href="./energy.png">
+    <div>
+        <img data-src="energy.png" alt="energy.png" class="lazy">
+    </div>
+    <p>energy.png</p>
+</a>
+
+<a class="iconItem" href="./eyesEmoji.png">
+    <div>
+        <img data-src="eyesEmoji.png" alt="eyesEmoji.png" class="lazy">
+    </div>
+    <p>eyesEmoji.png</p>
+</a>
+
+<a class="iconItem" href="./fire.png">
+    <div>
+        <img data-src="fire.png" alt="fire.png" class="lazy">
+    </div>
+    <p>fire.png</p>
+</a>
+
+<a class="iconItem" href="./gem1.png">
+    <div>
+        <img data-src="gem1.png" alt="gem1.png" class="lazy">
+    </div>
+    <p>gem1.png</p>
+</a>
+
+<a class="iconItem" href="./gem2.png">
+    <div>
+        <img data-src="gem2.png" alt="gem2.png" class="lazy">
+    </div>
+    <p>gem2.png</p>
+</a>
+
+<a class="iconItem" href="./gem3.png">
+    <div>
+        <img data-src="gem3.png" alt="gem3.png" class="lazy">
+    </div>
+    <p>gem3.png</p>
+</a>
+
+<a class="iconItem" href="./gem4.png">
+    <div>
+        <img data-src="gem4.png" alt="gem4.png" class="lazy">
+    </div>
+    <p>gem4.png</p>
+</a>
+
+<a class="iconItem" href="./gem5.png">
+    <div>
+        <img data-src="gem5.png" alt="gem5.png" class="lazy">
+    </div>
+    <p>gem5.png</p>
+</a>
+
+<a class="iconItem" href="./gem6.png">
+    <div>
+        <img data-src="gem6.png" alt="gem6.png" class="lazy">
+    </div>
+    <p>gem6.png</p>
+</a>
+
+<a class="iconItem" href="./ggcu.png">
+    <div>
+        <img data-src="ggcu.png" alt="ggcu.png" class="lazy">
+    </div>
+    <p>ggcu.png</p>
+</a>
+
+<a class="iconItem" href="./glove.png">
+    <div>
+        <img data-src="glove.png" alt="glove.png" class="lazy">
+    </div>
+    <p>glove.png</p>
+</a>
+
+<a class="iconItem" href="./green.png">
+    <div>
+        <img data-src="green.png" alt="green.png" class="lazy">
+    </div>
+    <p>green.png</p>
+</a>
+
+<a class="iconItem" href="./henk.png">
+    <div>
+        <img data-src="henk.png" alt="henk.png" class="lazy">
+    </div>
+    <p>henk.png</p>
+</a>
+
+<a class="iconItem" href="./mijnkjweft.png">
+    <div>
+        <img data-src="mijnkjweft.png" alt="mijnkjweft.png" class="lazy">
+    </div>
+    <p>mijnkjweft.png</p>
+</a>
+
+<a class="iconItem" href="./mushroom.png">
+    <div>
+        <img data-src="mushroom.png" alt="mushroom.png" class="lazy">
+    </div>
+    <p>mushroom.png</p>
+</a>
+
+<a class="iconItem" href="./ongoing.png">
+    <div>
+        <img data-src="ongoing.png" alt="ongoing.png" class="lazy">
+    </div>
+    <p>ongoing.png</p>
+</a>
+
+<a class="iconItem" href="./ongoingLocation.png">
+    <div>
+        <img data-src="ongoingLocation.png" alt="ongoingLocation.png" class="lazy">
+    </div>
+    <p>ongoingLocation.png</p>
+</a>
+
+<a class="iconItem" href="./onreveal.png">
+    <div>
+        <img data-src="onreveal.png" alt="onreveal.png" class="lazy">
+    </div>
+    <p>onreveal.png</p>
+</a>
+
+<a class="iconItem" href="./onrevealLocation.png">
+    <div>
+        <img data-src="onrevealLocation.png" alt="onrevealLocation.png" class="lazy">
+    </div>
+    <p>onrevealLocation.png</p>
+</a>
+
+<a class="iconItem" href="./oreRecourse.png">
+    <div>
+        <img data-src="oreRecourse.png" alt="oreRecourse.png" class="lazy">
+    </div>
+    <p>oreRecourse.png</p>
+</a>
+
+<a class="iconItem" href="./partypopper.png">
+    <div>
+        <img data-src="partypopper.png" alt="partypopper.png" class="lazy">
+    </div>
+    <p>partypopper.png</p>
+</a>
+
+<a class="iconItem" href="./power.png">
+    <div>
+        <img data-src="power.png" alt="power.png" class="lazy">
+    </div>
+    <p>power.png</p>
+</a>
+
+<a class="iconItem" href="./questionmarks.png">
+    <div>
+        <img data-src="questionmarks.png" alt="questionmarks.png" class="lazy">
+    </div>
+    <p>questionmarks.png</p>
+</a>
+
+<a class="iconItem" href="./RandomGem.png">
+    <div>
+        <img data-src="RandomGem.png" alt="RandomGem.png" class="lazy">
+    </div>
+    <p>RandomGem.png</p>
+</a>
+
+<a class="iconItem" href="./revolution.png">
+    <div>
+        <img data-src="revolution.png" alt="revolution.png" class="lazy">
+    </div>
+    <p>revolution.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage1.png">
+    <div>
+        <img data-src="shroobLanguage1.png" alt="shroobLanguage1.png" class="lazy">
+    </div>
+    <p>shroobLanguage1.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage10.png">
+    <div>
+        <img data-src="shroobLanguage10.png" alt="shroobLanguage10.png" class="lazy">
+    </div>
+    <p>shroobLanguage10.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage11.png">
+    <div>
+        <img data-src="shroobLanguage11.png" alt="shroobLanguage11.png" class="lazy">
+    </div>
+    <p>shroobLanguage11.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage12.png">
+    <div>
+        <img data-src="shroobLanguage12.png" alt="shroobLanguage12.png" class="lazy">
+    </div>
+    <p>shroobLanguage12.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage13.png">
+    <div>
+        <img data-src="shroobLanguage13.png" alt="shroobLanguage13.png" class="lazy">
+    </div>
+    <p>shroobLanguage13.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage14.png">
+    <div>
+        <img data-src="shroobLanguage14.png" alt="shroobLanguage14.png" class="lazy">
+    </div>
+    <p>shroobLanguage14.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage15.png">
+    <div>
+        <img data-src="shroobLanguage15.png" alt="shroobLanguage15.png" class="lazy">
+    </div>
+    <p>shroobLanguage15.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage16.png">
+    <div>
+        <img data-src="shroobLanguage16.png" alt="shroobLanguage16.png" class="lazy">
+    </div>
+    <p>shroobLanguage16.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage17.png">
+    <div>
+        <img data-src="shroobLanguage17.png" alt="shroobLanguage17.png" class="lazy">
+    </div>
+    <p>shroobLanguage17.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage18.png">
+    <div>
+        <img data-src="shroobLanguage18.png" alt="shroobLanguage18.png" class="lazy">
+    </div>
+    <p>shroobLanguage18.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage19.png">
+    <div>
+        <img data-src="shroobLanguage19.png" alt="shroobLanguage19.png" class="lazy">
+    </div>
+    <p>shroobLanguage19.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage2.png">
+    <div>
+        <img data-src="shroobLanguage2.png" alt="shroobLanguage2.png" class="lazy">
+    </div>
+    <p>shroobLanguage2.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage3.png">
+    <div>
+        <img data-src="shroobLanguage3.png" alt="shroobLanguage3.png" class="lazy">
+    </div>
+    <p>shroobLanguage3.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage4.png">
+    <div>
+        <img data-src="shroobLanguage4.png" alt="shroobLanguage4.png" class="lazy">
+    </div>
+    <p>shroobLanguage4.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage5.png">
+    <div>
+        <img data-src="shroobLanguage5.png" alt="shroobLanguage5.png" class="lazy">
+    </div>
+    <p>shroobLanguage5.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage6.png">
+    <div>
+        <img data-src="shroobLanguage6.png" alt="shroobLanguage6.png" class="lazy">
+    </div>
+    <p>shroobLanguage6.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage7.png">
+    <div>
+        <img data-src="shroobLanguage7.png" alt="shroobLanguage7.png" class="lazy">
+    </div>
+    <p>shroobLanguage7.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage8.png">
+    <div>
+        <img data-src="shroobLanguage8.png" alt="shroobLanguage8.png" class="lazy">
+    </div>
+    <p>shroobLanguage8.png</p>
+</a>
+
+<a class="iconItem" href="./shroobLanguage9.png">
+    <div>
+        <img data-src="shroobLanguage9.png" alt="shroobLanguage9.png" class="lazy">
+    </div>
+    <p>shroobLanguage9.png</p>
+</a>
+
+<a class="iconItem" href="./special.png">
+    <div>
+        <img data-src="special.png" alt="special.png" class="lazy">
+    </div>
+    <p>special.png</p>
+</a>
+
+<a class="iconItem" href="./specialLocation.png">
+    <div>
+        <img data-src="specialLocation.png" alt="specialLocation.png" class="lazy">
+    </div>
+    <p>specialLocation.png</p>
+</a>
+
+<a class="iconItem" href="./stone.png">
+    <div>
+        <img data-src="stone.png" alt="stone.png" class="lazy">
+    </div>
+    <p>stone.png</p>
+</a>
+
+<a class="iconItem" href="./stoneRecourse.png">
+    <div>
+        <img data-src="stoneRecourse.png" alt="stoneRecourse.png" class="lazy">
+    </div>
+    <p>stoneRecourse.png</p>
+</a>
+
+<a class="iconItem" href="./UnknownBattleCard.png">
+    <div>
+        <img data-src="UnknownBattleCard.png" alt="UnknownBattleCard.png" class="lazy">
+    </div>
+    <p>UnknownBattleCard.png</p>
+</a>
+
+<a class="iconItem" href="./victoryPoint.png">
+    <div>
+        <img data-src="victoryPoint.png" alt="victoryPoint.png" class="lazy">
+    </div>
+    <p>victoryPoint.png</p>
+</a>
+
+<a class="iconItem" href="./water.png">
+    <div>
+        <img data-src="water.png" alt="water.png" class="lazy">
+    </div>
+    <p>water.png</p>
+</a>
+
+<a class="iconItem" href="./wheatRecourse.png">
+    <div>
+        <img data-src="wheatRecourse.png" alt="wheatRecourse.png" class="lazy">
+    </div>
+    <p>wheatRecourse.png</p>
+</a>
+
+<a class="iconItem" href="./wind.png">
+    <div>
+        <img data-src="wind.png" alt="wind.png" class="lazy">
+    </div>
+    <p>wind.png</p>
+</a>
+
+<a class="iconItem" href="./woodRecourse.png">
+    <div>
+        <img data-src="woodRecourse.png" alt="woodRecourse.png" class="lazy">
+    </div>
+    <p>woodRecourse.png</p>
+</a>
+
+<a class="iconItem" href="./woolRecourse.png">
+    <div>
+        <img data-src="woolRecourse.png" alt="woolRecourse.png" class="lazy">
+    </div>
+    <p>woolRecourse.png</p>
+</a>
+
+        </div>
+    </div>
     <footer>
         
     <h2>OldMartijntje &copy;</h2>
@@ -182,7 +728,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 23:23PM</p>
+        <p>Last updated: <span>21/05/24 18:42PM / </span><span class="time-since" data-value="2024-05-21T18:42:53.621138"></span></p>
     </footer>
     <script>
     
@@ -224,8 +770,54 @@ header {
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
+
+        document.querySelectorAll('input[name="view"]').forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                handleRadioChange(event.target.id);
+            });
+        });
+
+        function handleRadioChange(selectedId) {
+            if (selectedId === 'listView') {
+                console.log('List View selected');
+                // Add your code to handle List View selection
+                document.getElementById('list').style.display = 'block';
+                document.getElementById('icon').style.display = 'none';
+            } else if (selectedId === 'iconView') {
+                console.log('Icon View selected');
+                document.getElementById('list').style.display = 'none';
+                document.getElementById('icon').style.display = 'block';
+
+                // Add your code to handle Icon View selection
+            }
+        }
+        handleRadioChange('iconView');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img.lazy');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    } else {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = '';
+                        }
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
         
     </script>
 </body>

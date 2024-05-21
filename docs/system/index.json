@@ -1,0 +1,25 @@
+{
+    "path": "https://api.oldmartijntje.nl/system",
+    "folders": [],
+    "files": [
+        {
+            "name": "folder.png",
+            "size": 26105,
+            "lastModified": 1716307293.6174471,
+            "type": "png"
+        },
+        {
+            "name": "index.html",
+            "size": 8505,
+            "lastModified": 1716309311.9203625,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 615,
+            "lastModified": 1716309311.9228802,
+            "type": "json"
+        }
+    ],
+    "parent": "../index.json"
+}

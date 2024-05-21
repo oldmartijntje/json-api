@@ -15,279 +15,350 @@ It contains 19 files and 1 folders.">
 </head>
 <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #3c3c3c;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        height: 100svh;
-        width: 100vw;
-    }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100svh;
+    width: 100vw;
+    user-select: none;
+}
 
-    a,
-    a:visited {
-        color: #67acf8;
-    }
+a, a:visited {
+    color: #67acf8;
+}
 
-    footer {
-        width: calc(100% - 2rem);
-        background-color: #1f1f1f;
-        padding: 1rem;
-        text-align: center;
-        height: 12rem;
-    }
+footer {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    height: 12rem;
+}
 
-    .buttons {
-        display: flex;
-        justify-content: start;
-        gap: 1rem;
-    }
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
 
-    #title {
-        word-wrap: break-word;
-    }
+#title {
+    word-wrap: break-word;
+}
 
-    #indexName {
-        text-decoration: underline;
-    }
+#indexName {
+    text-decoration: underline;
+}
 
-    header {
-        width: calc(100% - 2rem);
-        background-color: #1f1f1f;
-        padding: 1rem;
-    }
+header {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+}
 
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+.content {
+    margin: 1rem;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
+@media only screen and (max-width: 800px) {
     .fileLine {
-        display: flex;
-        justify-content: space-between;
+        gap: 0.5rem;
     }
 
-    .fileLine * {
-        overflow: hidden;
-        word-wrap: break-word;
-        flex: 1 1 20%;
-    }
-
-    .fileLine *:first-child {
-        flex: 2 1 40%;
-    }
-
-    .content {
-        margin: 1rem;
-        flex-grow: 1;
-        overflow-y: scroll;
-    }
-
-    .icon-radio {
+    .modifiedDate {
         display: none;
     }
 
-    .icon-label {
-        display: inline-block;
-        cursor: pointer;
-        margin-right: 10px;
-    }
+}
 
-    .icon-label img {
-        display: block;
-        height: 2rem;
-        width: 2rem;
-        background-color: #3c3c3c;
-    }
-
-    .icon-radio:checked+.icon-label {
-        outline: 2px solid #67acf8;
-    }
-
-    .iconList {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        flex-direction: row;
-    }
-
-    .iconItem {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        text-align: center;
-        height: 115px;
-        width: 115px;
-    }
-
-    .iconItem:hover {
-        background-color: #4d4d4d;
-    }
-
-    .iconItem img {
-        height: 75%;
-        aspect-ratio: 1/1;
-    }
-
-    .iconItem p {
-        font-size: 0.8rem;
-        margin: 0;
-    }
-
-    @media only screen and (max-width: 800px) {
-        .fileLine {
-            gap: 0.5rem;
-        }
-
-        .modifiedDate {
-            display: none;
-        }
-
-    }
 </style>
 
 <body>
-    <header>
-        <h1 id="title">Index of <span
-                id="indexName">https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images</span></h1>
-        <div class="buttons">
-            <strong><a href="../index.html">[parent directory]</a></strong>
-            <strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
-            <strong><a href="./index.json">[json index]</a></strong>
-        </div>
-        <div class="buttons" style="margin-top: 1rem;">
-            <input type="radio" id="listView" name="view" class="icon-radio" checked>
-            <label for="listView" class="icon-label">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
-            </label>
+<header>
+<h1 id="title">Index of <span id="indexName">https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images</span></h1>
+<div class="buttons">
+<strong><a href="../index.html">[parent directory]</a></strong>
+<strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
+<strong><a href="./index.json">[json index]</a></strong>
+</div>
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
 
-            <input type="radio" id="iconView" name="view" class="icon-radio">
-            <label for="iconView" class="icon-label">
-                <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
-            </label>
-        </div>
-    </header>
-    <div class="content" id="list">
-        <h2>Folders (1)</h2>
-        <ul>
-            <li class="fileLine"><strong><a href="./ads/index.html">./ads</a></strong><span class="childrenAmount"
-                    title="Amount of items in this folder">11 Items </span><span class="time-since"
-                    title="Last Modified" data-value="2024-05-08T12:48:38.260256"></span><span class="modifiedDate"
-                    title="Last Modified">08/05/24 12:48PM</span></li>
-        </ul>
-        <h2>Files (19)</h2>
-        <ul>
-            <li class="fileLine"><a href="./404.png">404.png</a><span class="size" title="File Size">5.681
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-18T21:36:34.187697"></span><span class="modifiedDate"
-                    title="Last Modified">18/01/24 21:36PM</span></li>
-            <li class="fileLine"><a href="./aprilFoolsQR.png">aprilFoolsQR.png</a><span class="size"
-                    title="File Size">1.645 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-04-01T21:29:15.484963"></span><span class="modifiedDate"
-                    title="Last Modified">01/04/24 21:29PM</span></li>
-            <li class="fileLine"><a href="./background.gif">background.gif</a><span class="size"
-                    title="File Size">776.337 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-12-20T13:47:50.274508"></span><span class="modifiedDate"
-                    title="Last Modified">20/12/23 13:47PM</span></li>
-            <li class="fileLine"><a href="./bee.gif">bee.gif</a><span class="size" title="File Size">614.249
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-12-02T14:16:14.999808"></span><span class="modifiedDate"
-                    title="Last Modified">02/12/23 14:16PM</span></li>
-            <li class="fileLine"><a href="./crown.png">crown.png</a><span class="size" title="File Size">70.745
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-18T20:24:54.149217"></span><span class="modifiedDate"
-                    title="Last Modified">18/01/24 20:24PM</span></li>
-            <li class="fileLine"><a href="./mii full.png">mii full.png</a><span class="size" title="File Size">47.266
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-11-28T20:20:31.393268"></span><span class="modifiedDate"
-                    title="Last Modified">28/11/23 20:20PM</span></li>
-            <li class="fileLine"><a href="./mii.png">mii.png</a><span class="size" title="File Size">9.094
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-11-18T22:22:45.994238"></span><span class="modifiedDate"
-                    title="Last Modified">18/11/23 22:22PM</span></li>
-            <li class="fileLine"><a href="./mobileUser.png">mobileUser.png</a><span class="size"
-                    title="File Size">84.018 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-11-18T21:48:56.155814"></span><span class="modifiedDate"
-                    title="Last Modified">18/11/23 21:48PM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegular.pdn">mobileUserRegular.pdn</a><span class="size"
-                    title="File Size">883.45 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-28T00:34:55.112029"></span><span class="modifiedDate"
-                    title="Last Modified">28/01/24 00:34AM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegular.png">mobileUserRegular.png</a><span class="size"
-                    title="File Size">502.781 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-27T20:52:03.316798"></span><span class="modifiedDate"
-                    title="Last Modified">27/01/24 20:52PM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegular2.png">mobileUserRegular2.png</a><span class="size"
-                    title="File Size">411.96 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-27T21:14:08.308459"></span><span class="modifiedDate"
-                    title="Last Modified">27/01/24 21:14PM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegular3.png">mobileUserRegular3.png</a><span class="size"
-                    title="File Size">397.56 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-27T22:28:01.328817"></span><span class="modifiedDate"
-                    title="Last Modified">27/01/24 22:28PM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegular4.png">mobileUserRegular4.png</a><span class="size"
-                    title="File Size">397.276 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-28T00:34:45.000538"></span><span class="modifiedDate"
-                    title="Last Modified">28/01/24 00:34AM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegularBackground.png">mobileUserRegularBackground.png</a><span
-                    class="size" title="File Size">3.565 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-28T00:44:10.288536"></span><span class="modifiedDate"
-                    title="Last Modified">28/01/24 00:44AM</span></li>
-            <li class="fileLine"><a href="./mobileUserRegularCopyright.png">mobileUserRegularCopyright.png</a><span
-                    class="size" title="File Size">2.749 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-27T22:09:58.338176"></span><span class="modifiedDate"
-                    title="Last Modified">27/01/24 22:09PM</span></li>
-            <li class="fileLine"><a
-                    href="./mobileUserRegularPressAnywhere.png">mobileUserRegularPressAnywhere.png</a><span class="size"
-                    title="File Size">56.496 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-28T01:16:49.588825"></span><span class="modifiedDate"
-                    title="Last Modified">28/01/24 01:16AM</span></li>
-            <li class="fileLine"><a href="./myAI.jpeg">myAI.jpeg</a><span class="size" title="File Size">256.816
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-10-03T10:52:20.056381"></span><span class="modifiedDate"
-                    title="Last Modified">03/10/23 10:52AM</span></li>
-            <li class="fileLine"><a href="./navigator.png">navigator.png</a><span class="size" title="File Size">16.49
-                    KB</span><span class="time-since" title="Last Modified"
-                    data-value="2023-11-18T22:05:56.085647"></span><span class="modifiedDate"
-                    title="Last Modified">18/11/23 22:05PM</span></li>
-            <li class="fileLine"><a href="./turtleWithEnvelope.png">turtleWithEnvelope.png</a><span class="size"
-                    title="File Size">129.394 KB</span><span class="time-since" title="Last Modified"
-                    data-value="2024-01-04T14:51:34.548130"></span><span class="modifiedDate"
-                    title="Last Modified">04/01/24 14:51PM</span></li>
-        </ul>
-        </ul>
-    </div>
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
+    <h2>Folders (1)</h2>
+<ul>
+<li class="fileLine"><strong><a href="./ads/index.html">./ads</a></strong><span class="childrenAmount" title="Amount of items in this folder">11 Items </span><span class="time-since" title="Last Modified" data-value="2024-05-08T12:48:38.260256"></span><span class="modifiedDate" title="Last Modified">08/05/24 12:48PM</span></li>
+</ul>
+<h2>Files (19)</h2>
+<ul>
+<li class="fileLine"><a href="./404.png">404.png</a><span class="size" title="File Size">5.681 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-18T21:36:34.187697"></span><span class="modifiedDate" title="Last Modified">18/01/24 21:36PM</span></li>
+<li class="fileLine"><a href="./aprilFoolsQR.png">aprilFoolsQR.png</a><span class="size" title="File Size">1.645 KB</span><span class="time-since" title="Last Modified" data-value="2024-04-01T21:29:15.484963"></span><span class="modifiedDate" title="Last Modified">01/04/24 21:29PM</span></li>
+<li class="fileLine"><a href="./background.gif">background.gif</a><span class="size" title="File Size">776.337 KB</span><span class="time-since" title="Last Modified" data-value="2023-12-20T13:47:50.274508"></span><span class="modifiedDate" title="Last Modified">20/12/23 13:47PM</span></li>
+<li class="fileLine"><a href="./bee.gif">bee.gif</a><span class="size" title="File Size">614.249 KB</span><span class="time-since" title="Last Modified" data-value="2023-12-02T14:16:14.999808"></span><span class="modifiedDate" title="Last Modified">02/12/23 14:16PM</span></li>
+<li class="fileLine"><a href="./crown.png">crown.png</a><span class="size" title="File Size">70.745 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-18T20:24:54.149217"></span><span class="modifiedDate" title="Last Modified">18/01/24 20:24PM</span></li>
+<li class="fileLine"><a href="./mii full.png">mii full.png</a><span class="size" title="File Size">47.266 KB</span><span class="time-since" title="Last Modified" data-value="2023-11-28T20:20:31.393268"></span><span class="modifiedDate" title="Last Modified">28/11/23 20:20PM</span></li>
+<li class="fileLine"><a href="./mii.png">mii.png</a><span class="size" title="File Size">9.094 KB</span><span class="time-since" title="Last Modified" data-value="2023-11-18T22:22:45.994238"></span><span class="modifiedDate" title="Last Modified">18/11/23 22:22PM</span></li>
+<li class="fileLine"><a href="./mobileUser.png">mobileUser.png</a><span class="size" title="File Size">84.018 KB</span><span class="time-since" title="Last Modified" data-value="2023-11-18T21:48:56.155814"></span><span class="modifiedDate" title="Last Modified">18/11/23 21:48PM</span></li>
+<li class="fileLine"><a href="./mobileUserRegular.pdn">mobileUserRegular.pdn</a><span class="size" title="File Size">883.45 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-28T00:34:55.112029"></span><span class="modifiedDate" title="Last Modified">28/01/24 00:34AM</span></li>
+<li class="fileLine"><a href="./mobileUserRegular.png">mobileUserRegular.png</a><span class="size" title="File Size">502.781 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-27T20:52:03.316798"></span><span class="modifiedDate" title="Last Modified">27/01/24 20:52PM</span></li>
+<li class="fileLine"><a href="./mobileUserRegular2.png">mobileUserRegular2.png</a><span class="size" title="File Size">411.96 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-27T21:14:08.308459"></span><span class="modifiedDate" title="Last Modified">27/01/24 21:14PM</span></li>
+<li class="fileLine"><a href="./mobileUserRegular3.png">mobileUserRegular3.png</a><span class="size" title="File Size">397.56 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-27T22:28:01.328817"></span><span class="modifiedDate" title="Last Modified">27/01/24 22:28PM</span></li>
+<li class="fileLine"><a href="./mobileUserRegular4.png">mobileUserRegular4.png</a><span class="size" title="File Size">397.276 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-28T00:34:45.000538"></span><span class="modifiedDate" title="Last Modified">28/01/24 00:34AM</span></li>
+<li class="fileLine"><a href="./mobileUserRegularBackground.png">mobileUserRegularBackground.png</a><span class="size" title="File Size">3.565 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-28T00:44:10.288536"></span><span class="modifiedDate" title="Last Modified">28/01/24 00:44AM</span></li>
+<li class="fileLine"><a href="./mobileUserRegularCopyright.png">mobileUserRegularCopyright.png</a><span class="size" title="File Size">2.749 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-27T22:09:58.338176"></span><span class="modifiedDate" title="Last Modified">27/01/24 22:09PM</span></li>
+<li class="fileLine"><a href="./mobileUserRegularPressAnywhere.png">mobileUserRegularPressAnywhere.png</a><span class="size" title="File Size">56.496 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-28T01:16:49.588825"></span><span class="modifiedDate" title="Last Modified">28/01/24 01:16AM</span></li>
+<li class="fileLine"><a href="./myAI.jpeg">myAI.jpeg</a><span class="size" title="File Size">256.816 KB</span><span class="time-since" title="Last Modified" data-value="2023-10-03T10:52:20.056381"></span><span class="modifiedDate" title="Last Modified">03/10/23 10:52AM</span></li>
+<li class="fileLine"><a href="./navigator.png">navigator.png</a><span class="size" title="File Size">16.49 KB</span><span class="time-since" title="Last Modified" data-value="2023-11-18T22:05:56.085647"></span><span class="modifiedDate" title="Last Modified">18/11/23 22:05PM</span></li>
+<li class="fileLine"><a href="./turtleWithEnvelope.png">turtleWithEnvelope.png</a><span class="size" title="File Size">129.394 KB</span><span class="time-since" title="Last Modified" data-value="2024-01-04T14:51:34.548130"></span><span class="modifiedDate" title="Last Modified">04/01/24 14:51PM</span></li>
+</ul>
+</ul></div>
     <div class="content" id="icon">
         <div class="iconList">
-            <a class="iconItem" href="./404.png">
-                <img data-src="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/404.png" alt="404.png"
-                    class="lazy">
-                <p>404.png</p>
-            </a>
-            <a class="iconItem" href="./404.png">
-                <img data-src="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/404.png" alt="404.png"
-                    class="lazy">
-                <p>404.png</p>
-            </a>
-            <a class="iconItem" href="./404.png">
-                <img data-src="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/404.png" alt="404.png"
-                    class="lazy">
-                <p>404.png</p>
-            </a>
+            
+<a class="iconItem" href="./ads/index.html">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/folder.png" alt="ads" class="lazy">
+    </div>
+    <p>ads</p>
+</a>
+
+<a class="iconItem" href="./404.png">
+    <div>
+        <img data-src="404.png" alt="404.png" class="lazy">
+    </div>
+    <p>404.png</p>
+</a>
+
+<a class="iconItem" href="./aprilFoolsQR.png">
+    <div>
+        <img data-src="aprilFoolsQR.png" alt="aprilFoolsQR.png" class="lazy">
+    </div>
+    <p>aprilFoolsQR.png</p>
+</a>
+
+<a class="iconItem" href="./background.gif">
+    <div>
+        <img data-src="background.gif" alt="background.gif" class="lazy">
+    </div>
+    <p>background.gif</p>
+</a>
+
+<a class="iconItem" href="./bee.gif">
+    <div>
+        <img data-src="bee.gif" alt="bee.gif" class="lazy">
+    </div>
+    <p>bee.gif</p>
+</a>
+
+<a class="iconItem" href="./crown.png">
+    <div>
+        <img data-src="crown.png" alt="crown.png" class="lazy">
+    </div>
+    <p>crown.png</p>
+</a>
+
+<a class="iconItem" href="./mii full.png">
+    <div>
+        <img data-src="mii full.png" alt="mii full.png" class="lazy">
+    </div>
+    <p>mii full.png</p>
+</a>
+
+<a class="iconItem" href="./mii.png">
+    <div>
+        <img data-src="mii.png" alt="mii.png" class="lazy">
+    </div>
+    <p>mii.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUser.png">
+    <div>
+        <img data-src="mobileUser.png" alt="mobileUser.png" class="lazy">
+    </div>
+    <p>mobileUser.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegular.pdn">
+    <div>
+        <img data-src="https://simpleicon.com/wp-content/uploads/file.png" alt="mobileUserRegular.pdn" class="lazy">
+    </div>
+    <p>mobileUserRegular.pdn</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegular.png">
+    <div>
+        <img data-src="mobileUserRegular.png" alt="mobileUserRegular.png" class="lazy">
+    </div>
+    <p>mobileUserRegular.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegular2.png">
+    <div>
+        <img data-src="mobileUserRegular2.png" alt="mobileUserRegular2.png" class="lazy">
+    </div>
+    <p>mobileUserRegular2.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegular3.png">
+    <div>
+        <img data-src="mobileUserRegular3.png" alt="mobileUserRegular3.png" class="lazy">
+    </div>
+    <p>mobileUserRegular3.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegular4.png">
+    <div>
+        <img data-src="mobileUserRegular4.png" alt="mobileUserRegular4.png" class="lazy">
+    </div>
+    <p>mobileUserRegular4.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegularBackground.png">
+    <div>
+        <img data-src="mobileUserRegularBackground.png" alt="mobileUserRegularBackground.png" class="lazy">
+    </div>
+    <p>mobileUserRegularBackground.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegularCopyright.png">
+    <div>
+        <img data-src="mobileUserRegularCopyright.png" alt="mobileUserRegularCopyright.png" class="lazy">
+    </div>
+    <p>mobileUserRegularCopyright.png</p>
+</a>
+
+<a class="iconItem" href="./mobileUserRegularPressAnywhere.png">
+    <div>
+        <img data-src="mobileUserRegularPressAnywhere.png" alt="mobileUserRegularPressAnywhere.png" class="lazy">
+    </div>
+    <p>mobileUserRegularPressAnywhere.png</p>
+</a>
+
+<a class="iconItem" href="./myAI.jpeg">
+    <div>
+        <img data-src="myAI.jpeg" alt="myAI.jpeg" class="lazy">
+    </div>
+    <p>myAI.jpeg</p>
+</a>
+
+<a class="iconItem" href="./navigator.png">
+    <div>
+        <img data-src="navigator.png" alt="navigator.png" class="lazy">
+    </div>
+    <p>navigator.png</p>
+</a>
+
+<a class="iconItem" href="./turtleWithEnvelope.png">
+    <div>
+        <img data-src="turtleWithEnvelope.png" alt="turtleWithEnvelope.png" class="lazy">
+    </div>
+    <p>turtleWithEnvelope.png</p>
+</a>
+
         </div>
     </div>
     <footer>
-
-        <h2>OldMartijntje &copy;</h2>
-        <a href="https://oldmartijntje.nl">My Website</a>
-        <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
-        <p>Generated this index with <a
-                href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a>
-        </p>
-
-        <p>Last updated: 16/05/24 23:23PM</p>
+        
+    <h2>OldMartijntje &copy;</h2>
+    <a href="https://oldmartijntje.nl">My Website</a>
+    <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
+    <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
+    
+        <p>Last updated: <span>21/05/24 18:42PM / </span><span class="time-since" data-value="2024-05-21T18:42:53.551605"></span></p>
     </footer>
     <script>
-
+    
         function timeSince(date) {
             const seconds = Math.floor((new Date() - date) / 1000);
             let interval = Math.floor(seconds / 31536000);
@@ -326,8 +397,8 @@ It contains 19 files and 1 folders.">
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
 
         document.querySelectorAll('input[name="view"]').forEach((radio) => {
             radio.addEventListener('change', (event) => {
@@ -374,7 +445,7 @@ It contains 19 files and 1 folders.">
                 imageObserver.observe(img);
             });
         });
-
+        
     </script>
 </body>
 

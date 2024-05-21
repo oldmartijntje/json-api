@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter.messagebox import showerror
 
 
-
+done = 0
 
 title = 'OldMartijntje\'s Static API'
 
@@ -58,6 +58,7 @@ def loadStyling():
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+    user-select: none;
 }
 
 a, a:visited {
@@ -113,17 +114,6 @@ header {
     overflow-y: scroll;
 }
 
-@media only screen and (max-width: 800px) {
-    .fileLine {
-        gap: 0.5rem;
-    }
-
-    .modifiedDate {
-        display: none;
-    }
-
-}
-
 .icon-radio {
     display: none;
 }
@@ -166,16 +156,36 @@ header {
     background-color: #4d4d4d;
 }
 
-.iconItem img {
-    height: 75%;
-    aspect-ratio: 1/1;
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
 }
 
 .iconItem p {
     font-size: 0.8rem;
     margin: 0;
+    word-break: break-all;
 }
 
+@media only screen and (max-width: 800px) {
+    .fileLine {
+        gap: 0.5rem;
+    }
+
+    .modifiedDate {
+        display: none;
+    }
+
+}
 '''
         with open('./styles.css', 'w') as file:
             file.write(styles)
@@ -227,8 +237,8 @@ def loadJavascript():
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
 
         document.querySelectorAll('input[name="view"]').forEach((radio) => {
             radio.addEventListener('change', (event) => {
@@ -321,12 +331,12 @@ def createHTML(files, folders, filePath):
     header += '<strong><a href="./index.json">[json index]</a></strong>\n'
     header += '</div>\n'
     header += '''<div class="buttons" style="margin-top: 1rem;">
-    <input type="radio" id="listView" name="view" class="icon-radio" checked>
+    <input type="radio" id="listView" name="view" class="icon-radio">
     <label for="listView" class="icon-label">
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
     </label>
 
-    <input type="radio" id="iconView" name="view" class="icon-radio">
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
     <label for="iconView" class="icon-label">
         <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
     </label>
@@ -404,16 +414,28 @@ def ignoreBasePathInWebPath(filePath, settings):
     return webPath
 
 def fetchIcon(fileOrFolder):
+    displayIcons = ['png', 'jpeg', 'jpg', 'ico', 'gif']
     if fileOrFolder['type'] == 'folder':
         return 'https://simpleicon.com/wp-content/uploads/folder.png'
+    elif fileOrFolder['type'] == 'html':
+        return 'https://simpleicon.com/wp-content/uploads/html.png'
+    elif fileOrFolder['type'] == 'css':
+        return 'https://simpleicon.com/wp-content/uploads/css.png'
+    elif fileOrFolder['type'] == 'js':
+        return 'https://simpleicon.com/wp-content/uploads/javascript.png'
+    elif fileOrFolder['type'] == 'json':
+        return 'https://simpleicon.com/wp-content/uploads/json.png'
+    elif  fileOrFolder['type'] in displayIcons:
+        return fileOrFolder['name']
     else:
         return 'https://simpleicon.com/wp-content/uploads/file.png'
 
 def generateViewIcons(files, folders, filePath):
     design = '''
 <a class="iconItem" href="{url}">
-    <img data-src="{icon}" alt="{name}"
-        class="lazy">
+    <div>
+        <img data-src="{icon}" alt="{name}" class="lazy">
+    </div>
     <p>{name}</p>
 </a>
 '''
@@ -427,6 +449,7 @@ def generateViewIcons(files, folders, filePath):
     return icons	
 
 def saveHTML(header, content, filePath, files, folders):
+    global done
     webPathPatst = filePath.split('./docs/')
     if len(webPathPatst) > 1:
         webPath = webPathPatst[1]
@@ -465,7 +488,7 @@ def saveHTML(header, content, filePath, files, folders):
     </div>
     <footer>
         {loadSetting(settings, 'footer')}
-        <p>Last updated: <span>{str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))}</span><span class="time-since" data-value="{str(datetime.datetime.now().isoformat())}"></span></p>
+        <p>Last updated: <span>{str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))} / </span><span class="time-since" data-value="{str(datetime.datetime.now().isoformat())}"></span></p>
     </footer>
     <script>
     {javascript}
@@ -476,6 +499,9 @@ def saveHTML(header, content, filePath, files, folders):
     # Save the HTML content to a file
     with open(filePath + '/index.html', 'w') as file:
         file.write(start + header + middle + content + end)
+        file.close()
+    done += 1
+    print(str(done)+'.Generated index.html for ' + filePath + '.')
 
 def findIndented(folders, currentPath, files):
     header, content = createHTML(files, folders, currentPath)

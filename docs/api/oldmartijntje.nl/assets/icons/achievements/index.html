@@ -25,6 +25,7 @@ It contains 51 files and 0 folders.">
     overflow: hidden;
     height: 100svh;
     width: 100vw;
+    user-select: none;
 }
 
 a, a:visited {
@@ -80,6 +81,68 @@ header {
     overflow-y: scroll;
 }
 
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -91,7 +154,6 @@ header {
 
 }
 
-
 </style>
 
 <body>
@@ -102,8 +164,18 @@ header {
 <strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
 <strong><a href="./index.json">[json index]</a></strong>
 </div>
-</header>
-<div class="content">
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio" checked>
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
     <h2>Files (51)</h2>
 <ul>
 <li class="fileLine"><a href="./Sprite-0001-locked.png">Sprite-0001-locked.png</a><span class="size" title="File Size">201 bytes</span><span class="time-since" title="Last Modified" data-value="2024-04-19T20:34:25.601277"></span><span class="modifiedDate" title="Last Modified">19/04/24 20:34PM</span></li>
@@ -159,6 +231,368 @@ header {
 <li class="fileLine"><a href="./Sprite-0026-unlocked.png">Sprite-0026-unlocked.png</a><span class="size" title="File Size">182 bytes</span><span class="time-since" title="Last Modified" data-value="2024-05-07T00:07:50.447743"></span><span class="modifiedDate" title="Last Modified">07/05/24 00:07AM</span></li>
 </ul>
 </ul></div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            
+<a class="iconItem" href="./Sprite-0001-locked.png">
+    <div>
+        <img data-src="Sprite-0001-locked.png" alt="Sprite-0001-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0001-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0001-unlocked.png">
+    <div>
+        <img data-src="Sprite-0001-unlocked.png" alt="Sprite-0001-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0001-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0002-locked.png">
+    <div>
+        <img data-src="Sprite-0002-locked.png" alt="Sprite-0002-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0002-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0002-unlocked.png">
+    <div>
+        <img data-src="Sprite-0002-unlocked.png" alt="Sprite-0002-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0002-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0003-locked.png">
+    <div>
+        <img data-src="Sprite-0003-locked.png" alt="Sprite-0003-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0003-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0003-unlocked.png">
+    <div>
+        <img data-src="Sprite-0003-unlocked.png" alt="Sprite-0003-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0003-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0004-locked.png">
+    <div>
+        <img data-src="Sprite-0004-locked.png" alt="Sprite-0004-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0004-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0004-unlocked.png">
+    <div>
+        <img data-src="Sprite-0004-unlocked.png" alt="Sprite-0004-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0004-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0005-locked.png">
+    <div>
+        <img data-src="Sprite-0005-locked.png" alt="Sprite-0005-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0005-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0005-unlocked.png">
+    <div>
+        <img data-src="Sprite-0005-unlocked.png" alt="Sprite-0005-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0005-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0006-locked.png">
+    <div>
+        <img data-src="Sprite-0006-locked.png" alt="Sprite-0006-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0006-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0006-unlocked.png">
+    <div>
+        <img data-src="Sprite-0006-unlocked.png" alt="Sprite-0006-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0006-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0007-locked.png">
+    <div>
+        <img data-src="Sprite-0007-locked.png" alt="Sprite-0007-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0007-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0007-unlocked.png">
+    <div>
+        <img data-src="Sprite-0007-unlocked.png" alt="Sprite-0007-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0007-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0008-locked.png">
+    <div>
+        <img data-src="Sprite-0008-locked.png" alt="Sprite-0008-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0008-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0008-unlocked.png">
+    <div>
+        <img data-src="Sprite-0008-unlocked.png" alt="Sprite-0008-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0008-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0009-unlocked.png">
+    <div>
+        <img data-src="Sprite-0009-unlocked.png" alt="Sprite-0009-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0009-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0010-locked.png">
+    <div>
+        <img data-src="Sprite-0010-locked.png" alt="Sprite-0010-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0010-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0010-unlocked.png">
+    <div>
+        <img data-src="Sprite-0010-unlocked.png" alt="Sprite-0010-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0010-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0011-locked.png">
+    <div>
+        <img data-src="Sprite-0011-locked.png" alt="Sprite-0011-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0011-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0011-unlocked.png">
+    <div>
+        <img data-src="Sprite-0011-unlocked.png" alt="Sprite-0011-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0011-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0012-locked.png">
+    <div>
+        <img data-src="Sprite-0012-locked.png" alt="Sprite-0012-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0012-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0012-unlocked.png">
+    <div>
+        <img data-src="Sprite-0012-unlocked.png" alt="Sprite-0012-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0012-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0013-locked.png">
+    <div>
+        <img data-src="Sprite-0013-locked.png" alt="Sprite-0013-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0013-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0013-unlocked.png">
+    <div>
+        <img data-src="Sprite-0013-unlocked.png" alt="Sprite-0013-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0013-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0014-locked.png">
+    <div>
+        <img data-src="Sprite-0014-locked.png" alt="Sprite-0014-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0014-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0014-unlocked.png">
+    <div>
+        <img data-src="Sprite-0014-unlocked.png" alt="Sprite-0014-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0014-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0015-locked.png">
+    <div>
+        <img data-src="Sprite-0015-locked.png" alt="Sprite-0015-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0015-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0015-unlocked.png">
+    <div>
+        <img data-src="Sprite-0015-unlocked.png" alt="Sprite-0015-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0015-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0016-locked.png">
+    <div>
+        <img data-src="Sprite-0016-locked.png" alt="Sprite-0016-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0016-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0016-unlocked.png">
+    <div>
+        <img data-src="Sprite-0016-unlocked.png" alt="Sprite-0016-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0016-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0017-locked.png">
+    <div>
+        <img data-src="Sprite-0017-locked.png" alt="Sprite-0017-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0017-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0017-unlocked.png">
+    <div>
+        <img data-src="Sprite-0017-unlocked.png" alt="Sprite-0017-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0017-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0018-locked.png">
+    <div>
+        <img data-src="Sprite-0018-locked.png" alt="Sprite-0018-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0018-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0018-unlocked.png">
+    <div>
+        <img data-src="Sprite-0018-unlocked.png" alt="Sprite-0018-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0018-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0019-locked.png">
+    <div>
+        <img data-src="Sprite-0019-locked.png" alt="Sprite-0019-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0019-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0019-unlocked.png">
+    <div>
+        <img data-src="Sprite-0019-unlocked.png" alt="Sprite-0019-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0019-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0020-locked.png">
+    <div>
+        <img data-src="Sprite-0020-locked.png" alt="Sprite-0020-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0020-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0020-unlocked.png">
+    <div>
+        <img data-src="Sprite-0020-unlocked.png" alt="Sprite-0020-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0020-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0021-locked.png">
+    <div>
+        <img data-src="Sprite-0021-locked.png" alt="Sprite-0021-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0021-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0021-unlocked.png">
+    <div>
+        <img data-src="Sprite-0021-unlocked.png" alt="Sprite-0021-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0021-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0022-locked.png">
+    <div>
+        <img data-src="Sprite-0022-locked.png" alt="Sprite-0022-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0022-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0022-unlocked.png">
+    <div>
+        <img data-src="Sprite-0022-unlocked.png" alt="Sprite-0022-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0022-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0023-locked.png">
+    <div>
+        <img data-src="Sprite-0023-locked.png" alt="Sprite-0023-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0023-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0023-unlocked.png">
+    <div>
+        <img data-src="Sprite-0023-unlocked.png" alt="Sprite-0023-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0023-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0024-locked.png">
+    <div>
+        <img data-src="Sprite-0024-locked.png" alt="Sprite-0024-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0024-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0024-unlocked.png">
+    <div>
+        <img data-src="Sprite-0024-unlocked.png" alt="Sprite-0024-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0024-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0025-locked.png">
+    <div>
+        <img data-src="Sprite-0025-locked.png" alt="Sprite-0025-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0025-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0025-unlocked.png">
+    <div>
+        <img data-src="Sprite-0025-unlocked.png" alt="Sprite-0025-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0025-unlocked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0026-locked.png">
+    <div>
+        <img data-src="Sprite-0026-locked.png" alt="Sprite-0026-locked.png" class="lazy">
+    </div>
+    <p>Sprite-0026-locked.png</p>
+</a>
+
+<a class="iconItem" href="./Sprite-0026-unlocked.png">
+    <div>
+        <img data-src="Sprite-0026-unlocked.png" alt="Sprite-0026-unlocked.png" class="lazy">
+    </div>
+    <p>Sprite-0026-unlocked.png</p>
+</a>
+
+        </div>
+    </div>
     <footer>
         
     <h2>OldMartijntje &copy;</h2>
@@ -166,7 +600,7 @@ header {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: 16/05/24 23:23PM</p>
+        <p>Last updated: <span>21/05/24 18:42PM / </span><span class="time-since" data-value="2024-05-21T18:42:53.463711"></span></p>
     </footer>
     <script>
     
@@ -208,8 +642,54 @@ header {
         // Initial update
         updateTimeSince();
 
-        // Update every minute
-        setInterval(updateTimeSince, 60000);
+        // Update every 10 seconds
+        setInterval(updateTimeSince, 10000);
+
+        document.querySelectorAll('input[name="view"]').forEach((radio) => {
+            radio.addEventListener('change', (event) => {
+                handleRadioChange(event.target.id);
+            });
+        });
+
+        function handleRadioChange(selectedId) {
+            if (selectedId === 'listView') {
+                console.log('List View selected');
+                // Add your code to handle List View selection
+                document.getElementById('list').style.display = 'block';
+                document.getElementById('icon').style.display = 'none';
+            } else if (selectedId === 'iconView') {
+                console.log('Icon View selected');
+                document.getElementById('list').style.display = 'none';
+                document.getElementById('icon').style.display = 'block';
+
+                // Add your code to handle Icon View selection
+            }
+        }
+        handleRadioChange('iconView');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img.lazy');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    } else {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = '';
+                        }
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
         
     </script>
 </body>

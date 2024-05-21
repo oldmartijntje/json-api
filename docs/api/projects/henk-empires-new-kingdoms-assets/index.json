@@ -4,25 +4,27 @@
         {
             "name": "icons",
             "childrenAmount": 69,
-            "lastModified": 1715191206.22736
+            "lastModified": 1715191206.22736,
+            "type": "folder"
         },
         {
             "name": "images",
             "childrenAmount": 134,
-            "lastModified": 1715191206.2369432
+            "lastModified": 1715191206.2369432,
+            "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 5176,
-            "lastModified": 1715894451.182151,
+            "size": 9262,
+            "lastModified": 1716309311.7398586,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 767,
-            "lastModified": 1715894451.182151,
+            "size": 831,
+            "lastModified": 1716309311.743419,
             "type": "json"
         }
     ],

@@ -4,20 +4,21 @@
         {
             "name": "lists",
             "childrenAmount": 7,
-            "lastModified": 1715870497.6562262
+            "lastModified": 1715870497.6562262,
+            "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 4766,
-            "lastModified": 1715894451.232534,
+            "size": 8614,
+            "lastModified": 1716309311.908837,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 597,
-            "lastModified": 1715894451.233533,
+            "size": 628,
+            "lastModified": 1716309311.9108362,
             "type": "json"
         }
     ],

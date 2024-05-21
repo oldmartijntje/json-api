@@ -4,7 +4,8 @@
         {
             "name": "henk-empires-new-kingdoms-assets",
             "childrenAmount": 4,
-            "lastModified": 1715191206.2217681
+            "lastModified": 1715191206.2217681,
+            "type": "folder"
         }
     ],
     "files": [
@@ -16,14 +17,14 @@
         },
         {
             "name": "index.html",
-            "size": 5770,
-            "lastModified": 1715894451.179555,
+            "size": 10572,
+            "lastModified": 1716309311.7323363,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1181,
-            "lastModified": 1715894451.1801064,
+            "size": 1213,
+            "lastModified": 1716309311.7368536,
             "type": "json"
         },
         {

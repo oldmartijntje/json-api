@@ -4,7 +4,8 @@
         {
             "name": "ads",
             "childrenAmount": 13,
-            "lastModified": 1715165318.2602558
+            "lastModified": 1715165318.2602558,
+            "type": "folder"
         }
     ],
     "files": [
@@ -40,14 +41,14 @@
         },
         {
             "name": "index.html",
-            "size": 10127,
-            "lastModified": 1715894451.1679487,
+            "size": 18085,
+            "lastModified": 1716309311.6926053,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 3842,
-            "lastModified": 1715894451.169505,
+            "size": 3872,
+            "lastModified": 1716309311.7046566,
             "type": "json"
         },
         {
