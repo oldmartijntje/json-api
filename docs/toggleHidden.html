@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Toggle</title>
+</head>
+
+<body>
+    <script>
+        const value = localStorage.getItem('showHiddenFolders');
+        if (value === 'true') {
+            localStorage.setItem('showHiddenFolders', 'false');
+        } else {
+            localStorage.setItem('showHiddenFolders', 'true');
+        }
+        window.location.href = './index.html'
+    </script>
+</body>
+
+</html>

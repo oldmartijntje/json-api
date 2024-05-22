@@ -3,14 +3,14 @@
     "folders": [
         {
             "name": "files",
-            "childrenAmount": 9,
-            "lastModified": 1716323027.615599,
+            "childrenAmount": 8,
+            "lastModified": 1716380184.0963018,
             "type": "folder"
         },
         {
             "name": "lists",
             "childrenAmount": 7,
-            "lastModified": 1716323060.00575,
+            "lastModified": 1716379916.6002302,
             "type": "folder"
         }
     ],
@@ -18,13 +18,13 @@
         {
             "name": "index.html",
             "size": 11298,
-            "lastModified": 1716324375.3696232,
+            "lastModified": 1716379916.5967715,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 789,
-            "lastModified": 1716324375.3716238,
+            "size": 792,
+            "lastModified": 1716379916.597344,
             "type": "json"
         }
     ],

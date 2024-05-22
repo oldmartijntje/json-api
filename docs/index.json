@@ -2,15 +2,15 @@
     "path": "https://api.oldmartijntje.nl",
     "folders": [
         {
-            "name": "api",
-            "childrenAmount": 7,
-            "lastModified": 1716322950.0783732,
+            "name": ".system",
+            "childrenAmount": 26,
+            "lastModified": 1716379916.6261995,
             "type": "folder"
         },
         {
-            "name": "system",
-            "childrenAmount": 26,
-            "lastModified": 1716323654.8568778,
+            "name": "api",
+            "childrenAmount": 7,
+            "lastModified": 1716379916.4400153,
             "type": "folder"
         }
     ],
@@ -18,20 +18,26 @@
         {
             "name": "CNAME",
             "size": 20,
-            "lastModified": 1715195614.459698,
+            "lastModified": 1716379916.012866,
             "type": "CNAME"
         },
         {
             "name": "index.html",
             "size": 11900,
-            "lastModified": 1716324374.9233234,
+            "lastModified": 1716379916.6002302,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 905,
-            "lastModified": 1716324374.9273252,
+            "size": 907,
+            "lastModified": 1716379916.6002302,
             "type": "json"
+        },
+        {
+            "name": "toggleHidden.html",
+            "size": 555,
+            "lastModified": 1716380220.4311972,
+            "type": "html"
         }
     ]
 }

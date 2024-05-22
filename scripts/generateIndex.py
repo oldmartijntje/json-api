@@ -29,33 +29,33 @@ def createSettingsJson():
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     '''
     settings['icons'] = {
-        'folder': 'https://api.oldmartijntje.nl/system/folder.png',
-        '?': 'https://api.oldmartijntje.nl/system/unknown-file-types.png',
-        "json": "https://api.oldmartijntje.nl/system/json.png",
-        "pdn": "https://api.oldmartijntje.nl/system/pdn.png",
-        "html": "https://api.oldmartijntje.nl/system/html.png",
-        "css": "https://api.oldmartijntje.nl/system/css.png",
-        "js": "https://api.oldmartijntje.nl/system/js.png",
-        "py": "https://api.oldmartijntje.nl/system/py.png",
-        "aseprite": "https://api.oldmartijntje.nl/system/aseprite.png",
-        "docx": "https://api.oldmartijntje.nl/system/docx.png",
-        "pptx": "https://api.oldmartijntje.nl/system/pptx.png",
-        "xlsx": "https://api.oldmartijntje.nl/system/xlsx.png",
-        "pdf": "https://api.oldmartijntje.nl/system/pdf.png",
-        "mp3": "https://api.oldmartijntje.nl/system/mp3.png",
-        "wav": "https://api.oldmartijntje.nl/system/wav.png",
-        "ogg": "https://api.oldmartijntje.nl/system/ogg.png",
-        "nds": "https://api.oldmartijntje.nl/system/nds.png",
-        "zip": "https://api.oldmartijntje.nl/system/archive.png",
-        "rar": "https://api.oldmartijntje.nl/system/archive.png",
-        "7z": "https://api.oldmartijntje.nl/system/archive.png",
-        "iso": "https://api.oldmartijntje.nl/system/archive.png",
-        "exe": "https://api.oldmartijntje.nl/system/exe.png",
-        "md": "https://api.oldmartijntje.nl/system/markdown.png",
-        "txt": "https://api.oldmartijntje.nl/system/txt.png",
-        "url": "https://api.oldmartijntje.nl/system/url.png",
-        "mp4": "https://api.oldmartijntje.nl/system/vlc.png",
-        "webm": "https://api.oldmartijntje.nl/system/vlc.png",
+        'folder': 'https://api.oldmartijntje.nl/.system/folder.png',
+        '?': 'https://api.oldmartijntje.nl/.system/unknown-file-types.png',
+        "json": "https://api.oldmartijntje.nl/.system/json.png",
+        "pdn": "https://api.oldmartijntje.nl/.system/pdn.png",
+        "html": "https://api.oldmartijntje.nl/.system/html.png",
+        "css": "https://api.oldmartijntje.nl/.system/css.png",
+        "js": "https://api.oldmartijntje.nl/.system/js.png",
+        "py": "https://api.oldmartijntje.nl/.system/py.png",
+        "aseprite": "https://api.oldmartijntje.nl/.system/aseprite.png",
+        "docx": "https://api.oldmartijntje.nl/.system/docx.png",
+        "pptx": "https://api.oldmartijntje.nl/.system/pptx.png",
+        "xlsx": "https://api.oldmartijntje.nl/.system/xlsx.png",
+        "pdf": "https://api.oldmartijntje.nl/.system/pdf.png",
+        "mp3": "https://api.oldmartijntje.nl/.system/mp3.png",
+        "wav": "https://api.oldmartijntje.nl/.system/wav.png",
+        "ogg": "https://api.oldmartijntje.nl/.system/ogg.png",
+        "nds": "https://api.oldmartijntje.nl/.system/nds.png",
+        "zip": "https://api.oldmartijntje.nl/.system/archive.png",
+        "rar": "https://api.oldmartijntje.nl/.system/archive.png",
+        "7z": "https://api.oldmartijntje.nl/.system/archive.png",
+        "iso": "https://api.oldmartijntje.nl/.system/archive.png",
+        "exe": "https://api.oldmartijntje.nl/.system/exe.png",
+        "md": "https://api.oldmartijntje.nl/.system/markdown.png",
+        "txt": "https://api.oldmartijntje.nl/.system/txt.png",
+        "url": "https://api.oldmartijntje.nl/.system/url.png",
+        "mp4": "https://api.oldmartijntje.nl/.system/vlc.png",
+        "webm": "https://api.oldmartijntje.nl/.system/vlc.png",
 
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
@@ -447,7 +447,7 @@ def createHTML(files, folders, filePath):
             content += '<ul>\n'
         content += '<li class="fileLine">'
         content += '<div>'
-        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/.system/unknown-file-types.png\'">'
         content += '<a href="./' + folder['name'] + '/index.html">' + folder['name'] + '</a>'
         content += '</div>'
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
@@ -463,7 +463,7 @@ def createHTML(files, folders, filePath):
         if file['name'] != 'index.html' and file['name'] != 'index.json':
             content += '<li class="fileLine">'
             content += '<div>'
-            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/.system/unknown-file-types.png\'">'
             content += '<a href="./' + file['name'] + '">' + file['name'] + '</a>'
             content += '</div>'
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
@@ -540,7 +540,7 @@ def generateViewIcons(files, folders, filePath):
     <p>{name}</p>
 </a>
 '''
-    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy"  onerror="this.src=\'https://api.oldmartijntje.nl/system/unknown-file-types.png\'">'
+    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy"  onerror="this.src=\'https://api.oldmartijntje.nl/.system/unknown-file-types.png\'">'
     videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:

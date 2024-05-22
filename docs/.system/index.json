@@ -1,0 +1,163 @@
+{
+    "path": "https://api.oldmartijntje.nl/.system",
+    "folders": [],
+    "files": [
+        {
+            "name": "archive.png",
+            "size": 1104013,
+            "lastModified": 1716379916.608737,
+            "type": "png"
+        },
+        {
+            "name": "aseprite.png",
+            "size": 28449,
+            "lastModified": 1716379916.608737,
+            "type": "png"
+        },
+        {
+            "name": "css.png",
+            "size": 240155,
+            "lastModified": 1716379916.6112385,
+            "type": "png"
+        },
+        {
+            "name": "docx.png",
+            "size": 55285,
+            "lastModified": 1716379916.611956,
+            "type": "png"
+        },
+        {
+            "name": "exe.png",
+            "size": 9539,
+            "lastModified": 1716379916.6124494,
+            "type": "png"
+        },
+        {
+            "name": "folder.png",
+            "size": 26105,
+            "lastModified": 1716379916.612953,
+            "type": "png"
+        },
+        {
+            "name": "html.png",
+            "size": 143832,
+            "lastModified": 1716379916.6139522,
+            "type": "png"
+        },
+        {
+            "name": "icons.json",
+            "size": 1678,
+            "lastModified": 1716380027.5336058,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 25955,
+            "lastModified": 1716379916.6149495,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 4304,
+            "lastModified": 1716379916.6149495,
+            "type": "json"
+        },
+        {
+            "name": "js.png",
+            "size": 11050,
+            "lastModified": 1716379916.6149495,
+            "type": "png"
+        },
+        {
+            "name": "json.png",
+            "size": 14746,
+            "lastModified": 1716379916.6160202,
+            "type": "png"
+        },
+        {
+            "name": "markdown.png",
+            "size": 4200,
+            "lastModified": 1716379916.6163867,
+            "type": "png"
+        },
+        {
+            "name": "mp3.png",
+            "size": 227627,
+            "lastModified": 1716379916.6173859,
+            "type": "png"
+        },
+        {
+            "name": "nds.png",
+            "size": 13363,
+            "lastModified": 1716379916.6173859,
+            "type": "png"
+        },
+        {
+            "name": "ogg.png",
+            "size": 117168,
+            "lastModified": 1716379916.6188917,
+            "type": "png"
+        },
+        {
+            "name": "pdf.png",
+            "size": 88204,
+            "lastModified": 1716379916.6203945,
+            "type": "png"
+        },
+        {
+            "name": "pdn.png",
+            "size": 58144,
+            "lastModified": 1716379916.6203945,
+            "type": "png"
+        },
+        {
+            "name": "pptx.png",
+            "size": 21247,
+            "lastModified": 1716379916.6213934,
+            "type": "png"
+        },
+        {
+            "name": "py.png",
+            "size": 68904,
+            "lastModified": 1716379916.6213934,
+            "type": "png"
+        },
+        {
+            "name": "txt.png",
+            "size": 9495,
+            "lastModified": 1716379916.62245,
+            "type": "png"
+        },
+        {
+            "name": "unknown-file-types.png",
+            "size": 10230,
+            "lastModified": 1716379916.62245,
+            "type": "png"
+        },
+        {
+            "name": "url.png",
+            "size": 14338,
+            "lastModified": 1716379916.6232054,
+            "type": "png"
+        },
+        {
+            "name": "vlc.png",
+            "size": 52312,
+            "lastModified": 1716379916.6232054,
+            "type": "png"
+        },
+        {
+            "name": "wav.png",
+            "size": 275990,
+            "lastModified": 1716379916.625202,
+            "type": "png"
+        },
+        {
+            "name": "xlsx.png",
+            "size": 63161,
+            "lastModified": 1716379916.6261995,
+            "type": "png"
+        }
+    ],
+    "parent": "../index.json"
+}
