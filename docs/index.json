@@ -4,13 +4,13 @@
         {
             "name": "api",
             "childrenAmount": 7,
-            "lastModified": 1716379916.4400153,
+            "lastModified": 1716388138.2088628,
             "type": "folder"
         },
         {
-            "name": "hidden_system",
+            "name": "HIDDEN_system",
             "childrenAmount": 26,
-            "lastModified": 1716379916.6261995,
+            "lastModified": 1716388138.4650822,
             "type": "folder"
         }
     ],
@@ -18,25 +18,25 @@
         {
             "name": "CNAME",
             "size": 20,
-            "lastModified": 1716379916.012866,
+            "lastModified": 1715195614.459698,
             "type": "CNAME"
         },
         {
             "name": "index.html",
-            "size": 12269,
-            "lastModified": 1716381348.4790142,
+            "size": 12271,
+            "lastModified": 1716388138.467083,
             "type": "html"
         },
         {
             "name": "index.json",
             "size": 1083,
-            "lastModified": 1716381348.4825153,
+            "lastModified": 1716388138.4726233,
             "type": "json"
         },
         {
             "name": "toggleHidden.html",
             "size": 555,
-            "lastModified": 1716380220.4311972,
+            "lastModified": 1716388138.4736228,
             "type": "html"
         }
     ]
