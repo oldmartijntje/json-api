@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/_system",
+    "path": "https://api.oldmartijntje.nl/hidden_system",
     "folders": [],
     "files": [
         {
@@ -46,20 +46,20 @@
         },
         {
             "name": "icons.json",
-            "size": 1678,
-            "lastModified": 1716380382.7540045,
+            "size": 1840,
+            "lastModified": 1716380870.5067217,
             "type": "json"
         },
         {
             "name": "index.html",
-            "size": 26008,
-            "lastModified": 1716380400.0968094,
+            "size": 25792,
+            "lastModified": 1716380485.7639272,
             "type": "html"
         },
         {
             "name": "index.json",
             "size": 4305,
-            "lastModified": 1716380400.1074414,
+            "lastModified": 1716380485.7731547,
             "type": "json"
         },
         {

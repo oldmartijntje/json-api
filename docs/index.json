@@ -8,7 +8,7 @@
             "type": "folder"
         },
         {
-            "name": "_system",
+            "name": "hidden_system",
             "childrenAmount": 26,
             "lastModified": 1716379916.6261995,
             "type": "folder"
@@ -23,14 +23,14 @@
         },
         {
             "name": "index.html",
-            "size": 12717,
-            "lastModified": 1716380399.8478837,
+            "size": 12681,
+            "lastModified": 1716380485.4672465,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1076,
-            "lastModified": 1716380399.8498895,
+            "size": 1077,
+            "lastModified": 1716380485.4707415,
             "type": "json"
         },
         {

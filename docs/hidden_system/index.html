@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
+    <title>OldMartijntje's Static API</title>
+    <meta property="og:title" content="api.oldmartijntje.nl">
+    <meta property="og:description" content="OldMartijntje's API. View this folder: &quot;https://api.oldmartijntje.nl/hidden_system&quot;
+It contains 24 files and 0 folders.">
+    <meta property="og:image" content="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
+    <meta property="og:url" content="https://api.oldmartijntje.nlhidden_system">
+    <meta property="og:type" content="website">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100svh;
+    width: 100vw;
+}
+
+ul {
+    padding: 0;
+}
+
+a, a:visited {
+    color: #67acf8;
+}
+
+footer {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    max-height: 8rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#title {
+    word-wrap: break-word;
+    font-size: 1.1rem;
+}
+
+#indexName {
+    text-decoration: underline;
+}
+
+header {
+    width: calc(100% - 2rem);
+    background-color: #1f1f1f;
+    padding: 1rem;
+}
+
+.fileLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon {
+    padding-right: 1rem;
+}
+
+.fileLine * {
+    overflow: hidden;
+    word-wrap: break-word;
+    flex: 1 1 20%;
+}
+
+.fileLine *:first-child {
+    flex: 2 1 40%;
+}  
+
+.content {
+    margin: 1rem;
+    flex-grow: 1;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+.icon-radio {
+    display: none;
+}
+
+.icon-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icon-label img {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #3c3c3c;
+}
+
+.icon-radio:checked+.icon-label {
+    outline: 2px solid #67acf8;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    height: 115px;
+    width: 115px;
+    max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+.iconItem:hover {
+    background-color: #4d4d4d;
+}
+
+.iconItem div video,
+.iconItem div img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.iconItem div {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconItem p {
+    font-size: 0.8rem;
+    margin: 0;
+    word-break: break-all;
+}
+
+footer a,
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+footer h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.miniIcon {
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+li div {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .fileLine {
+        gap: 0.5rem;
+    }
+
+    .modifiedDate {
+        display: none;
+    }
+}
+
+</style>
+
+<body>
+<header>
+<h1 id="title">Index of <span id="indexName">https://api.oldmartijntje.nl/hidden_system</span></h1>
+<div class="buttons">
+<strong><a href="../index.html">[parent directory]</a></strong>
+<strong><a href="https://api.oldmartijntje.nl">[homepage]</a></strong>
+<strong><a href="./index.json">[json index]</a></strong>
+</div>
+<div class="buttons" style="margin-top: 1rem;">
+    <input type="radio" id="listView" name="view" class="icon-radio">
+    <label for="listView" class="icon-label">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+    </label>
+
+    <input type="radio" id="iconView" name="view" class="icon-radio">
+    <label for="iconView" class="icon-label">
+        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+    </label>
+</div></header>
+<div class="content" id="list">
+    <h2>Files (24)</h2>
+<ul>
+<li class="fileLine"><div><img data-src="archive.png" alt="archive.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./archive.png">archive.png</a></div><span class="size" title="File Size">1.104013 MB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.608737"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="aseprite.png" alt="aseprite.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./aseprite.png">aseprite.png</a></div><span class="size" title="File Size">28.449 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.608737"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="css.png" alt="css.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./css.png">css.png</a></div><span class="size" title="File Size">240.155 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.611238"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="docx.png" alt="docx.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./docx.png">docx.png</a></div><span class="size" title="File Size">55.285 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.611956"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="exe.png" alt="exe.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./exe.png">exe.png</a></div><span class="size" title="File Size">9.539 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.612449"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="folder.png" alt="folder.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./folder.png">folder.png</a></div><span class="size" title="File Size">26.105 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.612953"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="html.png" alt="html.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./html.png">html.png</a></div><span class="size" title="File Size">143.832 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.613952"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="https://api.oldmartijntje.nl/hidden_system/json.png" alt="icons.json" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./icons.json">icons.json</a></div><span class="size" title="File Size">1.84 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:27:50.506722"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:27PM</span></li>
+<li class="fileLine"><div><img data-src="js.png" alt="js.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./js.png">js.png</a></div><span class="size" title="File Size">11.05 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.614949"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="json.png" alt="json.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./json.png">json.png</a></div><span class="size" title="File Size">14.746 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.616020"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="markdown.png" alt="markdown.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./markdown.png">markdown.png</a></div><span class="size" title="File Size">4.2 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.616387"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="mp3.png" alt="mp3.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./mp3.png">mp3.png</a></div><span class="size" title="File Size">227.627 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.617386"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="nds.png" alt="nds.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./nds.png">nds.png</a></div><span class="size" title="File Size">13.363 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.617386"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="ogg.png" alt="ogg.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./ogg.png">ogg.png</a></div><span class="size" title="File Size">117.168 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.618892"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="pdf.png" alt="pdf.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./pdf.png">pdf.png</a></div><span class="size" title="File Size">88.204 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.620394"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="pdn.png" alt="pdn.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./pdn.png">pdn.png</a></div><span class="size" title="File Size">58.144 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.620394"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="pptx.png" alt="pptx.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./pptx.png">pptx.png</a></div><span class="size" title="File Size">21.247 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.621393"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="py.png" alt="py.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./py.png">py.png</a></div><span class="size" title="File Size">68.904 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.621393"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="txt.png" alt="txt.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./txt.png">txt.png</a></div><span class="size" title="File Size">9.495 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.622450"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="unknown-file-types.png" alt="unknown-file-types.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./unknown-file-types.png">unknown-file-types.png</a></div><span class="size" title="File Size">10.23 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.622450"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="url.png" alt="url.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./url.png">url.png</a></div><span class="size" title="File Size">14.338 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.623205"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="vlc.png" alt="vlc.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./vlc.png">vlc.png</a></div><span class="size" title="File Size">52.312 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.623205"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="wav.png" alt="wav.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./wav.png">wav.png</a></div><span class="size" title="File Size">275.99 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.625202"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine"><div><img data-src="xlsx.png" alt="xlsx.png" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./xlsx.png">xlsx.png</a></div><span class="size" title="File Size">63.161 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.626199"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+</ul>
+</ul></div>
+    <div class="content" id="icon">
+        <div class="iconList">
+            
+<a class="iconItem" href="./archive.png">
+    <div>
+        <img data-src="archive.png" alt="archive.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>archive.png</p>
+</a>
+
+<a class="iconItem" href="./aseprite.png">
+    <div>
+        <img data-src="aseprite.png" alt="aseprite.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>aseprite.png</p>
+</a>
+
+<a class="iconItem" href="./css.png">
+    <div>
+        <img data-src="css.png" alt="css.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>css.png</p>
+</a>
+
+<a class="iconItem" href="./docx.png">
+    <div>
+        <img data-src="docx.png" alt="docx.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>docx.png</p>
+</a>
+
+<a class="iconItem" href="./exe.png">
+    <div>
+        <img data-src="exe.png" alt="exe.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>exe.png</p>
+</a>
+
+<a class="iconItem" href="./folder.png">
+    <div>
+        <img data-src="folder.png" alt="folder.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>folder.png</p>
+</a>
+
+<a class="iconItem" href="./html.png">
+    <div>
+        <img data-src="html.png" alt="html.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>html.png</p>
+</a>
+
+<a class="iconItem" href="./icons.json">
+    <div>
+        <img data-src="https://api.oldmartijntje.nl/hidden_system/json.png" alt="icons.json" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>icons.json</p>
+</a>
+
+<a class="iconItem" href="./js.png">
+    <div>
+        <img data-src="js.png" alt="js.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>js.png</p>
+</a>
+
+<a class="iconItem" href="./json.png">
+    <div>
+        <img data-src="json.png" alt="json.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>json.png</p>
+</a>
+
+<a class="iconItem" href="./markdown.png">
+    <div>
+        <img data-src="markdown.png" alt="markdown.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>markdown.png</p>
+</a>
+
+<a class="iconItem" href="./mp3.png">
+    <div>
+        <img data-src="mp3.png" alt="mp3.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>mp3.png</p>
+</a>
+
+<a class="iconItem" href="./nds.png">
+    <div>
+        <img data-src="nds.png" alt="nds.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>nds.png</p>
+</a>
+
+<a class="iconItem" href="./ogg.png">
+    <div>
+        <img data-src="ogg.png" alt="ogg.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>ogg.png</p>
+</a>
+
+<a class="iconItem" href="./pdf.png">
+    <div>
+        <img data-src="pdf.png" alt="pdf.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>pdf.png</p>
+</a>
+
+<a class="iconItem" href="./pdn.png">
+    <div>
+        <img data-src="pdn.png" alt="pdn.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>pdn.png</p>
+</a>
+
+<a class="iconItem" href="./pptx.png">
+    <div>
+        <img data-src="pptx.png" alt="pptx.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>pptx.png</p>
+</a>
+
+<a class="iconItem" href="./py.png">
+    <div>
+        <img data-src="py.png" alt="py.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>py.png</p>
+</a>
+
+<a class="iconItem" href="./txt.png">
+    <div>
+        <img data-src="txt.png" alt="txt.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>txt.png</p>
+</a>
+
+<a class="iconItem" href="./unknown-file-types.png">
+    <div>
+        <img data-src="unknown-file-types.png" alt="unknown-file-types.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>unknown-file-types.png</p>
+</a>
+
+<a class="iconItem" href="./url.png">
+    <div>
+        <img data-src="url.png" alt="url.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>url.png</p>
+</a>
+
+<a class="iconItem" href="./vlc.png">
+    <div>
+        <img data-src="vlc.png" alt="vlc.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>vlc.png</p>
+</a>
+
+<a class="iconItem" href="./wav.png">
+    <div>
+        <img data-src="wav.png" alt="wav.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>wav.png</p>
+</a>
+
+<a class="iconItem" href="./xlsx.png">
+    <div>
+        <img data-src="xlsx.png" alt="xlsx.png" class="lazy"  onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>xlsx.png</p>
+</a>
+
+        </div>
+    </div>
+    <footer>
+        
+    <h2>OldMartijntje &copy;</h2>
+    <a href="https://oldmartijntje.nl">My Website</a>
+    <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
+    <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
+    
+        <p>Last updated: <span>22/05/24 14:28PM / </span><span class="time-since" data-value="2024-05-22T14:28:04.121046"></span></p>
+    </footer>
+    <script>
+    
+
+function setLocalStorageItem(key, value) {
+    localStorage.setItem(key, value);
+}
+
+function timeSince(date) {
+    const seconds = Math.floor((new Date() - date) / 1000);
+    let interval = Math.floor(seconds / 31536000);
+
+    if (interval >= 1) {
+        return interval + " year" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) {
+        return interval + " month" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval >= 1) {
+        return interval + " day" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval >= 1) {
+        return interval + " hour" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval >= 1) {
+        return interval + " minute" + (interval > 1 ? "s" : "");
+    }
+    return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+}
+
+function updateTimeSince() {
+    const elements = document.querySelectorAll('.time-since');
+    elements.forEach(element => {
+        const datetimeString = element.getAttribute('data-value');
+        const datetime = new Date(datetimeString);
+        element.textContent = timeSince(datetime) + " ago";
+    });
+}
+
+function setRadioButtonValue(value) {
+    // Find all radio buttons with name "view"
+    let radioButtons = document.querySelectorAll('input[name="view"]');
+    
+    // Loop through each radio button
+    radioButtons.forEach((radio) => {
+        radio.checked = false;
+    });
+    radioButtons.forEach((radio) => {
+        // Check if the radio button's value matches the desired value
+        if (radio.id === value) {
+            // Set the checked attribute to true if it matches
+            radio.checked = true;
+        }
+    });
+}
+
+// Initial update
+updateTimeSince();
+
+// Update every 10 seconds
+setInterval(updateTimeSince, 10000);
+
+var displayMode = localStorage.getItem('displayMode');
+console.log(displayMode);
+if (displayMode == null) {
+    displayMode = 'iconView';
+    setLocalStorageItem('displayMode', 'iconView');
+}
+console.log('Display Mode:', displayMode);
+handleRadioChange(displayMode);
+
+document.querySelectorAll('input[name="view"]').forEach((radio) => {
+    radio.addEventListener('change', (event) => {
+        handleRadioChange(event.target.id);
+    });
+});
+
+function handleRadioChange(selectedId) {
+    setLocalStorageItem('displayMode', selectedId);
+    if (selectedId === 'listView') {
+        console.log('List View selected');
+        // Add your code to handle List View selection
+        document.getElementById('list').style.display = 'block';
+        document.getElementById('icon').style.display = 'none';
+    } else if (selectedId === 'iconView') {
+        console.log('Icon View selected');
+        document.getElementById('list').style.display = 'none';
+        document.getElementById('icon').style.display = 'block';
+
+        // Add your code to handle Icon View selection
+    }
+    setRadioButtonValue(selectedId);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img.lazy');
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            } else {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = '';
+                }
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+
+const hidden = localStorage.getItem('showHiddenFolders') === 'true';
+const hiddenFolders = document.querySelectorAll('.hidden-folder');
+hiddenFolders.forEach(folder => {
+    folder.style.display = hidden ? 'block' : 'none';
+});
+        
+    </script>
+</body>
+
+</html>

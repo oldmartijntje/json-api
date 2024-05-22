@@ -29,33 +29,33 @@ def createSettingsJson():
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     '''
     settings['icons'] = {
-        'folder': 'https://api.oldmartijntje.nl/_system/folder.png',
-        '?': 'https://api.oldmartijntje.nl/_system/unknown-file-types.png',
-        "json": "https://api.oldmartijntje.nl/_system/json.png",
-        "pdn": "https://api.oldmartijntje.nl/_system/pdn.png",
-        "html": "https://api.oldmartijntje.nl/_system/html.png",
-        "css": "https://api.oldmartijntje.nl/_system/css.png",
-        "js": "https://api.oldmartijntje.nl/_system/js.png",
-        "py": "https://api.oldmartijntje.nl/_system/py.png",
-        "aseprite": "https://api.oldmartijntje.nl/_system/aseprite.png",
-        "docx": "https://api.oldmartijntje.nl/_system/docx.png",
-        "pptx": "https://api.oldmartijntje.nl/_system/pptx.png",
-        "xlsx": "https://api.oldmartijntje.nl/_system/xlsx.png",
-        "pdf": "https://api.oldmartijntje.nl/_system/pdf.png",
-        "mp3": "https://api.oldmartijntje.nl/_system/mp3.png",
-        "wav": "https://api.oldmartijntje.nl/_system/wav.png",
-        "ogg": "https://api.oldmartijntje.nl/_system/ogg.png",
-        "nds": "https://api.oldmartijntje.nl/_system/nds.png",
-        "zip": "https://api.oldmartijntje.nl/_system/archive.png",
-        "rar": "https://api.oldmartijntje.nl/_system/archive.png",
-        "7z": "https://api.oldmartijntje.nl/_system/archive.png",
-        "iso": "https://api.oldmartijntje.nl/_system/archive.png",
-        "exe": "https://api.oldmartijntje.nl/_system/exe.png",
-        "md": "https://api.oldmartijntje.nl/_system/markdown.png",
-        "txt": "https://api.oldmartijntje.nl/_system/txt.png",
-        "url": "https://api.oldmartijntje.nl/_system/url.png",
-        "mp4": "https://api.oldmartijntje.nl/_system/vlc.png",
-        "webm": "https://api.oldmartijntje.nl/_system/vlc.png",
+        'folder': 'https://api.oldmartijntje.nl/hidden_system/folder.png',
+        '?': 'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png',
+        "json": "https://api.oldmartijntje.nl/hidden_system/json.png",
+        "pdn": "https://api.oldmartijntje.nl/hidden_system/pdn.png",
+        "html": "https://api.oldmartijntje.nl/hidden_system/html.png",
+        "css": "https://api.oldmartijntje.nl/hidden_system/css.png",
+        "js": "https://api.oldmartijntje.nl/hidden_system/js.png",
+        "py": "https://api.oldmartijntje.nl/hidden_system/py.png",
+        "aseprite": "https://api.oldmartijntje.nl/hidden_system/aseprite.png",
+        "docx": "https://api.oldmartijntje.nl/hidden_system/docx.png",
+        "pptx": "https://api.oldmartijntje.nl/hidden_system/pptx.png",
+        "xlsx": "https://api.oldmartijntje.nl/hidden_system/xlsx.png",
+        "pdf": "https://api.oldmartijntje.nl/hidden_system/pdf.png",
+        "mp3": "https://api.oldmartijntje.nl/hidden_system/mp3.png",
+        "wav": "https://api.oldmartijntje.nl/hidden_system/wav.png",
+        "ogg": "https://api.oldmartijntje.nl/hidden_system/ogg.png",
+        "nds": "https://api.oldmartijntje.nl/hidden_system/nds.png",
+        "zip": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+        "rar": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+        "7z": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+        "iso": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+        "exe": "https://api.oldmartijntje.nl/hidden_system/exe.png",
+        "md": "https://api.oldmartijntje.nl/hidden_system/markdown.png",
+        "txt": "https://api.oldmartijntje.nl/hidden_system/txt.png",
+        "url": "https://api.oldmartijntje.nl/hidden_system/url.png",
+        "mp4": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
+        "webm": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
 
     }
     settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
@@ -265,124 +265,130 @@ def loadJavascript():
     except:
         javascript = '''
 
-        function setLocalStorageItem(key, value) {
-            localStorage.setItem(key, value);
+function setLocalStorageItem(key, value) {
+    localStorage.setItem(key, value);
+}
+
+function timeSince(date) {
+    const seconds = Math.floor((new Date() - date) / 1000);
+    let interval = Math.floor(seconds / 31536000);
+
+    if (interval >= 1) {
+        return interval + " year" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) {
+        return interval + " month" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval >= 1) {
+        return interval + " day" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval >= 1) {
+        return interval + " hour" + (interval > 1 ? "s" : "");
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval >= 1) {
+        return interval + " minute" + (interval > 1 ? "s" : "");
+    }
+    return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
+}
+
+function updateTimeSince() {
+    const elements = document.querySelectorAll('.time-since');
+    elements.forEach(element => {
+        const datetimeString = element.getAttribute('data-value');
+        const datetime = new Date(datetimeString);
+        element.textContent = timeSince(datetime) + " ago";
+    });
+}
+
+function setRadioButtonValue(value) {
+    // Find all radio buttons with name "view"
+    let radioButtons = document.querySelectorAll('input[name="view"]');
+    
+    // Loop through each radio button
+    radioButtons.forEach((radio) => {
+        radio.checked = false;
+    });
+    radioButtons.forEach((radio) => {
+        // Check if the radio button's value matches the desired value
+        if (radio.id === value) {
+            // Set the checked attribute to true if it matches
+            radio.checked = true;
         }
+    });
+}
 
-        function timeSince(date) {
-            const seconds = Math.floor((new Date() - date) / 1000);
-            let interval = Math.floor(seconds / 31536000);
+// Initial update
+updateTimeSince();
 
-            if (interval >= 1) {
-                return interval + " year" + (interval > 1 ? "s" : "");
-            }
-            interval = Math.floor(seconds / 2592000);
-            if (interval >= 1) {
-                return interval + " month" + (interval > 1 ? "s" : "");
-            }
-            interval = Math.floor(seconds / 86400);
-            if (interval >= 1) {
-                return interval + " day" + (interval > 1 ? "s" : "");
-            }
-            interval = Math.floor(seconds / 3600);
-            if (interval >= 1) {
-                return interval + " hour" + (interval > 1 ? "s" : "");
-            }
-            interval = Math.floor(seconds / 60);
-            if (interval >= 1) {
-                return interval + " minute" + (interval > 1 ? "s" : "");
-            }
-            return Math.floor(seconds) + " second" + (seconds > 1 ? "s" : "");
-        }
+// Update every 10 seconds
+setInterval(updateTimeSince, 10000);
 
-        function updateTimeSince() {
-            const elements = document.querySelectorAll('.time-since');
-            elements.forEach(element => {
-                const datetimeString = element.getAttribute('data-value');
-                const datetime = new Date(datetimeString);
-                element.textContent = timeSince(datetime) + " ago";
-            });
-        }
+var displayMode = localStorage.getItem('displayMode');
+console.log(displayMode);
+if (displayMode == null) {
+    displayMode = 'iconView';
+    setLocalStorageItem('displayMode', 'iconView');
+}
+console.log('Display Mode:', displayMode);
+handleRadioChange(displayMode);
 
-        function setRadioButtonValue(value) {
-            // Find all radio buttons with name "view"
-            let radioButtons = document.querySelectorAll('input[name="view"]');
-            
-            // Loop through each radio button
-            radioButtons.forEach((radio) => {
-                radio.checked = false;
-            });
-            radioButtons.forEach((radio) => {
-                // Check if the radio button's value matches the desired value
-                if (radio.id === value) {
-                    // Set the checked attribute to true if it matches
-                    radio.checked = true;
+document.querySelectorAll('input[name="view"]').forEach((radio) => {
+    radio.addEventListener('change', (event) => {
+        handleRadioChange(event.target.id);
+    });
+});
+
+function handleRadioChange(selectedId) {
+    setLocalStorageItem('displayMode', selectedId);
+    if (selectedId === 'listView') {
+        console.log('List View selected');
+        // Add your code to handle List View selection
+        document.getElementById('list').style.display = 'block';
+        document.getElementById('icon').style.display = 'none';
+    } else if (selectedId === 'iconView') {
+        console.log('Icon View selected');
+        document.getElementById('list').style.display = 'none';
+        document.getElementById('icon').style.display = 'block';
+
+        // Add your code to handle Icon View selection
+    }
+    setRadioButtonValue(selectedId);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img.lazy');
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            } else {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = '';
                 }
-            });
-        }
-
-        // Initial update
-        updateTimeSince();
-
-        // Update every 10 seconds
-        setInterval(updateTimeSince, 10000);
-
-        var displayMode = localStorage.getItem('displayMode');
-        console.log(displayMode);
-        if (displayMode == null) {
-            displayMode = 'iconView';
-            setLocalStorageItem('displayMode', 'iconView');
-        }
-        console.log('Display Mode:', displayMode);
-        handleRadioChange(displayMode);
-
-        document.querySelectorAll('input[name="view"]').forEach((radio) => {
-            radio.addEventListener('change', (event) => {
-                handleRadioChange(event.target.id);
-            });
-        });
-
-        function handleRadioChange(selectedId) {
-            setLocalStorageItem('displayMode', selectedId);
-            if (selectedId === 'listView') {
-                console.log('List View selected');
-                // Add your code to handle List View selection
-                document.getElementById('list').style.display = 'block';
-                document.getElementById('icon').style.display = 'none';
-            } else if (selectedId === 'iconView') {
-                console.log('Icon View selected');
-                document.getElementById('list').style.display = 'none';
-                document.getElementById('icon').style.display = 'block';
-
-                // Add your code to handle Icon View selection
             }
-            setRadioButtonValue(selectedId);
-        }
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const lazyImages = document.querySelectorAll('img.lazy');
-
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    } else {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = '';
-                        }
-                    }
-                });
-            });
-
-            lazyImages.forEach(img => {
-                imageObserver.observe(img);
-            });
         });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+
+const hidden = localStorage.getItem('showHiddenFolders') === 'true';
+const hiddenFolders = document.querySelectorAll('.hidden-folder');
+hiddenFolders.forEach(folder => {
+    folder.style.display = hidden ? 'block' : 'none';
+});
         '''
         with open('./scripts.js', 'w') as file:
             file.write(javascript)
@@ -447,7 +453,7 @@ def createHTML(files, folders, filePath):
             content += '<ul>\n'
         content += '<li class="fileLine">'
         content += '<div>'
-        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/_system/unknown-file-types.png\'">'
+        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png\'">'
         content += '<a href="./' + folder['name'] + '/index.html">' + folder['name'] + '</a>'
         content += '</div>'
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
@@ -463,7 +469,7 @@ def createHTML(files, folders, filePath):
         if file['name'] != 'index.html' and file['name'] != 'index.json':
             content += '<li class="fileLine">'
             content += '<div>'
-            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/_system/unknown-file-types.png\'">'
+            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png\'">'
             content += '<a href="./' + file['name'] + '">' + file['name'] + '</a>'
             content += '</div>'
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
