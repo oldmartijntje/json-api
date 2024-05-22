@@ -460,7 +460,7 @@ def createHTML(files, folders, filePath):
         else:
             content += '<li class="fileLine">'
         content += '<div>'
-        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/HIDDEN_system/unknown-file-types.png\';this.onerror=\'this.src=\\\'https://simpleicon.com/wp-content/uploads/file.png\\\'\'">'
+        content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://simpleicon.com/wp-content/uploads/file.png\'">'
         content += '<a href="./' + folder['name'] + '/index.html">' + folder['name'] + '</a>'
         content += '</div>'
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
@@ -479,7 +479,7 @@ def createHTML(files, folders, filePath):
             else:
                 content += '<li class="fileLine">'
             content += '<div>'
-            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/HIDDEN_system/unknown-file-types.png\';this.onerror=\'this.src=\\\'https://simpleicon.com/wp-content/uploads/file.png\\\'\'">'
+            content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://simpleicon.com/wp-content/uploads/file.png\'">'
             content += '<a href="./' + file['name'] + '">' + file['name'] + '</a>'
             content += '</div>'
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
@@ -556,7 +556,7 @@ def generateViewIcons(files, folders, filePath):
     <p>{name}</p>
 </a>
 '''
-    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy" onerror="this.data-src=\'https://api.oldmartijntje.nl/HIDDEN_system/unknown-file-types.png\';this.onerror=\'this.data-src=\\\'https://simpleicon.com/wp-content/uploads/file.png\\\'\'">'
+    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy" onerror="this.src=\'https://simpleicon.com/wp-content/uploads/file.png\'">'
     videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:
