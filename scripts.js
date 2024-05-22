@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const hidden = localStorage.getItem('showHiddenFolders') === 'true';
-const hiddenFolders = document.querySelectorAll('.hidden-folder');
+const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'block' : 'none';
 });

@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const hidden = localStorage.getItem('showHiddenFolders') === 'true';
-const hiddenFolders = document.querySelectorAll('.hidden-folder');
+const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'block' : 'none';
 });
@@ -451,7 +451,10 @@ def createHTML(files, folders, filePath):
         if folder == folders[0]:
             content += f'<h2>Folders ({len(folders)})</h2>\n'
             content += '<ul>\n'
-        content += '<li class="fileLine">'
+        if folder['name'].startswith('hidden_'):
+            content += '<li class="fileLine hidden-item">'
+        else:
+            content += '<li class="fileLine">'
         content += '<div>'
         content += '<img data-src="' + fetchIcon(folder) + '" alt="' + folder['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png\'">'
         content += '<a href="./' + folder['name'] + '/index.html">' + folder['name'] + '</a>'
@@ -467,7 +470,10 @@ def createHTML(files, folders, filePath):
             content += f'<h2>Files ({len(files)-2})</h2>\n'
             content += '<ul>\n'
         if file['name'] != 'index.html' and file['name'] != 'index.json':
-            content += '<li class="fileLine">'
+            if file['name'].startswith('hidden_'):
+                content += '<li class="fileLine hidden-item">'
+            else:
+                content += '<li class="fileLine">'
             content += '<div>'
             content += '<img data-src="' + fetchIcon(file) + '" alt="' + file['name'] + '" class="miniIcon lazy" onerror="this.src=\'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png\'">'
             content += '<a href="./' + file['name'] + '">' + file['name'] + '</a>'

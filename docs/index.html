@@ -211,7 +211,7 @@ li div {
     <h2>Folders (2)</h2>
 <ul>
 <li class="fileLine"><div><img data-src="https://api.oldmartijntje.nl/hidden_system/folder.png" alt="api" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./api/index.html">api</a></div><span class="childrenAmount" title="Amount of items in this folder">5 Items </span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.440015"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
-<li class="fileLine"><div><img data-src="https://api.oldmartijntje.nl/hidden_system/folder.png" alt="hidden_system" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./hidden_system/index.html">hidden_system</a></div><span class="childrenAmount" title="Amount of items in this folder">24 Items </span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.626199"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
+<li class="fileLine hidden-item"><div><img data-src="https://api.oldmartijntje.nl/hidden_system/folder.png" alt="hidden_system" class="miniIcon lazy" onerror="this.src='https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png'"><a href="./hidden_system/index.html">hidden_system</a></div><span class="childrenAmount" title="Amount of items in this folder">24 Items </span><span class="time-since" title="Last Modified" data-value="2024-05-22T14:11:56.626199"></span><span class="modifiedDate" title="Last Modified">22/05/24 14:11PM</span></li>
 </ul>
 <h2>Files (2)</h2>
 <ul>
@@ -259,7 +259,7 @@ li div {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: <span>22/05/24 14:28PM / </span><span class="time-since" data-value="2024-05-22T14:28:03.876129"></span></p>
+        <p>Last updated: <span>22/05/24 14:29PM / </span><span class="time-since" data-value="2024-05-22T14:29:58.850138"></span></p>
     </footer>
     <script>
     
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const hidden = localStorage.getItem('showHiddenFolders') === 'true';
-const hiddenFolders = document.querySelectorAll('.hidden-folder');
+const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'block' : 'none';
 });
