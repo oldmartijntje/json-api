@@ -124,4 +124,14 @@ const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'flex' : 'none';
 });
+
+const spoilerButtons = document.querySelectorAll(".spoiler button");
+
+spoilerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.previousElementSibling;
+    item.classList.remove("spoilerItems");
+    button.style.display = "none";
+  });
+});
         

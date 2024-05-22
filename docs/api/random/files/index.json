@@ -1,6 +1,13 @@
 {
     "path": "https://api.oldmartijntje.nl/api/random/files",
-    "folders": [],
+    "folders": [
+        {
+            "name": "spoiler_empty-folder",
+            "childrenAmount": 2,
+            "lastModified": 1716390660.6042697,
+            "type": "folder"
+        }
+    ],
     "files": [
         {
             "name": "hidden_Center of the Page.mp3",
@@ -16,14 +23,14 @@
         },
         {
             "name": "index.html",
-            "size": 14829,
-            "lastModified": 1716388822.2651563,
+            "size": 18151,
+            "lastModified": 1716390842.6497605,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1638,
-            "lastModified": 1716388822.2701812,
+            "size": 2000,
+            "lastModified": 1716390842.6577458,
             "type": "json"
         },
         {
@@ -49,6 +56,12 @@
             "size": 4696,
             "lastModified": 1716322682.6333027,
             "type": "js"
+        },
+        {
+            "name": "spoiler_mii sonic.png",
+            "size": 17410,
+            "lastModified": 1716236067.1493704,
+            "type": "png"
         },
         {
             "name": "styles.css",

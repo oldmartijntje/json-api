@@ -80,6 +80,10 @@ header {
     flex: 1 1 20%;
 }
 
+.spoiler .fileLine {
+    margin: 0;
+}
+
 .fileLine *:first-child {
     flex: 2 1 40%;
 }  
@@ -180,6 +184,58 @@ li div {
 
 .hidden-item div {
     filter: brightness(0.5);
+}
+
+.spoiler {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.spoiler .spoilerItems {
+  filter: blur(5px); /* Adjust blur amount as needed */
+  transition: filter 0.3s ease-in-out;
+  margin: 0;
+}
+
+.spoiler .spoilerItems.shownSpoilerItem {
+    filter: blur(0);
+}
+
+.icon.spoiler {
+    height: 115px;
+    width: 115px;
+    max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+.spoiler .iconItem {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.spoiler .iconItem.spoilerItems {
+    filter: blur(10px); /* Adjust blur amount as needed */
+}
+
+.spoiler button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.spoiler:hover button {
+  opacity: 1; /* Show button on hover */
 }
 
 @media only screen and (max-width: 800px) {
@@ -766,7 +822,7 @@ li div {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: <span>22/05/24 16:41PM / </span><span class="time-since" data-value="2024-05-22T16:41:07.472669"></span></p>
+        <p>Last updated: <span>22/05/24 17:14PM / </span><span class="time-since" data-value="2024-05-22T17:14:30.769565"></span></p>
     </footer>
     <script>
     
@@ -894,6 +950,16 @@ const hidden = localStorage.getItem('showHiddenFolders') === 'true';
 const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'flex' : 'none';
+});
+
+const spoilerButtons = document.querySelectorAll(".spoiler button");
+
+spoilerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.previousElementSibling;
+    item.classList.remove("spoilerItems");
+    button.style.display = "none";
+  });
 });
         
     </script>

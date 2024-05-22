@@ -144,6 +144,10 @@ header {
     flex: 1 1 20%;
 }
 
+.spoiler .fileLine {
+    margin: 0;
+}
+
 .fileLine *:first-child {
     flex: 2 1 40%;
 }  
@@ -244,6 +248,58 @@ li div {
 
 .hidden-item div {
     filter: brightness(0.5);
+}
+
+.spoiler {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.spoiler .spoilerItems {
+  filter: blur(5px); /* Adjust blur amount as needed */
+  transition: filter 0.3s ease-in-out;
+  margin: 0;
+}
+
+.spoiler .spoilerItems.shownSpoilerItem {
+    filter: blur(0);
+}
+
+.icon.spoiler {
+    height: 115px;
+    width: 115px;
+    max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+.spoiler .iconItem {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.spoiler .iconItem.spoilerItems {
+    filter: blur(10px); /* Adjust blur amount as needed */
+}
+
+.spoiler button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.spoiler:hover button {
+  opacity: 1; /* Show button on hover */
 }
 
 @media only screen and (max-width: 800px) {
@@ -393,6 +449,16 @@ const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'flex' : 'none';
 });
+
+const spoilerButtons = document.querySelectorAll(".spoiler button");
+
+spoilerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.previousElementSibling;
+    item.classList.remove("spoilerItems");
+    button.style.display = "none";
+  });
+});
         '''
         with open('./scripts.js', 'w') as file:
             file.write(javascript)
@@ -457,6 +523,8 @@ def createHTML(files, folders, filePath):
             content += '<ul>\n'
         if folder['name'].startswith('hidden_'):
             content += '<li class="fileLine hidden-item">'
+        elif folder['name'].startswith('spoiler_'):
+            content += '<li class="spoiler"><div class="fileLine spoilerItems">'
         else:
             content += '<li class="fileLine">'
         content += '<div>'
@@ -466,6 +534,8 @@ def createHTML(files, folders, filePath):
         content += '<span class="childrenAmount" title="Amount of items in this folder">' + str(folder['childrenAmount']-2) + ' Items </span>'
         content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(folder['lastModified']).isoformat()) + '"></span>'
         content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(folder['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
+        if folder['name'].startswith('spoiler_'):
+            content += '</div><button>Reveal Spoiler</button>'
         content += '</li>\n'
         if folder == folders[-1]:
             content += '</ul>\n'
@@ -476,6 +546,8 @@ def createHTML(files, folders, filePath):
         if file['name'] != 'index.html' and file['name'] != 'index.json':
             if file['name'].startswith('hidden_'):
                 content += '<li class="fileLine hidden-item">'
+            elif file['name'].startswith('spoiler_'):
+                content += '<li class="spoiler"><div class="fileLine spoilerItems">'
             else:
                 content += '<li class="fileLine">'
             content += '<div>'
@@ -485,6 +557,8 @@ def createHTML(files, folders, filePath):
             content += '<span class="size" title="File Size">' + str(fileSizeCalculator(file['size'])) + '</span>'
             content += '<span class="time-since" title="Last Modified" data-value="' + str(datetime.datetime.fromtimestamp(file['lastModified']).isoformat()) + '"></span>'
             content += '<span class="modifiedDate" title="Last Modified">' + str(datetime.datetime.fromtimestamp(file['lastModified']).strftime('%d/%m/%y %H:%M%p')) + '</span>'
+            if file['name'].startswith('spoiler_'):
+                content += '</div><button>Reveal Spoiler</button>'
             content += '</li>\n'
         if file == files[-1]:
             content += '</ul>\n'
@@ -556,23 +630,37 @@ def generateViewIcons(files, folders, filePath):
     <p>{name}</p>
 </a>
 '''
+    spoilerDesign = '''
+<div class="spoiler icon">
+    {design}
+    <button>Reveal Spoiler</button>
+</div>
+'''
     imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy" onerror="this.src=\'https://simpleicon.com/wp-content/uploads/file.png\'">'
     videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:
         if folder['name'] != 'node_modules':
+            currentDesign = design
             extraClass = ''
-            if folder['name'].startswith('hidden_'):
+            if folder['name'].startswith('spoiler_'):
+                currentDesign = spoilerDesign.format(design=design)
+                extraClass = 'spoilerItems'
+            elif folder['name'].startswith('hidden_'):
                 extraClass = 'hidden-item'
-            icons += design.format(extraClass=extraClass, url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'], type=imgDesign.format(icon=fetchIcon(folder), name=folder['name']))
+            icons += currentDesign.format(extraClass=extraClass, url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'], type=imgDesign.format(icon=fetchIcon(folder), name=folder['name']))
     for file in files:
+        currentDesign = design
         extraClass = ''
-        if file['name'].startswith('hidden_'):
+        if file['name'].startswith('spoiler_'):
+            currentDesign = spoilerDesign.format(design=design)
+            extraClass = 'spoilerItems'
+        elif file['name'].startswith('hidden_'):
             extraClass = 'hidden-item'
         if file['type'] in videoTypes:
-            icons += design.format(extraClass=extraClass, url='./' + file['name'], name=file['name'], type=videoDesign.format(url='./' + file['name'], name=file['name']))
+            icons += currentDesign.format(extraClass=extraClass, url='./' + file['name'], name=file['name'], type=videoDesign.format(url='./' + file['name'], name=file['name']))
         elif file['name'] != 'index.html' and file['name'] != 'index.json':
-            icons += design.format(extraClass=extraClass, url='./' + file['name'], icon=fetchIcon(file), name=file['name'], type=imgDesign.format(icon=fetchIcon(file), name=file['name']))
+            icons += currentDesign.format(extraClass=extraClass, url='./' + file['name'], icon=fetchIcon(file), name=file['name'], type=imgDesign.format(icon=fetchIcon(file), name=file['name']))
     return icons	
 
 def saveHTML(header, content, filePath, files, folders):

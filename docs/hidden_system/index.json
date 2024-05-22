@@ -3,6 +3,12 @@
     "folders": [],
     "files": [
         {
+            "name": "404notFound.png",
+            "size": 101852,
+            "lastModified": 1715007735.6930208,
+            "type": "png"
+        },
+        {
             "name": "archive.png",
             "size": 1104013,
             "lastModified": 1716388138.4032881,
@@ -52,14 +58,14 @@
         },
         {
             "name": "index.html",
-            "size": 25060,
-            "lastModified": 1716388822.2871525,
+            "size": 27106,
+            "lastModified": 1716390842.6938708,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 4317,
-            "lastModified": 1716388822.3031535,
+            "size": 4486,
+            "lastModified": 1716390842.709849,
             "type": "json"
         },
         {

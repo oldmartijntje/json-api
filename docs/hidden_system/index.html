@@ -8,7 +8,7 @@
     <title>OldMartijntje's Static API</title>
     <meta property="og:title" content="api.oldmartijntje.nl">
     <meta property="og:description" content="OldMartijntje's API. View this folder: &quot;https://api.oldmartijntje.nl/hidden_system&quot;
-It contains 24 files and 0 folders.">
+It contains 25 files and 0 folders.">
     <meta property="og:image" content="https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png">
     <meta property="og:url" content="https://api.oldmartijntje.nlhidden_system">
     <meta property="og:type" content="website">
@@ -78,6 +78,10 @@ header {
     overflow: hidden;
     word-wrap: break-word;
     flex: 1 1 20%;
+}
+
+.spoiler .fileLine {
+    margin: 0;
 }
 
 .fileLine *:first-child {
@@ -182,6 +186,58 @@ li div {
     filter: brightness(0.5);
 }
 
+.spoiler {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.spoiler .spoilerItems {
+  filter: blur(5px); /* Adjust blur amount as needed */
+  transition: filter 0.3s ease-in-out;
+  margin: 0;
+}
+
+.spoiler .spoilerItems.shownSpoilerItem {
+    filter: blur(0);
+}
+
+.icon.spoiler {
+    height: 115px;
+    width: 115px;
+    max-width: 20%;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+.spoiler .iconItem {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.spoiler .iconItem.spoilerItems {
+    filter: blur(10px); /* Adjust blur amount as needed */
+}
+
+.spoiler button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.spoiler:hover button {
+  opacity: 1; /* Show button on hover */
+}
+
 @media only screen and (max-width: 800px) {
     .fileLine {
         gap: 0.5rem;
@@ -214,8 +270,9 @@ li div {
     </label>
 </div></header>
 <div class="content" id="list">
-    <h2>Files (24)</h2>
+    <h2>Files (25)</h2>
 <ul>
+<li class="fileLine"><div><img data-src="404notFound.png" alt="404notFound.png" class="miniIcon lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'"><a href="./404notFound.png">404notFound.png</a></div><span class="size" title="File Size">101.852 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-06T17:02:15.693021"></span><span class="modifiedDate" title="Last Modified">06/05/24 17:02PM</span></li>
 <li class="fileLine"><div><img data-src="archive.png" alt="archive.png" class="miniIcon lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'"><a href="./archive.png">archive.png</a></div><span class="size" title="File Size">1.104013 MB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T16:28:58.403288"></span><span class="modifiedDate" title="Last Modified">22/05/24 16:28PM</span></li>
 <li class="fileLine"><div><img data-src="aseprite.png" alt="aseprite.png" class="miniIcon lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'"><a href="./aseprite.png">aseprite.png</a></div><span class="size" title="File Size">28.449 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T16:28:58.405288"></span><span class="modifiedDate" title="Last Modified">22/05/24 16:28PM</span></li>
 <li class="fileLine"><div><img data-src="css.png" alt="css.png" class="miniIcon lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'"><a href="./css.png">css.png</a></div><span class="size" title="File Size">240.155 KB</span><span class="time-since" title="Last Modified" data-value="2024-05-22T16:28:58.409816"></span><span class="modifiedDate" title="Last Modified">22/05/24 16:28PM</span></li>
@@ -245,6 +302,13 @@ li div {
     <div class="content" id="icon">
         <div class="iconList">
             
+<a class="iconItem " href="./404notFound.png">
+    <div>
+        <img data-src="404notFound.png" alt="404notFound.png" class="lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
+    </div>
+    <p>404notFound.png</p>
+</a>
+
 <a class="iconItem " href="./archive.png">
     <div>
         <img data-src="archive.png" alt="archive.png" class="lazy" onerror="this.src='https://simpleicon.com/wp-content/uploads/file.png'">
@@ -422,7 +486,7 @@ li div {
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     
-        <p>Last updated: <span>22/05/24 16:41PM / </span><span class="time-since" data-value="2024-05-22T16:41:07.583375"></span></p>
+        <p>Last updated: <span>22/05/24 17:14PM / </span><span class="time-since" data-value="2024-05-22T17:14:31.017577"></span></p>
     </footer>
     <script>
     
@@ -550,6 +614,16 @@ const hidden = localStorage.getItem('showHiddenFolders') === 'true';
 const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
     folder.style.display = hidden ? 'flex' : 'none';
+});
+
+const spoilerButtons = document.querySelectorAll(".spoiler button");
+
+spoilerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.previousElementSibling;
+    item.classList.remove("spoilerItems");
+    button.style.display = "none";
+  });
 });
         
     </script>
