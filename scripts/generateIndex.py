@@ -242,7 +242,7 @@ li div {
     margin-left: 1rem;
 }
 
-.hidden-item * {
+.hidden-item div {
     filter: brightness(0.5);
 }
 
