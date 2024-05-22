@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const hidden = localStorage.getItem('showHiddenFolders') === 'true';
 const hiddenFolders = document.querySelectorAll('.hidden-item');
 hiddenFolders.forEach(folder => {
-    folder.style.display = hidden ? 'block' : 'none';
+    folder.style.display = hidden ? 'flex' : 'none';
 });
         '''
         with open('./scripts.js', 'w') as file:
@@ -545,7 +545,7 @@ def fetchIcon(fileOrFolder):
 def generateViewIcons(files, folders, filePath):
     videoTypes = loadSetting(settings, 'loadVideosFromTypes')
     design = '''
-<a class="iconItem" href="{url}">
+<a class="iconItem {extraClass}" href="{url}">
     <div>
         {type}
     </div>
@@ -557,12 +557,18 @@ def generateViewIcons(files, folders, filePath):
     icons = ''
     for folder in folders:
         if folder['name'] != 'node_modules':
-            icons += design.format(url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'], type=imgDesign.format(icon=fetchIcon(folder), name=folder['name']))
+            extraClass = ''
+            if folder['name'].startswith('hidden_'):
+                extraClass = 'hidden-item'
+            icons += design.format(extraClass=extraClass, url='./' + folder['name'] + '/index.html', icon=fetchIcon(folder), name=folder['name'], type=imgDesign.format(icon=fetchIcon(folder), name=folder['name']))
     for file in files:
+        extraClass = ''
+        if file['name'].startswith('hidden_'):
+            extraClass = 'hidden-item'
         if file['type'] in videoTypes:
-            icons += design.format(url='./' + file['name'], name=file['name'], type=videoDesign.format(url='./' + file['name'], name=file['name']))
+            icons += design.format(extraClass=extraClass, url='./' + file['name'], name=file['name'], type=videoDesign.format(url='./' + file['name'], name=file['name']))
         elif file['name'] != 'index.html' and file['name'] != 'index.json':
-            icons += design.format(url='./' + file['name'], icon=fetchIcon(file), name=file['name'], type=imgDesign.format(icon=fetchIcon(file), name=file['name']))
+            icons += design.format(extraClass=extraClass, url='./' + file['name'], icon=fetchIcon(file), name=file['name'], type=imgDesign.format(icon=fetchIcon(file), name=file['name']))
     return icons	
 
 def saveHTML(header, content, filePath, files, folders):
