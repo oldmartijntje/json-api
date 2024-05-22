@@ -540,7 +540,7 @@ def generateViewIcons(files, folders, filePath):
     <p>{name}</p>
 </a>
 '''
-    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy"  onerror="this.src=\'https://api.oldmartijntje.nl/_system/unknown-file-types.png\'">'
+    imgDesign = '<img data-src="{icon}" alt="{name}" class="lazy"  onerror="this.src=\'https://simpleicon.com/wp-content/uploads/file.png\'">'
     videoDesign = '<video src="{url}" alt="{name}" loop muted playsinline></video>'
     icons = ''
     for folder in folders:
