@@ -27,6 +27,7 @@ def createSettingsJson():
         "renameOriginalTo": "index.html",
         "renameGeneratedTo": "generated-index.html"
     }
+    settings['webAddressLinkFileType'] = '.link'
     settings['footer'] = '''
     <h2>OldMartijntje &copy;</h2>
     <a href="https://oldmartijntje.nl">My Website</a>
