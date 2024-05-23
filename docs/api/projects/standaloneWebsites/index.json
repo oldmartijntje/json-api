@@ -3,11 +3,24 @@
     "folders": [
         {
             "name": "api-info-page",
-            "childrenAmount": 0,
-            "lastModified": 1716480145.8592644,
+            "childrenAmount": 2,
+            "lastModified": 1716480224.8669598,
             "type": "folder"
         }
     ],
-    "files": [],
+    "files": [
+        {
+            "name": "index.html",
+            "size": 11437,
+            "lastModified": 1716480224.861959,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 329,
+            "lastModified": 1716480224.864994,
+            "type": "json"
+        }
+    ],
     "parent": "../index.json"
 }

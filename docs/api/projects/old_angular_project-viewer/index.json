@@ -3,6 +3,18 @@
     "folders": [],
     "files": [
         {
+            "name": "index.html",
+            "size": 12389,
+            "lastModified": 1716480224.8589573,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 535,
+            "lastModified": 1716480224.8609593,
+            "type": "json"
+        },
+        {
             "name": "project-viewer_achievements.json",
             "size": 3967,
             "lastModified": 1715169322.7235186,
