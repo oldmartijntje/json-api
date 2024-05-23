@@ -4,21 +4,21 @@
         {
             "name": "api-info-page",
             "childrenAmount": 2,
-            "lastModified": 1716480224.8669598,
+            "lastModified": 1716481329.41004,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 11437,
-            "lastModified": 1716480224.861959,
+            "size": 11469,
+            "lastModified": 1716481417.3557014,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 329,
-            "lastModified": 1716480224.864994,
+            "size": 656,
+            "lastModified": 1716481417.3577082,
             "type": "json"
         }
     ],
