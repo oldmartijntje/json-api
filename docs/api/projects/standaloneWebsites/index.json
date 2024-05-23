@@ -1,0 +1,13 @@
+{
+    "path": "https://api.oldmartijntje.nl/api/projects/standaloneWebsites",
+    "folders": [
+        {
+            "name": "api-info-page",
+            "childrenAmount": 0,
+            "lastModified": 1716480145.8592644,
+            "type": "folder"
+        }
+    ],
+    "files": [],
+    "parent": "../index.json"
+}

@@ -9,8 +9,8 @@
         },
         {
             "name": "projects",
-            "childrenAmount": 6,
-            "lastModified": 1716388138.3168964,
+            "childrenAmount": 5,
+            "lastModified": 1716480114.885492,
             "type": "folder"
         },
         {
@@ -30,13 +30,13 @@
         {
             "name": "index.html",
             "size": 14605,
-            "lastModified": 1716390870.39739,
+            "lastModified": 1716480045.2584436,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1313,
-            "lastModified": 1716390870.409401,
+            "size": 1310,
+            "lastModified": 1716480045.2614417,
             "type": "json"
         },
         {

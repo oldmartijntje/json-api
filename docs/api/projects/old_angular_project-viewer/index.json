@@ -1,0 +1,19 @@
+{
+    "path": "https://api.oldmartijntje.nl/api/projects/old_angular_project-viewer",
+    "folders": [],
+    "files": [
+        {
+            "name": "project-viewer_achievements.json",
+            "size": 3967,
+            "lastModified": 1715169322.7235186,
+            "type": "json"
+        },
+        {
+            "name": "project-viewer_offlineProjects.json",
+            "size": 41189,
+            "lastModified": 1715169285.0942204,
+            "type": "json"
+        }
+    ],
+    "parent": "../index.json"
+}
