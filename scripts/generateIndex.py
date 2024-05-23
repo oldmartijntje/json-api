@@ -136,6 +136,7 @@ header {
 
 #icon {
     padding-right: 1rem;
+    user-select: none;
 }
 
 .fileLine * {
@@ -156,7 +157,6 @@ header {
     margin: 1rem;
     flex-grow: 1;
     overflow-y: scroll;
-    user-select: none;
 }
 
 .icon-radio {
