@@ -12,25 +12,19 @@
             "childrenAmount": 4,
             "lastModified": 1716480224.8599546,
             "type": "folder"
-        },
-        {
-            "name": "standaloneWebsites",
-            "childrenAmount": 3,
-            "lastModified": 1716481198.3415554,
-            "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
             "size": 13284,
-            "lastModified": 1716481440.3236234,
+            "lastModified": 1716481744.5025856,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1023,
-            "lastModified": 1716481440.3266242,
+            "size": 1024,
+            "lastModified": 1716481744.5055895,
             "type": "json"
         }
     ],

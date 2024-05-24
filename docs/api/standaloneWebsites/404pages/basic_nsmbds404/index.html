@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic_nsmbds404</title>
+    <style>
+        body * {
+            color: white;
+            text-shadow: 0 0 10px black;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100svh;
+            width: 100vw;
+        }
+
+        #pipe {
+            top: 80svh;
+            left: calc(100vw - 32rem);
+            position: absolute;
+            z-index: 1;
+        }
+
+        a {
+            display: block;
+            height: 5rem;
+            width: 32rem;
+            background-image: url(./pipe.png);
+            image-rendering: pixelated;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #background {
+            width: 100vw;
+            height: 100svh;
+            background: url(https://i.imgur.com/G2Nvy7v.png);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            background-size: cover;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background">
+        <div style="align-self: center; text-align: center;">
+            <h1 style="font-size: 15svh;">404</h1>
+            <h2 style="font-size: 8svh;">Page not found</h2>
+        </div>
+    </div>
+    <div id="pipe">
+        <a href="../index.html" style="font-size: 5svh; padding-left: 15vw; padding-top: 2svh;">Home</a>
+    </div>
+</body>
+
+</html>

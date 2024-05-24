@@ -1,6 +1,12 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/projects/standaloneWebsites",
+    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites",
     "folders": [
+        {
+            "name": "404pages",
+            "childrenAmount": 1,
+            "lastModified": 1716577217.6557717,
+            "type": "folder"
+        },
         {
             "name": "api-info-page",
             "childrenAmount": 2,
@@ -12,13 +18,13 @@
         {
             "name": "index.html",
             "size": 11469,
-            "lastModified": 1716481440.532319,
+            "lastModified": 1716481744.6853206,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 656,
-            "lastModified": 1716481440.534318,
+            "size": 654,
+            "lastModified": 1716481744.6873133,
             "type": "json"
         }
     ],

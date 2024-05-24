@@ -1,0 +1,13 @@
+{
+    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites/404pages",
+    "folders": [
+        {
+            "name": "basic_nsmbds404",
+            "childrenAmount": 2,
+            "lastModified": 1716577656.1113214,
+            "type": "folder"
+        }
+    ],
+    "files": [],
+    "parent": "../index.json"
+}

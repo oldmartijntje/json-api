@@ -1,0 +1,19 @@
+{
+    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites/404pages/basic_nsmbds404",
+    "folders": [],
+    "files": [
+        {
+            "name": "index.html",
+            "size": 1649,
+            "lastModified": 1716579991.5314786,
+            "type": "html"
+        },
+        {
+            "name": "pipe.png",
+            "size": 253,
+            "lastModified": 1716577638.0421455,
+            "type": "png"
+        }
+    ],
+    "parent": "../index.json"
+}

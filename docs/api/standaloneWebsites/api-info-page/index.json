@@ -1,17 +1,17 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/projects/standaloneWebsites/api-info-page",
+    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites/api-info-page",
     "folders": [],
     "files": [
         {
             "name": "index.html",
-            "size": 931,
-            "lastModified": 1716481739.3881586,
+            "size": 1095,
+            "lastModified": 1716489345.1293547,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 489,
-            "lastModified": 1716481440.5373201,
+            "size": 491,
+            "lastModified": 1716481744.6893156,
             "type": "json"
         }
     ],
