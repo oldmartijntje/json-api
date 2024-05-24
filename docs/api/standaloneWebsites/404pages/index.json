@@ -3,11 +3,24 @@
     "folders": [
         {
             "name": "basic_nsmbds404",
-            "childrenAmount": 2,
-            "lastModified": 1716577656.1113214,
+            "childrenAmount": 3,
+            "lastModified": 1716580017.3822098,
             "type": "folder"
         }
     ],
-    "files": [],
+    "files": [
+        {
+            "name": "index.html",
+            "size": 11475,
+            "lastModified": 1716580017.3760417,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 331,
+            "lastModified": 1716580017.3792179,
+            "type": "json"
+        }
+    ],
     "parent": "../index.json"
 }

@@ -3,8 +3,8 @@
     "folders": [
         {
             "name": "404pages",
-            "childrenAmount": 1,
-            "lastModified": 1716577217.6557717,
+            "childrenAmount": 3,
+            "lastModified": 1716580017.377041,
             "type": "folder"
         },
         {
@@ -17,14 +17,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 11469,
-            "lastModified": 1716481744.6853206,
+            "size": 12238,
+            "lastModified": 1716580017.3700268,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 654,
-            "lastModified": 1716481744.6873133,
+            "size": 816,
+            "lastModified": 1716580017.373039,
             "type": "json"
         }
     ],
