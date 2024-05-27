@@ -201,7 +201,7 @@ header {
     text-align: center;
     height: 115px;
     width: 115px;
-    max-width: 20%;
+    max-width: 10rem;
     flex-grow: 1;
     border-radius: 0.5rem;
 }
