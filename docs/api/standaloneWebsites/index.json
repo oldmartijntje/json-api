@@ -4,27 +4,27 @@
         {
             "name": "404pages",
             "childrenAmount": 3,
-            "lastModified": 1716580017.377041,
+            "lastModified": 1717157799.1488943,
             "type": "folder"
         },
         {
             "name": "api-info-page",
             "childrenAmount": 2,
-            "lastModified": 1716481329.41004,
+            "lastModified": 1717157799.1498914,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 12238,
-            "lastModified": 1716580017.3700268,
+            "size": 12239,
+            "lastModified": 1717158654.9528165,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 816,
-            "lastModified": 1716580017.373039,
+            "size": 818,
+            "lastModified": 1717158654.9538264,
             "type": "json"
         }
     ],

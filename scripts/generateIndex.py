@@ -22,6 +22,7 @@ def createSettingsJson():
     settings['commitOnRun'] = True
     settings['alwaysDefaultStyles'] = True
     settings['alwaysDefaultJavascript'] = True
+    settings['alwaysDefaultPersonalisation'] = True
     settings['whenPersonalIndex'] = {
         "ignoreTheGeneration": True,
         "renameOriginalTo": "index.html",
@@ -34,53 +35,66 @@ def createSettingsJson():
     <a href="https://docs.oldmartijntje.nl">My Digital Garden</a>
     <p>Generated this index with <a href="https://github.com/oldmartijntje/json-api/blob/main/scripts/generateIndex.py">a python script</a></p>
     '''
-    settings['icons'] = {
-        'folder': 'https://api.oldmartijntje.nl/hidden_system/folder.png',
-        '?': 'https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png',
-        "json": "https://api.oldmartijntje.nl/hidden_system/json.png",
-        "pdn": "https://api.oldmartijntje.nl/hidden_system/pdn.png",
-        "html": "https://api.oldmartijntje.nl/hidden_system/html.png",
-        "css": "https://api.oldmartijntje.nl/hidden_system/css.png",
-        "js": "https://api.oldmartijntje.nl/hidden_system/js.png",
-        "py": "https://api.oldmartijntje.nl/hidden_system/py.png",
-        "aseprite": "https://api.oldmartijntje.nl/hidden_system/aseprite.png",
-        "docx": "https://api.oldmartijntje.nl/hidden_system/docx.png",
-        "pptx": "https://api.oldmartijntje.nl/hidden_system/pptx.png",
-        "xlsx": "https://api.oldmartijntje.nl/hidden_system/xlsx.png",
-        "pdf": "https://api.oldmartijntje.nl/hidden_system/pdf.png",
-        "mp3": "https://api.oldmartijntje.nl/hidden_system/mp3.png",
-        "wav": "https://api.oldmartijntje.nl/hidden_system/wav.png",
-        "ogg": "https://api.oldmartijntje.nl/hidden_system/ogg.png",
-        "nds": "https://api.oldmartijntje.nl/hidden_system/nds.png",
-        "zip": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-        "rar": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-        "7z": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-        "iso": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-        "exe": "https://api.oldmartijntje.nl/hidden_system/exe.png",
-        "md": "https://api.oldmartijntje.nl/hidden_system/markdown.png",
-        "txt": "https://api.oldmartijntje.nl/hidden_system/txt.png",
-        "url": "https://api.oldmartijntje.nl/hidden_system/url.png",
-        "mp4": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
-        "webm": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
-
-    }
-    settings['loadVideosFromTypes'] = ['mp4', 'webm', 'ogg']
 
     with open('./settings.json', 'w') as file:
         json.dump(settings, file, indent=4)
     
-def loadSetting(settingsDict, key):
+def loadSetting(settingsDict, key, name='settings.json'):
     try:
         return settingsDict[key]
     except:
-        showerror('Error', 'The settings.json file is missing the ' + key + ' key. Please fill it in.')
+        showerror('Error', f'The {name} file is missing the ' + key + ' key. Please fill it in.')
         # open the folder in the file explorer
-        os.system('explorer /select,settings.json')
+        os.system(f'explorer /select,{name}')
         exit()
+
+def loadPersonalisation():
+    try: 
+        if loadSetting(settings, 'alwaysDefaultPersonalisation', 'settings.json'):
+            raise Exception
+        customisables = open('./personalisation.json', 'r').read()
+    except:
+        customisables = {
+        "icons": {
+            "folder": "https://api.oldmartijntje.nl/hidden_system/folder.png",
+            "?": "https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png",
+            "json": "https://api.oldmartijntje.nl/hidden_system/json.png",
+            "pdn": "https://api.oldmartijntje.nl/hidden_system/pdn.png",
+            "html": "https://api.oldmartijntje.nl/hidden_system/html.png",
+            "css": "https://api.oldmartijntje.nl/hidden_system/css.png",
+            "js": "https://api.oldmartijntje.nl/hidden_system/js.png",
+            "py": "https://api.oldmartijntje.nl/hidden_system/py.png",
+            "aseprite": "https://api.oldmartijntje.nl/hidden_system/aseprite.png",
+            "docx": "https://api.oldmartijntje.nl/hidden_system/docx.png",
+            "pptx": "https://api.oldmartijntje.nl/hidden_system/pptx.png",
+            "xlsx": "https://api.oldmartijntje.nl/hidden_system/xlsx.png",
+            "pdf": "https://api.oldmartijntje.nl/hidden_system/pdf.png",
+            "mp3": "https://api.oldmartijntje.nl/hidden_system/mp3.png",
+            "wav": "https://api.oldmartijntje.nl/hidden_system/wav.png",
+            "ogg": "https://api.oldmartijntje.nl/hidden_system/ogg.png",
+            "nds": "https://api.oldmartijntje.nl/hidden_system/nds.png",
+            "zip": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+            "rar": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+            "7z": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+            "iso": "https://api.oldmartijntje.nl/hidden_system/archive.png",
+            "exe": "https://api.oldmartijntje.nl/hidden_system/exe.png",
+            "md": "https://api.oldmartijntje.nl/hidden_system/markdown.png",
+            "txt": "https://api.oldmartijntje.nl/hidden_system/txt.png",
+            "url": "https://api.oldmartijntje.nl/hidden_system/url.png",
+            "mp4": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
+            "webm": "https://api.oldmartijntje.nl/hidden_system/vlc.png"
+        },
+        "loadVideosFromTypes": ["mp4", "webm", "ogg"],
+        "loadPhotosFromTypes": ["png", "jpeg", "jpg", "ico", "gif"],
+    }
+        with open('./personalisation.json', 'w') as file:
+            json.dump(customisables, file, indent=4)
+            file.close()
+    return customisables
 
 def loadStyling():
     try:
-        if loadSetting(settings, 'alwaysDefaultStyles'):
+        if loadSetting(settings, 'alwaysDefaultStyles', 'settings.json'):
             raise Exception
         styles = open('./styles.css', 'r').read()
     except:
@@ -325,7 +339,7 @@ li div {
 
 def loadJavascript():
     try:
-        if loadSetting(settings, 'alwaysDefaultJavascript'):
+        if loadSetting(settings, 'alwaysDefaultJavascript', 'settings.json'):
             raise Exception
         javascript = open('./scripts.js', 'r').read()
     except:
@@ -507,7 +521,7 @@ def createHTML(files, folders, filePath):
     header += '<div class="buttons">\n'
     if (filePath != startingPos):
         header += '<strong><a href="../index.html">[parent directory]</a></strong>\n'
-        header += f'<strong><a href="{loadSetting(settings, 'webPath')}">[homepage]</a></strong>\n'
+        header += f'<strong><a href="{loadSetting(settings, 'webPath', 'settings.json')}">[homepage]</a></strong>\n'
     header += '<strong><a href="./index.json">[json index]</a></strong>\n'
     header += '</div>\n'
     header += '''<div class="buttons" style="margin-top: 1rem;">
@@ -607,27 +621,27 @@ def saveJson(content, filePath):
 
 
 def ignoreBasePathInWebPath(filePath, settings):
-    webPathPatst = filePath.split(loadSetting(settings, 'startingFolder'))
+    webPathPatst = filePath.split(loadSetting(settings, 'startingFolder', 'settings.json'))
     if len(webPathPatst) > 1:
         webPath = webPathPatst[1]
     else:
         webPath = ""
-    webPath = loadSetting(settings, 'webPath') + webPath
+    webPath = loadSetting(settings, 'webPath', 'settings.json') + webPath
     return webPath
 
 def fetchIcon(fileOrFolder):
-    displayIcons = ['png', 'jpeg', 'jpg', 'ico', 'gif']
-    if loadSetting(settings, 'icons') and fileOrFolder['type'] in loadSetting(settings, 'icons'):
-        return loadSetting(settings, 'icons')[fileOrFolder['type']]
+    displayIcons = loadSetting(customisables, 'loadPhotosFromTypes', 'personalisation.json')
+    if loadSetting(customisables, 'icons', 'personalisation.json') and fileOrFolder['type'] in loadSetting(customisables, 'icons', 'personalisation.json'):
+        return loadSetting(customisables, 'icons', 'personalisation.json')[fileOrFolder['type']]
     elif  fileOrFolder['type'] in displayIcons:
         return fileOrFolder['name']
     else:
-        if loadSetting(settings, 'icons') and '?' in loadSetting(settings, 'icons'):
-            return loadSetting(settings, 'icons')['?']
+        if loadSetting(customisables, 'icons', 'personalisation.json') and '?' in loadSetting(customisables, 'icons', 'personalisation.json'):
+            return loadSetting(customisables, 'icons', 'personalisation.json')['?']
         return 'https://simpleicon.com/wp-content/uploads/file.png'
 
 def generateViewIcons(files, folders, filePath):
-    videoTypes = loadSetting(settings, 'loadVideosFromTypes')
+    videoTypes = loadSetting(customisables, 'loadVideosFromTypes', 'personalisation.json')
     design = '''
 <a class="iconItem {extraClass}" href="{url}">
     <div>
@@ -678,7 +692,7 @@ def saveHTML(header, content, filePath, files, folders):
         webPath = webPathPatst[1]
     else:
         webPath = ""
-    webPath = loadSetting(settings, 'webPath') + webPath
+    webPath = loadSetting(settings, 'webPath', 'settings.json') + webPath
     start = f'''{defaultComment}
 <!DOCTYPE html>
 <html lang="en">
@@ -686,11 +700,11 @@ def saveHTML(header, content, filePath, files, folders):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{loadSetting(settings, 'websiteIcon')}">
+    <link rel="icon" href="{loadSetting(settings, 'websiteIcon', 'settings.json')}">
     <title>{title}</title>
-    <meta property="og:title" content="{loadSetting(settings, 'embedTitle')}">
-    <meta property="og:description" content="{loadSetting(settings, 'embedDescription')} View this folder: &quot;{ignoreBasePathInWebPath(filePath, settings)}&quot;\nIt contains {len(files)-2} files and {len(folders)} folders.">
-    <meta property="og:image" content="{loadSetting(settings, 'embedImage')}">
+    <meta property="og:title" content="{loadSetting(settings, 'embedTitle', 'settings.json')}">
+    <meta property="og:description" content="{loadSetting(settings, 'embedDescription', 'settings.json')} View this folder: &quot;{ignoreBasePathInWebPath(filePath, settings)}&quot;\nIt contains {len(files)-2} files and {len(folders)} folders.">
+    <meta property="og:image" content="{loadSetting(settings, 'embedImage', 'settings.json')}">
     <meta property="og:url" content="{webPath}">
     <meta property="og:type" content="website">
 </head>
@@ -711,7 +725,7 @@ def saveHTML(header, content, filePath, files, folders):
         </div>
     </div>
     <footer>
-        {loadSetting(settings, 'footer')}
+        {loadSetting(settings, 'footer', 'settings.json')}
         <p>Last updated: <span>{str(datetime.datetime.now().strftime('%d/%m/%y %H:%M%p'))} / </span><span class="time-since" data-value="{str(datetime.datetime.now().isoformat())}"></span></p>
     </footer>
     <script>
@@ -727,19 +741,19 @@ def saveHTML(header, content, filePath, files, folders):
             file.close()
     except:
         indexAutoGenerated = True
-    if indexAutoGenerated == False and loadSetting(settings, 'whenPersonalIndex')['ignoreTheGeneration'] == True:
+    if indexAutoGenerated == False and loadSetting(settings, 'whenPersonalIndex', 'settings.json')['ignoreTheGeneration'] == True:
         done += 1
         print(str(done)+'.Not Generated index.html for ' + filePath + ' because it was not auto-generated.')
         return    
-    elif indexAutoGenerated == False and loadSetting(settings, 'whenPersonalIndex')['ignoreTheGeneration'] == False:
+    elif indexAutoGenerated == False and loadSetting(settings, 'whenPersonalIndex', 'settings.json')['ignoreTheGeneration'] == False:
         try:
-            if indexName != './'+ loadSetting(settings, 'whenPersonalIndex')['renameOriginalTo']:
-                os.rename(filePath + indexName, filePath + './'+ loadSetting(settings, 'whenPersonalIndex')['renameOriginalTo'])  
+            if indexName != './'+ loadSetting(settings, 'whenPersonalIndex', 'settings.json')['renameOriginalTo']:
+                os.rename(filePath + indexName, filePath + './'+ loadSetting(settings, 'whenPersonalIndex', 'settings.json')['renameOriginalTo'])  
         except Exception as e:
-            showerror('Error', 'The file ' + filePath + indexName + ' could not be renamed to ' + loadSetting(settings, 'whenPersonalIndex')['renameOriginalTo'] + '.\nError: ' + str(e))
+            showerror('Error', 'The file ' + filePath + indexName + ' could not be renamed to ' + loadSetting(settings, 'whenPersonalIndex', 'settings.json')['renameOriginalTo'] + '.\nError: ' + str(e))
             os.system('explorer /select,' + filePath + indexName)
             exit()
-        indexName = '/' + loadSetting(settings, 'whenPersonalIndex')['renameGeneratedTo']
+        indexName = '/' + loadSetting(settings, 'whenPersonalIndex', 'settings.json')['renameGeneratedTo']
 
             
     # Save the HTML content to a file
@@ -766,9 +780,10 @@ def findIndented(folders, currentPath, files):
 
 settings = loadSettingsJson()
 styling = loadStyling()
+customisables = loadPersonalisation()
 javascript = loadJavascript()
 
-startingPos = loadSetting(settings, 'startingFolder')
+startingPos = loadSetting(settings, 'startingFolder', 'settings.json')
 try:
     files, folders = list_files_and_folders(startingPos)
 except:
@@ -776,7 +791,7 @@ except:
 
 findIndented(folders, startingPos, files)
 
-if loadSetting(settings, 'commitOnRun'):
+if loadSetting(settings, 'commitOnRun', 'settings.json'):
 
     # commit using subprocess
     subprocess.run(['git', 'add', '.'])

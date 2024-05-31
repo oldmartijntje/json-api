@@ -4,27 +4,27 @@
         {
             "name": "assets",
             "childrenAmount": 4,
-            "lastModified": 1716388138.2898111,
+            "lastModified": 1717157798.717486,
             "type": "folder"
         },
         {
             "name": "data",
             "childrenAmount": 8,
-            "lastModified": 1716388138.2938213,
+            "lastModified": 1717157798.723028,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 12165,
-            "lastModified": 1716580016.367398,
+            "size": 12167,
+            "lastModified": 1717158654.8411453,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 804,
-            "lastModified": 1716580016.3699253,
+            "size": 802,
+            "lastModified": 1717158654.842144,
             "type": "json"
         }
     ],
