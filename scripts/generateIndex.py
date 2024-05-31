@@ -52,7 +52,7 @@ def loadPersonalisation():
     try: 
         if loadSetting(settings, 'alwaysDefaultPersonalisation', 'settings.json'):
             raise Exception
-        customisables = open('./personalisation.json', 'r').read()
+        customisables = json.load(open('./personalisation.json'))
     except:
         customisables = {
         "icons": {
