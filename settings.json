@@ -9,7 +9,7 @@
     "commitOnRun": true,
     "alwaysDefaultStyles": true,
     "alwaysDefaultJavascript": true,
-    "alwaysDefaultPersonalisation": false,
+    "alwaysDefaultPersonalisation": true,
     "whenPersonalIndex": {
         "ignoreTheGeneration": true,
         "renameOriginalTo": "index.html",
