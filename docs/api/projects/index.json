@@ -4,27 +4,27 @@
         {
             "name": "henk-empires-new-kingdoms-assets",
             "childrenAmount": 5,
-            "lastModified": 1716480093.296241,
+            "lastModified": 1717233400.3229415,
             "type": "folder"
         },
         {
             "name": "old_angular_project-viewer",
             "childrenAmount": 4,
-            "lastModified": 1716480224.8599546,
+            "lastModified": 1717233400.326945,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 12429,
-            "lastModified": 1716580571.410838,
+            "size": 12640,
+            "lastModified": 1717233400.3239481,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 843,
-            "lastModified": 1716580571.413837,
+            "size": 1140,
+            "lastModified": 1717233400.3249748,
             "type": "json"
         }
     ],

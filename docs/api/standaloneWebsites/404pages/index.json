@@ -4,21 +4,21 @@
         {
             "name": "basic_nsmbds404",
             "childrenAmount": 3,
-            "lastModified": 1716580017.3822098,
+            "lastModified": 1717233400.33694,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 11481,
-            "lastModified": 1716580571.824407,
+            "size": 11692,
+            "lastModified": 1717233400.3379402,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 660,
-            "lastModified": 1716580571.8299282,
+            "size": 931,
+            "lastModified": 1717233400.3389404,
             "type": "json"
         }
     ],
