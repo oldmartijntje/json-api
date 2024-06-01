@@ -678,7 +678,7 @@ def saveHTML(header, content, filePath, files, folders):
         webPath = webPathPatst[1]
     else:
         webPath = ""
-    webPath = loadSetting(settings, 'webPath') + webPath
+    webPath = loadSetting(settings, 'webPath') + "/" + webPath
     start = f'''{defaultComment}
 <!DOCTYPE html>
 <html lang="en">
