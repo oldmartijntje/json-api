@@ -17,7 +17,7 @@ def createSettingsJson():
     settings['webPath'] = 'https://oldmartijntje.github.io/json-api'
     settings['websiteIcon'] = 'https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png'
     settings['embedImage'] = 'https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png'
-    settings['embedTitle'] = 'api.oldmartijntje.nl'
+    settings['embedTitle'] = 'oldmartijntje.github.io/json-api'
     settings['embedDescription'] = 'OldMartijntje\'s API.'
     settings['commitOnRun'] = True
     settings['alwaysDefaultStyles'] = True

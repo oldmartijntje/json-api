@@ -16,21 +16,15 @@
     ],
     "files": [
         {
-            "name": "CNAME",
-            "size": 20,
-            "lastModified": 1715195614.459698,
-            "type": "CNAME"
-        },
-        {
             "name": "index.html",
-            "size": 13596,
-            "lastModified": 1717233533.6722965,
+            "size": 13752,
+            "lastModified": 1718111422.5640643,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1082,
-            "lastModified": 1717233533.675291,
+            "size": 1094,
+            "lastModified": 1718111422.567102,
             "type": "json"
         },
         {
