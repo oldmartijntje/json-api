@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/icons",
+    "path": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/icons",
     "folders": [
         {
             "name": "achievements",
@@ -65,14 +65,14 @@
         },
         {
             "name": "index.html",
-            "size": 30235,
-            "lastModified": 1717233400.3009443,
+            "size": 30027,
+            "lastModified": 1717233533.703971,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 5349,
-            "lastModified": 1717233400.3019433,
+            "size": 5051,
+            "lastModified": 1717233533.7169745,
             "type": "json"
         },
         {

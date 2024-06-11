@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/icons/console icons",
+    "path": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/icons/console icons",
     "folders": [],
     "files": [
         {
@@ -484,14 +484,14 @@
         },
         {
             "name": "index.html",
-            "size": 66904,
-            "lastModified": 1717233400.2989786,
+            "size": 66136,
+            "lastModified": 1717233533.7759697,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 13896,
-            "lastModified": 1717233400.2999818,
+            "size": 13128,
+            "lastModified": 1717233533.8029375,
             "type": "json"
         }
     ],

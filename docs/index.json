@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl",
+    "path": "https://oldmartijntje.github.io/json-api",
     "folders": [
         {
             "name": "api",
@@ -23,14 +23,14 @@
         },
         {
             "name": "index.html",
-            "size": 16601,
-            "lastModified": 1717233467.854087,
+            "size": 13596,
+            "lastModified": 1717233533.6722965,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1079,
-            "lastModified": 1717233472.9985049,
+            "size": 1082,
+            "lastModified": 1717233533.675291,
             "type": "json"
         },
         {

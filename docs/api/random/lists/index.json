@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/random/lists",
+    "path": "https://oldmartijntje.github.io/json-api/api/random/lists",
     "folders": [],
     "files": [
         {
@@ -22,14 +22,14 @@
         },
         {
             "name": "index.html",
-            "size": 14969,
-            "lastModified": 1717233400.3349416,
+            "size": 14761,
+            "lastModified": 1717233533.9992034,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1646,
-            "lastModified": 1717233400.3359425,
+            "size": 1347,
+            "lastModified": 1717233534.002179,
             "type": "json"
         },
         {

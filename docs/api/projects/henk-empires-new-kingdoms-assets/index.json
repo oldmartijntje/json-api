@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/projects/henk-empires-new-kingdoms-assets",
+    "path": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets",
     "folders": [
         {
             "name": "icons",
@@ -23,14 +23,14 @@
         },
         {
             "name": "index.html",
-            "size": 13352,
-            "lastModified": 1717233400.321969,
+            "size": 13144,
+            "lastModified": 1717233533.8529353,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1288,
-            "lastModified": 1717233400.3229415,
+            "size": 1016,
+            "lastModified": 1717233533.8559728,
             "type": "json"
         }
     ],

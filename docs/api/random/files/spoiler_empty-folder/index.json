@@ -1,17 +1,17 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/random/files/spoiler_empty-folder",
+    "path": "https://oldmartijntje.github.io/json-api/api/random/files/spoiler_empty-folder",
     "folders": [],
     "files": [
         {
             "name": "index.html",
-            "size": 10838,
-            "lastModified": 1717233400.3309696,
+            "size": 10630,
+            "lastModified": 1717233533.9952056,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 783,
-            "lastModified": 1717233400.3319442,
+            "size": 485,
+            "lastModified": 1717233533.9961772,
             "type": "json"
         }
     ],

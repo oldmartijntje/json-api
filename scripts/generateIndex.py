@@ -14,9 +14,9 @@ def createSettingsJson():
     settings = {}
     settings['title'] = 'OldMartijntje\'s Static API'
     settings['startingFolder'] = './docs'
-    settings['webPath'] = 'https://api.oldmartijntje.nl'
-    settings['websiteIcon'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
-    settings['embedImage'] = 'https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png'
+    settings['webPath'] = 'https://oldmartijntje.github.io/json-api'
+    settings['websiteIcon'] = 'https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png'
+    settings['embedImage'] = 'https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png'
     settings['embedTitle'] = 'api.oldmartijntje.nl'
     settings['embedDescription'] = 'OldMartijntje\'s API.'
     settings['commitOnRun'] = True
@@ -56,33 +56,33 @@ def loadPersonalisation():
     except:
         customisables = {
         "icons": {
-            "folder": "https://api.oldmartijntje.nl/hidden_system/folder.png",
-            "?": "https://api.oldmartijntje.nl/hidden_system/unknown-file-types.png",
-            "json": "https://api.oldmartijntje.nl/hidden_system/json.png",
-            "pdn": "https://api.oldmartijntje.nl/hidden_system/pdn.png",
-            "html": "https://api.oldmartijntje.nl/hidden_system/html.png",
-            "css": "https://api.oldmartijntje.nl/hidden_system/css.png",
-            "js": "https://api.oldmartijntje.nl/hidden_system/js.png",
-            "py": "https://api.oldmartijntje.nl/hidden_system/py.png",
-            "aseprite": "https://api.oldmartijntje.nl/hidden_system/aseprite.png",
-            "docx": "https://api.oldmartijntje.nl/hidden_system/docx.png",
-            "pptx": "https://api.oldmartijntje.nl/hidden_system/pptx.png",
-            "xlsx": "https://api.oldmartijntje.nl/hidden_system/xlsx.png",
-            "pdf": "https://api.oldmartijntje.nl/hidden_system/pdf.png",
-            "mp3": "https://api.oldmartijntje.nl/hidden_system/mp3.png",
-            "wav": "https://api.oldmartijntje.nl/hidden_system/wav.png",
-            "ogg": "https://api.oldmartijntje.nl/hidden_system/ogg.png",
-            "nds": "https://api.oldmartijntje.nl/hidden_system/nds.png",
-            "zip": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-            "rar": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-            "7z": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-            "iso": "https://api.oldmartijntje.nl/hidden_system/archive.png",
-            "exe": "https://api.oldmartijntje.nl/hidden_system/exe.png",
-            "md": "https://api.oldmartijntje.nl/hidden_system/markdown.png",
-            "txt": "https://api.oldmartijntje.nl/hidden_system/txt.png",
-            "url": "https://api.oldmartijntje.nl/hidden_system/url.png",
-            "mp4": "https://api.oldmartijntje.nl/hidden_system/vlc.png",
-            "webm": "https://api.oldmartijntje.nl/hidden_system/vlc.png"
+            "folder": "https://oldmartijntje.github.io/json-api/hidden_system/folder.png",
+            "?": "https://oldmartijntje.github.io/json-api/hidden_system/unknown-file-types.png",
+            "json": "https://oldmartijntje.github.io/json-api/hidden_system/json.png",
+            "pdn": "https://oldmartijntje.github.io/json-api/hidden_system/pdn.png",
+            "html": "https://oldmartijntje.github.io/json-api/hidden_system/html.png",
+            "css": "https://oldmartijntje.github.io/json-api/hidden_system/css.png",
+            "js": "https://oldmartijntje.github.io/json-api/hidden_system/js.png",
+            "py": "https://oldmartijntje.github.io/json-api/hidden_system/py.png",
+            "aseprite": "https://oldmartijntje.github.io/json-api/hidden_system/aseprite.png",
+            "docx": "https://oldmartijntje.github.io/json-api/hidden_system/docx.png",
+            "pptx": "https://oldmartijntje.github.io/json-api/hidden_system/pptx.png",
+            "xlsx": "https://oldmartijntje.github.io/json-api/hidden_system/xlsx.png",
+            "pdf": "https://oldmartijntje.github.io/json-api/hidden_system/pdf.png",
+            "mp3": "https://oldmartijntje.github.io/json-api/hidden_system/mp3.png",
+            "wav": "https://oldmartijntje.github.io/json-api/hidden_system/wav.png",
+            "ogg": "https://oldmartijntje.github.io/json-api/hidden_system/ogg.png",
+            "nds": "https://oldmartijntje.github.io/json-api/hidden_system/nds.png",
+            "zip": "https://oldmartijntje.github.io/json-api/hidden_system/archive.png",
+            "rar": "https://oldmartijntje.github.io/json-api/hidden_system/archive.png",
+            "7z": "https://oldmartijntje.github.io/json-api/hidden_system/archive.png",
+            "iso": "https://oldmartijntje.github.io/json-api/hidden_system/archive.png",
+            "exe": "https://oldmartijntje.github.io/json-api/hidden_system/exe.png",
+            "md": "https://oldmartijntje.github.io/json-api/hidden_system/markdown.png",
+            "txt": "https://oldmartijntje.github.io/json-api/hidden_system/txt.png",
+            "url": "https://oldmartijntje.github.io/json-api/hidden_system/url.png",
+            "mp4": "https://oldmartijntje.github.io/json-api/hidden_system/vlc.png",
+            "webm": "https://oldmartijntje.github.io/json-api/hidden_system/vlc.png"
         },
         "loadVideosFromTypes": ["mp4", "webm", "ogg"],
         "loadPhotosFromTypes": ["png", "jpeg", "jpg", "ico", "gif"],

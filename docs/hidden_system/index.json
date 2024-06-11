@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/hidden_system",
+    "path": "https://oldmartijntje.github.io/json-api/hidden_system",
     "folders": [],
     "files": [
         {
@@ -58,14 +58,14 @@
         },
         {
             "name": "index.html",
-            "size": 27367,
-            "lastModified": 1717233400.3439422,
+            "size": 27159,
+            "lastModified": 1717233534.027177,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 4757,
-            "lastModified": 1717233400.3449411,
+            "size": 4486,
+            "lastModified": 1717233534.0352166,
             "type": "json"
         },
         {

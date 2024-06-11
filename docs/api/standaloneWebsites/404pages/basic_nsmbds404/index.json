@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites/404pages/basic_nsmbds404",
+    "path": "https://oldmartijntje.github.io/json-api/api/standaloneWebsites/404pages/basic_nsmbds404",
     "folders": [],
     "files": [
         {
@@ -10,8 +10,8 @@
         },
         {
             "name": "index.json",
-            "size": 896,
-            "lastModified": 1717233400.33694,
+            "size": 650,
+            "lastModified": 1717233534.0141766,
             "type": "json"
         },
         {

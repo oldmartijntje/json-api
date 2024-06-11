@@ -1,9 +1,9 @@
 {
     "title": "OldMartijntje's Static API",
     "startingFolder": "./docs",
-    "webPath": "https://api.oldmartijntje.nl",
-    "websiteIcon": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png",
-    "embedImage": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/mii.png",
+    "webPath": "https://oldmartijntje.github.io/json-api",
+    "websiteIcon": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png",
+    "embedImage": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/mii.png",
     "embedTitle": "api.oldmartijntje.nl",
     "embedDescription": "OldMartijntje's API.",
     "commitOnRun": true,

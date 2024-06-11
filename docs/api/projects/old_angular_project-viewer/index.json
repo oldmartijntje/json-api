@@ -1,17 +1,17 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/projects/old_angular_project-viewer",
+    "path": "https://oldmartijntje.github.io/json-api/api/projects/old_angular_project-viewer",
     "folders": [],
     "files": [
         {
             "name": "index.html",
-            "size": 12653,
-            "lastModified": 1717233400.3259726,
+            "size": 12445,
+            "lastModified": 1717233533.97793,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1129,
-            "lastModified": 1717233400.326945,
+            "size": 859,
+            "lastModified": 1717233533.979962,
             "type": "json"
         },
         {

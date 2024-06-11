@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/standaloneWebsites",
+    "path": "https://oldmartijntje.github.io/json-api/api/standaloneWebsites",
     "folders": [
         {
             "name": "404pages",
@@ -17,14 +17,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 12448,
-            "lastModified": 1717233400.3419423,
+            "size": 12240,
+            "lastModified": 1717233534.004176,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1116,
-            "lastModified": 1717233400.342942,
+            "size": 817,
+            "lastModified": 1717233534.0061767,
             "type": "json"
         }
     ],

@@ -1,5 +1,5 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets",
+    "path": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets",
     "folders": [
         {
             "name": "icons",
@@ -17,14 +17,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 12405,
-            "lastModified": 1717233400.3099427,
+            "size": 12197,
+            "lastModified": 1717233533.6892927,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1083,
-            "lastModified": 1717233400.3109834,
+            "size": 816,
+            "lastModified": 1717233533.6919334,
             "type": "json"
         }
     ],

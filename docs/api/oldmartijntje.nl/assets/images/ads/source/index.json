@@ -1,17 +1,17 @@
 {
-    "path": "https://api.oldmartijntje.nl/api/oldmartijntje.nl/assets/images/ads/source",
+    "path": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets/images/ads/source",
     "folders": [],
     "files": [
         {
             "name": "index.html",
-            "size": 12176,
-            "lastModified": 1717233400.305944,
+            "size": 11968,
+            "lastModified": 1717233533.8299372,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1112,
-            "lastModified": 1717233400.3069415,
+            "size": 815,
+            "lastModified": 1717233533.8339343,
             "type": "json"
         },
         {
