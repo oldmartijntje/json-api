@@ -6,6 +6,12 @@
             "childrenAmount": 2,
             "lastModified": 1717233400.3319442,
             "type": "folder"
+        },
+        {
+            "name": "weird",
+            "childrenAmount": 5,
+            "lastModified": 1718212858.8475401,
+            "type": "folder"
         }
     ],
     "files": [
@@ -23,14 +29,14 @@
         },
         {
             "name": "index.html",
-            "size": 18468,
-            "lastModified": 1718111689.381372,
+            "size": 18480,
+            "lastModified": 1718111828.5660303,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 2012,
-            "lastModified": 1718111689.3862932,
+            "size": 2011,
+            "lastModified": 1718111828.5670314,
             "type": "json"
         },
         {

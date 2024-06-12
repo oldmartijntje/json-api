@@ -1,0 +1,37 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/random/files/weird",
+    "folders": [],
+    "files": [
+        {
+            "name": "avengeeers.mp3",
+            "size": 1923117,
+            "lastModified": 1634027152.7148423,
+            "type": "mp3"
+        },
+        {
+            "name": "megaloveniaaaa.mp3",
+            "size": 2431313,
+            "lastModified": 1634026266.5106199,
+            "type": "mp3"
+        },
+        {
+            "name": "pigstwep owo.mp3",
+            "size": 1549001,
+            "lastModified": 1634029258.5944536,
+            "type": "mp3"
+        },
+        {
+            "name": "sweden.mp3",
+            "size": 2298285,
+            "lastModified": 1634029611.0520108,
+            "type": "mp3"
+        },
+        {
+            "name": "UHUH.mp3",
+            "size": 3019053,
+            "lastModified": 1634069392.0601792,
+            "type": "mp3"
+        }
+    ],
+    "parent": "../index.json"
+}
