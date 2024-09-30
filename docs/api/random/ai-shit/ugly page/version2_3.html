@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Worst Website Ever</title>
+    <style>
+        body {
+            background-color: #ff00ff;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: lime;
+            margin: 0;
+            padding: 0;
+            animation: background-flash 0.2s infinite alternate;
+        }
+
+        @keyframes background-flash {
+            0% { background-color: #ff00ff; }
+            25% { background-color: #00ff00; }
+            50% { background-color: #ff0000; }
+            75% { background-color: #0000ff; }
+            100% { background-color: #ffff00; }
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 100px;
+            text-align: center;
+            text-shadow: 10px 10px 0px red;
+            animation: h1-shake 0.1s infinite, h1-zoom 0.3s infinite alternate;
+        }
+
+        @keyframes h1-shake {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(20px, -20px); }
+            50% { transform: translate(-20px, 20px); }
+            75% { transform: translate(20px, 20px); }
+            100% { transform: translate(-20px, -20px); }
+        }
+
+        @keyframes h1-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.3); }
+        }
+
+        h2 {
+            font-size: 80px;
+            color: blue;
+            text-align: left;
+            background-color: black;
+            text-decoration: underline;
+            text-transform: uppercase;
+            padding: 10px;
+            border: 5px dashed yellow;
+            animation: h2-spin 1s linear infinite, h2-flip 2s infinite alternate;
+        }
+
+        @keyframes h2-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+
+        @keyframes h2-flip {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(180deg); }
+        }
+
+        p {
+            font-size: 40px;
+            color: red;
+            text-align: justify;
+            line-height: 1.2;
+            background-color: cyan;
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid black;
+            font-weight: bold;
+            animation: p-blink 0.5s infinite alternate, p-slide 1s infinite;
+        }
+
+        @keyframes p-blink {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes p-slide {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(-100px); }
+        }
+
+        a {
+            color: orange;
+            font-size: 40px;
+            text-decoration: blink;
+            background-color: purple;
+            padding: 20px;
+            display: block;
+            width: fit-content;
+            border: 10px solid red;
+            margin: 20px auto;
+            font-style: italic;
+            text-shadow: 2px 2px 8px green;
+            animation: a-spin 0.5s infinite alternate, a-bounce 0.2s infinite;
+        }
+
+        @keyframes a-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes a-bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30px); }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: container-wobble 1s infinite;
+        }
+
+        @keyframes container-wobble {
+            0% { transform: skew(0deg, 0deg); }
+            50% { transform: skew(10deg, 10deg); }
+            100% { transform: skew(-10deg, -10deg); }
+        }
+
+        ul {
+            list-style-type: square;
+            font-size: 50px;
+            color: white;
+            background-color: orange;
+            padding: 30px;
+            border: 5px double blue;
+            animation: ul-scale 1s infinite alternate, ul-rotate 2s infinite;
+        }
+
+        @keyframes ul-scale {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.8); }
+        }
+
+        @keyframes ul-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        li {
+            margin: 25px;
+            animation: li-flash 0.5s infinite alternate, li-grow 1s infinite alternate;
+        }
+
+        @keyframes li-flash {
+            0% { background-color: red; }
+            100% { background-color: blue; }
+        }
+
+        @keyframes li-grow {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 15px solid red;
+            animation: img-spin 1s linear infinite, img-grow 1.5s infinite alternate;
+        }
+
+        @keyframes img-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(1440deg); }
+        }
+
+        @keyframes img-grow {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.5); }
+        }
+
+        footer {
+            font-size: 60px;
+            text-align: center;
+            background-color: yellow;
+            padding: 30px;
+            border-top: 10px solid red;
+            animation: footer-fade 2s infinite alternate, footer-spin 3s infinite linear;
+        }
+
+        @keyframes footer-fade {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        @keyframes footer-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Worst Website in History!</h1>
+
+        <h2>Spinning and Flashing Madness!</h2>
+
+        <p>
+            Congratulations, you've found the worst website ever! 
+            It doesn't just look bad—it moves, it flashes, it spins. 
+            Your eyes are about to suffer. Everything is broken, and yet somehow, 
+            everything is also moving at once. Why are you still here?
+        </p>
+
+        <a href="#">Do Not Click This!</a>
+
+        <ul>
+            <li>Spinning Text</li>
+            <li>Flashing Colors</li>
+            <li>Shaking Elements</li>
+            <li>Blinking and Sliding Animations</li>
+        </ul>
+
+        <img src="https://www.example.com/ugliest-image.jpg" alt="Terrible Image">
+
+    </div>
+
+    <footer>
+        This is a nightmare!
+    </footer>
+</body>
+</html>
