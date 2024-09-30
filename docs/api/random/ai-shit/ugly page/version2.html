@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Even Uglier Website</title>
+    <style>
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            14% {
+                color: orange;
+            }
+
+            28% {
+                color: yellow;
+            }
+
+            42% {
+                color: green;
+            }
+
+            57% {
+                color: blue;
+            }
+
+            71% {
+                color: indigo;
+            }
+
+            85% {
+                color: violet;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        @keyframes jitter {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(5px, 5px) rotate(5deg);
+            }
+
+            50% {
+                transform: translate(-5px, 5px) rotate(-5deg);
+            }
+
+            75% {
+                transform: translate(5px, -5px) rotate(5deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        body {
+            background: url('/api/placeholder/100/100'), repeating-linear-gradient(45deg, #ff00ff, #ff00ff 10px, #00ffff 10px, #00ffff 20px);
+            font-family: "Papyrus", "Comic Sans MS", fantasy;
+            color: yellow;
+            text-shadow: 2px 2px 4px #ff0000, -2px -2px 4px #00ff00, 0 0 10px #0000ff;
+            cursor: crosshair;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 5em;
+            text-align: center;
+            animation: spin 3s linear infinite, rainbow 5s linear infinite, jitter 0.5s infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        p {
+            font-size: 28px;
+            text-align: justify;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(255, 0, 255, 0.3);
+            border: 10px groove gold;
+            transform: skew(-5deg, 5deg);
+            animation: rainbow 5s linear infinite;
+        }
+
+        .blink {
+            animation: blinker 0.3s step-end infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            background: lime;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .zoom-in-out {
+            animation: zoom 2s ease-in-out infinite;
+        }
+
+        @keyframes zoom {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="blink">Welcome to the EVEN Uglier Website!</h1>
+    <div class="marquee">
+        <div class="marquee-content">
+            <span style="font-size: 24px; font-weight: bold;">🚨 WARNING: EXTREME UGLINESS AHEAD! 🚨</span>
+        </div>
+    </div>
+    <p>This website is now an even greater assault on your senses. We've added more garish colors, unnecessary
+        animations, and a mix of fonts that should never be seen together. Enjoy the eyesore!</p>
+    <img src="/api/placeholder/400/300" alt="Even uglier placeholder image" class="zoom-in-out"
+        style="border: 5px dotted #ff00ff; margin: 20px auto; display: block;">
+    <audio autoplay loop>
+        <source
+            src="data:audio/wav;base64,UklGRjIAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAAABmYWN0BAAAAAAAAABkYXRhAAAAAA=="
+            type="audio/wav">
+    </audio>
+</body>
+
+</html>

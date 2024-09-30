@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Sinewave Ugliness Extreme</title>
+    <style>
+        @keyframes rainbow {
+            0% {
+                color: red;
+                background-color: cyan;
+            }
+
+            16.666% {
+                color: orange;
+                background-color: blue;
+            }
+
+            33.333% {
+                color: yellow;
+                background-color: magenta;
+            }
+
+            50% {
+                color: green;
+                background-color: red;
+            }
+
+            66.666% {
+                color: blue;
+                background-color: yellow;
+            }
+
+            83.333% {
+                color: indigo;
+                background-color: lime;
+            }
+
+            100% {
+                color: violet;
+                background-color: cyan;
+            }
+        }
+
+        @keyframes sineWave {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(20px);
+            }
+
+            75% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotateHue {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(45deg,
+                    #ff0000, #ff7f00, #ffff00, #00ff00,
+                    #0000ff, #8b00ff, #ff0000, #ff7f00,
+                    #ffff00, #00ff00, #0000ff, #8b00ff);
+            background-size: 600% 600%;
+            animation: rainbow 10s linear infinite, rotateHue 5s linear infinite;
+            font-family: "Comic Sans MS", "Papyrus", fantasy;
+            overflow-x: hidden;
+        }
+
+        .rainbow-text {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 2s linear infinite;
+        }
+
+        h1 {
+            font-size: 5em;
+            text-align: center;
+            animation: sineWave 3s ease-in-out infinite, rotateHue 2s linear infinite;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: justify;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 10px double gold;
+            animation: sineWave 5s ease-in-out infinite, rainbow 3s linear infinite;
+        }
+
+        .sine-mover {
+            animation: sineWave 2s ease-in-out infinite;
+        }
+
+        .rainbow-border {
+            border-style: solid;
+            border-width: 5px;
+            animation: rainbow 3s linear infinite;
+        }
+
+        .spinning-rainbow {
+            width: 100px;
+            height: 100px;
+            background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+            border-radius: 50%;
+            animation: spin 2s linear infinite, rotateHue 3s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="rainbow-text sine-mover">Rainbow Sinewave Madness!</h1>
+    <div style="display: flex; justify-content: space-around;">
+        <div class="spinning-rainbow"></div>
+        <div class="spinning-rainbow" style="animation-duration: 1.5s, 2s;"></div>
+        <div class="spinning-rainbow" style="animation-duration: 3s, 4s;"></div>
+    </div>
+    <p class="rainbow-border">
+        This website now features extreme rainbow effects and sinusoidal movements.
+        Every element on this page is either changing colors, moving in a wave pattern,
+        or both! Your eyes won't know where to look, and your brain might just give up trying to process this visual
+        chaos.
+    </p>
+    <div style="display: flex; justify-content: center;">
+        <img src="/api/placeholder/200/200" alt="Rainbow placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px;">
+        <img src="/api/placeholder/200/200" alt="Another rainbow placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px; animation-delay: -1s;">
+    </div>
+    <div
+        style="font-size: 36px; text-align: center; animation: sineWave 1s ease-in-out infinite, rainbow 1s linear infinite;">
+        🌈 RAINBOW OVERLOAD! 🌈
+    </div>
+</body>
+
+</html>

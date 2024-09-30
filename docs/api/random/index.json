@@ -2,6 +2,12 @@
     "path": "https://oldmartijntje.github.io/json-api/api/random",
     "folders": [
         {
+            "name": "ai-shit",
+            "childrenAmount": 1,
+            "lastModified": 1727688115.5003748,
+            "type": "folder"
+        },
+        {
             "name": "files",
             "childrenAmount": 12,
             "lastModified": 1718212858.8210225,
@@ -17,14 +23,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 12270,
-            "lastModified": 1718111828.5392232,
+            "size": 12271,
+            "lastModified": 1718212870.7848961,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 806,
-            "lastModified": 1718111828.5392232,
+            "size": 808,
+            "lastModified": 1718212870.7893994,
             "type": "json"
         }
     ],

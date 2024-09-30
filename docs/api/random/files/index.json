@@ -9,8 +9,8 @@
         },
         {
             "name": "weird",
-            "childrenAmount": 5,
-            "lastModified": 1718212858.8475401,
+            "childrenAmount": 7,
+            "lastModified": 1718212870.8614795,
             "type": "folder"
         }
     ],
@@ -29,14 +29,14 @@
         },
         {
             "name": "index.html",
-            "size": 18480,
-            "lastModified": 1718111828.5660303,
+            "size": 19281,
+            "lastModified": 1718212870.8241,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 2011,
-            "lastModified": 1718111828.5670314,
+            "size": 2178,
+            "lastModified": 1718212870.8291094,
             "type": "json"
         },
         {

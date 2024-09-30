@@ -1,0 +1,49 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/random/ai-shit/ugly page",
+    "folders": [],
+    "files": [
+        {
+            "name": "version1.html",
+            "size": 1465,
+            "lastModified": 1727688154.7922537,
+            "type": "html"
+        },
+        {
+            "name": "version2.html",
+            "size": 4267,
+            "lastModified": 1727688167.0467577,
+            "type": "html"
+        },
+        {
+            "name": "version3.html",
+            "size": 4851,
+            "lastModified": 1727688180.2543046,
+            "type": "html"
+        },
+        {
+            "name": "version4.html",
+            "size": 6308,
+            "lastModified": 1727688191.9221973,
+            "type": "html"
+        },
+        {
+            "name": "version5.html",
+            "size": 7709,
+            "lastModified": 1727688203.869079,
+            "type": "html"
+        },
+        {
+            "name": "version6.html",
+            "size": 8901,
+            "lastModified": 1727688215.5787804,
+            "type": "html"
+        },
+        {
+            "name": "version7.html",
+            "size": 10458,
+            "lastModified": 1727688228.4803348,
+            "type": "html"
+        }
+    ],
+    "parent": "../index.json"
+}

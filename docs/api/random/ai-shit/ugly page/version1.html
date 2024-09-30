@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ugliest Website Ever</title>
+    <style>
+        body {
+            background: repeating-linear-gradient(45deg, #ff00ff, #ff00ff 10px, #00ffff 10px, #00ffff 20px);
+            font-family: "Comic Sans MS", cursive;
+            color: yellow;
+            text-shadow: 2px 2px 4px #ff0000, -2px -2px 4px #00ff00;
+        }
+        h1 {
+            font-size: 4em;
+            text-align: center;
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        p {
+            font-size: 24px;
+            text-align: justify;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 5px dashed orange;
+        }
+        .blink {
+            animation: blinker 0.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="blink">Welcome to the Ugliest Website!</h1>
+    <p>This website is designed to be an assault on your eyes. It features a horrible color scheme, comic sans font, and unnecessary animations. We hope you "enjoy" your stay!</p>
+    <img src="/api/placeholder/300/200" alt="Ugly placeholder image">
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Sparkly Shrek-Donkey Nightmare Extravaganza</title>
+    <style>
+        @keyframes rainbow {
+            0% {
+                color: red;
+                background-color: cyan;
+            }
+
+            16.666% {
+                color: orange;
+                background-color: blue;
+            }
+
+            33.333% {
+                color: yellow;
+                background-color: magenta;
+            }
+
+            50% {
+                color: green;
+                background-color: red;
+            }
+
+            66.666% {
+                color: blue;
+                background-color: yellow;
+            }
+
+            83.333% {
+                color: indigo;
+                background-color: lime;
+            }
+
+            100% {
+                color: violet;
+                background-color: cyan;
+            }
+        }
+
+        @keyframes sineWave {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(20px);
+            }
+
+            75% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotateHue {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shrink-grow {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.5);
+            }
+        }
+
+        @keyframes zigzag {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(20px);
+            }
+
+            75% {
+                transform: translateX(-20px);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.5);
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background:
+                repeating-linear-gradient(45deg,
+                    #ff00ff, #ff00ff 10px,
+                    #00ffff 10px, #00ffff 20px),
+                url('/api/placeholder/100/100');
+            animation: rainbow 5s linear infinite, rotateHue 3s linear infinite;
+            font-family: "Comic Sans MS", "Papyrus", "Brush Script MT", cursive;
+            overflow-x: hidden;
+            cursor: url('/api/placeholder/32/32'), auto;
+        }
+
+        .rainbow-text {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 2s linear infinite, spin 5s linear infinite;
+            text-shadow:
+                2px 2px 0 #ff00ff,
+                -2px -2px 0 #00ffff,
+                4px 4px 0 #ff0000,
+                -4px -4px 0 #00ff00;
+        }
+
+        h1 {
+            font-size: 5em;
+            text-align: center;
+            animation: sineWave 3s ease-in-out infinite, rotateHue 2s linear infinite, spin 8s linear infinite;
+            filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #00ffff);
+        }
+
+        p {
+            font-size: 24px;
+            text-align: justify;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 10px groove gold;
+            animation: sineWave 5s ease-in-out infinite, rainbow 3s linear infinite, spin 15s linear infinite;
+            box-shadow:
+                0 0 10px #ff00ff,
+                0 0 20px #00ffff,
+                0 0 30px #ff0000,
+                0 0 40px #00ff00;
+        }
+
+        .sine-mover {
+            animation: sineWave 2s ease-in-out infinite;
+        }
+
+        .rainbow-border {
+            border-style: solid;
+            border-width: 5px;
+            animation: rainbow 3s linear infinite;
+        }
+
+        .spinning-rainbow {
+            width: 100px;
+            height: 100px;
+            background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+            border-radius: 50%;
+            animation: spin 2s linear infinite, rotateHue 3s linear infinite;
+            filter: blur(5px);
+        }
+
+        .shrek-face {
+            font-size: 100px;
+            animation: spin 3s linear infinite, shrink-grow 2s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px #00ff00);
+        }
+
+        .donkey-face {
+            font-size: 80px;
+            animation: spin 4s linear infinite reverse, zigzag 3s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px #808080);
+        }
+
+        .spinning-text {
+            animation: spin 5s linear infinite;
+            display: inline-block;
+        }
+
+        .donkey-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 20px;
+            animation: sparkle 1s infinite;
+        }
+
+        marquee {
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            color: #ffffff;
+            font-size: 24px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee scrollamount="20" behavior="alternate">✨🧌 WELCOME TO THE SWAMPIEST, SPARKLIEST WEBSITE IN ALL THE LAND!
+        🫏✨</marquee>
+    <h1 class="rainbow-text">Ultra Sparkly Shrek-Donkey Nightmare Extravaganza!</h1>
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <div class="spinning-rainbow"></div>
+        <div class="shrek-face">🧌</div>
+        <div class="donkey-face">🫏</div>
+        <div class="spinning-rainbow" style="animation-duration: 1.5s, 2s;"></div>
+    </div>
+    <p>
+        <span class="spinning-text">This website is now the ultimate fusion of Shrek, Donkey, and an explosion in a
+            glitter factory! Every pixel is competing for your attention with colors that shouldn't exist together,
+            movements that defy logic, and enough sparkle to make a unicorn jealous. Welcome to the swamp of your
+            nightmares!</span>
+    </p>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <img src="/api/placeholder/200/200" alt="Spinning Shrek placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px; animation: sineWave 2s ease-in-out infinite, rainbow 3s linear infinite, spin 10s linear infinite;">
+        <img src="/api/placeholder/200/200" alt="Spinning Donkey placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px; animation: sineWave 2s ease-in-out infinite, rainbow 3s linear infinite, spin 10s linear reverse;">
+    </div>
+    <div
+        style="font-size: 36px; text-align: center; animation: sineWave 1s ease-in-out infinite, rainbow 1s linear infinite, spin 8s linear infinite;">
+        🧌✨ SHREK IS LOVE, SHREK IS LIFE! 🫏✨ AND DONKEY TOO! 🫏✨
+    </div>
+    <script>
+        function createDonkeyTrail(e) {
+            const donkey = document.createElement('div');
+            donkey.innerHTML = '🫏';
+            donkey.className = 'donkey-face donkey-trail';
+            donkey.style.left = e.pageX + 'px';
+            donkey.style.top = e.pageY + 'px';
+            document.body.appendChild(donkey);
+            setTimeout(() => donkey.remove(), 1000);
+        }
+        document.addEventListener('mousemove', createDonkeyTrail);
+
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+        setInterval(createSparkle, 100);
+    </script>
+</body>
+
+</html>
