@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,13 @@
             text-align: center;
             margin-top: 50px;
         }
+
         #info {
             display: none;
             font-size: 18px;
             margin-top: 20px;
         }
+
         #startButton {
             font-size: 20px;
             padding: 10px 20px;
@@ -22,12 +25,13 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1>Welcome!</h1>
     <p>Click the button below to start.</p>
     <button id="startButton">Start</button>
-    
+
     <p id="info">When the page is not focused, it will randomly play the sound after 1 to 5 minutes.</p>
 
     <audio id="annoyingSound">
@@ -41,8 +45,9 @@
         const infoElement = document.getElementById('info');
 
         function getRandomDelay() {
-            // Get a random number between 1 and 5 minutes (in milliseconds)
-            return Math.floor(Math.random() * (300000 - 60000 + 1)) + 60000;
+            // Get a random number between 1 second and 5 minutes (in milliseconds)
+            return Math.floor(Math.random() * (300000 - 1000 + 1)) + 1000;
+
         }
 
         function playSoundWithDelay() {
@@ -65,14 +70,15 @@
         startButton.addEventListener('click', () => {
             // Hide the start button
             startButton.style.display = 'none';
-            
+
             // Show the instructions
             infoElement.style.display = 'block';
-            
+
             // Start the sound loop
             playSoundWithDelay();
         });
     </script>
 
 </body>
+
 </html>
