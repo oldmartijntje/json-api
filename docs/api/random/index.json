@@ -3,8 +3,8 @@
     "folders": [
         {
             "name": "ai-shit",
-            "childrenAmount": 1,
-            "lastModified": 1727688115.5003748,
+            "childrenAmount": 3,
+            "lastModified": 1727688259.2853324,
             "type": "folder"
         },
         {
@@ -23,14 +23,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 12271,
-            "lastModified": 1718212870.7848961,
+            "size": 13085,
+            "lastModified": 1727688259.28033,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 808,
-            "lastModified": 1718212870.7893994,
+            "size": 976,
+            "lastModified": 1727688259.282333,
             "type": "json"
         }
     ],

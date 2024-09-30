@@ -3,11 +3,24 @@
     "folders": [
         {
             "name": "ugly page",
-            "childrenAmount": 7,
-            "lastModified": 1727688227.0252075,
+            "childrenAmount": 11,
+            "lastModified": 1727688751.7363021,
             "type": "folder"
         }
     ],
-    "files": [],
+    "files": [
+        {
+            "name": "index.html",
+            "size": 11511,
+            "lastModified": 1727688259.284339,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 324,
+            "lastModified": 1727688259.2853324,
+            "type": "json"
+        }
+    ],
     "parent": "../index.json"
 }
