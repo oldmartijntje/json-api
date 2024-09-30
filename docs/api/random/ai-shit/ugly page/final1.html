@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Worst Website Monstrosity</title>
+    <style>
+        @keyframes rainbow {
+            0% {
+                color: red;
+                background-color: cyan;
+            }
+
+            16.666% {
+                color: orange;
+                background-color: blue;
+            }
+
+            33.333% {
+                color: yellow;
+                background-color: magenta;
+            }
+
+            50% {
+                color: green;
+                background-color: red;
+            }
+
+            66.666% {
+                color: blue;
+                background-color: yellow;
+            }
+
+            83.333% {
+                color: indigo;
+                background-color: lime;
+            }
+
+            100% {
+                color: violet;
+                background-color: cyan;
+            }
+        }
+
+        @keyframes sineWave {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(20px);
+            }
+
+            75% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotateHue {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shrink-grow {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.5);
+            }
+        }
+
+        @keyframes zigzag {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(20px);
+            }
+
+            75% {
+                transform: translateX(-20px);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+
+        @keyframes glitter {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes background-flash {
+            0% {
+                background-color: #ff00ff;
+            }
+
+            20% {
+                background-color: #00ff00;
+            }
+
+            40% {
+                background-color: #ff0000;
+            }
+
+            60% {
+                background-color: #0000ff;
+            }
+
+            80% {
+                background-color: #ffff00;
+            }
+
+            100% {
+                background-color: #ff9900;
+            }
+        }
+
+        @keyframes h1-shake {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(25px, -25px);
+            }
+
+            50% {
+                transform: translate(-25px, 25px);
+            }
+
+            75% {
+                transform: translate(25px, 25px);
+            }
+
+            100% {
+                transform: translate(-25px, -25px);
+            }
+        }
+
+        @keyframes h1-zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.4);
+            }
+        }
+
+        @keyframes h1-wave {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: repeating-linear-gradient(45deg, #ff00ff, #ff00ff 10px, #00ffff 10px, #00ffff 20px), url('/api/placeholder/100/100');
+            animation: rainbow 5s linear infinite, rotateHue 3s linear infinite, glitter 5s linear infinite, background-flash 0.1s infinite alternate, shake 0.5s infinite;
+            background-size: 200% 200%;
+            font-family: "Comic Sans MS", "Papyrus", "Brush Script MT", cursive;
+            overflow-x: hidden;
+            cursor: url('/api/placeholder/32/32'), auto;
+            color: lime;
+        }
+
+        .rainbow-text {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 2s linear infinite, spin 5s linear infinite;
+            text-shadow: 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff, 4px 4px 0 #ff0000, -4px -4px 0 #00ff00;
+        }
+
+        h1 {
+            font-size: 120px;
+            text-align: center;
+            animation: sineWave 3s ease-in-out infinite, rotateHue 2s linear infinite, spin 8s linear infinite, h1-shake 0.05s infinite, h1-zoom 0.3s infinite alternate, h1-wave 1s infinite;
+            filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #00ffff);
+            background: url('/api/placeholder/100/100') repeat;
+            padding: 30px;
+            border: 10px solid #f1c40f;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 90px;
+            color: blue;
+            text-align: center;
+            background-color: black;
+            text-decoration: underline;
+            text-transform: uppercase;
+            padding: 10px;
+            border: 8px dashed yellow;
+            animation: spin 0.5s linear infinite, shrink-grow 2s infinite alternate;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 50px;
+            color: red;
+            text-align: justify;
+            line-height: 1.2;
+            background-color: cyan;
+            padding: 30px;
+            margin: 20px;
+            border: 8px solid black;
+            font-weight: bold;
+            animation: sineWave 5s ease-in-out infinite, rainbow 3s linear infinite, spin 15s linear infinite, blink 0.1s infinite alternate, zigzag 1s infinite alternate;
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff0000, 0 0 40px #00ff00;
+            cursor: pointer;
+        }
+
+        .sine-mover {
+            animation: sineWave 2s ease-in-out infinite;
+        }
+
+        .rainbow-border {
+            border-style: solid;
+            border-width: 5px;
+            animation: rainbow 3s linear infinite;
+        }
+
+        .spinning-rainbow {
+            width: 100px;
+            height: 100px;
+            background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+            border-radius: 50%;
+            animation: spin 2s linear infinite, rotateHue 3s linear infinite;
+            filter: blur(5px) contrast(200%);
+        }
+
+        .shrek-face {
+            font-size: 100px;
+            animation: spin 3s linear infinite, shrink-grow 2s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px #00ff00);
+        }
+
+        .donkey-face {
+            font-size: 80px;
+            animation: spin 4s linear infinite reverse, zigzag 3s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px #808080);
+        }
+
+        .spinning-text {
+            animation: spin 5s linear infinite;
+            display: inline-block;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 20px;
+            animation: sparkle 1s infinite;
+        }
+
+        .glitter {
+            position: fixed;
+            pointer-events: none;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, white, gold);
+            border-radius: 50%;
+            animation: sparkle 0.5s infinite;
+        }
+
+        marquee {
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            color: #ffffff;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .glitter-text {
+            background: linear-gradient(to right, gold, silver, gold);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: glitter 3s linear infinite;
+            background-size: 200% auto;
+        }
+
+        #shrek {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            background: url('/api/placeholder/1000/1000') no-repeat center;
+            background-size: cover;
+        }
+
+        .cursed-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            opacity: 0.9;
+            animation: float 3s infinite;
+            filter: hue-rotate(90deg);
+            cursor: pointer;
+        }
+
+        footer {
+            font-size: 70px;
+            text-align: center;
+            background-color: yellow;
+            padding: 50px;
+            border-top: 15px solid red;
+            animation: rainbow 3s linear infinite, spin 2s infinite linear;
+            background: url('/api/placeholder/100/100') repeat;
+            cursor: pointer;
+        }
+
+        .random-text {
+            position: absolute;
+            color: purple;
+            font-size: 24px;
+            pointer-events: none;
+            animation: colorChange 4s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: green;
+            }
+
+            75% {
+                color: purple;
+            }
+
+            100% {
+                color: orange;
+            }
+        }
+
+        ul {
+            list-style-type: square;
+            font-size: 55px;
+            color: white;
+            background-color: orange;
+            padding: 40px;
+            border: 8px double blue;
+            animation: ul-scale 0.5s infinite alternate, ul-rotate 1s infinite;
+            background: url('/api/placeholder/100/100') repeat;
+            cursor: pointer;
+        }
+
+        @keyframes ul-scale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(2);
+            }
+        }
+
+        @keyframes ul-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+
+        li {
+            margin: 30px;
+            animation: li-flash 0.2s infinite alternate, li-grow 0.8s infinite alternate;
+            cursor: pointer;
+        }
+
+        @keyframes li-flash {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: blue;
+            }
+        }
+
+        @keyframes li-grow {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <marquee scrollamount="20" behavior="alternate" class="glitter-text">✨🧌 WELCOME TO THE SWAMPIEST, SPARKLIEST,
+        GLITTERIEST WEBSITE IN ALL THE LAND! 🫏✨</marquee>
+    <h1 class="rainbow-text glitter-text">The Ultimate Worst Website Monstrosity!</h1>
+    <h2>Prepare for a Cheesy Experience!</h2>
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <div class="spinning-rainbow"></div>
+        <div class="shrek-face">🧌</div>
+        <div class="donkey-face">🫏</div>
+        <div class="spinning-rainbow" style="animation-duration: 1.5s, 2s;"></div>
+    </div>
+    <p class="glitter-text">
+        <span class="spinning-text">This website is now the ultimate fusion of Shrek, Donkey, and an explosion in a
+            glitter supernova! Every pixel is dripping with sparkles, competing for your attention with colors that
+            shouldn't exist together, movements that defy logic, and enough glitter to make a unicorn's dreams come
+            true. Welcome to the bedazzled swamp of your wildest, most fabulous nightmares!</span>
+    </p>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <img src="/api/placeholder/200/200" alt="Spinning Shrek placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px; animation: sineWave 2s ease-in-out infinite, rainbow 3s linear infinite, spin 10s linear infinite;">
+        <img src="/api/placeholder/200/200" alt="Spinning Donkey placeholder" class="sine-mover rainbow-border"
+            style="margin: 10px; animation: sineWave 2s ease-in-out infinite, rainbow 3s linear infinite, spin 10s linear reverse;">
+    </div>
+    <div style="font-size: 36px; text-align: center; animation: sineWave 1s ease-in-out infinite, rainbow 1s linear infinite, spin 8s linear infinite;"
+        class="glitter-text">
+        🧌✨ SHREK IS LOVE, SHREK IS LIFE! 🫏✨ AND DONKEY TOO! 🫏✨ NOW WITH 1000% MORE GLITTER! ✨✨✨
+    </div>
+    <footer>
+        CHEESE IS LOVE, CHEESE IS LIFE!
+    </footer>
+
+    <div id="shrek"></div>
+
+    <audio id="myAudio">
+        <source src="https://www.myinstants.com/media/sounds/five-nights-at-freddys-full-scream-sound_2.mp3"
+            type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="annoyingSound">
+        <source src="https://www.myinstants.com/media/sounds/pew_pew-dknight556-1379997159.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <ul>
+        <li>Cheese everywhere!</li>
+        <li>Annoying popups!</li>
+        <li>Spinning text!</li>
+        <li>Flashing colors!</li>
+        <li>Jumpscare alert!</li>
+    </ul>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var annoyingAudio = document.getElementById("annoyingSound");
+
+        function playJumpscareAudio() {
+            audio.play();
+        }
+
+        function playAnnoyingSound() {
+            var interval = Math.floor(Math.random() * 5000) + 1000;
+            setTimeout(function () {
+                annoyingAudio.currentTime = 0;
+                annoyingAudio.play();
+                playAnnoyingSound();
+            }, interval);
+        }
+
+        setInterval(function () {
+            document.body.style.transform = "translate(" + (Math.random() * 10 - 5) + "px, " + (Math.random() * 10 - 5) + "px)";
+        }, 100);
+
+        function createCheese() {
+            let cheese = document.createElement('div');
+            cheese.innerHTML = '🧀';
+            cheese.style.position = 'absolute';
+            cheese.style.left = Math.random() * window.innerWidth + 'px';
+            cheese.style.top = '-50px';
+            cheese.style.fontSize = Math.random() * 100 + 30 + 'px';
+            document.body.appendChild(cheese);
+            let fallInterval = setInterval(function () {
+                cheese.style.top = parseInt(cheese.style.top) + 10 + 'px';
+                if (parseInt(cheese.style.top) > window.innerHeight) {
+                    clearInterval(fallInterval);
+                    cheese.remove();
+                }
+            }, 50);
+        }
+        setInterval(createCheese, 500);
+
+        setTimeout(function () {
+            let shrekDiv = document.getElementById('shrek');
+            shrekDiv.style.display = 'block';
+            shrekDiv.style.animation = 'jumpscare-fade 0.5s';
+            playJumpscareAudio();
+            setTimeout(function () {
+                shrekDiv.style.display = 'none';
+                audio.pause();
+                audio.currentTime = 0;
+            }, 2000);
+        }, 5000);
+
+        playAnnoyingSound();
+
+        function createRandomText() {
+            let randomText = document.createElement('div');
+            randomText.innerHTML = 'Why did the web developer go broke? Because he used up all his cache! 💩';
+            randomText.className = 'random-text';
+            randomText.style.left = Math.random() * window.innerWidth + 'px';
+            randomText.style.top = Math.random() * window.innerHeight + 'px';
+            randomText.style.animation = "spin 2s infinite";
+            document.body.appendChild(randomText);
+            setTimeout(() => randomText.remove(), 2000);
+        }
+        setInterval(createRandomText, 1500);
+
+        function createCursedImage() {
+            let img = document.createElement('img');
+            img.src = '/api/placeholder/100/100';
+            img.className = 'cursed-image';
+            img.style.left = Math.random() * window.innerWidth + 'px';
+            img.style.top = Math.random() * window.innerHeight + 'px';
+            img.style.animation = "spin 4s infinite";
+            img.style.opacity = Math.random();
+            document.body.appendChild(img);
+            setTimeout(() => img.remove(), 4000);
+        }
+        setInterval(createCursedImage, 2000);
+
+        document.querySelectorAll('h1, h2, p, ul, li, img, footer').forEach(element => {
+            element.addEventListener('mouseover', function () {
+                const jumpHeight = Math.random() * 100 + 50;
+                const jumpDuration = Math.random() * 0.5 + 0.5;
+                element.style.transition = `transform ${jumpDuration}s`;
+                element.style.transform = `translateY(-${jumpHeight}px)`;
+            });
+
+            element.addEventListener('mouseout', function () {
+                element.style.transition = `transform 0.5s`;
+                element.style.transform = 'translateY(0)';
+            });
+        });
+
+        setInterval(function () {
+            let clickAlert = confirm("Do you want to click OK? Clicking Cancel will make it worse!");
+            if (!clickAlert) {
+                alert("Haha, you clicked Cancel! More annoyances are coming!");
+            }
+        }, 10000);
+    </script>
+</body>
+
+</html>

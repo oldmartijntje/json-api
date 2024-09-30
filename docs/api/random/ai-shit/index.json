@@ -3,8 +3,8 @@
     "folders": [
         {
             "name": "ugly page",
-            "childrenAmount": 25,
-            "lastModified": 1727699482.5992486,
+            "childrenAmount": 26,
+            "lastModified": 1727728198.3996012,
             "type": "folder"
         }
     ],
@@ -12,13 +12,13 @@
         {
             "name": "index.html",
             "size": 11518,
-            "lastModified": 1727697265.8025033,
+            "lastModified": 1727699566.9629617,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 652,
-            "lastModified": 1727697265.8035047,
+            "size": 654,
+            "lastModified": 1727699566.9639616,
             "type": "json"
         }
     ],
