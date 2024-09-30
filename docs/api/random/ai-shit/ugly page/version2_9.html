@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The WORST Cheesy Website Ever!</title>
+    <style>
+        body {
+            background-color: #ff00ff;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: lime;
+            margin: 0;
+            padding: 0;
+            animation: background-flash 0.1s infinite alternate;
+            overflow: hidden;
+            /* Hide overflow to make it worse */
+        }
+
+        @keyframes background-flash {
+            0% {
+                background-color: #ff00ff;
+            }
+
+            20% {
+                background-color: #00ff00;
+            }
+
+            40% {
+                background-color: #ff0000;
+            }
+
+            60% {
+                background-color: #0000ff;
+            }
+
+            80% {
+                background-color: #ffff00;
+            }
+
+            100% {
+                background-color: #ff9900;
+            }
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 120px;
+            text-align: center;
+            text-shadow: 15px 15px 0px red;
+            animation: h1-shake 0.05s infinite, h1-zoom 0.3s infinite alternate, h1-wave 1s infinite;
+            background: url('https://i.imgur.com/RlVw5G7.png') repeat;
+            /* Cheesy background */
+            padding: 30px;
+            border: 10px solid #f1c40f;
+            cursor: pointer;
+        }
+
+        @keyframes h1-shake {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(25px, -25px);
+            }
+
+            50% {
+                transform: translate(-25px, 25px);
+            }
+
+            75% {
+                transform: translate(25px, 25px);
+            }
+
+            100% {
+                transform: translate(-25px, -25px);
+            }
+        }
+
+        @keyframes h1-zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.4);
+            }
+        }
+
+        @keyframes h1-wave {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        h2 {
+            font-size: 90px;
+            color: blue;
+            text-align: center;
+            background-color: black;
+            text-decoration: underline;
+            text-transform: uppercase;
+            padding: 10px;
+            border: 8px dashed yellow;
+            animation: h2-spin 0.5s linear infinite, h2-flip 2s infinite alternate;
+            cursor: pointer;
+        }
+
+        @keyframes h2-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(1440deg);
+            }
+        }
+
+        @keyframes h2-flip {
+            0% {
+                transform: rotateX(0deg);
+            }
+
+            100% {
+                transform: rotateX(180deg);
+            }
+        }
+
+        p {
+            font-size: 50px;
+            color: red;
+            text-align: justify;
+            line-height: 1.2;
+            background-color: cyan;
+            padding: 30px;
+            margin: 20px;
+            border: 8px solid black;
+            font-weight: bold;
+            animation: p-blink 0.1s infinite alternate, p-slide 1s infinite alternate;
+            cursor: pointer;
+        }
+
+        @keyframes p-blink {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes p-slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(200px);
+            }
+
+            100% {
+                transform: translateX(-200px);
+            }
+        }
+
+        a {
+            color: orange;
+            font-size: 50px;
+            text-decoration: none;
+            background-color: purple;
+            padding: 25px;
+            display: block;
+            width: fit-content;
+            border: 15px solid red;
+            margin: 30px auto;
+            font-style: italic;
+            text-shadow: 2px 2px 10px green;
+            animation: a-spin 0.5s infinite alternate, a-bounce 0.1s infinite;
+            background: url('https://i.imgur.com/9C0ZB0n.png') no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        @keyframes a-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes a-bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50px);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: container-wobble 0.5s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes container-wobble {
+            0% {
+                transform: skew(0deg, 0deg);
+            }
+
+            50% {
+                transform: skew(20deg, 20deg);
+            }
+
+            100% {
+                transform: skew(-20deg, -20deg);
+            }
+        }
+
+        ul {
+            list-style-type: square;
+            font-size: 55px;
+            color: white;
+            background-color: orange;
+            padding: 40px;
+            border: 8px double blue;
+            animation: ul-scale 0.5s infinite alternate, ul-rotate 1s infinite;
+            background: url('https://i.imgur.com/yMwDlZX.png') repeat;
+            cursor: pointer;
+        }
+
+        @keyframes ul-scale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(2);
+            }
+        }
+
+        @keyframes ul-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+
+        li {
+            margin: 30px;
+            animation: li-flash 0.2s infinite alternate, li-grow 0.8s infinite alternate;
+            cursor: pointer;
+        }
+
+        @keyframes li-flash {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: blue;
+            }
+        }
+
+        @keyframes li-grow {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.3);
+            }
+        }
+
+        img {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            border: 15px solid red;
+            animation: img-spin 0.3s linear infinite, img-grow 1s infinite alternate;
+            background: url('https://i.imgur.com/tHqJvSZ.png') no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        @keyframes img-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(2160deg);
+            }
+        }
+
+        @keyframes img-grow {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.7);
+            }
+        }
+
+        footer {
+            font-size: 70px;
+            text-align: center;
+            background-color: yellow;
+            padding: 50px;
+            border-top: 15px solid red;
+            animation: footer-fade 1s infinite alternate, footer-spin 2s infinite linear;
+            background: url('https://i.imgur.com/POkVcMV.png') repeat;
+            cursor: pointer;
+        }
+
+        @keyframes footer-fade {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes footer-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Shrek Jumpscare */
+        #shrek {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            background: url('https://i.imgur.com/d7uVrPH.png') no-repeat center;
+            background-size: cover;
+        }
+
+        @keyframes jumpscare-fade {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the WORST Website Ever!</h1>
+    <h2>Prepare for a Cheesy Experience!</h2>
+    <div class="container">
+        <p>Is this website horrible enough for you?</p>
+        <ul>
+            <li>Cheese everywhere!</li>
+            <li>Annoying popups!</li>
+            <li>Spinning text!</li>
+            <li>Flashing colors!</li>
+            <li>Jumpscare alert!</li>
+        </ul>
+        <img src="https://i.imgur.com/lXK9w0S.png" alt="Cheese Wheel">
+        <div class="moving-div">I am moving!</div>
+    </div>
+
+    <footer>
+        CHEESE IS LOVE, CHEESE IS LIFE!
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="myAudio">
+        <source src="https://www.myinstants.com/media/sounds/five-nights-at-freddys-full-scream-sound_2.mp3"
+            type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="annoyingSound">
+        <source src="https://www.myinstants.com/media/sounds/pew_pew-dknight556-1379997159.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Shrek Jumpscare -->
+    <div id="shrek"></div>
+
+    <script>
+        // Get the audio elements
+        var audio = document.getElementById("myAudio");
+        var annoyingAudio = document.getElementById("annoyingSound");
+
+        // Function to play the jumpscare sound
+        function playJumpscareAudio() {
+            audio.play();
+        }
+
+        // Play annoying sound at random intervals
+        function playAnnoyingSound() {
+            var interval = Math.floor(Math.random() * 5000) + 1000; // Random interval between 1s and 6s
+            setTimeout(function () {
+                annoyingAudio.currentTime = 0; // Reset to the beginning
+                annoyingAudio.play();
+                playAnnoyingSound(); // Recursively call itself for continuous playback
+            }, interval);
+        }
+
+        // Random page shake
+        setInterval(function () {
+            document.body.style.transform = "translate(" + (Math.random() * 10 - 5) + "px, " + (Math.random() * 10 - 5) + "px)";
+        }, 100);
+
+        // Cheese rain effect
+        function createCheese() {
+            let cheese = document.createElement('div');
+            cheese.innerHTML = '🧀';
+            cheese.style.position = 'absolute';
+            cheese.style.left = Math.random() * window.innerWidth + 'px';
+            cheese.style.top = '-50px';
+            cheese.style.fontSize = Math.random() * 100 + 30 + 'px';
+            document.body.appendChild(cheese);
+            let fallInterval = setInterval(function () {
+                cheese.style.top = parseInt(cheese.style.top) + 10 + 'px';
+                if (parseInt(cheese.style.top) > window.innerHeight) {
+                    clearInterval(fallInterval);
+                    cheese.remove();
+                }
+            }, 50);
+        }
+        setInterval(createCheese, 500);
+
+        // Shrek Jumpscare after 5 seconds
+        setTimeout(function () {
+            let shrekDiv = document.getElementById('shrek');
+            shrekDiv.style.display = 'block';
+            shrekDiv.style.animation = 'jumpscare-fade 0.5s';
+            playJumpscareAudio(); // Play sound for the jumpscare
+            setTimeout(function () {
+                shrekDiv.style.display = 'none';
+                audio.pause(); // Stop audio after jumpscare
+                audio.currentTime = 0; // Reset audio to start
+            }, 2000); // Hide after 2 seconds
+        }, 5000);
+
+        // Start playing the annoying sound
+        playAnnoyingSound();
+
+        // Function to make elements jump on hover
+        document.querySelectorAll('h1, h2, p, ul, li, img, footer').forEach(element => {
+            element.addEventListener('mouseover', function () {
+                const jumpHeight = Math.random() * 100 + 50; // Random jump height
+                const jumpDuration = Math.random() * 0.5 + 0.5; // Random jump duration
+                element.style.transition = `transform ${jumpDuration}s`;
+                element.style.transform = `translateY(-${jumpHeight}px)`;
+            });
+
+            element.addEventListener('mouseout', function () {
+                element.style.transition = `transform 0.5s`;
+                element.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>

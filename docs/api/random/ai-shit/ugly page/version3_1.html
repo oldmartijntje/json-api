@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Worst Website Ever</title>
+    <style>
+        body {
+            background-color: lime;
+            color: red;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            animation: shake 0.5s infinite;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 5px blue;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 24px;
+            animation: flicker 1s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(2deg);
+            }
+
+            50% {
+                transform: rotate(-2deg);
+            }
+
+            75% {
+                transform: rotate(2deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #shrek {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            background: yellow;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Worst Website Ever!</h1>
+    <p>Click here for a surprise!</p>
+    <div id="shrek">
+        <img src="https://i.pinimg.com/originals/c6/3f/89/c63f893299c6b3c275f0f8c684af6c0c.jpg" alt="Shrek" width="300">
+    </div>
+    <audio id="myAudio">
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+    </audio>
+    <audio id="annoyingSound">
+        <source src="https://www.soundjay.com/button/beep-09.wav" type="audio/wav">
+    </audio>
+    <footer onclick="alert('You clicked the footer!')">This is the footer, click me!</footer>
+
+    <script>
+        // Get the audio elements
+        var audio = document.getElementById("myAudio");
+        var annoyingAudio = document.getElementById("annoyingSound");
+
+        // Function to play the jumpscare sound
+        function playJumpscareAudio() {
+            audio.play();
+        }
+
+        // Play annoying sound at random intervals
+        function playAnnoyingSound() {
+            var interval = Math.floor(Math.random() * 5000) + 1000; // Random interval between 1s and 6s
+            setTimeout(function () {
+                annoyingAudio.currentTime = 0; // Reset to the beginning
+                annoyingAudio.play();
+                playAnnoyingSound(); // Recursively call itself for continuous playback
+            }, interval);
+        }
+
+        // Random page shake
+        setInterval(function () {
+            document.body.style.transform = "translate(" + (Math.random() * 10 - 5) + "px, " + (Math.random() * 10 - 5) + "px)";
+        }, 100);
+
+        // Cheese rain effect
+        function createCheese() {
+            let cheese = document.createElement('div');
+            cheese.innerHTML = '🧀';
+            cheese.style.position = 'absolute';
+            cheese.style.left = Math.random() * window.innerWidth + 'px';
+            cheese.style.top = '-50px';
+            cheese.style.fontSize = Math.random() * 100 + 30 + 'px';
+            document.body.appendChild(cheese);
+            let fallInterval = setInterval(function () {
+                cheese.style.top = parseInt(cheese.style.top) + 10 + 'px';
+                if (parseInt(cheese.style.top) > window.innerHeight) {
+                    clearInterval(fallInterval);
+                    cheese.remove();
+                }
+            }, 50);
+        }
+        setInterval(createCheese, 500);
+
+        // Shrek Jumpscare after 5 seconds
+        setTimeout(function () {
+            let shrekDiv = document.getElementById('shrek');
+            shrekDiv.style.display = 'block';
+            shrekDiv.style.animation = 'jumpscare-fade 0.5s';
+            playJumpscareAudio(); // Play sound for the jumpscare
+            setTimeout(function () {
+                shrekDiv.style.display = 'none';
+                audio.pause(); // Stop audio after jumpscare
+                audio.currentTime = 0; // Reset audio to start
+            }, 2000); // Hide after 2 seconds
+        }, 5000);
+
+        // Start playing the annoying sound
+        playAnnoyingSound();
+
+        // Function to make elements jump on hover
+        document.querySelectorAll('h1, h2, p, ul, li, img, footer').forEach(element => {
+            element.addEventListener('mouseover', function () {
+                const jumpHeight = Math.random() * 100 + 50; // Random jump height
+                const jumpDuration = Math.random() * 0.5 + 0.5; // Random jump duration
+                element.style.transition = `transform ${jumpDuration}s`;
+                element.style.transform = `translateY(-${jumpHeight}px)`;
+            });
+
+            element.addEventListener('mouseout', function () {
+                element.style.transition = `transform 0.5s`;
+                element.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Random pop-up function
+        setInterval(function () {
+            alert("You can't escape this website!");
+        }, 10000); // Pop-up every 10 seconds
+
+    </script>
+</body>
+
+</html>

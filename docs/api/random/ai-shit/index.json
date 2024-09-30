@@ -3,22 +3,22 @@
     "folders": [
         {
             "name": "ugly page",
-            "childrenAmount": 17,
-            "lastModified": 1727697157.5829806,
+            "childrenAmount": 25,
+            "lastModified": 1727699482.5992486,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "index.html",
-            "size": 11517,
-            "lastModified": 1727688786.009534,
+            "size": 11518,
+            "lastModified": 1727697265.8025033,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 653,
-            "lastModified": 1727688786.010534,
+            "size": 652,
+            "lastModified": 1727697265.8035047,
             "type": "json"
         }
     ],

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Absolute Worst Website Ever</title>
+    <style>
+        body {
+            background-color: lime;
+            color: red;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+            text-align: center;
+            animation: shake 0.5s infinite;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 80px;
+            text-shadow: 5px 5px 10px blue;
+            margin-top: 100px;
+            cursor: pointer;
+            transform: rotate(15deg);
+            animation: spin 5s infinite linear;
+        }
+
+        h2 {
+            color: yellow;
+            font-size: 60px;
+            animation: blink 1s infinite;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 36px;
+            animation: flicker 1s infinite;
+            cursor: pointer;
+            margin: 50px 0;
+            border: 5px dashed black;
+            padding: 20px;
+            background-color: pink;
+        }
+
+        #shrek {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            animation: bounce 0.5s infinite;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            background: yellow;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .random-text {
+            position: absolute;
+            color: purple;
+            font-size: 24px;
+            pointer-events: none;
+            /* Prevent interaction */
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Absolute Worst Website Ever!</h1>
+    <h2>Click here for a surprise!</h2>
+    <p>THIS IS THE WORST SITE EVER! STAY AWAY!</p>
+
+    <div id="shrek">
+        <img src="https://i.pinimg.com/originals/c6/3f/89/c63f893299c6b3c275f0f8c684af6c0c.jpg" alt="Shrek" width="300">
+    </div>
+
+    <audio id="myAudio">
+        <source src="https://www.soundjay.com/button/beep-09.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <footer onclick="alert('You clicked the footer! You are trapped!')">CLICK ME, I DARE YOU!</footer>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function playAudio() {
+            audio.currentTime = 0; // Reset audio to start
+            audio.play();
+        }
+
+        // Play audio on page load
+        window.onload = function () {
+            playAudio();
+        };
+
+        // Random page shake
+        setInterval(function () {
+            document.body.style.transform = "translate(" + (Math.random() * 20 - 10) + "px, " + (Math.random() * 20 - 10) + "px)";
+        }, 100);
+
+        // Cheese rain effect
+        function createCheese() {
+            let cheese = document.createElement('div');
+            cheese.innerHTML = '🧀';
+            cheese.style.position = 'absolute';
+            cheese.style.left = Math.random() * window.innerWidth + 'px';
+            cheese.style.top = '-50px';
+            cheese.style.fontSize = Math.random() * 100 + 30 + 'px';
+            document.body.appendChild(cheese);
+            let fallInterval = setInterval(function () {
+                cheese.style.top = parseInt(cheese.style.top) + 10 + 'px';
+                if (parseInt(cheese.style.top) > window.innerHeight) {
+                    clearInterval(fallInterval);
+                    cheese.remove();
+                }
+            }, 50);
+        }
+        setInterval(createCheese, 300); // More frequent cheese
+
+        // Shrek Jumpscare after 3 seconds
+        setTimeout(function () {
+            let shrekDiv = document.getElementById('shrek');
+            shrekDiv.style.display = 'block';
+            playAudio(); // Play sound for the jumpscare
+            setTimeout(function () {
+                shrekDiv.style.display = 'none';
+            }, 2000); // Hide after 2 seconds
+        }, 3000); // Shorter time before jumpscare
+
+        // Random pop-up function
+        setInterval(function () {
+            alert("You can't escape this website! 😈");
+        }, 5000); // Pop-up every 5 seconds
+
+        // Random text generation
+        setInterval(function () {
+            let randomText = document.createElement('div');
+            randomText.innerHTML = '💩 This site is awful! 💩';
+            randomText.className = 'random-text';
+            randomText.style.left = Math.random() * window.innerWidth + 'px';
+            randomText.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(randomText);
+            setTimeout(() => randomText.remove(), 2000); // Remove after 2 seconds
+        }, 1500); // Generate random text every 1.5 seconds
+
+        // Random mouse click sound
+        document.addEventListener('click', function () {
+            playAudio(); // Play sound on click
+        });
+
+        // Annoying pop-up that asks to click
+        setInterval(function () {
+            let clickAlert = confirm("Do you want to click OK? Clicking Cancel will make it worse!");
+            if (!clickAlert) {
+                alert("Haha, you clicked Cancel! More annoyances are coming!");
+            }
+        }, 10000); // Every 10 seconds
+
+    </script>
+</body>
+
+</html>
