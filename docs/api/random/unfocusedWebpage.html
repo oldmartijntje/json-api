@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound with Focus Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #info {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #startButton {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome!</h1>
+    <p>Click the button below to start.</p>
+    <button id="startButton">Start</button>
+    
+    <p id="info">When the page is not focused, it will randomly play the sound after 1 to 5 minutes.</p>
+
+    <audio id="annoyingSound">
+        <source src="https://www.myinstants.com/media/sounds/pew_pew-dknight556-1379997159.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const audioElement = document.getElementById('annoyingSound');
+        const startButton = document.getElementById('startButton');
+        const infoElement = document.getElementById('info');
+
+        function getRandomDelay() {
+            // Get a random number between 1 and 5 minutes (in milliseconds)
+            return Math.floor(Math.random() * (300000 - 60000 + 1)) + 60000;
+        }
+
+        function playSoundWithDelay() {
+            const delay = getRandomDelay();
+            console.log(`Next sound will play in ${delay / 1000 / 60} minutes.`);
+
+            setTimeout(() => {
+                // Check if the document is NOT focused
+                if (!document.hasFocus()) {
+                    audioElement.play().catch((error) => {
+                        console.error('Failed to play sound:', error);
+                    });
+                }
+                // Repeat the process
+                playSoundWithDelay();
+            }, delay);
+        }
+
+        // Start the loop after button click
+        startButton.addEventListener('click', () => {
+            // Hide the start button
+            startButton.style.display = 'none';
+            
+            // Show the instructions
+            infoElement.style.display = 'block';
+            
+            // Start the sound loop
+            playSoundWithDelay();
+        });
+    </script>
+
+</body>
+</html>
