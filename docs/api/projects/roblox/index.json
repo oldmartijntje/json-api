@@ -3,9 +3,21 @@
     "folders": [],
     "files": [
         {
+            "name": "index.html",
+            "size": 11478,
+            "lastModified": 1729090526.8613968,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 323,
+            "lastModified": 1729090526.8639183,
+            "type": "json"
+        },
+        {
             "name": "newsMessages.json",
-            "size": 298,
-            "lastModified": 1729090519.6196973,
+            "size": 502,
+            "lastModified": 1729090690.840754,
             "type": "json"
         }
     ],
