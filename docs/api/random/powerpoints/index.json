@@ -1,0 +1,20 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/random/powerpoints",
+    "folders": [
+        {
+            "name": "project-betacraft-explorer",
+            "childrenAmount": 18,
+            "lastModified": 1734017645.4185765,
+            "type": "folder"
+        }
+    ],
+    "files": [
+        {
+            "name": "powerpoint.html",
+            "size": 3259,
+            "lastModified": 1734014945.5980315,
+            "type": "html"
+        }
+    ],
+    "parent": "../index.json"
+}
