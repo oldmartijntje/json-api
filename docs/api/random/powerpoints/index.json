@@ -3,16 +3,28 @@
     "folders": [
         {
             "name": "project-betacraft-explorer",
-            "childrenAmount": 18,
-            "lastModified": 1734017645.4185765,
+            "childrenAmount": 20,
+            "lastModified": 1748788344.6021464,
             "type": "folder"
         }
     ],
     "files": [
         {
+            "name": "index.html",
+            "size": 12774,
+            "lastModified": 1748788344.582131,
+            "type": "html"
+        },
+        {
+            "name": "index.json",
+            "size": 518,
+            "lastModified": 1748788344.582131,
+            "type": "json"
+        },
+        {
             "name": "powerpoint.html",
-            "size": 3259,
-            "lastModified": 1734014945.5980315,
+            "size": 3349,
+            "lastModified": 1748788344.582131,
             "type": "html"
         }
     ],

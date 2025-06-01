@@ -4,25 +4,25 @@
         {
             "name": "oldmartijntje.nl",
             "childrenAmount": 4,
-            "lastModified": 1717233400.3149414,
+            "lastModified": 1748788344.2827811,
             "type": "folder"
         },
         {
             "name": "projects",
             "childrenAmount": 5,
-            "lastModified": 1729090463.5715008,
+            "lastModified": 1748788344.5028734,
             "type": "folder"
         },
         {
             "name": "random",
             "childrenAmount": 7,
-            "lastModified": 1734017629.5496998,
+            "lastModified": 1748788344.6021464,
             "type": "folder"
         },
         {
             "name": "standaloneWebsites",
             "childrenAmount": 4,
-            "lastModified": 1717233400.3419423,
+            "lastModified": 1748788344.6031473,
             "type": "folder"
         }
     ],
@@ -30,25 +30,25 @@
         {
             "name": "Docs.OldMartijntje.nl.url",
             "size": 120,
-            "lastModified": 1716322003.1657577,
+            "lastModified": 1748788344.2281928,
             "type": "url"
         },
         {
             "name": "index.html",
             "size": 16078,
-            "lastModified": 1734013534.6780767,
+            "lastModified": 1748788344.2281928,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1505,
-            "lastModified": 1734013534.6795893,
+            "size": 1506,
+            "lastModified": 1748788344.2291927,
             "type": "json"
         },
         {
             "name": "OldMartijntje.nl.url",
             "size": 115,
-            "lastModified": 1716321961.6368594,
+            "lastModified": 1748788344.2281928,
             "type": "url"
         }
     ],

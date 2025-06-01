@@ -4,13 +4,19 @@
         {
             "name": "api",
             "childrenAmount": 8,
-            "lastModified": 1717233400.2949474,
+            "lastModified": 1748788434.9508674,
+            "type": "folder"
+        },
+        {
+            "name": "docs.oldmartijntje",
+            "childrenAmount": 1,
+            "lastModified": 1748788424.0067506,
             "type": "folder"
         },
         {
             "name": "hidden_system",
             "childrenAmount": 27,
-            "lastModified": 1717233400.3449411,
+            "lastModified": 1748788344.6181352,
             "type": "folder"
         }
     ],
@@ -18,19 +24,19 @@
         {
             "name": "index.html",
             "size": 13329,
-            "lastModified": 1734013534.6259449,
+            "lastModified": 1748788344.6181352,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 938,
-            "lastModified": 1734013534.6269443,
+            "size": 939,
+            "lastModified": 1748788344.6181352,
             "type": "json"
         },
         {
             "name": "toggleHidden.html",
             "size": 555,
-            "lastModified": 1716388138.4736228,
+            "lastModified": 1748788344.6181352,
             "type": "html"
         }
     ]
