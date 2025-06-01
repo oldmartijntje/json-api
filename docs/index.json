@@ -9,8 +9,8 @@
         },
         {
             "name": "docs.oldmartijntje",
-            "childrenAmount": 1,
-            "lastModified": 1748788424.0067506,
+            "childrenAmount": 3,
+            "lastModified": 1748788453.095958,
             "type": "folder"
         },
         {
@@ -23,14 +23,14 @@
     "files": [
         {
             "name": "index.html",
-            "size": 13329,
-            "lastModified": 1748788344.6181352,
+            "size": 14209,
+            "lastModified": 1748788452.5281372,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 939,
-            "lastModified": 1748788344.6181352,
+            "size": 1118,
+            "lastModified": 1748788452.5281372,
             "type": "json"
         },
         {
