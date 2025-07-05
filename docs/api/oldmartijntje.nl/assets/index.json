@@ -2,30 +2,30 @@
     "path": "https://oldmartijntje.github.io/json-api/api/oldmartijntje.nl/assets",
     "folders": [
         {
-            "name": "icons",
-            "childrenAmount": 30,
-            "lastModified": 1748788344.2472143,
+            "name": "images",
+            "childrenAmount": 22,
+            "lastModified": 1751701233.8813355,
             "type": "folder"
         },
         {
-            "name": "images",
-            "childrenAmount": 22,
-            "lastModified": 1748788344.2797782,
+            "name": "icons",
+            "childrenAmount": 30,
+            "lastModified": 1751701233.8673353,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "index.html",
-            "size": 12666,
-            "lastModified": 1748788452.589696,
-            "type": "html"
+            "name": "index.json",
+            "size": 794,
+            "lastModified": 1751701233.8823357,
+            "type": "json"
         },
         {
-            "name": "index.json",
-            "size": 827,
-            "lastModified": 1748788452.589696,
-            "type": "json"
+            "name": "index.html",
+            "size": 12204,
+            "lastModified": 1751701233.8823357,
+            "type": "html"
         }
     ],
     "parent": "../index.json"

@@ -2,36 +2,36 @@
     "path": "https://oldmartijntje.github.io/json-api/api/projects/henk-empires-new-kingdoms-assets",
     "folders": [
         {
-            "name": "icons",
-            "childrenAmount": 69,
-            "lastModified": 1748788344.3003497,
+            "name": "images",
+            "childrenAmount": 134,
+            "lastModified": 1751701233.9433372,
             "type": "folder"
         },
         {
-            "name": "images",
-            "childrenAmount": 134,
-            "lastModified": 1748788344.5018737,
+            "name": "icons",
+            "childrenAmount": 69,
+            "lastModified": 1751701233.8873358,
             "type": "folder"
         }
     ],
     "files": [
         {
             "name": "henk-empire-new-kingdoms.json",
-            "size": 103499,
-            "lastModified": 1748788344.2827811,
+            "size": 100731,
+            "lastModified": 1751701233.8833356,
+            "type": "json"
+        },
+        {
+            "name": "index.json",
+            "size": 993,
+            "lastModified": 1751701233.9433372,
             "type": "json"
         },
         {
             "name": "index.html",
-            "size": 13637,
-            "lastModified": 1748788452.7693417,
+            "size": 13165,
+            "lastModified": 1751701233.9433372,
             "type": "html"
-        },
-        {
-            "name": "index.json",
-            "size": 1030,
-            "lastModified": 1748788452.7703397,
-            "type": "json"
         }
     ],
     "parent": "../index.json"

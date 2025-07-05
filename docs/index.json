@@ -2,41 +2,41 @@
     "path": "https://oldmartijntje.github.io/json-api",
     "folders": [
         {
+            "name": "hidden_system",
+            "childrenAmount": 27,
+            "lastModified": 1751701233.9983385,
+            "type": "folder"
+        },
+        {
             "name": "api",
             "childrenAmount": 8,
-            "lastModified": 1748788434.9508674,
+            "lastModified": 1751701233.9913383,
             "type": "folder"
         },
         {
             "name": "docs.oldmartijntje",
             "childrenAmount": 3,
-            "lastModified": 1748788453.095958,
-            "type": "folder"
-        },
-        {
-            "name": "hidden_system",
-            "childrenAmount": 27,
-            "lastModified": 1748788344.6181352,
+            "lastModified": 1751701233.9933383,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "index.html",
-            "size": 14209,
-            "lastModified": 1748788452.5281372,
+            "name": "toggleHidden.html",
+            "size": 534,
+            "lastModified": 1751701233.9993386,
             "type": "html"
         },
         {
             "name": "index.json",
-            "size": 1118,
-            "lastModified": 1748788452.5281372,
+            "size": 1076,
+            "lastModified": 1751701233.9993386,
             "type": "json"
         },
         {
-            "name": "toggleHidden.html",
-            "size": 555,
-            "lastModified": 1748788344.6181352,
+            "name": "index.html",
+            "size": 13730,
+            "lastModified": 1751701233.9993386,
             "type": "html"
         }
     ]

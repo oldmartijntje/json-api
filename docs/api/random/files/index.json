@@ -4,76 +4,76 @@
         {
             "name": "spoiler_empty-folder",
             "childrenAmount": 2,
-            "lastModified": 1748788344.530395,
+            "lastModified": 1751701233.9553375,
             "type": "folder"
         },
         {
             "name": "weird",
             "childrenAmount": 7,
-            "lastModified": 1748788344.5801294,
+            "lastModified": 1751701233.976338,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "hidden_Center of the Page.mp3",
-            "size": 2881197,
-            "lastModified": 1748788344.5293937,
-            "type": "mp3"
-        },
-        {
-            "name": "ICON.zip",
-            "size": 1918382,
-            "lastModified": 1748788344.5158894,
-            "type": "zip"
-        },
-        {
-            "name": "index.html",
-            "size": 19618,
-            "lastModified": 1748788452.95309,
-            "type": "html"
-        },
-        {
-            "name": "index.json",
-            "size": 2174,
-            "lastModified": 1748788452.95309,
-            "type": "json"
-        },
-        {
-            "name": "Martijn-Regular_1.ttf",
-            "size": 24272,
-            "lastModified": 1748788344.5158894,
-            "type": "ttf"
+            "name": "scripts.js",
+            "size": 4576,
+            "lastModified": 1751701233.9553375,
+            "type": "js"
         },
         {
             "name": "MartijnHandwriting-Regular.ttf",
             "size": 93476,
-            "lastModified": 1748788344.516889,
+            "lastModified": 1751701233.9483373,
             "type": "ttf"
         },
         {
+            "name": "index.json",
+            "size": 2092,
+            "lastModified": 1751701233.9553375,
+            "type": "json"
+        },
+        {
+            "name": "styles.css",
+            "size": 2296,
+            "lastModified": 1751701233.9563375,
+            "type": "css"
+        },
+        {
+            "name": "index.html",
+            "size": 19080,
+            "lastModified": 1751701233.9553375,
+            "type": "html"
+        },
+        {
+            "name": "ICON.zip",
+            "size": 1918382,
+            "lastModified": 1751701233.9483373,
+            "type": "zip"
+        },
+        {
             "name": "README.md",
-            "size": 58,
-            "lastModified": 1748788344.516889,
+            "size": 56,
+            "lastModified": 1751701233.9483373,
             "type": "md"
         },
         {
-            "name": "scripts.js",
-            "size": 4696,
-            "lastModified": 1748788344.530395,
-            "type": "js"
+            "name": "hidden_Center of the Page.mp3",
+            "size": 2881197,
+            "lastModified": 1751701233.9553375,
+            "type": "mp3"
+        },
+        {
+            "name": "Martijn-Regular_1.ttf",
+            "size": 24272,
+            "lastModified": 1751701233.9483373,
+            "type": "ttf"
         },
         {
             "name": "spoiler_mii sonic.png",
             "size": 17410,
-            "lastModified": 1748788344.530395,
+            "lastModified": 1751701233.9553375,
             "type": "png"
-        },
-        {
-            "name": "styles.css",
-            "size": 2455,
-            "lastModified": 1748788344.5313957,
-            "type": "css"
         }
     ],
     "parent": "../index.json"

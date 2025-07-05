@@ -4,22 +4,22 @@
         {
             "name": "ugly page",
             "childrenAmount": 26,
-            "lastModified": 1748788344.5073812,
+            "lastModified": 1751701233.9443371,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "index.html",
-            "size": 11855,
-            "lastModified": 1748788452.907446,
-            "type": "html"
+            "name": "index.json",
+            "size": 627,
+            "lastModified": 1751701233.9433372,
+            "type": "json"
         },
         {
-            "name": "index.json",
-            "size": 654,
-            "lastModified": 1748788452.907446,
-            "type": "json"
+            "name": "index.html",
+            "size": 11401,
+            "lastModified": 1751701233.9433372,
+            "type": "html"
         }
     ],
     "parent": "../index.json"

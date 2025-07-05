@@ -4,22 +4,22 @@
         {
             "name": "basic_nsmbds404",
             "childrenAmount": 3,
-            "lastModified": 1748788344.6031473,
+            "lastModified": 1751701233.9913383,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "index.html",
-            "size": 11929,
-            "lastModified": 1748788453.0789363,
-            "type": "html"
+            "name": "index.json",
+            "size": 647,
+            "lastModified": 1751701233.9913383,
+            "type": "json"
         },
         {
-            "name": "index.json",
-            "size": 672,
-            "lastModified": 1748788453.0799377,
-            "type": "json"
+            "name": "index.html",
+            "size": 11475,
+            "lastModified": 1751701233.9913383,
+            "type": "html"
         }
     ],
     "parent": "../index.json"

@@ -2,47 +2,53 @@
     "path": "https://oldmartijntje.github.io/json-api/api/random",
     "folders": [
         {
-            "name": "ai-shit",
-            "childrenAmount": 3,
-            "lastModified": 1748788344.5043778,
-            "type": "folder"
-        },
-        {
             "name": "files",
             "childrenAmount": 12,
-            "lastModified": 1748788344.5313957,
-            "type": "folder"
-        },
-        {
-            "name": "lists",
-            "childrenAmount": 7,
-            "lastModified": 1748788344.582131,
+            "lastModified": 1751701233.9563375,
             "type": "folder"
         },
         {
             "name": "powerpoints",
             "childrenAmount": 4,
-            "lastModified": 1748788344.582131,
+            "lastModified": 1751701233.9823382,
+            "type": "folder"
+        },
+        {
+            "name": "lists",
+            "childrenAmount": 7,
+            "lastModified": 1751701233.9823382,
+            "type": "folder"
+        },
+        {
+            "name": "ai-shit",
+            "childrenAmount": 3,
+            "lastModified": 1751701233.9433372,
             "type": "folder"
         }
     ],
     "files": [
         {
-            "name": "index.html",
-            "size": 15124,
-            "lastModified": 1748788452.8874223,
-            "type": "html"
-        },
-        {
             "name": "index.json",
-            "size": 1320,
-            "lastModified": 1748788452.8874223,
+            "size": 1271,
+            "lastModified": 1751701233.9823382,
             "type": "json"
         },
         {
+            "name": "index.html",
+            "size": 14636,
+            "lastModified": 1751701233.9823382,
+            "type": "html"
+        },
+        {
             "name": "unfocusedWebpage.html",
-            "size": 2509,
-            "lastModified": 1748788344.6021464,
+            "size": 2426,
+            "lastModified": 1751701233.9913383,
+            "type": "html"
+        },
+        {
+            "name": "photo_album(1).html",
+            "size": 16468,
+            "lastModified": 1751701272.3382924,
             "type": "html"
         }
     ],
