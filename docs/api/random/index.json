@@ -29,14 +29,20 @@
     "files": [
         {
             "name": "index.json",
-            "size": 1271,
-            "lastModified": 1751701233.9823382,
+            "size": 1439,
+            "lastModified": 1751701300.9740164,
             "type": "json"
         },
         {
+            "name": "photo_album(2).html",
+            "size": 25634,
+            "lastModified": 1752083134.0848985,
+            "type": "html"
+        },
+        {
             "name": "index.html",
-            "size": 14636,
-            "lastModified": 1751701233.9823382,
+            "size": 15457,
+            "lastModified": 1751701300.9740164,
             "type": "html"
         },
         {
@@ -49,6 +55,12 @@
             "name": "photo_album(1).html",
             "size": 16468,
             "lastModified": 1751701272.3382924,
+            "type": "html"
+        },
+        {
+            "name": "photo_album(4).html",
+            "size": 24755,
+            "lastModified": 1752083776.2690117,
             "type": "html"
         }
     ],
