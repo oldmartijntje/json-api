@@ -527,12 +527,12 @@ def createHTML(files, folders, filePath):
     header += '''<div class="buttons" style="margin-top: 1rem;">
     <input type="radio" id="listView" name="view" class="icon-radio">
     <label for="listView" class="icon-label">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-2033548-1712980.png" alt="List View">
+        <img src="https://i.imgur.com/JEmRscL.png" alt="List View">
     </label>
 
     <input type="radio" id="iconView" name="view" class="icon-radio">
     <label for="iconView" class="icon-label">
-        <img src="https://simpleicon.com/wp-content/uploads/picture.png" alt="Icon View">
+        <img src="https://i.imgur.com/hoAzRPT.png" alt="Icon View">
     </label>
 </div>'''
     header += '</header>\n'
@@ -803,8 +803,7 @@ try:
 except:
     files, folders = list_files_and_folders('.'+ startingPos)
 
-findIndented(folders, startingPos, files)
-
+findIndented(folders, startingPos, files) 
 if loadSetting(settings, 'commitOnRun', 'settings.json'):
 
     # commit using subprocess

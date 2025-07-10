@@ -22,6 +22,12 @@
             "type": "js"
         },
         {
+            "name": "CIMG4686.JPG",
+            "size": 5816155,
+            "lastModified": 1752124382.3008628,
+            "type": "JPG"
+        },
+        {
             "name": "MartijnHandwriting-Regular.ttf",
             "size": 93476,
             "lastModified": 1751701233.9483373,
@@ -30,8 +36,14 @@
         {
             "name": "index.json",
             "size": 2100,
-            "lastModified": 1751701300.9740164,
+            "lastModified": 1752083922.3482838,
             "type": "json"
+        },
+        {
+            "name": "CIMG4750.JPG",
+            "size": 3881732,
+            "lastModified": 1752124382.36286,
+            "type": "JPG"
         },
         {
             "name": "styles.css",
@@ -42,7 +54,7 @@
         {
             "name": "index.html",
             "size": 19080,
-            "lastModified": 1751701300.9740164,
+            "lastModified": 1752083922.3482838,
             "type": "html"
         },
         {
@@ -64,6 +76,12 @@
             "type": "mp3"
         },
         {
+            "name": "CIMG4724.JPG",
+            "size": 5776465,
+            "lastModified": 1752124382.319862,
+            "type": "JPG"
+        },
+        {
             "name": "Martijn-Regular_1.ttf",
             "size": 24272,
             "lastModified": 1751701233.9483373,
@@ -74,6 +92,12 @@
             "size": 17410,
             "lastModified": 1751701233.9553375,
             "type": "png"
+        },
+        {
+            "name": "CIMG4739.JPG",
+            "size": 5436340,
+            "lastModified": 1752124382.3428607,
+            "type": "JPG"
         }
     ],
     "parent": "../index.json"

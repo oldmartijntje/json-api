@@ -3,8 +3,8 @@
     "folders": [
         {
             "name": "files",
-            "childrenAmount": 12,
-            "lastModified": 1751701233.9563375,
+            "childrenAmount": 16,
+            "lastModified": 1752124382.3508604,
             "type": "folder"
         },
         {
@@ -29,8 +29,8 @@
     "files": [
         {
             "name": "index.json",
-            "size": 1439,
-            "lastModified": 1751701300.9740164,
+            "size": 1771,
+            "lastModified": 1752083922.3482838,
             "type": "json"
         },
         {
@@ -41,8 +41,8 @@
         },
         {
             "name": "index.html",
-            "size": 15457,
-            "lastModified": 1751701300.9740164,
+            "size": 17099,
+            "lastModified": 1752083922.3472838,
             "type": "html"
         },
         {
