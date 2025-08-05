@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Galaxy Explorer - Space Simulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+            background: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #ui-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+        
+        #info-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        #coordinates {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        #system-info {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            text-align: right;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        #title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        #warp-map {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: rgba(10, 10, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(79, 195, 247, 0.5);
+            border-radius: 10px;
+            display: none;
+            z-index: 200;
+            pointer-events: auto;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(79, 195, 247, 0.3);
+        }
+        
+        #warp-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4fc3f7;
+        }
+        
+        .warp-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            height: calc(100% - 60px);
+        }
+        
+        .warp-cell {
+            background: rgba(20, 30, 50, 0.8);
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .warp-cell:hover {
+            transform: scale(1.05);
+            border-color: #4fc3f7;
+            background: rgba(30, 50, 80, 0.9);
+            box-shadow: 0 0 15px rgba(79, 195, 247, 0.5);
+        }
+        
+        .warp-cell.current {
+            border: 2px solid #ff9800;
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.5);
+        }
+        
+        .system-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+            color: #4fc3f7;
+        }
+        
+        .system-coords {
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .warp-cell .system-stats {
+            font-size: 11px;
+            margin-top: 5px;
+            text-align: center;
+            color: #ff9800;
+        }
+        
+        #warp-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: #ff9800;
+            font-size: 20px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #warp-close:hover {
+            background: rgba(255, 152, 0, 0.2);
+        }
+        
+        #warp-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: 300;
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: #4fc3f7;
+            text-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
+        }
+        
+        .panel-title {
+            color: #4fc3f7;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .panel-title i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .control-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .key {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        #save-notification {
+            position: absolute;
+            bottom: 20px;
+            right: 50%;
+            transform: translateX(50%);
+            background: rgba(0, 100, 0, 0.7);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .debug-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 300px;
+        }
+        
+        #status-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="ui-container">
+        <div id="title">GALAXY EXPLORER</div>
+        
+        <div id="info-panel">
+            <div class="panel-title">
+                <span>🚀 SHIP CONTROLS</span>
+            </div>
+            <div class="control-item">
+                <span>Look Around</span>
+                <span class="key">Hold R + Mouse</span>
+            </div>
+            <div class="control-item">
+                <span>Forward/Backward</span>
+                <span class="key">W / S</span>
+            </div>
+            <div class="control-item">
+                <span>Strafe Left/Right</span>
+                <span class="key">A / D</span>
+            </div>
+            <div class="control-item">
+                <span>Ascend/Descend</span>
+                <span class="key">Q / E</span>
+            </div>
+            <div class="control-item">
+                <span>Warp Map (T)</span>
+                <span class="key">T</span>
+            </div>
+            <div class="control-item">
+                <span>Release Mouse</span>
+                <span class="key">ESC</span>
+            </div>
+        </div>
+        
+        <div id="coordinates">
+            <div class="panel-title">🌌 COORDINATES</div>
+            <div id="position">X: 0.0, Y: 0.0, Z: 0.0</div>
+            <div id="cell">Cell: [0, 0, 0]</div>
+            <div id="distance-to-center">Dist to center: 0.0</div>
+        </div>
+        
+        <div id="system-info">
+            <div class="panel-title">⭐ CURRENT SYSTEM</div>
+            <div id="system-name">Sol Prime</div>
+            <div id="system-stats">Stars: 1, Planets: 3</div>
+            <div id="system-lod">Active LOD: 2</div>
+        </div>
+        
+        <div id="save-notification">Game Saved</div>
+        
+        <div id="warp-map">
+            <div id="warp-title">GALACTIC WARP MAP</div>
+            <button id="warp-close">✕</button>
+            <div class="warp-grid" id="warp-grid"></div>
+        </div>
+        
+        <div id="warp-animation">WARP ENGAGE</div>
+        
+        <div id="status-panel">
+            <div>Planet Speed: Fixed</div>
+            <div>System Detection: Accurate</div>
+        </div>
+    </div>
+
+    <!-- Three.js from CDN -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.155.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+
+        // Seeded random generator (Xorshift algorithm)
+        class SeededRandom {
+            constructor(seed = 88675123) {
+                this.state = seed;
+            }
+            
+            next() {
+                let x = this.state;
+                x ^= x << 13;
+                x ^= x >> 17;
+                x ^= x << 5;
+                this.state = x;
+                return (x >>> 0) / 0xFFFFFFFF;
+            }
+            
+            nextFloat(min, max) {
+                return min + (max - min) * this.next();
+            }
+            
+            nextInt(min, max) {
+                return Math.floor(this.nextFloat(min, max));
+            }
+            
+            pick(array) {
+                return array[this.nextInt(0, array.length)];
+            }
+        }
+
+        // Name generator
+        class NameGenerator {
+            static adjectives = [
+                "Crimson", "Azure", "Emerald", "Golden", "Violet", 
+                "Ancient", "Mystic", "Frozen", "Volcanic", "Radiant",
+                "Silent", "Eternal", "Lost", "Forgotten", "Hidden",
+                "Celestial", "Stellar", "Cosmic", "Galactic", "Nebular",
+                "Quantum", "Void", "Abyssal", "Luminous", "Dark"
+            ];
+            
+            static nouns = [
+                "Orion", "Andromeda", "Pegasus", "Phoenix", "Draco",
+                "Centaurus", "Lyra", "Aquila", "Cygnus", "Perseus",
+                "Vega", "Sirius", "Polaris", "Rigel", "Betelgeuse",
+                "Nebula", "Quasar", "Pulsar", "Comet", "Asteroid",
+                "Horizon", "Infinity", "Voyager", "Explorer", "Odyssey"
+            ];
+            
+            static suffixes = [
+                "Alpha", "Beta", "Gamma", "Delta", "Prime",
+                "Secundus", "Tertius", "Quartus", "Quintus"
+            ];
+            
+            static generate(rng) {
+                const adjective = rng.pick(NameGenerator.adjectives);
+                const noun = rng.pick(NameGenerator.nouns);
+                const suffix = rng.pick(NameGenerator.suffixes);
+                const number = rng.nextInt(1, 100);
+                
+                return `${adjective} ${noun} ${suffix}-${number}`;
+            }
+        }
+
+        // StarSystem class
+        class StarSystem {
+            constructor(seed, cellX, cellY, cellZ) {
+                this.seed = seed;
+                this.cellX = cellX;
+                this.cellY = cellY;
+                this.cellZ = cellZ;
+                this.origin = new THREE.Vector3(
+                    cellX * 2000,
+                    cellY * 2000,
+                    cellZ * 2000
+                );
+                this.stars = [];
+                this.planets = [];
+                this.isLoaded = false;
+                this.lodLevel = -1; // -1 = unloaded, 0 = distant, 1 = stars only, 2 = full
+                this.name = "Unnamed System";
+            }
+            
+            generate(rng) {
+                // Generate system name
+                this.name = NameGenerator.generate(rng);
+                
+                // Generate stars
+                const starCount = rng.nextInt(1, 4);
+                for (let i = 0; i < starCount; i++) {
+                    const starType = rng.pick(['yellow', 'red', 'blue', 'white']);
+                    const size = rng.nextFloat(3, 8);
+                    let color;
+                    
+                    switch(starType) {
+                        case 'yellow': color = new THREE.Color(1.0, 0.9, 0.6); break;
+                        case 'red': color = new THREE.Color(1.0, 0.5, 0.4); break;
+                        case 'blue': color = new THREE.Color(0.5, 0.7, 1.0); break;
+                        case 'white': color = new THREE.Color(1.0, 1.0, 1.0); break;
+                    }
+                    
+                    const offset = new THREE.Vector3(
+                        rng.nextFloat(-10, 10),
+                        rng.nextFloat(-5, 5),
+                        rng.nextFloat(-10, 10)
+                    );
+                    
+                    this.stars.push({ type: starType, size, color, offset });
+                }
+                
+                // Generate planets - with realistic time periods
+                const planetCount = rng.nextInt(0, 8);
+                for (let i = 0; i < planetCount; i++) {
+                    const planetType = rng.pick(['rocky', 'gas', 'ice', 'lava', 'earthlike']);
+                    const size = rng.nextFloat(0.5, 3.0);
+                    const orbitRadius = 20 + i * 15 + rng.nextFloat(-5, 5);
+                    
+                    // Realistic time periods (in milliseconds)
+                    const orbitPeriod = rng.nextFloat(60000, 300000); // 1-5 minutes per orbit
+                    const rotationPeriod = rng.nextFloat(10000, 60000); // 10-60 seconds per rotation
+                    
+                    let color;
+                    switch(planetType) {
+                        case 'rocky': color = new THREE.Color(0.8, 0.6, 0.4); break;
+                        case 'gas': color = new THREE.Color(0.4, 0.6, 1.0); break;
+                        case 'ice': color = new THREE.Color(0.7, 0.9, 1.0); break;
+                        case 'lava': color = new THREE.Color(1.0, 0.3, 0.1); break;
+                        case 'earthlike': color = new THREE.Color(0.2, 0.6, 0.3); break;
+                    }
+                    
+                    this.planets.push({
+                        type: planetType,
+                        size,
+                        color,
+                        orbitRadius,
+                        orbitPeriod,
+                        rotationPeriod
+                    });
+                }
+            }
+            
+            loadLOD(level, scene) {
+                if (this.lodLevel === level) return;
+                
+                // Unload previous LOD
+                this.unload(scene);
+                
+                // Load new LOD
+                this.lodLevel = level;
+                
+                // LOD 0: Distant point representation
+                if (level >= 0) {
+                    // Create a point for each star in the system
+                    for (const star of this.stars) {
+                        const starPos = this.origin.clone().add(star.offset);
+                        
+                        // Create a visible point for the star
+                        const geometry = new THREE.SphereGeometry(0.5, 8, 8);
+                        const material = new THREE.MeshBasicMaterial({ 
+                            color: star.color
+                        });
+                        const point = new THREE.Mesh(geometry, material);
+                        point.position.copy(starPos);
+                        scene.add(point);
+                        this.pointMeshes = this.pointMeshes || [];
+                        this.pointMeshes.push(point);
+                    }
+                }
+                
+                // LOD 1: Load stars only (no planets)
+                if (level >= 1) {
+                    for (const star of this.stars) {
+                        const starPos = this.origin.clone().add(star.offset);
+                        
+                        // Create detailed star
+                        const geometry = new THREE.SphereGeometry(star.size, 32, 32);
+                        const material = new THREE.MeshStandardMaterial({ 
+                            color: star.color,
+                            emissive: star.color,
+                            emissiveIntensity: 0.8,
+                            roughness: 0.1
+                        });
+                        const starMesh = new THREE.Mesh(geometry, material);
+                        starMesh.position.copy(starPos);
+                        scene.add(starMesh);
+                        this.starMeshes = this.starMeshes || [];
+                        this.starMeshes.push(starMesh);
+                        
+                        // Create star light source
+                        const starLight = new THREE.PointLight(star.color, 1.0, 300);
+                        starLight.position.copy(starPos);
+                        scene.add(starLight);
+                        this.starLights = this.starLights || [];
+                        this.starLights.push(starLight);
+                        
+                        // Add glow effect
+                        const glowGeometry = new THREE.SphereGeometry(star.size * 1.1, 32, 32);
+                        const glowMaterial = new THREE.MeshBasicMaterial({
+                            color: star.color,
+                            transparent: true,
+                            opacity: 0.3
+                        });
+                        const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+                        starMesh.add(glow);
+                    }
+                }
+                
+                // LOD 2: Load full system with planets
+                if (level >= 2) {
+                    // Load stars if not already loaded
+                    if (level === 2) this.loadLOD(1, scene);
+                    
+                    // Create planets
+                    for (const planet of this.planets) {
+                        const pivot = new THREE.Object3D();
+                        pivot.position.copy(this.origin);
+                        scene.add(pivot);
+                        
+                        // Planet mesh
+                        const geometry = new THREE.SphereGeometry(planet.size, 32, 32);
+                        const material = new THREE.MeshStandardMaterial({ 
+                            color: planet.color,
+                            roughness: 0.8,
+                            metalness: 0.1
+                        });
+                        const planetMesh = new THREE.Mesh(geometry, material);
+                        planetMesh.position.set(planet.orbitRadius, 0, 0);
+                        pivot.add(planetMesh);
+                        
+                        // Store planet data
+                        this.planetObjects = this.planetObjects || [];
+                        this.planetObjects.push({
+                            pivot,
+                            mesh: planetMesh,
+                            orbitPeriod: planet.orbitPeriod,
+                            rotationPeriod: planet.rotationPeriod
+                        });
+                    }
+                }
+                
+                this.isLoaded = true;
+            }
+            
+            unload(scene) {
+                // Remove point representations
+                if (this.pointMeshes) {
+                    this.pointMeshes.forEach(mesh => scene.remove(mesh));
+                    this.pointMeshes = null;
+                }
+                
+                // Remove star lights
+                if (this.starLights) {
+                    this.starLights.forEach(light => scene.remove(light));
+                    this.starLights = null;
+                }
+                
+                // Remove star meshes
+                if (this.starMeshes) {
+                    this.starMeshes.forEach(mesh => scene.remove(mesh));
+                    this.starMeshes = null;
+                }
+                
+                // Remove planets
+                if (this.planetObjects) {
+                    this.planetObjects.forEach(obj => scene.remove(obj.pivot));
+                    this.planetObjects = null;
+                }
+                
+                this.lodLevel = -1;
+                this.isLoaded = false;
+            }
+            
+            update() {
+                if (!this.planetObjects) return;
+                
+                // Update planet orbits and rotations based on real time
+                const now = Date.now();
+                
+                for (const planet of this.planetObjects) {
+                    // Orbit around star (slower, more realistic)
+                    planet.pivot.rotation.y = (now / planet.orbitPeriod) * 2 * Math.PI;
+                    
+                    // Planet self-rotation (slower, more realistic)
+                    planet.mesh.rotation.y = (now / planet.rotationPeriod) * 2 * Math.PI;
+                }
+            }
+        }
+
+        // Galaxy Simulator class
+        class GalaxySimulator {
+            constructor() {
+                // Global variables
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 10000);
+                this.renderer = null;
+                this.controls = null;
+                
+                // Movement parameters
+                this.shipVelocity = new THREE.Vector3();
+                this.THRUST_FORCE = 15;
+                this.MAX_SPEED = 50;
+                this.DAMPING = 0.95;
+                this.keys = {};
+                this.isMouseLookEnabled = false;
+                this.clock = new THREE.Clock();
+                this.lastSaveTime = 0;
+                this.saveInterval = 5000; // Save every 5 seconds
+                
+                // Galaxy parameters - larger cell size for more distance between systems
+                this.cellSize = 2000; // Each star system is 2000x2000x2000 units
+                this.activeSystems = new Map();
+                this.currentSystem = null;
+                this.currentCell = { x: 0, y: 0, z: 0 };
+                this.loadDistance = 1000;   // Load full system when within 1000 units of center
+                this.unloadDistance = 1500;  // Unload full system when beyond 1500 units
+                this.lodChangeDistance = 1000; // Use this for LOD transitions
+                this.masterRNG = null;
+                this.seed = "cosmic123";
+                this.lastCell = { x: 0, y: 0, z: 0 };
+                
+                // UI references
+                this.positionElement = document.getElementById('position');
+                this.cellElement = document.getElementById('cell');
+                this.distanceElement = document.getElementById('distance-to-center');
+                this.systemNameElement = document.getElementById('system-name');
+                this.systemStatsElement = document.getElementById('system-stats');
+                this.systemLodElement = document.getElementById('system-lod');
+                this.warpMap = document.getElementById('warp-map');
+                this.warpGrid = document.getElementById('warp-grid');
+                this.warpAnimation = document.getElementById('warp-animation');
+                this.saveNotification = document.getElementById('save-notification');
+            }
+            
+            init() {
+                // Initialize renderer
+                this.renderer = new THREE.WebGLRenderer({ 
+                    antialias: true,
+                    logarithmicDepthBuffer: true
+                });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                document.getElementById('canvas-container').appendChild(this.renderer.domElement);
+                
+                // Position camera (spaceship)
+                this.camera.position.set(0, 2, 10);
+                
+                // Initialize controls
+                this.setupControls();
+                
+                // Initialize lighting
+                this.setupLighting();
+                
+                // Load state or initialize new
+                this.loadState();
+                
+                // Generate initial systems
+                this.updateCurrentCell();
+                this.generateSystemsWindow();
+                
+                // Set up event listeners
+                this.setupEventListeners();
+            }
+            
+            saveState() {
+                const shipPos = this.controls.getObject().position;
+                const shipQuat = this.controls.getObject().quaternion;
+                
+                const state = {
+                    seed: this.seed,
+                    position: { x: shipPos.x, y: shipPos.y, z: shipPos.z },
+                    quaternion: {
+                        x: shipQuat.x,
+                        y: shipQuat.y,
+                        z: shipQuat.z,
+                        w: shipQuat.w
+                    },
+                    currentCell: { ...this.currentCell },
+                    velocity: {
+                        x: this.shipVelocity.x,
+                        y: this.shipVelocity.y,
+                        z: this.shipVelocity.z
+                    }
+                };
+                
+                localStorage.setItem('spaceSimState', JSON.stringify(state));
+                
+                // Show save notification
+                this.saveNotification.style.opacity = '1';
+                setTimeout(() => {
+                    this.saveNotification.style.opacity = '0';
+                }, 2000);
+            }
+            
+            loadState() {
+                const savedState = localStorage.getItem('spaceSimState');
+                
+                if (savedState) {
+                    try {
+                        const state = JSON.parse(savedState);
+                        
+                        // Set seed
+                        this.seed = state.seed;
+                        let numericSeed = 0;
+                        for (let i = 0; i < state.seed.length; i++) {
+                            numericSeed = (numericSeed << 5) - numericSeed + state.seed.charCodeAt(i);
+                            numericSeed |= 0;
+                        }
+                        this.masterRNG = new SeededRandom(Math.abs(numericSeed));
+                        
+                        // Set position
+                        const shipPos = new THREE.Vector3(
+                            state.position.x,
+                            state.position.y,
+                            state.position.z
+                        );
+                        this.controls.getObject().position.copy(shipPos);
+                        
+                        // Set quaternion
+                        this.controls.getObject().quaternion.set(
+                            state.quaternion.x,
+                            state.quaternion.y,
+                            state.quaternion.z,
+                            state.quaternion.w
+                        );
+                        
+                        // Set velocity
+                        this.shipVelocity.set(
+                            state.velocity.x,
+                            state.velocity.y,
+                            state.velocity.z
+                        );
+                        
+                        // Set current cell
+                        this.currentCell = state.currentCell;
+                        this.lastCell = {...this.currentCell};
+                        
+                        console.log('Game state loaded successfully');
+                        return;
+                    } catch (e) {
+                        console.error('Error loading saved state:', e);
+                    }
+                }
+                
+                // Initialize new state
+                this.masterRNG = new SeededRandom();
+                console.log('New game initialized');
+            }
+            
+            setupControls() {
+                this.controls = new PointerLockControls(this.camera, document.body);
+                this.scene.add(this.controls.getObject());
+                
+                this.controls.addEventListener('lock', () => {
+                    this.isMouseLookEnabled = true;
+                });
+                
+                this.controls.addEventListener('unlock', () => {
+                    this.isMouseLookEnabled = false;
+                });
+            }
+            
+            setupLighting() {
+                // Ambient light
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.2);
+                this.scene.add(ambientLight);
+            }
+            
+            setupEventListeners() {
+                // Keyboard events
+                document.addEventListener('keydown', this.onKeyDown.bind(this));
+                document.addEventListener('keyup', this.onKeyUp.bind(this));
+                
+                // Window resize
+                window.addEventListener('resize', this.onWindowResize.bind(this));
+                
+                // Prevent right-click context menu
+                document.addEventListener('contextmenu', e => e.preventDefault());
+                
+                // Warp map close button
+                document.getElementById('warp-close').addEventListener('click', () => {
+                    this.toggleWarpMap();
+                });
+                
+                // Toggle warp map with T
+                document.addEventListener('keydown', (e) => {
+                    if (e.code === 'KeyT') {
+                        this.toggleWarpMap();
+                    }
+                });
+            }
+            
+            toggleWarpMap() {
+                if (this.warpMap.style.display === 'block') {
+                    this.warpMap.style.display = 'none';
+                } else {
+                    this.warpMap.style.display = 'block';
+                    this.populateWarpMap();
+                }
+            }
+            
+            populateWarpMap() {
+                this.warpGrid.innerHTML = '';
+                
+                const gridSize = 5; // 5x5 grid
+                const centerX = this.currentCell.x;
+                const centerY = this.currentCell.y;
+                const centerZ = this.currentCell.z;
+                
+                // Calculate the starting coordinates for the grid
+                const startX = centerX - Math.floor(gridSize / 2);
+                const startY = centerY - Math.floor(gridSize / 2);
+                
+                for (let y = 0; y < gridSize; y++) {
+                    for (let x = 0; x < gridSize; x++) {
+                        const cellX = startX + x;
+                        const cellY = startY + y;
+                        const cellZ = centerZ; // Keeping Z constant for 2D map
+                        
+                        const cellElement = document.createElement('div');
+                        cellElement.className = 'warp-cell';
+                        
+                        // Check if this is the current cell
+                        if (cellX === this.currentCell.x && 
+                            cellY === this.currentCell.y && 
+                            cellZ === this.currentCell.z) {
+                            cellElement.classList.add('current');
+                        }
+                        
+                        const key = `${cellX},${cellY},${cellZ}`;
+                        let system = this.activeSystems.get(key);
+                        
+                        if (!system) {
+                            // Create new system if not already in active systems
+                            system = new StarSystem(this.seed + key, cellX, cellY, cellZ);
+                            
+                            // Create RNG for this system
+                            const systemRNG = new SeededRandom();
+                            let systemSeed = 0;
+                            for (let i = 0; i < key.length; i++) {
+                                systemSeed = (systemSeed << 5) - systemSeed + key.charCodeAt(i);
+                                systemSeed |= 0;
+                            }
+                            systemRNG.state = Math.abs(systemSeed);
+                            
+                            // Generate system content
+                            system.generate(systemRNG);
+                            
+                            // Add to active systems
+                            this.activeSystems.set(key, system);
+                        }
+                        
+                        cellElement.innerHTML = `
+                            <div class="system-name">${system.name}</div>
+                            <div class="system-coords">[${cellX}, ${cellY}, ${cellZ}]</div>
+                            <div class="system-stats">Stars: ${system.stars.length}, Planets: ${system.planets.length}</div>
+                        `;
+                        
+                        cellElement.addEventListener('click', () => {
+                            this.warpToSystem(cellX, cellY, cellZ, system);
+                        });
+                        
+                        this.warpGrid.appendChild(cellElement);
+                    }
+                }
+            }
+            
+            warpToSystem(targetX, targetY, targetZ, system) {
+                // Start warp animation
+                this.warpAnimation.style.display = 'flex';
+                this.warpAnimation.style.opacity = '1';
+                
+                // Fade out
+                let opacity = 0;
+                const fadeOut = setInterval(() => {
+                    opacity += 0.05;
+                    this.warpAnimation.style.opacity = opacity;
+                    if (opacity >= 1) {
+                        clearInterval(fadeOut);
+                        
+                        // Move ship to target system
+                        const targetPos = system.origin.clone();
+                        targetPos.y += 10; // Offset to avoid being inside the star
+                        this.controls.getObject().position.copy(targetPos);
+                        
+                        // Reset velocity
+                        this.shipVelocity.set(0, 0, 0);
+                        
+                        // Update current cell
+                        this.currentCell = { x: targetX, y: targetY, z: targetZ };
+                        this.lastCell = {...this.currentCell};
+                        
+                        // Regenerate systems window
+                        this.generateSystemsWindow();
+                        
+                        // Update LOD
+                        this.updateSystemLOD();
+                        
+                        // Save state
+                        this.saveState();
+                        
+                        // Fade in
+                        let fadeInOpacity = 1;
+                        const fadeIn = setInterval(() => {
+                            fadeInOpacity -= 0.05;
+                            this.warpAnimation.style.opacity = fadeInOpacity;
+                            if (fadeInOpacity <= 0) {
+                                clearInterval(fadeIn);
+                                this.warpAnimation.style.display = 'none';
+                                
+                                // Close warp map
+                                this.warpMap.style.display = 'none';
+                            }
+                        }, 50);
+                    }
+                }, 50);
+            }
+            
+            onKeyDown(event) {
+                this.keys[event.code] = true;
+                
+                if (event.code === 'KeyR' && !this.isMouseLookEnabled) {
+                    this.controls.lock();
+                }
+                
+                if (event.code === 'Escape') {
+                    this.controls.unlock();
+                }
+            }
+            
+            onKeyUp(event) {
+                this.keys[event.code] = false;
+                
+                if (event.code === 'KeyR') {
+                    this.controls.unlock();
+                }
+            }
+            
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            
+            updateCurrentCell() {
+                const shipPos = this.controls.getObject().position;
+                this.currentCell.x = Math.floor(shipPos.x / this.cellSize);
+                this.currentCell.y = Math.floor(shipPos.y / this.cellSize);
+                this.currentCell.z = Math.floor(shipPos.z / this.cellSize);
+            }
+            
+            generateSystemsWindow() {
+                const windowSize = 3; // Generate systems in a 3x3x3 window around current cell
+                
+                // Generate new systems
+                for (let x = this.currentCell.x - windowSize; x <= this.currentCell.x + windowSize; x++) {
+                    for (let y = this.currentCell.y - windowSize; y <= this.currentCell.y + windowSize; y++) {
+                        for (let z = this.currentCell.z - windowSize; z <= this.currentCell.z + windowSize; z++) {
+                            const key = `${x},${y},${z}`;
+                            
+                            if (!this.activeSystems.has(key)) {
+                                // Create new system
+                                const system = new StarSystem(this.seed + key, x, y, z);
+                                
+                                // Create RNG for this system
+                                const systemRNG = new SeededRandom();
+                                let systemSeed = 0;
+                                for (let i = 0; i < key.length; i++) {
+                                    systemSeed = (systemSeed << 5) - systemSeed + key.charCodeAt(i);
+                                    systemSeed |= 0;
+                                }
+                                systemRNG.state = Math.abs(systemSeed);
+                                
+                                // Generate system content
+                                system.generate(systemRNG);
+                                
+                                // Add to active systems
+                                this.activeSystems.set(key, system);
+                                
+                                // Load at least LOD 0
+                                system.loadLOD(0, this.scene);
+                            }
+                        }
+                    }
+                }
+                
+                // Unload distant systems
+                for (const [key, system] of this.activeSystems) {
+                    const dx = Math.abs(system.cellX - this.currentCell.x);
+                    const dy = Math.abs(system.cellY - this.currentCell.y);
+                    const dz = Math.abs(system.cellZ - this.currentCell.z);
+                    
+                    if (dx > windowSize || dy > windowSize || dz > windowSize) {
+                        system.unload(this.scene);
+                        this.activeSystems.delete(key);
+                    }
+                }
+            }
+            
+            updateMovement(deltaTime) {
+                const acceleration = new THREE.Vector3();
+                const forward = new THREE.Vector3();
+                const right = new THREE.Vector3();
+                const up = new THREE.Vector3(0, 1, 0);
+                
+                this.camera.getWorldDirection(forward);
+                right.crossVectors(forward, up).normalize();
+                up.crossVectors(right, forward).normalize();
+                
+                if (this.keys['KeyW']) acceleration.add(forward.clone().multiplyScalar(this.THRUST_FORCE));
+                if (this.keys['KeyS']) acceleration.add(forward.clone().multiplyScalar(-this.THRUST_FORCE));
+                if (this.keys['KeyA']) acceleration.add(right.clone().multiplyScalar(-this.THRUST_FORCE));
+                if (this.keys['KeyD']) acceleration.add(right.clone().multiplyScalar(this.THRUST_FORCE));
+                if (this.keys['KeyQ']) acceleration.add(up.clone().multiplyScalar(this.THRUST_FORCE));
+                if (this.keys['KeyE']) acceleration.add(up.clone().multiplyScalar(-this.THRUST_FORCE));
+                
+                this.shipVelocity.add(acceleration.multiplyScalar(deltaTime));
+                this.shipVelocity.multiplyScalar(this.DAMPING);
+                
+                if (this.shipVelocity.length() > this.MAX_SPEED) {
+                    this.shipVelocity.normalize().multiplyScalar(this.MAX_SPEED);
+                }
+                
+                this.controls.getObject().position.add(this.shipVelocity.clone().multiplyScalar(deltaTime));
+            }
+            
+            updateSystemLOD() {
+                const shipPos = this.controls.getObject().position;
+                let closestSystem = null;
+                let closestDistance = Infinity;
+                
+                // Find closest system
+                for (const system of this.activeSystems.values()) {
+                    const distance = shipPos.distanceTo(system.origin);
+                    
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestSystem = system;
+                    }
+                    
+                    // Unload systems beyond unload distance
+                    if (distance > this.unloadDistance) {
+                        if (system.lodLevel > 0) {
+                            system.loadLOD(0, this.scene);
+                        }
+                    }
+                }
+                
+                // Update current system
+                if (closestSystem && closestDistance < this.loadDistance) {
+                    this.currentSystem = closestSystem;
+                    
+                    // Update LOD based on distance
+                    let lodLevel = 0;
+                    if (closestDistance < this.lodChangeDistance * 0.5) lodLevel = 2;
+                    else if (closestDistance < this.lodChangeDistance) lodLevel = 1;
+                    
+                    // Load appropriate LOD
+                    if (closestSystem.lodLevel !== lodLevel) {
+                        closestSystem.loadLOD(lodLevel, this.scene);
+                        this.systemLodElement.textContent = `Active LOD: ${lodLevel}`;
+                    }
+                    
+                    // Update UI
+                    this.systemNameElement.textContent = closestSystem.name;
+                    this.systemStatsElement.textContent = `Stars: ${closestSystem.stars.length}, Planets: ${closestSystem.planets.length}`;
+                    
+                    // Show distance to center
+                    this.distanceElement.textContent = `Dist to center: ${closestDistance.toFixed(1)}`;
+                } else {
+                    this.currentSystem = null;
+                    this.systemNameElement.textContent = "Deep Space";
+                    this.systemStatsElement.textContent = "No nearby systems";
+                    this.systemLodElement.textContent = "Active LOD: 0";
+                    this.distanceElement.textContent = "";
+                }
+            }
+            
+            updateUI() {
+                const pos = this.controls.getObject().position;
+                this.positionElement.textContent = `X: ${pos.x.toFixed(1)}, Y: ${pos.y.toFixed(1)}, Z: ${pos.z.toFixed(1)}`;
+                this.cellElement.textContent = `Cell: [${this.currentCell.x}, ${this.currentCell.y}, ${this.currentCell.z}]`;
+            }
+            
+            animate() {
+                requestAnimationFrame(this.animate.bind(this));
+                const deltaTime = this.clock.getDelta();
+                const now = Date.now();
+                
+                // Update movement
+                this.updateMovement(deltaTime);
+                
+                // Update current cell (only changes when moving between systems)
+                this.updateCurrentCell();
+                
+                // Only generate new systems if we've actually changed cells
+                if (this.currentCell.x !== this.lastCell.x || 
+                    this.currentCell.y !== this.lastCell.y || 
+                    this.currentCell.z !== this.lastCell.z) {
+                    this.generateSystemsWindow();
+                    this.lastCell = {...this.currentCell};
+                }
+                
+                // Update system LOD
+                this.updateSystemLOD();
+                
+                // Update active systems (including planet rotation)
+                for (const system of this.activeSystems.values()) {
+                    system.update();
+                }
+                
+                // Update UI
+                this.updateUI();
+                
+                // Auto-save every few seconds
+                if (now - this.lastSaveTime > this.saveInterval) {
+                    this.saveState();
+                    this.lastSaveTime = now;
+                }
+                
+                // Render the scene
+                this.renderer.render(this.scene, this.camera);
+            }
+            
+            start() {
+                this.init();
+                this.animate();
+            }
+        }
+
+        // Start the simulation
+        const simulator = new GalaxySimulator();
+        simulator.start();
+    </script>
+</body>
+</html>

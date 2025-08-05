@@ -21,8 +21,8 @@
         },
         {
             "name": "ai-shit",
-            "childrenAmount": 3,
-            "lastModified": 1751701233.9433372,
+            "childrenAmount": 4,
+            "lastModified": 1754396700.3778095,
             "type": "folder"
         }
     ],
@@ -30,7 +30,7 @@
         {
             "name": "index.json",
             "size": 1771,
-            "lastModified": 1752083922.3482838,
+            "lastModified": 1752124401.2342844,
             "type": "json"
         },
         {
@@ -41,8 +41,8 @@
         },
         {
             "name": "index.html",
-            "size": 17099,
-            "lastModified": 1752083922.3472838,
+            "size": 17035,
+            "lastModified": 1752124401.2342844,
             "type": "html"
         },
         {
