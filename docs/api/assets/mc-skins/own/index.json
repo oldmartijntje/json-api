@@ -1,0 +1,13 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/assets/mc-skins/own",
+    "folders": [],
+    "files": [
+        {
+            "name": "tinkerer.png",
+            "size": 1995,
+            "lastModified": 1754823245.4461641,
+            "type": "png"
+        }
+    ],
+    "parent": "../index.json"
+}

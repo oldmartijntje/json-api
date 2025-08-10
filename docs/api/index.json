@@ -8,6 +8,12 @@
             "type": "folder"
         },
         {
+            "name": "assets",
+            "childrenAmount": 1,
+            "lastModified": 1754823215.124236,
+            "type": "folder"
+        },
+        {
             "name": "standaloneWebsites",
             "childrenAmount": 4,
             "lastModified": 1751701233.9913383,
@@ -36,7 +42,7 @@
         {
             "name": "index.json",
             "size": 1451,
-            "lastModified": 1752124401.2162845,
+            "lastModified": 1754396749.3459125,
             "type": "json"
         },
         {
@@ -48,7 +54,7 @@
         {
             "name": "index.html",
             "size": 15518,
-            "lastModified": 1752124401.2162845,
+            "lastModified": 1754396749.345833,
             "type": "html"
         }
     ],

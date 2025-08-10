@@ -1,0 +1,13 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/assets/mc-skins/random",
+    "folders": [],
+    "files": [
+        {
+            "name": "steve.png",
+            "size": 1175,
+            "lastModified": 1754823238.0359342,
+            "type": "png"
+        }
+    ],
+    "parent": "../index.json"
+}

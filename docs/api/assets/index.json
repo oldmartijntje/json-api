@@ -1,0 +1,13 @@
+{
+    "path": "https://oldmartijntje.github.io/json-api/api/assets",
+    "folders": [
+        {
+            "name": "mc-skins",
+            "childrenAmount": 2,
+            "lastModified": 1754823224.1292295,
+            "type": "folder"
+        }
+    ],
+    "files": [],
+    "parent": "../index.json"
+}
