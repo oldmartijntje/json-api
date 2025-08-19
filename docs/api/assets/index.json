@@ -3,11 +3,24 @@
     "folders": [
         {
             "name": "mc-skins",
-            "childrenAmount": 2,
-            "lastModified": 1754823224.1292295,
+            "childrenAmount": 4,
+            "lastModified": 1754823259.698467,
             "type": "folder"
         }
     ],
-    "files": [],
+    "files": [
+        {
+            "name": "index.json",
+            "size": 303,
+            "lastModified": 1754823259.6984086,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 11301,
+            "lastModified": 1754823259.6983771,
+            "type": "html"
+        }
+    ],
     "parent": "../index.json"
 }

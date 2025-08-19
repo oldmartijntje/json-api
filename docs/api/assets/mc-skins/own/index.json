@@ -3,6 +3,18 @@
     "folders": [],
     "files": [
         {
+            "name": "index.json",
+            "size": 310,
+            "lastModified": 1754823259.698554,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 11179,
+            "lastModified": 1754823259.6985312,
+            "type": "html"
+        },
+        {
             "name": "tinkerer.png",
             "size": 1995,
             "lastModified": 1754823245.4461641,

@@ -9,8 +9,8 @@
         },
         {
             "name": "assets",
-            "childrenAmount": 1,
-            "lastModified": 1754823215.124236,
+            "childrenAmount": 3,
+            "lastModified": 1754823259.6983771,
             "type": "folder"
         },
         {
@@ -28,7 +28,7 @@
         {
             "name": "random",
             "childrenAmount": 10,
-            "lastModified": 1752083779.825974,
+            "lastModified": 1755587714.3854873,
             "type": "folder"
         }
     ],
@@ -41,8 +41,8 @@
         },
         {
             "name": "index.json",
-            "size": 1451,
-            "lastModified": 1754396749.3459125,
+            "size": 1610,
+            "lastModified": 1754823259.6927376,
             "type": "json"
         },
         {
@@ -53,8 +53,8 @@
         },
         {
             "name": "index.html",
-            "size": 15518,
-            "lastModified": 1754396749.345833,
+            "size": 16318,
+            "lastModified": 1754823259.6926432,
             "type": "html"
         }
     ],

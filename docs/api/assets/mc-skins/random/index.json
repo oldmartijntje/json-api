@@ -3,6 +3,18 @@
     "folders": [],
     "files": [
         {
+            "name": "index.json",
+            "size": 310,
+            "lastModified": 1754823259.698618,
+            "type": "json"
+        },
+        {
+            "name": "index.html",
+            "size": 11164,
+            "lastModified": 1754823259.6985939,
+            "type": "html"
+        },
+        {
             "name": "steve.png",
             "size": 1175,
             "lastModified": 1754823238.0359342,
