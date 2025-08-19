@@ -49,14 +49,12 @@
             text-align: center;
             font-size: 1.5rem;
             color: #667eea;
-            margin: 100px 0;
         }
 
         .error {
             text-align: center;
             font-size: 1.2rem;
             color: #ff6b6b;
-            margin: 100px 0;
         }
 
         /* Grid View */
@@ -83,15 +81,45 @@
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .photo-card img {
+        .photo-card .image-container {
             width: 100%;
             height: 250px;
+            position: relative;
+            overflow: hidden;
+            background: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .photo-card img.loaded {
+            opacity: 1;
         }
 
         .photo-card:hover img {
             transform: scale(1.05);
+        }
+
+        .image-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .image-container.loading .image-placeholder {
+            display: block;
         }
 
         .card-info {
@@ -312,6 +340,25 @@
         .photo-card:nth-child(3n) {
             animation-delay: 0.2s;
         }
+
+        /* Loading spinner for lazy images */
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 3px solid #333;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
     </style>
 </head>
 <body>
@@ -348,6 +395,7 @@
                 this.photos = [];
                 this.currentPhotoIndex = 0;
                 this.isFullscreen = false;
+                this.observer = null;
                 
                 this.content = document.getElementById('content');
                 this.subtitle = document.getElementById('subtitle');
@@ -359,6 +407,7 @@
                 this.photoCounter = document.getElementById('photoCounter');
                 
                 this.initializeEventListeners();
+                this.initializeLazyLoading();
                 this.loadPhotos();
             }
 
@@ -380,6 +429,91 @@
                         if (e.key === 'ArrowRight') this.navigatePhoto(1);
                     }
                 });
+
+                // Handle browser back/forward buttons
+                window.addEventListener('popstate', (e) => {
+                    this.handleUrlChange();
+                });
+            }
+
+            initializeLazyLoading() {
+                if ('IntersectionObserver' in window) {
+                    this.observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                this.loadImage(entry.target);
+                                this.observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        rootMargin: '50px 0px',
+                        threshold: 0.1
+                    });
+                }
+            }
+
+            loadImage(img) {
+                const container = img.closest('.image-container');
+                container.classList.add('loading');
+                
+                // Create loading spinner
+                const spinner = document.createElement('div');
+                spinner.className = 'loading-spinner';
+                container.appendChild(spinner);
+
+                img.onload = () => {
+                    img.classList.add('loaded');
+                    container.classList.remove('loading');
+                    if (spinner.parentNode) {
+                        spinner.remove();
+                    }
+                };
+
+                img.onerror = () => {
+                    container.classList.remove('loading');
+                    const placeholder = container.querySelector('.image-placeholder');
+                    if (placeholder) {
+                        placeholder.textContent = 'Failed to load image';
+                        placeholder.style.display = 'block';
+                        placeholder.style.color = '#ff6b6b';
+                    }
+                    if (spinner.parentNode) {
+                        spinner.remove();
+                    }
+                };
+
+                img.src = img.dataset.src;
+            }
+
+            getUrlParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    photoId: params.get('photo')
+                };
+            }
+
+            updateUrl(photoId) {
+                const url = new URL(window.location);
+                if (photoId) {
+                    url.searchParams.set('photo', photoId);
+                } else {
+                    url.searchParams.delete('photo');
+                }
+                window.history.pushState({ photoId }, '', url);
+            }
+
+            handleUrlChange() {
+                const { photoId } = this.getUrlParams();
+                if (photoId && this.photos.length > 0) {
+                    const photoIndex = this.photos.findIndex(photo => photo._id === photoId);
+                    if (photoIndex !== -1) {
+                        this.openFullscreen(photoIndex, false); // false = don't update URL again
+                    } else {
+                        this.closeFullscreen();
+                    }
+                } else {
+                    this.closeFullscreen();
+                }
             }
 
             async loadPhotos() {
@@ -403,6 +537,16 @@
                         });
                     
                     this.renderGallery();
+                    
+                    // Check for URL parameter after photos are loaded
+                    const { photoId } = this.getUrlParams();
+                    if (photoId) {
+                        const photoIndex = this.photos.findIndex(photo => photo._id === photoId);
+                        if (photoIndex !== -1) {
+                            // Small delay to ensure gallery is rendered
+                            setTimeout(() => this.openFullscreen(photoIndex, false), 100);
+                        }
+                    }
                     
                 } catch (error) {
                     console.error('Error loading photos:', error);
@@ -431,7 +575,10 @@
                     const date = this.formatDate(photo.attributes.datetime);
                     
                     card.innerHTML = `
-                        <img src="${photo.attributes.imgur}" alt="Photo ${index + 1}" loading="lazy">
+                        <div class="image-container">
+                            <img data-src="${photo.attributes.imgur}" alt="Photo ${index + 1}" class="lazy-image">
+                            <div class="image-placeholder">Loading...</div>
+                        </div>
                         <div class="card-info">
                             ${photo.attributes.marker ? `<div class="card-marker">${photo.attributes.marker}</div>` : ''}
                             ${photo.attributes.subtext ? `<div class="card-subtext">${photo.attributes.subtext}</div>` : ''}
@@ -441,6 +588,15 @@
                     
                     card.addEventListener('click', () => this.openFullscreen(index));
                     gridView.appendChild(card);
+
+                    // Set up lazy loading for this image
+                    const img = card.querySelector('.lazy-image');
+                    if (this.observer) {
+                        this.observer.observe(img);
+                    } else {
+                        // Fallback for browsers without IntersectionObserver
+                        this.loadImage(img);
+                    }
                 });
                 
                 this.content.innerHTML = '';
@@ -460,18 +616,27 @@
                 });
             }
 
-            openFullscreen(index) {
+            openFullscreen(index, updateUrl = true) {
                 this.currentPhotoIndex = index;
                 this.isFullscreen = true;
                 this.updateFullscreenContent();
                 this.fullscreenOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
+                
+                // Update URL with photo ID
+                if (updateUrl) {
+                    const photo = this.photos[index];
+                    this.updateUrl(photo._id);
+                }
             }
 
             closeFullscreen() {
                 this.isFullscreen = false;
                 this.fullscreenOverlay.classList.remove('active');
                 document.body.style.overflow = '';
+                
+                // Remove photo parameter from URL
+                this.updateUrl(null);
             }
 
             navigatePhoto(direction) {
@@ -479,6 +644,10 @@
                 if (newIndex >= 0 && newIndex < this.photos.length) {
                     this.currentPhotoIndex = newIndex;
                     this.updateFullscreenContent();
+                    
+                    // Update URL with new photo ID
+                    const photo = this.photos[this.currentPhotoIndex];
+                    this.updateUrl(photo._id);
                 }
             }
 
