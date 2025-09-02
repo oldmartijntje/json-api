@@ -35,8 +35,14 @@
         },
         {
             "name": "index.json",
-            "size": 2737,
-            "lastModified": 1754823259.704198,
+            "size": 2736,
+            "lastModified": 1755587737.5202022,
+            "type": "json"
+        },
+        {
+            "name": "playlist-lockout-bingo.json",
+            "size": 17692,
+            "lastModified": 1756843502.6623816,
             "type": "json"
         },
         {
@@ -54,7 +60,7 @@
         {
             "name": "index.html",
             "size": 22253,
-            "lastModified": 1754823259.7041068,
+            "lastModified": 1755587737.5201118,
             "type": "html"
         },
         {
